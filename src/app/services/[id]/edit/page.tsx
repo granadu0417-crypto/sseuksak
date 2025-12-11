@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { getSupabaseClient } from '@/lib/supabase';
 import { uploadServiceImages, deleteServiceImage } from '@/lib/storage';
-import { Category } from '@/types/database';
+import { Category, Service } from '@/types/database';
 import ImageUpload from '@/components/ImageUpload';
 
 // 지역 데이터
@@ -68,22 +68,25 @@ export default function EditServicePage({ params }: PageProps) {
         .single();
 
       if (error) throw error;
+      if (!data) throw new Error('서비스를 찾을 수 없습니다.');
 
-      if (data.provider_id !== user?.id) {
+      const serviceData = data as Service;
+
+      if (serviceData.provider_id !== user?.id) {
         alert('수정 권한이 없습니다.');
         router.push('/mypage/services');
         return;
       }
 
       setFormData({
-        category_id: data.category_id,
-        title: data.title,
-        description: data.description,
-        price: data.price.toString(),
-        location: data.location,
-        area: data.area || '',
+        category_id: serviceData.category_id,
+        title: serviceData.title,
+        description: serviceData.description,
+        price: serviceData.price.toString(),
+        location: serviceData.location,
+        area: serviceData.area || '',
       });
-      setExistingImages(data.images || []);
+      setExistingImages(serviceData.images || []);
     } catch (err) {
       console.error('서비스 로딩 실패:', err);
       setError('서비스 정보를 불러오는데 실패했습니다.');
@@ -153,6 +156,11 @@ export default function EditServicePage({ params }: PageProps) {
       return;
     }
 
+    if (!user?.id) {
+      setError('로그인이 필요합니다.');
+      return;
+    }
+
     setSaving(true);
     setError('');
 
@@ -165,7 +173,7 @@ export default function EditServicePage({ params }: PageProps) {
       // 2. 새 이미지 업로드
       let newImageUrls: string[] = [];
       if (newImageFiles.length > 0) {
-        const { urls } = await uploadServiceImages(newImageFiles, user!.id);
+        const { urls } = await uploadServiceImages(newImageFiles, user.id);
         newImageUrls = urls;
       }
 
@@ -183,9 +191,9 @@ export default function EditServicePage({ params }: PageProps) {
           area: formData.area,
           images: allImages,
           updated_at: new Date().toISOString(),
-        })
+        } as never)
         .eq('id', id)
-        .eq('provider_id', user?.id);
+        .eq('provider_id', user.id);
 
       if (updateError) throw updateError;
 

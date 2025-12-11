@@ -43,13 +43,14 @@ export default function ServiceDetailPage() {
           return;
         }
 
-        setService(serviceData);
+        const typedServiceData = serviceData as ServiceWithDetails;
+        setService(typedServiceData);
 
         // 제공자 정보 가져오기
         const { data: providerData } = await supabase
           .from('profiles')
           .select('*')
-          .eq('id', serviceData.provider_id)
+          .eq('id', typedServiceData.provider_id)
           .single();
 
         if (providerData) {
@@ -73,7 +74,7 @@ export default function ServiceDetailPage() {
         // 조회수 증가
         await supabase
           .from('services')
-          .update({ view_count: (serviceData.view_count || 0) + 1 })
+          .update({ view_count: (typedServiceData.view_count || 0) + 1 } as never)
           .eq('id', serviceId);
 
         // 찜 여부 확인
@@ -119,7 +120,7 @@ export default function ServiceDetailPage() {
       } else {
         await supabase
           .from('favorites')
-          .insert({ user_id: user.id, service_id: serviceId });
+          .insert({ user_id: user.id, service_id: serviceId } as never);
         setIsFavorite(true);
       }
     } catch (err) {
@@ -147,7 +148,8 @@ export default function ServiceDetailPage() {
       .single();
 
     if (existingRoom) {
-      router.push(`/chat/${existingRoom.id}`);
+      const roomData = existingRoom as { id: string };
+      router.push(`/chat/${roomData.id}`);
       return;
     }
 
@@ -158,12 +160,13 @@ export default function ServiceDetailPage() {
         service_id: serviceId,
         customer_id: user.id,
         provider_id: service.provider_id,
-      })
+      } as never)
       .select()
       .single();
 
     if (newRoom) {
-      router.push(`/chat/${newRoom.id}`);
+      const roomData = newRoom as { id: string };
+      router.push(`/chat/${roomData.id}`);
     } else if (error) {
       console.error('Error creating chat room:', error);
       alert('채팅방 생성에 실패했습니다.');

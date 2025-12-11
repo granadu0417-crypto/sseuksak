@@ -218,20 +218,23 @@ export default function NewServicePage() {
           area: formData.area,
           images: imageUrls,
           is_active: true,
-        })
+        } as never)
         .select()
         .single();
 
       if (insertError) throw insertError;
+      if (!data) throw new Error('서비스 등록에 실패했습니다.');
+
+      const serviceData = data as { id: string };
 
       // 3. 프로필을 전문가로 업데이트
       await supabase
         .from('profiles')
-        .update({ is_provider: true })
+        .update({ is_provider: true } as never)
         .eq('id', user.id);
 
       alert('서비스가 등록되었습니다!');
-      router.push(`/services/${data.id}`);
+      router.push(`/services/${serviceData.id}`);
     } catch (err: any) {
       console.error('서비스 등록 오류:', err);
       setError(err.message || '서비스 등록에 실패했습니다.');

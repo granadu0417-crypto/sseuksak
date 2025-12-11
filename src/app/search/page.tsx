@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { getSupabaseClient } from '@/lib/supabase';
@@ -50,7 +50,7 @@ interface Service {
 
 type SortOption = 'latest' | 'price_low' | 'price_high';
 
-export default function SearchPage() {
+function SearchContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const supabase = getSupabaseClient();
@@ -518,5 +518,41 @@ export default function SearchPage() {
         )}
       </div>
     </div>
+  );
+}
+
+function SearchLoading() {
+  return (
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <div className="sticky top-0 bg-white border-b border-gray-200 px-4 py-3 z-20">
+        <div className="h-7 bg-gray-200 rounded w-32 mb-3 animate-pulse" />
+        <div className="flex gap-2">
+          <div className="flex-1 h-12 bg-gray-100 rounded-xl animate-pulse" />
+          <div className="w-16 h-12 bg-gray-200 rounded-xl animate-pulse" />
+        </div>
+      </div>
+      <div className="p-4 space-y-4">
+        {[1, 2, 3].map(i => (
+          <div key={i} className="bg-white rounded-xl p-4 shadow-sm animate-pulse">
+            <div className="flex gap-4">
+              <div className="w-24 h-24 bg-gray-200 rounded-lg" />
+              <div className="flex-1">
+                <div className="h-5 bg-gray-200 rounded w-3/4 mb-2" />
+                <div className="h-4 bg-gray-200 rounded w-1/2 mb-2" />
+                <div className="h-4 bg-gray-200 rounded w-1/3" />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<SearchLoading />}>
+      <SearchContent />
+    </Suspense>
   );
 }

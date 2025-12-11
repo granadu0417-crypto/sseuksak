@@ -75,11 +75,12 @@ export default function MyServicesPage() {
     setDeletingId(serviceId);
     try {
       const supabase = getSupabaseClient();
+      if (!user?.id) return;
       const { error } = await supabase
         .from('services')
         .delete()
         .eq('id', serviceId)
-        .eq('provider_id', user?.id);
+        .eq('provider_id', user.id);
 
       if (error) throw error;
 

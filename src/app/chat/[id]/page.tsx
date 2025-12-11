@@ -74,14 +74,17 @@ export default function ChatRoomPage({ params }: PageProps) {
         .single();
 
       if (fetchError) throw fetchError;
+      if (!data) throw new Error('채팅방을 찾을 수 없습니다.');
+
+      const roomData = data as ChatRoomDetails;
 
       // 참여자인지 확인
-      if (data.customer_id !== user?.id && data.provider_id !== user?.id) {
+      if (roomData.customer_id !== user?.id && roomData.provider_id !== user?.id) {
         router.push('/chat');
         return;
       }
 
-      setRoom(data);
+      setRoom(roomData);
     } catch (err) {
       console.error('채팅방 로딩 실패:', err);
       setError('채팅방을 불러오는데 실패했습니다.');
@@ -101,13 +104,15 @@ export default function ChatRoomPage({ params }: PageProps) {
 
       setMessages(data || []);
 
-      // 읽음 처리
-      await supabase
-        .from('chat_messages')
-        .update({ is_read: true })
-        .eq('room_id', roomId)
-        .neq('sender_id', user?.id)
-        .eq('is_read', false);
+      // 읽음 처리 (타입 단언으로 Supabase 타입 추론 문제 해결)
+      if (user?.id) {
+        await (supabase
+          .from('chat_messages')
+          .update({ is_read: true } as never)
+          .eq('room_id', roomId)
+          .neq('sender_id', user.id)
+          .eq('is_read', false));
+      }
 
     } catch (err) {
       console.error('메시지 로딩 실패:', err);
@@ -156,7 +161,7 @@ export default function ChatRoomPage({ params }: PageProps) {
           if (newMsg.sender_id !== user.id) {
             await supabase
               .from('chat_messages')
-              .update({ is_read: true })
+              .update({ is_read: true } as never)
               .eq('id', newMsg.id);
           }
         }
@@ -191,7 +196,7 @@ export default function ChatRoomPage({ params }: PageProps) {
           room_id: roomId,
           sender_id: user.id,
           content: messageContent,
-        });
+        } as never);
 
       if (insertError) throw insertError;
 
@@ -201,7 +206,7 @@ export default function ChatRoomPage({ params }: PageProps) {
         .update({
           last_message: messageContent,
           last_message_at: new Date().toISOString(),
-        })
+        } as never)
         .eq('id', roomId);
 
       inputRef.current?.focus();

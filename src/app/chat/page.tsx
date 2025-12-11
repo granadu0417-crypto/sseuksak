@@ -63,8 +63,9 @@ export default function ChatListPage() {
       if (fetchError) throw fetchError;
 
       // 각 채팅방의 읽지 않은 메시지 수 조회
+      const rooms = (data || []) as ChatRoomWithDetails[];
       const roomsWithUnread = await Promise.all(
-        (data || []).map(async (room) => {
+        rooms.map(async (room) => {
           const { count } = await supabase
             .from('chat_messages')
             .select('*', { count: 'exact', head: true })
