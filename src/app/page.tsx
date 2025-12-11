@@ -6,13 +6,14 @@ import BannerCarousel from '@/components/home/BannerCarousel';
 import PopularKeywords from '@/components/home/PopularKeywords';
 import AreaSelector from '@/components/home/AreaSelector';
 import ServiceCardList from '@/components/home/ServiceCardList';
-import { getCategories, getPopularServices } from '@/lib/api/services';
+import { getCategories, getPopularServices, getNewServices } from '@/lib/api/services';
 
 export default async function Home() {
   // 서버 컴포넌트에서 데이터 가져오기
-  const [categories, popularServices] = await Promise.all([
+  const [categories, popularServices, newServices] = await Promise.all([
     getCategories(),
     getPopularServices(10),
+    getNewServices(6),
   ]);
   return (
     <div className="safe-bottom">
@@ -57,7 +58,7 @@ export default async function Home() {
           <h2 className="text-lg font-bold">새로 등록된 서비스</h2>
           <button className="text-sm text-gray-500">더보기</button>
         </div>
-        <ServiceCardList isNew />
+        <ServiceCardList services={newServices} isNew />
       </section>
     </div>
   );

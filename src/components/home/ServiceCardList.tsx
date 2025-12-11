@@ -1,160 +1,30 @@
 import Link from 'next/link';
 import { ServiceWithDetails } from '@/types/database';
 
-// 폴백 서비스 데이터 (데이터베이스 연결 전 또는 오류 시 사용)
-const fallbackServices: ServiceWithDetails[] = [
-  {
-    id: '1',
-    provider_id: '1',
-    category_id: '1',
-    title: '프리미엄 홈클리닝 서비스',
-    description: '',
-    location: '서울',
-    area: '강남구',
-    price: 80000,
-    original_price: 100000,
-    discount_percent: 20,
-    images: [],
-    is_active: true,
-    view_count: 128,
-    created_at: '',
-    updated_at: '',
-    average_rating: 4.9,
-    review_count: 128,
-  },
-  {
-    id: '2',
-    provider_id: '2',
-    category_id: '2',
-    title: '1:1 맞춤 영어회화 레슨',
-    description: '',
-    location: '서울',
-    area: '서초구',
-    price: 50000,
-    original_price: null,
-    discount_percent: null,
-    images: [],
-    is_active: true,
-    view_count: 89,
-    created_at: '',
-    updated_at: '',
-    average_rating: 4.8,
-    review_count: 89,
-  },
-  {
-    id: '3',
-    provider_id: '3',
-    category_id: '3',
-    title: '웨딩 스냅 촬영 패키지',
-    description: '',
-    location: '서울',
-    area: '마포구',
-    price: 200000,
-    original_price: 250000,
-    discount_percent: 20,
-    images: [],
-    is_active: true,
-    view_count: 45,
-    created_at: '',
-    updated_at: '',
-    average_rating: 5.0,
-    review_count: 45,
-  },
-  {
-    id: '4',
-    provider_id: '4',
-    category_id: '4',
-    title: '피아노 개인레슨 (초급~중급)',
-    description: '',
-    location: '서울',
-    area: '송파구',
-    price: 60000,
-    original_price: null,
-    discount_percent: null,
-    images: [],
-    is_active: true,
-    view_count: 67,
-    created_at: '',
-    updated_at: '',
-    average_rating: 4.7,
-    review_count: 67,
-  },
-];
-
-const fallbackNewServices: ServiceWithDetails[] = [
-  {
-    id: '5',
-    provider_id: '5',
-    category_id: '5',
-    title: '인테리어 컨설팅 서비스',
-    description: '',
-    location: '서울',
-    area: '용산구',
-    price: 150000,
-    original_price: null,
-    discount_percent: null,
-    images: [],
-    is_active: true,
-    view_count: 0,
-    created_at: new Date().toISOString(),
-    updated_at: '',
-    average_rating: 0,
-    review_count: 0,
-  },
-  {
-    id: '6',
-    provider_id: '6',
-    category_id: '6',
-    title: '요가 & 필라테스 1:1 레슨',
-    description: '',
-    location: '서울',
-    area: '강서구',
-    price: 70000,
-    original_price: null,
-    discount_percent: null,
-    images: [],
-    is_active: true,
-    view_count: 0,
-    created_at: new Date().toISOString(),
-    updated_at: '',
-    average_rating: 0,
-    review_count: 0,
-  },
-  {
-    id: '7',
-    provider_id: '7',
-    category_id: '7',
-    title: '반려동물 미용 서비스',
-    description: '',
-    location: '서울',
-    area: '영등포구',
-    price: 45000,
-    original_price: null,
-    discount_percent: null,
-    images: [],
-    is_active: true,
-    view_count: 0,
-    created_at: new Date().toISOString(),
-    updated_at: '',
-    average_rating: 0,
-    review_count: 0,
-  },
-];
-
 interface ServiceCardListProps {
   services?: ServiceWithDetails[];
   isNew?: boolean;
 }
 
 export default function ServiceCardList({ services, isNew = false }: ServiceCardListProps) {
-  // 데이터베이스에서 가져온 서비스가 없으면 폴백 사용
-  const displayServices = services && services.length > 0
-    ? services
-    : (isNew ? fallbackNewServices : fallbackServices);
+  // 서비스가 없으면 빈 상태 표시
+  if (!services || services.length === 0) {
+    return (
+      <div className="mx-4 py-8 text-center bg-gray-50 rounded-xl">
+        <div className="text-4xl mb-3">{isNew ? '🆕' : '⭐'}</div>
+        <p className="text-gray-500 text-sm">
+          {isNew ? '아직 새로 등록된 서비스가 없어요' : '아직 등록된 서비스가 없어요'}
+        </p>
+        <p className="text-gray-400 text-xs mt-1">
+          첫 번째 서비스를 등록해보세요!
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="scroll-x -mx-4 px-4">
-      {displayServices.map((service) => (
+      {services.map((service) => (
         <Link
           key={service.id}
           href={`/services/${service.id}`}

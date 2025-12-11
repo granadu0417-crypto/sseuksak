@@ -18,6 +18,36 @@ export async function getCategories(): Promise<Category[]> {
   return data || [];
 }
 
+// 신규 서비스 목록 조회 (홈페이지용)
+export async function getNewServices(limit: number = 10): Promise<ServiceWithDetails[]> {
+  const supabase = await createServerSupabaseClient();
+
+  const { data, error } = await supabase
+    .from('services')
+    .select(`
+      *,
+      category:categories(*),
+      provider:profiles(*),
+      reviews(rating)
+    `)
+    .eq('is_active', true)
+    .order('created_at', { ascending: false })
+    .limit(limit);
+
+  if (error) {
+    console.error('신규 서비스 조회 실패:', error);
+    return [];
+  }
+
+  return (data || []).map((service: Record<string, unknown>) => ({
+    ...(service as object),
+    average_rating: Array.isArray(service.reviews) && service.reviews.length
+      ? service.reviews.reduce((sum: number, r: { rating: number }) => sum + r.rating, 0) / service.reviews.length
+      : 0,
+    review_count: Array.isArray(service.reviews) ? service.reviews.length : 0,
+  })) as ServiceWithDetails[];
+}
+
 // 인기 서비스 목록 조회 (홈페이지용)
 export async function getPopularServices(limit: number = 10): Promise<ServiceWithDetails[]> {
   const supabase = await createServerSupabaseClient();
