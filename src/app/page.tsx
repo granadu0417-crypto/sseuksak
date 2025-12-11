@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import Header from '@/components/home/Header';
 import CategoryGrid from '@/components/home/CategoryGrid';
 import BannerCarousel from '@/components/home/BannerCarousel';
