@@ -3,6 +3,8 @@
 import { Suspense } from 'react';
 import RequestDetailContent from './RequestDetailContent';
 
+export const runtime = 'edge';
+
 interface PageProps {
   params: Promise<{ id: string }>;
 }
