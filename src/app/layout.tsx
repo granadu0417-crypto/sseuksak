@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import BottomNav from "@/components/BottomNav";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { NotificationProvider } from "@/contexts/NotificationContext";
 
 export const metadata: Metadata = {
   title: "쓱싹 - 내 주변 전문가 찾기",
@@ -41,10 +42,12 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <AuthProvider>
-          <main className="min-h-screen">
-            {children}
-          </main>
-          <BottomNav />
+          <NotificationProvider>
+            <main className="min-h-screen">
+              {children}
+            </main>
+            <BottomNav />
+          </NotificationProvider>
         </AuthProvider>
       </body>
     </html>

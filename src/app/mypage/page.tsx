@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
+import { useNotifications } from '@/contexts/NotificationContext';
 
 export default function MyPage() {
   const router = useRouter();
   const { user, loading, signOut } = useAuth();
+  const { unreadCount } = useNotifications();
 
   // 사용자 이름 가져오기
   const userName = user?.user_metadata?.name || user?.email?.split('@')[0] || '사용자';
@@ -34,7 +36,20 @@ export default function MyPage() {
 
   return (
     <div className="pt-4 px-4 pb-20">
-      <h1 className="text-2xl font-bold mb-4">마이페이지</h1>
+      {/* 헤더 */}
+      <div className="flex items-center justify-between mb-4">
+        <h1 className="text-2xl font-bold">마이페이지</h1>
+        <Link href="/notifications" className="relative p-2">
+          <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+          {unreadCount > 0 && (
+            <span className="absolute top-1 right-1 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+              {unreadCount > 9 ? '9+' : unreadCount}
+            </span>
+          )}
+        </Link>
+      </div>
 
       {/* 프로필 섹션 - 로그인 상태에 따라 다르게 표시 */}
       {user ? (
@@ -93,11 +108,11 @@ export default function MyPage() {
       <div className="mt-6 divide-y divide-gray-100">
         {[
           { icon: '🛠️', label: '내 서비스', href: '/mypage/services', requireAuth: true, highlight: true },
-          { icon: '📋', label: '내 요청서', href: '/mypage/requests', requireAuth: true },
-          { icon: '❤️', label: '찜한 서비스', href: '/mypage/favorites', requireAuth: true },
+          { icon: '📋', label: '내 요청서', href: '/requests', requireAuth: true },
+          { icon: '❤️', label: '찜한 서비스', href: '/favorites', requireAuth: true },
           { icon: '💬', label: '채팅 내역', href: '/mypage/chat', requireAuth: true },
           { icon: '⭐', label: '내 리뷰', href: '/mypage/reviews', requireAuth: true },
-          { icon: '🔔', label: '알림 설정', href: '/mypage/notifications', requireAuth: false },
+          { icon: '🔔', label: '알림', href: '/notifications', requireAuth: true, badge: unreadCount },
           { icon: '❓', label: '고객센터', href: '/help', requireAuth: false },
           { icon: '⚙️', label: '설정', href: '/settings', requireAuth: false },
         ].map((item) => (
@@ -111,6 +126,11 @@ export default function MyPage() {
             {item.requireAuth && !user && (
               <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">
                 로그인 필요
+              </span>
+            )}
+            {'badge' in item && item.badge && item.badge > 0 && (
+              <span className="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+                {item.badge > 99 ? '99+' : item.badge}
               </span>
             )}
             <svg
