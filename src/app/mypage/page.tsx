@@ -108,9 +108,10 @@ export default function MyPage() {
       <div className="mt-6 divide-y divide-gray-100">
         {[
           { icon: '🛠️', label: '내 서비스', href: '/mypage/services', requireAuth: true, highlight: true },
+          { icon: '📁', label: '포트폴리오', href: '/mypage/portfolio', requireAuth: true },
           { icon: '📋', label: '내 요청서', href: '/requests', requireAuth: true },
           { icon: '❤️', label: '찜한 서비스', href: '/favorites', requireAuth: true },
-          { icon: '💬', label: '채팅 내역', href: '/mypage/chat', requireAuth: true },
+          { icon: '💬', label: '채팅 내역', href: '/chat', requireAuth: true },
           { icon: '⭐', label: '내 리뷰', href: '/mypage/reviews', requireAuth: true },
           { icon: '🔔', label: '알림', href: '/notifications', requireAuth: true, badge: unreadCount },
           { icon: '❓', label: '고객센터', href: '/help', requireAuth: false },

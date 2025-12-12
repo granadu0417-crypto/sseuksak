@@ -389,7 +389,10 @@ export default function ServiceDetailPage() {
       {provider && (
         <div className="bg-white px-4 py-6">
           <h2 className="text-lg font-semibold mb-4">전문가 정보</h2>
-          <div className="flex items-center gap-4">
+          <Link
+            href={`/pro/${provider.id}`}
+            className="flex items-center gap-4 hover:bg-gray-50 -mx-2 px-2 py-2 rounded-xl transition-colors"
+          >
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
               {provider.avatar_url ? (
                 <img
@@ -403,7 +406,7 @@ export default function ServiceDetailPage() {
                 </span>
               )}
             </div>
-            <div>
+            <div className="flex-1">
               <p className="font-semibold text-gray-900">
                 {provider.name || '전문가'}
               </p>
@@ -411,7 +414,10 @@ export default function ServiceDetailPage() {
                 가입일: {new Date(provider.created_at).toLocaleDateString('ko-KR')}
               </p>
             </div>
-          </div>
+            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       )}
 

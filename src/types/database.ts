@@ -11,6 +11,7 @@ export interface Database {
           name: string | null;
           phone: string | null;
           avatar_url: string | null;
+          bio: string | null;
           is_provider: boolean;
           created_at: string;
           updated_at: string;
@@ -21,6 +22,7 @@ export interface Database {
           name?: string | null;
           phone?: string | null;
           avatar_url?: string | null;
+          bio?: string | null;
           is_provider?: boolean;
           created_at?: string;
           updated_at?: string;
@@ -31,6 +33,7 @@ export interface Database {
           name?: string | null;
           phone?: string | null;
           avatar_url?: string | null;
+          bio?: string | null;
           is_provider?: boolean;
           updated_at?: string;
         };
@@ -311,6 +314,40 @@ export interface Database {
         };
       };
 
+      // 포트폴리오
+      portfolios: {
+        Row: {
+          id: string;
+          provider_id: string;
+          title: string;
+          description: string | null;
+          images: string[];
+          category_id: string | null;
+          work_date: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          provider_id: string;
+          title: string;
+          description?: string | null;
+          images?: string[];
+          category_id?: string | null;
+          work_date?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          title?: string;
+          description?: string | null;
+          images?: string[];
+          category_id?: string | null;
+          work_date?: string | null;
+          updated_at?: string;
+        };
+      };
+
       // 알림
       notifications: {
         Row: {
@@ -364,6 +401,7 @@ export type ChatMessage = Database['public']['Tables']['chat_messages']['Row'];
 export type Request = Database['public']['Tables']['requests']['Row'];
 export type Quote = Database['public']['Tables']['quotes']['Row'];
 export type Notification = Database['public']['Tables']['notifications']['Row'];
+export type Portfolio = Database['public']['Tables']['portfolios']['Row'];
 
 // 서비스 + 관련 데이터 조합 타입
 export interface ServiceWithDetails extends Service {
