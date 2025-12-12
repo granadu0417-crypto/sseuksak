@@ -1,8 +1,9 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode, useRef } from 'react';
 import { useAuth } from './AuthContext';
-import { getSupabaseClient } from '@/lib/supabase';
+import { SupabaseClient } from '@supabase/supabase-js';
+import { Database } from '@/types/database';
 
 interface NotificationContextType {
   unreadCount: number;
@@ -16,14 +17,26 @@ const NotificationContext = createContext<NotificationContextType>({
 
 export function NotificationProvider({ children }: { children: ReactNode }) {
   const { user } = useAuth();
-  const supabase = getSupabaseClient();
   const [unreadCount, setUnreadCount] = useState(0);
+  const supabaseRef = useRef<SupabaseClient<Database> | null>(null);
+
+  // 클라이언트 사이드에서만 Supabase 클라이언트 초기화
+  const getSupabase = () => {
+    if (!supabaseRef.current && typeof window !== 'undefined') {
+      const { getSupabaseClient } = require('@/lib/supabase');
+      supabaseRef.current = getSupabaseClient();
+    }
+    return supabaseRef.current;
+  };
 
   const refreshUnreadCount = async () => {
     if (!user) {
       setUnreadCount(0);
       return;
     }
+
+    const supabase = getSupabase();
+    if (!supabase) return;
 
     const { count, error } = await supabase
       .from('notifications' as 'profiles')
@@ -45,6 +58,9 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!user) return;
 
+    const supabase = getSupabase();
+    if (!supabase) return;
+
     const channel = supabase
       .channel('notification-count')
       .on(
@@ -64,7 +80,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
     return () => {
       supabase.removeChannel(channel);
     };
-  }, [user, supabase]);
+  }, [user]);
 
   return (
     <NotificationContext.Provider value={{ unreadCount, refreshUnreadCount }}>

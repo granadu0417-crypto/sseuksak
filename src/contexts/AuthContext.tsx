@@ -1,8 +1,8 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { User, Session, AuthError } from '@supabase/supabase-js';
-import { getSupabaseClient } from '@/lib/supabase';
+import { createContext, useContext, useEffect, useState, ReactNode, useRef } from 'react';
+import { User, Session, AuthError, SupabaseClient } from '@supabase/supabase-js';
+import { Database } from '@/types/database';
 
 // 인증 컨텍스트 타입 정의
 interface AuthContextType {
@@ -23,10 +23,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const supabaseRef = useRef<SupabaseClient<Database> | null>(null);
 
-  const supabase = getSupabaseClient();
+  // 클라이언트 사이드에서만 Supabase 클라이언트 초기화
+  const getSupabase = () => {
+    if (!supabaseRef.current && typeof window !== 'undefined') {
+      const { getSupabaseClient } = require('@/lib/supabase');
+      supabaseRef.current = getSupabaseClient();
+    }
+    return supabaseRef.current;
+  };
 
   useEffect(() => {
+    const supabase = getSupabase();
+    if (!supabase) {
+      setLoading(false);
+      return;
+    }
+
     // 초기 세션 확인
     const initializeAuth = async () => {
       try {
@@ -63,6 +77,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // 프로필 존재 확인 및 생성
   const ensureProfile = async (authUser: User) => {
+    const supabase = getSupabase();
+    if (!supabase) return;
+
     const { data: existingProfile } = await supabase
       .from('profiles')
       .select('id')
@@ -82,6 +99,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // 회원가입
   const signUp = async (email: string, password: string, name: string) => {
+    const supabase = getSupabase();
+    if (!supabase) return { error: { message: 'Supabase not initialized' } as AuthError };
+
     const { error } = await supabase.auth.signUp({
       email,
       password,
@@ -96,6 +116,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // 로그인
   const signIn = async (email: string, password: string) => {
+    const supabase = getSupabase();
+    if (!supabase) return { error: { message: 'Supabase not initialized' } as AuthError };
+
     const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
@@ -105,7 +128,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // 로그아웃
   const signOut = async () => {
-    await supabase.auth.signOut();
+    const supabase = getSupabase();
+    if (supabase) {
+      await supabase.auth.signOut();
+    }
     setUser(null);
     setSession(null);
   };
@@ -114,6 +140,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const updateProfile = async (data: { name?: string; phone?: string; avatar_url?: string }) => {
     if (!user) {
       return { error: new Error('로그인이 필요합니다.') };
+    }
+
+    const supabase = getSupabase();
+    if (!supabase) {
+      return { error: new Error('Supabase not initialized') };
     }
 
     const updateData = {
