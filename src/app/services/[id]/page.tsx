@@ -2,12 +2,13 @@
 
 export const runtime = 'edge';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/contexts/AuthContext';
 import { getSupabaseClient } from '@/lib/supabase';
 import { ServiceWithDetails, Profile, Review } from '@/types/database';
+import ReviewModal from '@/components/ReviewModal';
 
 export default function ServiceDetailPage() {
   const params = useParams();
@@ -24,6 +25,23 @@ export default function ServiceDetailPage() {
   const [isFavorite, setIsFavorite] = useState(false);
   const [favoriteLoading, setFavoriteLoading] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+
+  // 리뷰 데이터 새로고침 함수
+  const fetchReviews = useCallback(async () => {
+    const { data: reviewsData } = await supabase
+      .from('reviews')
+      .select(`
+        *,
+        user:profiles(name, avatar_url)
+      `)
+      .eq('service_id', serviceId)
+      .order('created_at', { ascending: false });
+
+    if (reviewsData) {
+      setReviews(reviewsData);
+    }
+  }, [supabase, serviceId]);
 
   // 서비스 및 관련 데이터 불러오기
   useEffect(() => {
@@ -403,19 +421,40 @@ export default function ServiceDetailPage() {
       {/* 리뷰 섹션 */}
       <div className="bg-white px-4 py-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold">
-            리뷰 {reviews.length > 0 && `(${reviews.length})`}
-          </h2>
-          {averageRating && (
-            <div className="flex items-center gap-1">
-              <span className="text-yellow-500 text-lg">★</span>
-              <span className="font-bold text-lg">{averageRating}</span>
-            </div>
+          <div className="flex items-center gap-2">
+            <h2 className="text-lg font-semibold">
+              리뷰 {reviews.length > 0 && `(${reviews.length})`}
+            </h2>
+            {averageRating && (
+              <div className="flex items-center gap-1">
+                <span className="text-yellow-500">★</span>
+                <span className="font-bold">{averageRating}</span>
+              </div>
+            )}
+          </div>
+          {/* 리뷰 작성 버튼 - 본인 서비스가 아닐 때만 표시 */}
+          {user && user.id !== service.provider_id && (
+            <button
+              onClick={() => setIsReviewModalOpen(true)}
+              className="px-3 py-1.5 text-sm font-medium text-orange-500 border border-orange-500 rounded-lg hover:bg-orange-50 transition-colors"
+            >
+              리뷰 작성
+            </button>
           )}
         </div>
 
         {reviews.length === 0 ? (
-          <p className="text-gray-500 text-center py-8">아직 리뷰가 없습니다.</p>
+          <div className="text-center py-8">
+            <p className="text-gray-500">아직 리뷰가 없습니다.</p>
+            {user && user.id !== service.provider_id && (
+              <button
+                onClick={() => setIsReviewModalOpen(true)}
+                className="mt-3 text-orange-500 font-medium hover:underline"
+              >
+                첫 번째 리뷰를 작성해보세요!
+              </button>
+            )}
+          </div>
         ) : (
           <div className="space-y-6">
             {reviews.slice(0, 3).map((review: any) => (
@@ -489,6 +528,15 @@ export default function ServiceDetailPage() {
           </Link>
         )}
       </div>
+
+      {/* 리뷰 작성 모달 */}
+      <ReviewModal
+        isOpen={isReviewModalOpen}
+        onClose={() => setIsReviewModalOpen(false)}
+        serviceId={serviceId}
+        serviceName={service.title}
+        onReviewSubmitted={fetchReviews}
+      />
     </div>
   );
 }

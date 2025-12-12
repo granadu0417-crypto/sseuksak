@@ -125,3 +125,22 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
 }
+
+/* 모달 슬라이드 애니메이션 */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* 안전 영역 하단 높이 */
+.h-safe-bottom {
+  height: env(safe-area-inset-bottom, 0px);
+}
