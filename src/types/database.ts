@@ -212,6 +212,131 @@ export interface Database {
           is_read?: boolean;
         };
       };
+
+      // 요청서 (고객이 서비스 요청)
+      requests: {
+        Row: {
+          id: string;
+          user_id: string;
+          category_id: string;
+          title: string;
+          description: string;
+          budget_min: number | null;
+          budget_max: number | null;
+          location: string;
+          area: string;
+          preferred_date: string | null;
+          preferred_time: string | null;
+          images: string[];
+          status: 'open' | 'in_progress' | 'completed' | 'cancelled';
+          quote_count: number;
+          created_at: string;
+          updated_at: string;
+          expires_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          category_id: string;
+          title: string;
+          description: string;
+          budget_min?: number | null;
+          budget_max?: number | null;
+          location: string;
+          area: string;
+          preferred_date?: string | null;
+          preferred_time?: string | null;
+          images?: string[];
+          status?: 'open' | 'in_progress' | 'completed' | 'cancelled';
+          quote_count?: number;
+          created_at?: string;
+          updated_at?: string;
+          expires_at?: string;
+        };
+        Update: {
+          title?: string;
+          description?: string;
+          budget_min?: number | null;
+          budget_max?: number | null;
+          location?: string;
+          area?: string;
+          preferred_date?: string | null;
+          preferred_time?: string | null;
+          images?: string[];
+          status?: 'open' | 'in_progress' | 'completed' | 'cancelled';
+          quote_count?: number;
+          updated_at?: string;
+          expires_at?: string;
+        };
+      };
+
+      // 견적서 (전문가가 요청서에 응답)
+      quotes: {
+        Row: {
+          id: string;
+          request_id: string;
+          provider_id: string;
+          service_id: string | null;
+          price: number;
+          description: string;
+          estimated_duration: string | null;
+          available_date: string | null;
+          status: 'pending' | 'accepted' | 'rejected' | 'expired';
+          is_read: boolean;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          request_id: string;
+          provider_id: string;
+          service_id?: string | null;
+          price: number;
+          description: string;
+          estimated_duration?: string | null;
+          available_date?: string | null;
+          status?: 'pending' | 'accepted' | 'rejected' | 'expired';
+          is_read?: boolean;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          price?: number;
+          description?: string;
+          estimated_duration?: string | null;
+          available_date?: string | null;
+          status?: 'pending' | 'accepted' | 'rejected' | 'expired';
+          is_read?: boolean;
+          updated_at?: string;
+        };
+      };
+
+      // 알림
+      notifications: {
+        Row: {
+          id: string;
+          user_id: string;
+          type: 'new_quote' | 'quote_accepted' | 'new_message' | 'new_review' | 'request_expired' | 'system';
+          title: string;
+          message: string;
+          link: string | null;
+          is_read: boolean;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          type: 'new_quote' | 'quote_accepted' | 'new_message' | 'new_review' | 'request_expired' | 'system';
+          title: string;
+          message: string;
+          link?: string | null;
+          is_read?: boolean;
+          created_at?: string;
+        };
+        Update: {
+          is_read?: boolean;
+        };
+      };
     };
     Views: {
       [_ in never]: never;
@@ -236,6 +361,9 @@ export type Review = Database['public']['Tables']['reviews']['Row'];
 export type Favorite = Database['public']['Tables']['favorites']['Row'];
 export type ChatRoom = Database['public']['Tables']['chat_rooms']['Row'];
 export type ChatMessage = Database['public']['Tables']['chat_messages']['Row'];
+export type Request = Database['public']['Tables']['requests']['Row'];
+export type Quote = Database['public']['Tables']['quotes']['Row'];
+export type Notification = Database['public']['Tables']['notifications']['Row'];
 
 // 서비스 + 관련 데이터 조합 타입
 export interface ServiceWithDetails extends Service {
@@ -245,3 +373,19 @@ export interface ServiceWithDetails extends Service {
   average_rating?: number;
   review_count?: number;
 }
+
+// 요청서 + 관련 데이터 조합 타입
+export interface RequestWithDetails extends Request {
+  category?: Category;
+  user?: Profile;
+  quotes?: QuoteWithProvider[];
+}
+
+// 견적서 + 관련 데이터 조합 타입
+export interface QuoteWithProvider extends Quote {
+  provider?: Profile;
+  service?: Service;
+}
+
+// 알림 타입
+export type NotificationType = Database['public']['Tables']['notifications']['Row']['type'];
