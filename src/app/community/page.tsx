@@ -10,11 +10,10 @@ import {
   MessageSquare,
   ChevronLeft,
   ChevronRight,
-  Flame,
-  Clock,
-  Filter,
+  Loader2,
+  AlertCircle,
 } from 'lucide-react';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -26,25 +25,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-
-// 더미 데이터 - 게시글 목록
-const posts = [
-  { id: 1, category: '자유', title: '오늘 국회 본회의 요약해드림', author: '정치워처', views: 15234, likes: 892, comments: 156, createdAt: '14:32', isHot: true, isNotice: false },
-  { id: 2, category: '공지', title: '[공지] 커뮤니티 이용 규칙 안내', author: '운영자', views: 45123, likes: 234, comments: 12, createdAt: '12/15', isHot: false, isNotice: true },
-  { id: 3, category: '토론', title: '이번 정책 찬반 의견 나눠봅시다', author: '토론러', views: 8921, likes: 445, comments: 234, createdAt: '14:28', isHot: true, isNotice: false },
-  { id: 4, category: '정보', title: '각 정당별 공약 이행률 비교 (12월 업데이트)', author: '팩트체커', views: 12453, likes: 678, comments: 89, createdAt: '14:15', isHot: true, isNotice: false },
-  { id: 5, category: '자유', title: '우리 지역구 국회의원 활동 어떻게 생각하세요?', author: '시민123', views: 3421, likes: 123, comments: 67, createdAt: '13:52', isHot: false, isNotice: false },
-  { id: 6, category: '유머', title: '국회 속기록에서 발견한 웃긴 장면들', author: '웃음충전', views: 28934, likes: 1523, comments: 342, createdAt: '13:31', isHot: true, isNotice: false },
-  { id: 7, category: '정보', title: '다음 주 국회 일정 정리', author: '국회알리미', views: 5623, likes: 234, comments: 45, createdAt: '12:45', isHot: false, isNotice: false },
-  { id: 8, category: '토론', title: '청년 정책, 뭐가 제일 시급할까요?', author: '청년의소리', views: 7845, likes: 445, comments: 189, createdAt: '11:32', isHot: false, isNotice: false },
-  { id: 9, category: '자유', title: '정치 입문자인데 뭐부터 봐야할까요', author: '뉴비정치', views: 2341, likes: 89, comments: 78, createdAt: '10:21', isHot: false, isNotice: false },
-  { id: 10, category: '정보', title: '오늘 발의된 법안 목록 (12/16)', author: '법안추적기', views: 4523, likes: 234, comments: 34, createdAt: '09:45', isHot: false, isNotice: false },
-  { id: 11, category: '유머', title: '역대 정치인 명언(?) 모음', author: '명언수집가', views: 18234, likes: 923, comments: 267, createdAt: '12/15', isHot: true, isNotice: false },
-  { id: 12, category: '자유', title: '오늘 뉴스 보고 느낀 점', author: '일반시민', views: 1234, likes: 56, comments: 23, createdAt: '12/15', isHot: false, isNotice: false },
-  { id: 13, category: '토론', title: '경제 정책 방향에 대한 의견', author: '경제전문가', views: 6789, likes: 345, comments: 156, createdAt: '12/15', isHot: false, isNotice: false },
-  { id: 14, category: '정보', title: '이번 주 여론조사 결과 정리', author: '여론분석가', views: 9876, likes: 567, comments: 234, createdAt: '12/14', isHot: false, isNotice: false },
-  { id: 15, category: '자유', title: '첫 글이에요 잘 부탁드립니다', author: '새내기', views: 876, likes: 34, comments: 45, createdAt: '12/14', isHot: false, isNotice: false },
-];
+import { Skeleton } from '@/components/ui/skeleton';
+import { usePosts } from '@/lib/api/hooks';
+import { formatDistanceToNow } from 'date-fns';
+import { ko } from 'date-fns/locale';
 
 const categories = [
   { id: 'all', label: '전체' },
@@ -55,20 +39,108 @@ const categories = [
 ];
 
 const categoryColors: Record<string, string> = {
-  '자유': 'bg-blue-500/20 text-blue-400',
-  '토론': 'bg-purple-500/20 text-purple-400',
-  '정보': 'bg-green-500/20 text-green-400',
-  '유머': 'bg-orange-500/20 text-orange-400',
-  '공지': 'bg-red-500/20 text-red-400',
+  free: 'bg-blue-500/20 text-blue-400',
+  debate: 'bg-purple-500/20 text-purple-400',
+  info: 'bg-green-500/20 text-green-400',
+  humor: 'bg-orange-500/20 text-orange-400',
+  notice: 'bg-red-500/20 text-red-400',
 };
+
+const categoryLabels: Record<string, string> = {
+  free: '자유',
+  debate: '토론',
+  info: '정보',
+  humor: '유머',
+  notice: '공지',
+};
+
+const sortOptions = [
+  { value: 'created_at', label: '최신순' },
+  { value: 'like_count', label: '인기순' },
+  { value: 'comment_count', label: '댓글순' },
+  { value: 'view_count', label: '조회순' },
+];
+
+// 날짜 포맷팅 함수
+function formatDate(dateString: string): string {
+  try {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
+
+    if (diffInHours < 24) {
+      return formatDistanceToNow(date, { addSuffix: false, locale: ko });
+    }
+
+    // 24시간 이상이면 날짜 표시
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    return `${month}/${day}`;
+  } catch {
+    return dateString;
+  }
+}
 
 export default function CommunityPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('latest');
+  const [sortBy, setSortBy] = useState('created_at');
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const notices = posts.filter(p => p.isNotice);
-  const normalPosts = posts.filter(p => !p.isNotice);
+  // API 호출
+  const { data, isLoading, isError, error } = usePosts({
+    page: currentPage,
+    limit: 20,
+    category: selectedCategory,
+    search: searchQuery || undefined,
+    sort: sortBy,
+    order: 'desc',
+  });
+
+  // 카테고리 변경 시 페이지 리셋
+  const handleCategoryChange = (value: string) => {
+    setSelectedCategory(value);
+    setCurrentPage(1);
+  };
+
+  // 검색
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    setCurrentPage(1);
+  };
+
+  // 정렬 변경
+  const handleSortChange = (value: string) => {
+    setSortBy(value);
+    setCurrentPage(1);
+  };
+
+  // 페이지 버튼 생성
+  const renderPagination = () => {
+    if (!data) return null;
+
+    const { page, totalPages } = data;
+    const pages: (number | string)[] = [];
+
+    // 시작 페이지들
+    for (let i = 1; i <= Math.min(3, totalPages); i++) {
+      pages.push(i);
+    }
+
+    // 현재 페이지 주변
+    if (page > 4) pages.push('...');
+    for (let i = Math.max(4, page - 1); i <= Math.min(totalPages - 3, page + 1); i++) {
+      if (!pages.includes(i)) pages.push(i);
+    }
+
+    // 끝 페이지들
+    if (page < totalPages - 3) pages.push('...');
+    for (let i = Math.max(totalPages - 2, 4); i <= totalPages; i++) {
+      if (!pages.includes(i)) pages.push(i);
+    }
+
+    return pages;
+  };
 
   return (
     <div className="min-h-screen">
@@ -77,14 +149,16 @@ export default function CommunityPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             <h1 className="text-2xl font-bold">커뮤니티</h1>
-            <Button className="bg-primary hover:bg-primary/90">
-              <PenSquare className="h-4 w-4 mr-2" />
-              글쓰기
-            </Button>
+            <Link href="/write">
+              <Button className="bg-primary hover:bg-primary/90">
+                <PenSquare className="h-4 w-4 mr-2" />
+                글쓰기
+              </Button>
+            </Link>
           </div>
-          
+
           {/* 카테고리 탭 */}
-          <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
+          <Tabs value={selectedCategory} onValueChange={handleCategoryChange}>
             <TabsList className="bg-zinc-800/50">
               {categories.map((cat) => (
                 <TabsTrigger key={cat.id} value={cat.id}>
@@ -98,7 +172,7 @@ export default function CommunityPage() {
 
       <div className="max-w-6xl mx-auto p-4">
         {/* 검색 및 정렬 */}
-        <div className="flex flex-col sm:flex-row gap-3 mb-4">
+        <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 mb-4">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
@@ -108,161 +182,194 @@ export default function CommunityPage() {
               className="pl-9 bg-zinc-800/50 border-zinc-700"
             />
           </div>
-          <Select value={sortBy} onValueChange={setSortBy}>
+          <Select value={sortBy} onValueChange={handleSortChange}>
             <SelectTrigger className="w-[140px] bg-zinc-800/50 border-zinc-700">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-zinc-900 border-zinc-800">
-              <SelectItem value="latest">최신순</SelectItem>
-              <SelectItem value="popular">인기순</SelectItem>
-              <SelectItem value="comments">댓글순</SelectItem>
-              <SelectItem value="views">조회순</SelectItem>
+              {sortOptions.map((option) => (
+                <SelectItem key={option.value} value={option.value}>
+                  {option.label}
+                </SelectItem>
+              ))}
             </SelectContent>
           </Select>
-        </div>
+        </form>
+
+        {/* 로딩 상태 */}
+        {isLoading && (
+          <Card className="bg-card border-border overflow-hidden">
+            <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-3 bg-zinc-800/50 text-sm font-medium text-muted-foreground border-b border-border">
+              <div className="col-span-1 text-center">분류</div>
+              <div className="col-span-6">제목</div>
+              <div className="col-span-2 text-center">작성자</div>
+              <div className="col-span-1 text-center">조회</div>
+              <div className="col-span-1 text-center">추천</div>
+              <div className="col-span-1 text-center">날짜</div>
+            </div>
+            {[...Array(10)].map((_, i) => (
+              <div key={i} className="grid grid-cols-12 gap-4 px-4 py-3 border-b border-border">
+                <div className="col-span-1">
+                  <Skeleton className="h-6 w-12" />
+                </div>
+                <div className="col-span-6">
+                  <Skeleton className="h-5 w-full" />
+                </div>
+                <div className="col-span-2">
+                  <Skeleton className="h-5 w-16 mx-auto" />
+                </div>
+                <div className="col-span-1">
+                  <Skeleton className="h-5 w-10 mx-auto" />
+                </div>
+                <div className="col-span-1">
+                  <Skeleton className="h-5 w-8 mx-auto" />
+                </div>
+                <div className="col-span-1">
+                  <Skeleton className="h-5 w-12 mx-auto" />
+                </div>
+              </div>
+            ))}
+          </Card>
+        )}
+
+        {/* 에러 상태 */}
+        {isError && (
+          <Card className="bg-card border-border p-8">
+            <div className="flex flex-col items-center justify-center text-center">
+              <AlertCircle className="h-12 w-12 text-red-500 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">오류가 발생했습니다</h3>
+              <p className="text-muted-foreground mb-4">
+                {error instanceof Error ? error.message : '게시글을 불러오는데 실패했습니다.'}
+              </p>
+              <Button onClick={() => window.location.reload()}>
+                다시 시도
+              </Button>
+            </div>
+          </Card>
+        )}
 
         {/* 게시글 목록 */}
-        <Card className="bg-card border-border overflow-hidden">
-          {/* 테이블 헤더 */}
-          <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-3 bg-zinc-800/50 text-sm font-medium text-muted-foreground border-b border-border">
-            <div className="col-span-1 text-center">분류</div>
-            <div className="col-span-6">제목</div>
-            <div className="col-span-2 text-center">작성자</div>
-            <div className="col-span-1 text-center">조회</div>
-            <div className="col-span-1 text-center">추천</div>
-            <div className="col-span-1 text-center">날짜</div>
-          </div>
+        {data && !isLoading && (
+          <>
+            <Card className="bg-card border-border overflow-hidden">
+              {/* 테이블 헤더 */}
+              <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-3 bg-zinc-800/50 text-sm font-medium text-muted-foreground border-b border-border">
+                <div className="col-span-1 text-center">분류</div>
+                <div className="col-span-6">제목</div>
+                <div className="col-span-2 text-center">작성자</div>
+                <div className="col-span-1 text-center">조회</div>
+                <div className="col-span-1 text-center">추천</div>
+                <div className="col-span-1 text-center">날짜</div>
+              </div>
 
-          {/* 공지사항 */}
-          {notices.map((post) => (
-            <Link
-              key={post.id}
-              href={`/posts/${post.id}`}
-              className="grid grid-cols-12 gap-4 px-4 py-3 items-center hover:bg-zinc-800/30 transition-colors border-b border-border bg-zinc-800/20"
-            >
-              <div className="col-span-12 md:col-span-1 flex md:justify-center">
-                <Badge variant="secondary" className={categoryColors[post.category]}>
-                  {post.category}
-                </Badge>
-              </div>
-              <div className="col-span-12 md:col-span-6 flex items-center gap-2">
-                <span className="font-medium">{post.title}</span>
-                {post.comments > 0 && (
-                  <span className="text-xs text-primary">[{post.comments}]</span>
-                )}
-              </div>
-              <div className="hidden md:block col-span-2 text-center text-sm text-muted-foreground">
-                {post.author}
-              </div>
-              <div className="hidden md:block col-span-1 text-center text-sm text-muted-foreground">
-                {post.views.toLocaleString()}
-              </div>
-              <div className="hidden md:block col-span-1 text-center text-sm text-muted-foreground">
-                {post.likes}
-              </div>
-              <div className="hidden md:block col-span-1 text-center text-sm text-muted-foreground">
-                {post.createdAt}
-              </div>
-            </Link>
-          ))}
+              {/* 게시글이 없는 경우 */}
+              {data.items.length === 0 && (
+                <div className="p-12 text-center text-muted-foreground">
+                  <MessageSquare className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                  <p>게시글이 없습니다.</p>
+                  <p className="text-sm mt-2">첫 번째 글을 작성해보세요!</p>
+                </div>
+              )}
 
-          {/* 일반 게시글 */}
-          {normalPosts.map((post) => (
-            <Link
-              key={post.id}
-              href={`/posts/${post.id}`}
-              className="grid grid-cols-12 gap-4 px-4 py-3 items-center hover:bg-zinc-800/30 transition-colors border-b border-border last:border-0"
-            >
-              <div className="col-span-12 md:col-span-1 flex md:justify-center">
-                <Badge variant="secondary" className={`text-xs ${categoryColors[post.category]}`}>
-                  {post.category}
-                </Badge>
-              </div>
-              <div className="col-span-12 md:col-span-6">
-                <div className="flex items-center gap-2">
-                  <span className="font-medium truncate">{post.title}</span>
-                  {post.isHot && (
-                    <Badge className="shrink-0 bg-red-500/20 text-red-400 border-red-500/30 text-[10px] px-1">
-                      HOT
+              {/* 게시글 목록 */}
+              {data.items.map((post) => (
+                <Link
+                  key={post.id}
+                  href={`/posts/${post.id}`}
+                  className={`grid grid-cols-12 gap-4 px-4 py-3 items-center hover:bg-zinc-800/30 transition-colors border-b border-border last:border-0 ${
+                    post.is_pinned ? 'bg-zinc-800/20' : ''
+                  }`}
+                >
+                  <div className="col-span-12 md:col-span-1 flex md:justify-center">
+                    <Badge variant="secondary" className={`text-xs ${categoryColors[post.category]}`}>
+                      {categoryLabels[post.category]}
                     </Badge>
-                  )}
-                  {post.comments > 0 && (
-                    <span className="text-xs text-primary shrink-0">[{post.comments}]</span>
-                  )}
-                </div>
-                {/* 모바일: 추가 정보 */}
-                <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground md:hidden">
-                  <span>{post.author}</span>
-                  <span className="flex items-center gap-1">
-                    <Eye className="h-3 w-3" /> {post.views.toLocaleString()}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <ThumbsUp className="h-3 w-3" /> {post.likes}
-                  </span>
-                  <span>{post.createdAt}</span>
-                </div>
-              </div>
-              <div className="hidden md:block col-span-2 text-center text-sm text-muted-foreground truncate">
-                {post.author}
-              </div>
-              <div className="hidden md:block col-span-1 text-center text-sm text-muted-foreground">
-                {post.views.toLocaleString()}
-              </div>
-              <div className="hidden md:block col-span-1 text-center text-sm text-muted-foreground">
-                {post.likes}
-              </div>
-              <div className="hidden md:block col-span-1 text-center text-sm text-muted-foreground">
-                {post.createdAt}
-              </div>
-            </Link>
-          ))}
-        </Card>
+                  </div>
+                  <div className="col-span-12 md:col-span-6">
+                    <div className="flex items-center gap-2">
+                      <span className="font-medium truncate">{post.title}</span>
+                      {post.is_hot === 1 && (
+                        <Badge className="shrink-0 bg-red-500/20 text-red-400 border-red-500/30 text-[10px] px-1">
+                          HOT
+                        </Badge>
+                      )}
+                      {post.comment_count > 0 && (
+                        <span className="text-xs text-primary shrink-0">[{post.comment_count}]</span>
+                      )}
+                    </div>
+                    {/* 모바일: 추가 정보 */}
+                    <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground md:hidden">
+                      <span>{post.author_nickname || '익명'}</span>
+                      <span className="flex items-center gap-1">
+                        <Eye className="h-3 w-3" /> {post.view_count.toLocaleString()}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <ThumbsUp className="h-3 w-3" /> {post.like_count}
+                      </span>
+                      <span>{formatDate(post.created_at)}</span>
+                    </div>
+                  </div>
+                  <div className="hidden md:block col-span-2 text-center text-sm text-muted-foreground truncate">
+                    {post.author_nickname || '익명'}
+                  </div>
+                  <div className="hidden md:block col-span-1 text-center text-sm text-muted-foreground">
+                    {post.view_count.toLocaleString()}
+                  </div>
+                  <div className="hidden md:block col-span-1 text-center text-sm text-muted-foreground">
+                    {post.like_count}
+                  </div>
+                  <div className="hidden md:block col-span-1 text-center text-sm text-muted-foreground">
+                    {formatDate(post.created_at)}
+                  </div>
+                </Link>
+              ))}
+            </Card>
 
-        {/* 페이지네이션 */}
-        <div className="flex items-center justify-center gap-2 mt-6">
-          <Button variant="outline" size="icon" disabled>
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
-          {[1, 2, 3, 4, 5].map((page) => (
-            <Button
-              key={page}
-              variant={page === 1 ? 'default' : 'outline'}
-              size="icon"
-              className={page === 1 ? 'bg-primary' : ''}
-            >
-              {page}
-            </Button>
-          ))}
-          <span className="px-2 text-muted-foreground">...</span>
-          <Button variant="outline" size="icon">
-            42
-          </Button>
-          <Button variant="outline" size="icon">
-            <ChevronRight className="h-4 w-4" />
-          </Button>
-        </div>
+            {/* 페이지네이션 */}
+            {data.totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 mt-6">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  disabled={currentPage === 1}
+                  onClick={() => setCurrentPage(currentPage - 1)}
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </Button>
+                {renderPagination()?.map((page, i) => (
+                  typeof page === 'number' ? (
+                    <Button
+                      key={i}
+                      variant={page === currentPage ? 'default' : 'outline'}
+                      size="icon"
+                      className={page === currentPage ? 'bg-primary' : ''}
+                      onClick={() => setCurrentPage(page)}
+                    >
+                      {page}
+                    </Button>
+                  ) : (
+                    <span key={i} className="px-2 text-muted-foreground">
+                      {page}
+                    </span>
+                  )
+                ))}
+                <Button
+                  variant="outline"
+                  size="icon"
+                  disabled={currentPage === data.totalPages}
+                  onClick={() => setCurrentPage(currentPage + 1)}
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </div>
+            )}
 
-        {/* 하단 검색 */}
-        <div className="flex justify-center mt-6">
-          <div className="flex gap-2 max-w-md w-full">
-            <Select defaultValue="title">
-              <SelectTrigger className="w-[120px] bg-zinc-800/50 border-zinc-700">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent className="bg-zinc-900 border-zinc-800">
-                <SelectItem value="title">제목</SelectItem>
-                <SelectItem value="content">내용</SelectItem>
-                <SelectItem value="author">작성자</SelectItem>
-                <SelectItem value="all">제목+내용</SelectItem>
-              </SelectContent>
-            </Select>
-            <Input
-              placeholder="검색어 입력"
-              className="bg-zinc-800/50 border-zinc-700"
-            />
-            <Button>검색</Button>
-          </div>
-        </div>
+            {/* 결과 정보 */}
+            <div className="text-center text-sm text-muted-foreground mt-4">
+              총 {data.total.toLocaleString()}개의 게시글 중 {data.page} / {data.totalPages} 페이지
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
