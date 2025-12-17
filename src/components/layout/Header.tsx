@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, Search, Bell, User, Sparkles } from 'lucide-react';
+import { Menu, Search, Bell, User, Sparkles, LogOut, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -12,11 +12,19 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
 import { useStore } from '@/stores/useStore';
+import { useCurrentUser, useLogout } from '@/lib/api/hooks';
 
 export function Header() {
-  const { user, isAuthenticated, toggleSidebar, logout } = useStore();
+  const { toggleSidebar } = useStore();
+  const { data: user, isLoading } = useCurrentUser();
+  const logoutMutation = useLogout();
+
+  const isAuthenticated = !!user;
+
+  const handleLogout = () => {
+    logoutMutation.mutate();
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border glass">
@@ -79,7 +87,7 @@ export function Header() {
                 <DropdownMenuContent align="end" className="w-56 bg-zinc-900 border-zinc-800">
                   <div className="px-3 py-2">
                     <p className="font-medium">{user?.nickname || '사용자'}</p>
-                    <p className="text-xs text-muted-foreground">Lv.12 · 1,234 포인트</p>
+                    <p className="text-xs text-muted-foreground">Lv.{user?.level || 1} · {user?.points?.toLocaleString() || 0} 포인트</p>
                   </div>
                   <DropdownMenuSeparator className="bg-zinc-800" />
                   <DropdownMenuItem>
@@ -93,20 +101,39 @@ export function Header() {
                     예측 기록
                   </DropdownMenuItem>
                   <DropdownMenuSeparator className="bg-zinc-800" />
-                  <DropdownMenuItem onClick={logout} className="text-red-400">
-                    로그아웃
+                  <DropdownMenuItem
+                    onClick={handleLogout}
+                    className="text-red-400"
+                    disabled={logoutMutation.isPending}
+                  >
+                    {logoutMutation.isPending ? (
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    ) : (
+                      <LogOut className="mr-2 h-4 w-4" />
+                    )}
+                    {logoutMutation.isPending ? '로그아웃 중...' : '로그아웃'}
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </>
           ) : (
             <div className="flex items-center gap-2">
-              <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-                로그인
-              </Button>
-              <Button size="sm" className="bg-primary hover:bg-primary/90">
-                시작하기
-              </Button>
+              {isLoading ? (
+                <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+              ) : (
+                <>
+                  <Link href="/login">
+                    <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
+                      로그인
+                    </Button>
+                  </Link>
+                  <Link href="/register">
+                    <Button size="sm" className="bg-primary hover:bg-primary/90">
+                      시작하기
+                    </Button>
+                  </Link>
+                </>
+              )}
             </div>
           )}
         </div>

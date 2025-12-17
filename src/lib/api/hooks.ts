@@ -1,7 +1,7 @@
 'use client';
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import type { PostWithAuthor, CommentWithAuthor, PaginatedResponse, ApiResponse } from '@/lib/types';
+import type { PostWithAuthor, CommentWithAuthor, PaginatedResponse, ApiResponse, PoliticianWithParty, Party } from '@/lib/types';
 
 const API_BASE = '/api';
 
@@ -230,5 +230,259 @@ export function useCreateComment() {
       queryClient.invalidateQueries({ queryKey: ['comments', postId] });
       queryClient.invalidateQueries({ queryKey: ['post', postId] });
     },
+  });
+}
+
+// ============================================
+// 인증 관련 hooks
+// ============================================
+
+// 현재 사용자 정보
+interface UserInfo {
+  id: string;
+  nickname: string;
+  avatar_url: string | null;
+  level: number;
+  exp: number;
+  points: number;
+  role: string;
+  created_at: string;
+}
+
+export function useCurrentUser() {
+  return useQuery({
+    queryKey: ['currentUser'],
+    queryFn: async () => {
+      const res = await fetch(`${API_BASE}/auth/me`);
+      const data = await res.json() as ApiResponse<{ user: UserInfo }>;
+
+      if (!data.success) {
+        return null;
+      }
+
+      return data.data!.user;
+    },
+    retry: false,
+    staleTime: 5 * 60 * 1000, // 5분
+  });
+}
+
+// 회원가입
+export function useRegister() {
+  return useMutation({
+    mutationFn: async (body: {
+      nickname: string;
+      password: string;
+      passwordConfirm: string;
+    }) => {
+      const res = await fetch(`${API_BASE}/auth/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json() as ApiResponse<{
+        userId: string;
+        recoveryCode: string;
+      }>;
+
+      if (!data.success) {
+        throw new Error(data.error || '회원가입에 실패했습니다.');
+      }
+
+      return data.data!;
+    },
+  });
+}
+
+// 로그인
+export function useLogin() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (body: {
+      nickname: string;
+      password: string;
+    }) => {
+      const res = await fetch(`${API_BASE}/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json() as ApiResponse<{
+        user: { id: string; nickname: string; level: number; role: string };
+      }>;
+
+      if (!data.success) {
+        throw new Error(data.error || '로그인에 실패했습니다.');
+      }
+
+      return data.data!;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['currentUser'] });
+    },
+  });
+}
+
+// 로그아웃
+export function useLogout() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async () => {
+      const res = await fetch(`${API_BASE}/auth/logout`, {
+        method: 'POST',
+      });
+      const data = await res.json() as ApiResponse<null>;
+
+      if (!data.success) {
+        throw new Error(data.error || '로그아웃에 실패했습니다.');
+      }
+    },
+    onSuccess: () => {
+      queryClient.setQueryData(['currentUser'], null);
+      queryClient.invalidateQueries({ queryKey: ['currentUser'] });
+    },
+  });
+}
+
+// 비밀번호 복구
+export function useRecoverPassword() {
+  return useMutation({
+    mutationFn: async (body: {
+      nickname: string;
+      recoveryCode: string;
+      newPassword: string;
+      newPasswordConfirm: string;
+    }) => {
+      const res = await fetch(`${API_BASE}/auth/recover`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json() as ApiResponse<{ newRecoveryCode: string }>;
+
+      if (!data.success) {
+        throw new Error(data.error || '비밀번호 복구에 실패했습니다.');
+      }
+
+      return data.data!;
+    },
+  });
+}
+
+// ============================================
+// 정치인 관련 hooks
+// ============================================
+
+// 정치인 상세 정보 타입
+interface PoliticianDetail extends PoliticianWithParty {
+  birth_date: string | null;
+  education: string | null;
+  career: string | null;
+  contact_email: string | null;
+  website_url: string | null;
+  sns_twitter: string | null;
+  sns_facebook: string | null;
+  sns_instagram: string | null;
+  created_at: string;
+  updated_at: string;
+  activities: {
+    id: string;
+    activity_type: string;
+    title: string;
+    description: string | null;
+    source_url: string | null;
+    activity_date: string;
+  }[];
+  promises: {
+    id: string;
+    category: string;
+    title: string;
+    description: string | null;
+    status: string;
+    progress: number;
+    target_date: string | null;
+  }[];
+}
+
+// 정치인 목록 조회 파라미터
+interface GetPoliticiansParams {
+  page?: number;
+  limit?: number;
+  party?: string;
+  region?: string;
+  search?: string;
+  trending?: boolean;
+  sort?: string;
+  order?: 'asc' | 'desc';
+}
+
+// 정치인 목록 조회
+export function usePoliticians(params: GetPoliticiansParams = {}) {
+  const queryString = new URLSearchParams();
+
+  if (params.page) queryString.set('page', String(params.page));
+  if (params.limit) queryString.set('limit', String(params.limit));
+  if (params.party && params.party !== 'all') queryString.set('party', params.party);
+  if (params.region && params.region !== 'all') queryString.set('region', params.region);
+  if (params.search) queryString.set('search', params.search);
+  if (params.trending) queryString.set('trending', 'true');
+  if (params.sort) queryString.set('sort', params.sort);
+  if (params.order) queryString.set('order', params.order);
+
+  return useQuery({
+    queryKey: ['politicians', params],
+    queryFn: async () => {
+      const url = `${API_BASE}/politicians?${queryString.toString()}`;
+      const res = await fetch(url);
+      const data = await res.json() as ApiResponse<PaginatedResponse<PoliticianWithParty>>;
+
+      if (!data.success) {
+        throw new Error(data.error || '정치인 목록을 불러오는데 실패했습니다.');
+      }
+
+      return data.data!;
+    },
+  });
+}
+
+// 정치인 상세 조회
+export function usePolitician(id: string) {
+  return useQuery({
+    queryKey: ['politician', id],
+    queryFn: async () => {
+      const res = await fetch(`${API_BASE}/politicians/${id}`);
+      const data = await res.json() as ApiResponse<PoliticianDetail>;
+
+      if (!data.success) {
+        throw new Error(data.error || '정치인을 찾을 수 없습니다.');
+      }
+
+      return data.data!;
+    },
+    enabled: !!id,
+  });
+}
+
+// ============================================
+// 정당 관련 hooks
+// ============================================
+
+// 정당 목록 조회
+export function useParties() {
+  return useQuery({
+    queryKey: ['parties'],
+    queryFn: async () => {
+      const res = await fetch(`${API_BASE}/parties`);
+      const data = await res.json() as ApiResponse<Party[]>;
+
+      if (!data.success) {
+        throw new Error(data.error || '정당 목록을 불러오는데 실패했습니다.');
+      }
+
+      return data.data!;
+    },
+    staleTime: 10 * 60 * 1000, // 10분 캐시
   });
 }

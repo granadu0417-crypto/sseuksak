@@ -32,10 +32,27 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { usePost, useComments, useVotePost, useCreateComment } from '@/lib/api/hooks';
+import { usePost, useComments, useVotePost, useCreateComment, useCurrentUser } from '@/lib/api/hooks';
 import { formatDistanceToNow } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import type { CommentWithAuthor } from '@/lib/types';
+
+// 로그인 유도 컴포넌트
+function LoginPrompt({ message }: { message: string }) {
+  return (
+    <div className="p-4 rounded-lg bg-zinc-800/30 border border-zinc-700 text-center">
+      <p className="text-muted-foreground text-sm mb-3">{message}</p>
+      <div className="flex gap-2 justify-center">
+        <Link href={`/login?returnUrl=${encodeURIComponent(typeof window !== 'undefined' ? window.location.pathname : '/')}`}>
+          <Button size="sm">로그인</Button>
+        </Link>
+        <Link href="/register">
+          <Button size="sm" variant="outline">회원가입</Button>
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 const categoryColors: Record<string, string> = {
   free: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
@@ -67,15 +84,16 @@ interface CommentProps {
   postId: string;
   postAuthorId?: string;
   isReply?: boolean;
+  isLoggedIn?: boolean;
 }
 
-function Comment({ comment, postId, postAuthorId, isReply = false }: CommentProps) {
+function Comment({ comment, postId, postAuthorId, isReply = false, isLoggedIn = false }: CommentProps) {
   const [showReplyInput, setShowReplyInput] = useState(false);
   const [replyText, setReplyText] = useState('');
   const createComment = useCreateComment();
 
   const handleSubmitReply = () => {
-    if (!replyText.trim()) return;
+    if (!replyText.trim() || !isLoggedIn) return;
     createComment.mutate(
       { postId, content: replyText, parentId: comment.id },
       {
@@ -135,28 +153,34 @@ function Comment({ comment, postId, postAuthorId, isReply = false }: CommentProp
 
         {/* 답글 입력 */}
         {showReplyInput && (
-          <div className="mt-3 flex gap-2">
-            <Textarea
-              placeholder="답글을 입력하세요..."
-              value={replyText}
-              onChange={(e) => setReplyText(e.target.value)}
-              className="min-h-[60px] bg-zinc-900 border-zinc-700 text-sm"
-            />
-            <Button
-              size="sm"
-              className="shrink-0"
-              onClick={handleSubmitReply}
-              disabled={!replyText.trim() || createComment.isPending}
-            >
-              {createComment.isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : '등록'}
-            </Button>
+          <div className="mt-3">
+            {isLoggedIn ? (
+              <div className="flex gap-2">
+                <Textarea
+                  placeholder="답글을 입력하세요..."
+                  value={replyText}
+                  onChange={(e) => setReplyText(e.target.value)}
+                  className="min-h-[60px] bg-zinc-900 border-zinc-700 text-sm"
+                />
+                <Button
+                  size="sm"
+                  className="shrink-0"
+                  onClick={handleSubmitReply}
+                  disabled={!replyText.trim() || createComment.isPending}
+                >
+                  {createComment.isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : '등록'}
+                </Button>
+              </div>
+            ) : (
+              <LoginPrompt message="답글을 작성하려면 로그인이 필요합니다." />
+            )}
           </div>
         )}
       </div>
 
       {/* 대댓글 */}
       {comment.replies?.map((reply) => (
-        <Comment key={reply.id} comment={reply} postId={postId} postAuthorId={postAuthorId} isReply />
+        <Comment key={reply.id} comment={reply} postId={postId} postAuthorId={postAuthorId} isReply isLoggedIn={isLoggedIn} />
       ))}
     </div>
   );
@@ -170,6 +194,10 @@ export default function PostDetailPage() {
   const [bookmarked, setBookmarked] = useState(false);
   const [commentText, setCommentText] = useState('');
 
+  // 인증 상태
+  const { data: user } = useCurrentUser();
+  const isLoggedIn = !!user;
+
   // API 호출
   const { data: post, isLoading: postLoading, isError: postError } = usePost(postId);
   const { data: comments, isLoading: commentsLoading } = useComments(postId);
@@ -177,11 +205,12 @@ export default function PostDetailPage() {
   const createComment = useCreateComment();
 
   const handleVote = (voteType: 'like' | 'dislike') => {
+    if (!isLoggedIn) return;
     votePost.mutate({ postId, voteType });
   };
 
   const handleSubmitComment = () => {
-    if (!commentText.trim()) return;
+    if (!commentText.trim() || !isLoggedIn) return;
     createComment.mutate(
       { postId, content: commentText },
       {
@@ -331,27 +360,34 @@ export default function PostDetailPage() {
             )}
 
             {/* 추천/비추천 */}
-            <div className="flex items-center justify-center gap-4 py-6 border-t border-b border-border">
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => handleVote('like')}
-                disabled={votePost.isPending}
-                className="hover:bg-blue-600 hover:border-blue-600"
-              >
-                <ChevronUp className="h-5 w-5 mr-1" />
-                추천 {post.like_count}
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => handleVote('dislike')}
-                disabled={votePost.isPending}
-                className="hover:bg-red-600 hover:border-red-600"
-              >
-                <ChevronDown className="h-5 w-5 mr-1" />
-                비추천 {post.dislike_count}
-              </Button>
+            <div className="flex flex-col items-center gap-3 py-6 border-t border-b border-border">
+              <div className="flex items-center gap-4">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => handleVote('like')}
+                  disabled={votePost.isPending || !isLoggedIn}
+                  className={isLoggedIn ? "hover:bg-blue-600 hover:border-blue-600" : "opacity-60"}
+                >
+                  <ChevronUp className="h-5 w-5 mr-1" />
+                  추천 {post.like_count}
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => handleVote('dislike')}
+                  disabled={votePost.isPending || !isLoggedIn}
+                  className={isLoggedIn ? "hover:bg-red-600 hover:border-red-600" : "opacity-60"}
+                >
+                  <ChevronDown className="h-5 w-5 mr-1" />
+                  비추천 {post.dislike_count}
+                </Button>
+              </div>
+              {!isLoggedIn && (
+                <p className="text-xs text-muted-foreground">
+                  추천/비추천은 <Link href={`/login?returnUrl=/posts/${postId}`} className="text-primary hover:underline">로그인</Link> 후 이용 가능합니다.
+                </p>
+              )}
             </div>
 
             {/* 하단 액션 */}
@@ -390,25 +426,31 @@ export default function PostDetailPage() {
 
             {/* 댓글 입력 */}
             <div className="mb-6">
-              <Textarea
-                placeholder="댓글을 입력하세요..."
-                value={commentText}
-                onChange={(e) => setCommentText(e.target.value)}
-                className="min-h-[80px] bg-zinc-800/50 border-zinc-700 mb-2"
-              />
-              <div className="flex justify-end">
-                <Button
-                  onClick={handleSubmitComment}
-                  disabled={!commentText.trim() || createComment.isPending}
-                >
-                  {createComment.isPending ? (
-                    <Loader2 className="h-4 w-4 mr-1 animate-spin" />
-                  ) : (
-                    <Send className="h-4 w-4 mr-1" />
-                  )}
-                  댓글 등록
-                </Button>
-              </div>
+              {isLoggedIn ? (
+                <>
+                  <Textarea
+                    placeholder="댓글을 입력하세요..."
+                    value={commentText}
+                    onChange={(e) => setCommentText(e.target.value)}
+                    className="min-h-[80px] bg-zinc-800/50 border-zinc-700 mb-2"
+                  />
+                  <div className="flex justify-end">
+                    <Button
+                      onClick={handleSubmitComment}
+                      disabled={!commentText.trim() || createComment.isPending}
+                    >
+                      {createComment.isPending ? (
+                        <Loader2 className="h-4 w-4 mr-1 animate-spin" />
+                      ) : (
+                        <Send className="h-4 w-4 mr-1" />
+                      )}
+                      댓글 등록
+                    </Button>
+                  </div>
+                </>
+              ) : (
+                <LoginPrompt message="댓글을 작성하려면 로그인이 필요합니다." />
+              )}
             </div>
 
             {/* 댓글 로딩 */}
@@ -435,6 +477,7 @@ export default function PostDetailPage() {
                     comment={comment}
                     postId={postId}
                     postAuthorId={post.author_id}
+                    isLoggedIn={isLoggedIn}
                   />
                 ))}
               </div>

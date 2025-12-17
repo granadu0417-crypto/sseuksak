@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
@@ -16,6 +16,7 @@ import {
   Eye,
   Send,
   Loader2,
+  LogIn,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -30,7 +31,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useCreatePost } from '@/lib/api/hooks';
+import { useCreatePost, useCurrentUser } from '@/lib/api/hooks';
 
 const categories = [
   { id: 'free', label: '자유', description: '자유롭게 이야기 나눠요' },
@@ -55,7 +56,46 @@ export default function WritePage() {
   const [tags, setTags] = useState('');
   const [isPreview, setIsPreview] = useState(false);
 
+  const { data: user, isLoading: isAuthLoading } = useCurrentUser();
   const createPost = useCreatePost();
+
+  // 로그인 체크 - 로딩 중이거나 로그인되지 않은 경우 처리
+  if (isAuthLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <Loader2 className="h-8 w-8 animate-spin mx-auto text-primary" />
+          <p className="mt-2 text-muted-foreground">로딩 중...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className="min-h-screen flex items-center justify-center p-4">
+        <Card className="w-full max-w-md bg-card border-border">
+          <CardContent className="pt-6 text-center">
+            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <LogIn className="h-8 w-8 text-primary" />
+            </div>
+            <h2 className="text-xl font-bold mb-2">로그인이 필요합니다</h2>
+            <p className="text-muted-foreground mb-6">
+              글을 작성하려면 먼저 로그인해주세요.
+            </p>
+            <div className="flex gap-3 justify-center">
+              <Link href="/login?returnUrl=/write">
+                <Button>로그인</Button>
+              </Link>
+              <Link href="/register">
+                <Button variant="outline">회원가입</Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   const handleSubmit = () => {
     if (!category || !title.trim() || !content.trim()) {

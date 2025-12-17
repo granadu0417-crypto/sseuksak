@@ -18,38 +18,72 @@ INSERT INTO parties (id, name, short_name, color, description, member_count) VAL
 -- =====================================
 
 INSERT INTO politicians (id, name, party_id, region, position, attendance_rate, bill_count, promise_count, promise_completed, approval_rating, is_trending) VALUES
-('pol_lee_jaemyung', '이재명', 'party_democratic', '인천', '당대표', 94.5, 127, 15, 5, 42.3, 1),
-('pol_han_donghoon', '한동훈', 'party_ppp', '서울', '당대표', 89.2, 45, 12, 3, 38.7, 1),
+-- 행정부
+('pol_lee_jaemyung', '이재명', 'party_democratic', '인천', '대통령', 94.5, 127, 15, 5, 42.3, 1),
+-- 더불어민주당
+('pol_jung_cheongrae', '정청래', 'party_democratic', '서울', '당대표', 91.2, 89, 12, 4, 35.5, 1),
+('pol_kim_byungki', '김병기', 'party_democratic', '서울', '원내대표', 90.5, 67, 10, 3, 32.1, 0),
+-- 국민의힘
+('pol_jang_donghyuk', '장동혁', 'party_ppp', '서울', '당대표', 89.2, 45, 12, 3, 38.7, 1),
+('pol_song_unseok', '송언석', 'party_ppp', '경북', '원내대표', 88.5, 52, 9, 4, 34.2, 0),
+-- 조국혁신당
 ('pol_cho_kuk', '조국', 'party_rebuild', '서울', '당대표', 91.8, 23, 8, 2, 35.2, 1),
+-- 개혁신당
 ('pol_lee_junseok', '이준석', 'party_reform', '서울', '당대표', 87.3, 34, 10, 4, 28.9, 0),
-('pol_park_jiho', '박지호', 'party_justice', '경기', '원내대표', 92.1, 56, 11, 6, 31.5, 0),
-('pol_kim_minsoo', '김민수', 'party_democratic', '부산', '의원', 88.7, 78, 9, 3, 25.8, 0);
+('pol_cheon_haram', '천하람', 'party_reform', '경기', '원내대표', 86.1, 28, 7, 2, 26.5, 0),
+-- 기타
+('pol_park_jiho', '박지호', 'party_justice', '경기', '원내대표', 92.1, 56, 11, 6, 31.5, 0);
 
 -- 정치인 태그
 INSERT INTO politician_tags (id, politician_id, tag) VALUES
+-- 이재명 (대통령)
 ('tag_1', 'pol_lee_jaemyung', '경제'),
 ('tag_2', 'pol_lee_jaemyung', '복지'),
 ('tag_3', 'pol_lee_jaemyung', '부동산'),
-('tag_4', 'pol_han_donghoon', '법치'),
-('tag_5', 'pol_han_donghoon', '검찰개혁'),
-('tag_6', 'pol_cho_kuk', '검찰개혁'),
-('tag_7', 'pol_cho_kuk', '민주주의'),
-('tag_8', 'pol_lee_junseok', '청년'),
-('tag_9', 'pol_lee_junseok', '개혁'),
-('tag_10', 'pol_park_jiho', '노동'),
-('tag_11', 'pol_park_jiho', '환경');
+-- 정청래 (민주당대표)
+('tag_4', 'pol_jung_cheongrae', '국회개혁'),
+('tag_5', 'pol_jung_cheongrae', '언론'),
+-- 김병기 (민주원내대표)
+('tag_6', 'pol_kim_byungki', '안보'),
+('tag_7', 'pol_kim_byungki', '국방'),
+-- 장동혁 (국힘당대표)
+('tag_8', 'pol_jang_donghyuk', '법치'),
+('tag_9', 'pol_jang_donghyuk', '경제'),
+-- 송언석 (국힘원내대표)
+('tag_10', 'pol_song_unseok', '재정'),
+('tag_11', 'pol_song_unseok', '지역발전'),
+-- 조국 (조국혁신당)
+('tag_12', 'pol_cho_kuk', '검찰개혁'),
+('tag_13', 'pol_cho_kuk', '민주주의'),
+-- 이준석 (개혁신당)
+('tag_14', 'pol_lee_junseok', '청년'),
+('tag_15', 'pol_lee_junseok', '개혁'),
+-- 천하람 (개혁원내대표)
+('tag_16', 'pol_cheon_haram', '청년'),
+('tag_17', 'pol_cheon_haram', '디지털'),
+-- 박지호 (정의당)
+('tag_18', 'pol_park_jiho', '노동'),
+('tag_19', 'pol_park_jiho', '환경');
 
 -- =====================================
 -- 공약 데이터
 -- =====================================
 
 INSERT INTO promises (id, politician_id, category, title, description, status, progress, target_date) VALUES
+-- 이재명 (대통령)
 ('promise_1', 'pol_lee_jaemyung', '경제', '기본소득 도입', '전 국민 기본소득 단계적 도입', 'in_progress', 25, '2027-12-31'),
 ('promise_2', 'pol_lee_jaemyung', '부동산', '부동산 투기 근절', '다주택자 규제 강화 및 공급 확대', 'in_progress', 40, '2026-06-30'),
-('promise_3', 'pol_han_donghoon', '경제', '규제 혁파', '기업 규제 대폭 완화', 'in_progress', 55, '2026-12-31'),
-('promise_4', 'pol_han_donghoon', '안보', '한미동맹 강화', '한미 군사협력 확대', 'completed', 100, '2025-12-31'),
-('promise_5', 'pol_cho_kuk', '사법', '검찰개혁 완수', '검찰 권한 분산 및 민주적 통제', 'in_progress', 30, '2027-06-30'),
-('promise_6', 'pol_lee_junseok', '청년', '청년 일자리 창출', '청년 맞춤형 일자리 100만개', 'not_started', 0, '2028-12-31');
+-- 정청래 (민주당대표)
+('promise_3', 'pol_jung_cheongrae', '정치', '국회 개혁', '국회 운영 효율화 및 투명성 강화', 'in_progress', 30, '2026-12-31'),
+-- 장동혁 (국힘당대표)
+('promise_4', 'pol_jang_donghyuk', '경제', '규제 혁파', '기업 규제 대폭 완화', 'in_progress', 55, '2026-12-31'),
+('promise_5', 'pol_jang_donghyuk', '안보', '한미동맹 강화', '한미 군사협력 확대', 'in_progress', 60, '2026-12-31'),
+-- 조국 (조국혁신당)
+('promise_6', 'pol_cho_kuk', '사법', '검찰개혁 완수', '검찰 권한 분산 및 민주적 통제', 'in_progress', 30, '2027-06-30'),
+-- 이준석 (개혁신당)
+('promise_7', 'pol_lee_junseok', '청년', '청년 일자리 창출', '청년 맞춤형 일자리 100만개', 'in_progress', 15, '2028-12-31'),
+-- 천하람 (개혁원내대표)
+('promise_8', 'pol_cheon_haram', '디지털', '디지털 정부 혁신', '행정 디지털화 및 규제 샌드박스 확대', 'not_started', 0, '2027-12-31');
 
 -- =====================================
 -- 팩트체크 데이터
@@ -57,7 +91,7 @@ INSERT INTO promises (id, politician_id, category, title, description, status, p
 
 INSERT INTO factchecks (id, claim, claim_source, claim_date, politician_id, verdict, explanation, agree_count, disagree_count, view_count) VALUES
 ('fc_1', '현 정부 출범 이후 부동산 가격이 30% 상승했다', '국회 대정부질문', '2024-11-15', 'pol_lee_jaemyung', 'mostly_false', '실제 통계에 따르면 전국 평균 주택가격은 약 12% 상승했습니다. 30%는 과장된 수치입니다.', 234, 89, 1520),
-('fc_2', '검찰 수사권 폐지로 범죄가 증가했다', 'TV토론', '2024-10-20', 'pol_han_donghoon', 'unverifiable', '검찰 수사권 조정 이후 범죄율 변화에 대한 공식 통계가 아직 발표되지 않았습니다.', 156, 203, 890),
+('fc_2', '검찰 수사권 폐지로 범죄가 증가했다', 'TV토론', '2024-10-20', 'pol_jang_donghyuk', 'unverifiable', '검찰 수사권 조정 이후 범죄율 변화에 대한 공식 통계가 아직 발표되지 않았습니다.', 156, 203, 890),
 ('fc_3', '최저임금 인상으로 자영업자 폐업이 급증했다', '기자회견', '2024-09-10', NULL, 'half_true', '폐업 증가는 사실이나, 최저임금 외에 경기침체, 코로나19 여파 등 복합적 요인이 있습니다.', 312, 178, 2340);
 
 -- =====================================

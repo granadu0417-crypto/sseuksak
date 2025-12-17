@@ -30,9 +30,18 @@ database_id = "afb24f40-a480-4be5-ba5a-afde05b2b108"
 # name = "CHAT"
 # class_name = "ChatRoom"
 
-# 환경 변수
+# 환경 변수 (공개)
 [vars]
-NEXT_PUBLIC_APP_URL = "https://political-arena.pages.dev"
+NEXT_PUBLIC_APP_URL = "https://sseuksak.com"
+
+# 비밀 환경변수 (wrangler secret으로 설정)
+# - ASSEMBLY_API_KEY: 국회 열린데이터 API 키 (open.assembly.go.kr)
+# - SYNC_SECRET: 동기화 API 호출 인증 키
+
+# Cron Triggers (정기 동기화)
+[triggers]
+# 매일 한국시간 새벽 3시 (UTC 18:00) 실행
+crons = ["0 18 * * *"]
 
 # 프로덕션 환경
 [env.production]
