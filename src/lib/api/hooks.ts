@@ -1,7 +1,7 @@
 'use client';
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import type { PostWithAuthor, PaginatedResponse, ApiResponse } from '@/lib/types';
+import type { PostWithAuthor, CommentWithAuthor, PaginatedResponse, ApiResponse } from '@/lib/types';
 
 const API_BASE = '/api';
 
@@ -177,6 +177,58 @@ export function useVotePost() {
     onSuccess: (_, { postId }) => {
       queryClient.invalidateQueries({ queryKey: ['post', postId] });
       queryClient.invalidateQueries({ queryKey: ['posts'] });
+    },
+  });
+}
+
+// 댓글 목록 조회
+export function useComments(postId: string) {
+  return useQuery({
+    queryKey: ['comments', postId],
+    queryFn: async () => {
+      const res = await fetch(`${API_BASE}/posts/${postId}/comments`);
+      const data = await res.json() as ApiResponse<CommentWithAuthor[]>;
+
+      if (!data.success) {
+        throw new Error(data.error || '댓글을 불러오는데 실패했습니다.');
+      }
+
+      return data.data!;
+    },
+    enabled: !!postId,
+  });
+}
+
+// 댓글 작성
+export function useCreateComment() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({
+      postId,
+      content,
+      parentId,
+    }: {
+      postId: string;
+      content: string;
+      parentId?: string;
+    }) => {
+      const res = await fetch(`${API_BASE}/posts/${postId}/comments`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content, parent_id: parentId }),
+      });
+      const data = await res.json() as ApiResponse<{ id: string }>;
+
+      if (!data.success) {
+        throw new Error(data.error || '댓글 작성에 실패했습니다.');
+      }
+
+      return data.data!;
+    },
+    onSuccess: (_, { postId }) => {
+      queryClient.invalidateQueries({ queryKey: ['comments', postId] });
+      queryClient.invalidateQueries({ queryKey: ['post', postId] });
     },
   });
 }

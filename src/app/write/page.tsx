@@ -15,6 +15,7 @@ import {
   Code,
   Eye,
   Send,
+  Loader2,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -29,6 +30,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useCreatePost } from '@/lib/api/hooks';
 
 const categories = [
   { id: 'free', label: '자유', description: '자유롭게 이야기 나눠요' },
@@ -52,19 +54,36 @@ export default function WritePage() {
   const [content, setContent] = useState('');
   const [tags, setTags] = useState('');
   const [isPreview, setIsPreview] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async () => {
+  const createPost = useCreatePost();
+
+  const handleSubmit = () => {
     if (!category || !title.trim() || !content.trim()) {
       alert('카테고리, 제목, 내용을 모두 입력해주세요.');
       return;
     }
-    
-    setIsSubmitting(true);
-    // TODO: API 연동
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    alert('글이 등록되었습니다!');
-    router.push('/community');
+
+    const tagArray = tags
+      .split(',')
+      .map((t) => t.trim())
+      .filter((t) => t.length > 0);
+
+    createPost.mutate(
+      {
+        title: title.trim(),
+        content: content.trim(),
+        category,
+        tags: tagArray.length > 0 ? tagArray : undefined,
+      },
+      {
+        onSuccess: (data) => {
+          router.push(`/posts/${data.id}`);
+        },
+        onError: (error) => {
+          alert(error instanceof Error ? error.message : '글 작성에 실패했습니다.');
+        },
+      }
+    );
   };
 
   const insertMarkdown = (syntax: string, wrap = false) => {
@@ -108,10 +127,14 @@ export default function WritePage() {
             <Button
               size="sm"
               onClick={handleSubmit}
-              disabled={isSubmitting || !category || !title.trim() || !content.trim()}
+              disabled={createPost.isPending || !category || !title.trim() || !content.trim()}
             >
-              <Send className="h-4 w-4 mr-1" />
-              {isSubmitting ? '등록 중...' : '등록'}
+              {createPost.isPending ? (
+                <Loader2 className="h-4 w-4 mr-1 animate-spin" />
+              ) : (
+                <Send className="h-4 w-4 mr-1" />
+              )}
+              {createPost.isPending ? '등록 중...' : '등록'}
             </Button>
           </div>
         </div>

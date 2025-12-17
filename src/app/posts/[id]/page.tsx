@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import {
   ArrowLeft,
   Eye,
@@ -17,126 +17,77 @@ import {
   ChevronUp,
   ChevronDown,
   Send,
+  Loader2,
+  AlertCircle,
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Textarea } from '@/components/ui/textarea';
+import { Skeleton } from '@/components/ui/skeleton';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-
-// 더미 데이터
-const postData = {
-  id: 1,
-  category: '자유',
-  title: '오늘 국회 본회의 요약해드림',
-  content: `오늘 국회 본회의에서 있었던 주요 내용 정리해봤습니다.
-
-## 1. 예산안 관련
-- 내년도 예산안 심의가 진행됨
-- 여야 간 주요 쟁점은 복지 예산과 국방 예산 배분
-- 최종 표결은 다음 주로 예정
-
-## 2. 법안 처리
-- 총 15개 법안이 상정됨
-- 그 중 8개가 통과, 7개는 계류
-- 주목할 법안: 청년 주거 지원법, 디지털 플랫폼 규제법
-
-## 3. 대정부 질문
-- 경제 현안에 대한 질의가 주를 이룸
-- 물가 안정 대책, 부동산 정책 관련 공방
-
-본회의 영상은 국회 홈페이지에서 다시보기 가능합니다.
-질문 있으시면 댓글 남겨주세요!`,
-  author: {
-    nickname: '정치워처',
-    level: 15,
-    badge: '팩트체커',
-  },
-  createdAt: '2024-12-16 14:32',
-  views: 15234,
-  likes: 892,
-  dislikes: 23,
-  comments: 156,
-  isBookmarked: false,
-};
-
-const commentsData = [
-  {
-    id: 1,
-    author: { nickname: '시민A', level: 8 },
-    content: '정리 감사합니다! 청년 주거 지원법 통과됐으면 좋겠네요.',
-    createdAt: '14:45',
-    likes: 45,
-    dislikes: 2,
-    replies: [
-      {
-        id: 11,
-        author: { nickname: '정치워처', level: 15, isOP: true },
-        content: '저도 그 법안 주목하고 있어요. 다음 주 표결 예정이라고 합니다!',
-        createdAt: '14:52',
-        likes: 23,
-        dislikes: 0,
-      },
-    ],
-  },
-  {
-    id: 2,
-    author: { nickname: '분석가', level: 12, badge: '베스트 댓글러' },
-    content: '예산안 관련해서 여야 입장 차이가 꽤 크던데, 합의가 될지 모르겠네요. 작년에도 비슷한 상황이었는데 결국 수정안으로 통과됐었죠.',
-    createdAt: '15:03',
-    likes: 67,
-    dislikes: 5,
-    replies: [],
-  },
-  {
-    id: 3,
-    author: { nickname: '뉴비정치', level: 2 },
-    content: '국회 홈페이지 다시보기는 어디서 볼 수 있나요?',
-    createdAt: '15:21',
-    likes: 12,
-    dislikes: 0,
-    replies: [
-      {
-        id: 31,
-        author: { nickname: '국회알리미', level: 10 },
-        content: 'assembly.go.kr 에서 "의사중계" 메뉴로 가시면 됩니다!',
-        createdAt: '15:28',
-        likes: 18,
-        dislikes: 0,
-      },
-    ],
-  },
-  {
-    id: 4,
-    author: { nickname: '열혈시민', level: 6 },
-    content: '디지털 플랫폼 규제법은 좀 우려되는 부분이 있는데... 세부 내용 아시는 분?',
-    createdAt: '15:45',
-    likes: 34,
-    dislikes: 3,
-    replies: [],
-  },
-];
+import { usePost, useComments, useVotePost, useCreateComment } from '@/lib/api/hooks';
+import { formatDistanceToNow } from 'date-fns';
+import { ko } from 'date-fns/locale';
+import type { CommentWithAuthor } from '@/lib/types';
 
 const categoryColors: Record<string, string> = {
-  '자유': 'bg-blue-500/20 text-blue-400 border-blue-500/30',
-  '토론': 'bg-purple-500/20 text-purple-400 border-purple-500/30',
-  '정보': 'bg-green-500/20 text-green-400 border-green-500/30',
-  '유머': 'bg-orange-500/20 text-orange-400 border-orange-500/30',
+  free: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
+  debate: 'bg-purple-500/20 text-purple-400 border-purple-500/30',
+  info: 'bg-green-500/20 text-green-400 border-green-500/30',
+  humor: 'bg-orange-500/20 text-orange-400 border-orange-500/30',
+  notice: 'bg-red-500/20 text-red-400 border-red-500/30',
 };
 
+const categoryLabels: Record<string, string> = {
+  free: '자유',
+  debate: '토론',
+  info: '정보',
+  humor: '유머',
+  notice: '공지',
+};
+
+function formatDate(dateString: string): string {
+  try {
+    const date = new Date(dateString);
+    return formatDistanceToNow(date, { addSuffix: true, locale: ko });
+  } catch {
+    return dateString;
+  }
+}
+
 interface CommentProps {
-  comment: typeof commentsData[0];
+  comment: CommentWithAuthor;
+  postId: string;
+  postAuthorId?: string;
   isReply?: boolean;
 }
 
-function Comment({ comment, isReply = false }: CommentProps) {
+function Comment({ comment, postId, postAuthorId, isReply = false }: CommentProps) {
   const [showReplyInput, setShowReplyInput] = useState(false);
+  const [replyText, setReplyText] = useState('');
+  const createComment = useCreateComment();
+
+  const handleSubmitReply = () => {
+    if (!replyText.trim()) return;
+    createComment.mutate(
+      { postId, content: replyText, parentId: comment.id },
+      {
+        onSuccess: () => {
+          setReplyText('');
+          setShowReplyInput(false);
+        },
+      }
+    );
+  };
+
+  const isOP = comment.author_id === postAuthorId;
 
   return (
     <div className={`${isReply ? 'ml-8 mt-3' : ''}`}>
@@ -145,22 +96,17 @@ function Comment({ comment, isReply = false }: CommentProps) {
         <div className="flex items-center gap-2 mb-2">
           <Avatar className="h-7 w-7">
             <AvatarFallback className="text-xs bg-zinc-700">
-              {comment.author.nickname.charAt(0)}
+              {comment.author_nickname?.charAt(0) || '?'}
             </AvatarFallback>
           </Avatar>
-          <span className="font-medium text-sm">{comment.author.nickname}</span>
-          {(comment.author as { isOP?: boolean }).isOP && (
+          <span className="font-medium text-sm">{comment.author_nickname || '익명'}</span>
+          {isOP && (
             <Badge variant="secondary" className="text-[10px] px-1.5 py-0 bg-primary/20 text-primary">
               작성자
             </Badge>
           )}
-          {(comment.author as { badge?: string }).badge && (
-            <Badge variant="outline" className="text-[10px] px-1.5 py-0">
-              {(comment.author as { badge?: string }).badge}
-            </Badge>
-          )}
-          <span className="text-xs text-muted-foreground">Lv.{comment.author.level}</span>
-          <span className="text-xs text-muted-foreground ml-auto">{comment.createdAt}</span>
+          <span className="text-xs text-muted-foreground">Lv.{comment.author_level || 1}</span>
+          <span className="text-xs text-muted-foreground ml-auto">{formatDate(comment.created_at)}</span>
         </div>
 
         {/* 댓글 내용 */}
@@ -170,11 +116,11 @@ function Comment({ comment, isReply = false }: CommentProps) {
         <div className="flex items-center gap-4 text-xs">
           <button className="flex items-center gap-1 text-muted-foreground hover:text-foreground">
             <ThumbsUp className="h-3.5 w-3.5" />
-            <span>{comment.likes}</span>
+            <span>{comment.like_count}</span>
           </button>
           <button className="flex items-center gap-1 text-muted-foreground hover:text-foreground">
             <ThumbsDown className="h-3.5 w-3.5" />
-            <span>{comment.dislikes}</span>
+            <span>{comment.dislike_count}</span>
           </button>
           {!isReply && (
             <button
@@ -192,16 +138,25 @@ function Comment({ comment, isReply = false }: CommentProps) {
           <div className="mt-3 flex gap-2">
             <Textarea
               placeholder="답글을 입력하세요..."
+              value={replyText}
+              onChange={(e) => setReplyText(e.target.value)}
               className="min-h-[60px] bg-zinc-900 border-zinc-700 text-sm"
             />
-            <Button size="sm" className="shrink-0">등록</Button>
+            <Button
+              size="sm"
+              className="shrink-0"
+              onClick={handleSubmitReply}
+              disabled={!replyText.trim() || createComment.isPending}
+            >
+              {createComment.isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : '등록'}
+            </Button>
           </div>
         )}
       </div>
 
       {/* 대댓글 */}
-      {'replies' in comment && comment.replies.map((reply: any) => (
-        <Comment key={reply.id} comment={reply} isReply />
+      {comment.replies?.map((reply) => (
+        <Comment key={reply.id} comment={reply} postId={postId} postAuthorId={postAuthorId} isReply />
       ))}
     </div>
   );
@@ -209,23 +164,96 @@ function Comment({ comment, isReply = false }: CommentProps) {
 
 export default function PostDetailPage() {
   const params = useParams();
-  const [liked, setLiked] = useState(false);
-  const [disliked, setDisliked] = useState(false);
-  const [bookmarked, setBookmarked] = useState(postData.isBookmarked);
+  const router = useRouter();
+  const postId = params.id as string;
+
+  const [bookmarked, setBookmarked] = useState(false);
   const [commentText, setCommentText] = useState('');
+
+  // API 호출
+  const { data: post, isLoading: postLoading, isError: postError } = usePost(postId);
+  const { data: comments, isLoading: commentsLoading } = useComments(postId);
+  const votePost = useVotePost();
+  const createComment = useCreateComment();
+
+  const handleVote = (voteType: 'like' | 'dislike') => {
+    votePost.mutate({ postId, voteType });
+  };
+
+  const handleSubmitComment = () => {
+    if (!commentText.trim()) return;
+    createComment.mutate(
+      { postId, content: commentText },
+      {
+        onSuccess: () => {
+          setCommentText('');
+        },
+      }
+    );
+  };
+
+  // 로딩 상태
+  if (postLoading) {
+    return (
+      <div className="min-h-screen">
+        <div className="sticky top-0 z-10 border-b border-border bg-background/95 backdrop-blur">
+          <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-4">
+            <Skeleton className="h-5 w-5" />
+            <Skeleton className="h-6 w-16" />
+            <Skeleton className="h-4 w-24" />
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto p-4 space-y-4">
+          <Card className="bg-card border-border">
+            <CardContent className="p-6">
+              <Skeleton className="h-8 w-3/4 mb-4" />
+              <div className="flex items-center gap-3 mb-6">
+                <Skeleton className="h-10 w-10 rounded-full" />
+                <div>
+                  <Skeleton className="h-4 w-24 mb-2" />
+                  <Skeleton className="h-3 w-32" />
+                </div>
+              </div>
+              <div className="space-y-3">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-2/3" />
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    );
+  }
+
+  // 에러 상태
+  if (postError || !post) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Card className="bg-card border-border p-8 max-w-md">
+          <div className="flex flex-col items-center text-center">
+            <AlertCircle className="h-12 w-12 text-red-500 mb-4" />
+            <h3 className="text-lg font-semibold mb-2">게시글을 찾을 수 없습니다</h3>
+            <p className="text-muted-foreground mb-4">삭제되었거나 존재하지 않는 게시글입니다.</p>
+            <Button onClick={() => router.push('/community')}>목록으로</Button>
+          </div>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen">
       {/* 상단 네비게이션 */}
       <div className="sticky top-0 z-10 border-b border-border bg-background/95 backdrop-blur">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-4">
-          <Link href="/" className="text-muted-foreground hover:text-foreground">
+          <Link href="/community" className="text-muted-foreground hover:text-foreground">
             <ArrowLeft className="h-5 w-5" />
           </Link>
-          <Badge variant="outline" className={categoryColors[postData.category]}>
-            {postData.category}
+          <Badge variant="outline" className={categoryColors[post.category]}>
+            {categoryLabels[post.category]}
           </Badge>
-          <span className="text-sm text-muted-foreground">자유게시판</span>
+          <span className="text-sm text-muted-foreground">{categoryLabels[post.category]}게시판</span>
         </div>
       </div>
 
@@ -234,31 +262,28 @@ export default function PostDetailPage() {
         <Card className="bg-card border-border">
           <CardContent className="p-6">
             {/* 제목 */}
-            <h1 className="text-2xl font-bold mb-4">{postData.title}</h1>
+            <h1 className="text-2xl font-bold mb-4">{post.title}</h1>
 
             {/* 작성자 정보 */}
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-border">
               <Avatar className="h-10 w-10">
                 <AvatarFallback className="bg-gradient-to-br from-primary to-purple-600">
-                  {postData.author.nickname.charAt(0)}
+                  {post.author_nickname?.charAt(0) || '?'}
                 </AvatarFallback>
               </Avatar>
               <div className="flex-1">
                 <div className="flex items-center gap-2">
-                  <span className="font-medium">{postData.author.nickname}</span>
-                  <Badge variant="outline" className="text-xs">
-                    {postData.author.badge}
-                  </Badge>
-                  <span className="text-xs text-muted-foreground">Lv.{postData.author.level}</span>
+                  <span className="font-medium">{post.author_nickname || '익명'}</span>
+                  <span className="text-xs text-muted-foreground">Lv.{post.author_level || 1}</span>
                 </div>
                 <div className="flex items-center gap-3 text-xs text-muted-foreground mt-1">
                   <span className="flex items-center gap-1">
                     <Clock className="h-3 w-3" />
-                    {postData.createdAt}
+                    {formatDate(post.created_at)}
                   </span>
                   <span className="flex items-center gap-1">
                     <Eye className="h-3 w-3" />
-                    {postData.views.toLocaleString()}
+                    {post.view_count.toLocaleString()}
                   </span>
                 </div>
               </div>
@@ -280,7 +305,7 @@ export default function PostDetailPage() {
 
             {/* 본문 내용 */}
             <div className="prose prose-invert prose-sm max-w-none mb-6">
-              {postData.content.split('\n').map((line, idx) => {
+              {post.content.split('\n').map((line, idx) => {
                 if (line.startsWith('## ')) {
                   return <h2 key={idx} className="text-lg font-bold mt-6 mb-2">{line.replace('## ', '')}</h2>;
                 }
@@ -294,25 +319,38 @@ export default function PostDetailPage() {
               })}
             </div>
 
+            {/* 태그 */}
+            {post.tags && post.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {post.tags.map((tag, idx) => (
+                  <Badge key={idx} variant="secondary" className="text-xs">
+                    #{tag}
+                  </Badge>
+                ))}
+              </div>
+            )}
+
             {/* 추천/비추천 */}
             <div className="flex items-center justify-center gap-4 py-6 border-t border-b border-border">
               <Button
-                variant={liked ? 'default' : 'outline'}
+                variant="outline"
                 size="lg"
-                onClick={() => { setLiked(!liked); setDisliked(false); }}
-                className={liked ? 'bg-blue-600 hover:bg-blue-700' : ''}
+                onClick={() => handleVote('like')}
+                disabled={votePost.isPending}
+                className="hover:bg-blue-600 hover:border-blue-600"
               >
                 <ChevronUp className="h-5 w-5 mr-1" />
-                추천 {postData.likes + (liked ? 1 : 0)}
+                추천 {post.like_count}
               </Button>
               <Button
-                variant={disliked ? 'default' : 'outline'}
+                variant="outline"
                 size="lg"
-                onClick={() => { setDisliked(!disliked); setLiked(false); }}
-                className={disliked ? 'bg-red-600 hover:bg-red-700' : ''}
+                onClick={() => handleVote('dislike')}
+                disabled={votePost.isPending}
+                className="hover:bg-red-600 hover:border-red-600"
               >
                 <ChevronDown className="h-5 w-5 mr-1" />
-                비추천 {postData.dislikes + (disliked ? 1 : 0)}
+                비추천 {post.dislike_count}
               </Button>
             </div>
 
@@ -334,9 +372,9 @@ export default function PostDetailPage() {
                 </Button>
               </div>
               <div className="flex items-center gap-2">
-                <Button variant="outline" size="sm">목록</Button>
-                <Button variant="outline" size="sm">이전글</Button>
-                <Button variant="outline" size="sm">다음글</Button>
+                <Link href="/community">
+                  <Button variant="outline" size="sm">목록</Button>
+                </Link>
               </div>
             </div>
           </CardContent>
@@ -347,7 +385,7 @@ export default function PostDetailPage() {
           <CardContent className="p-6">
             <h2 className="font-bold mb-4 flex items-center gap-2">
               <MessageSquare className="h-5 w-5" />
-              댓글 {postData.comments}
+              댓글 {post.comment_count}
             </h2>
 
             {/* 댓글 입력 */}
@@ -359,31 +397,56 @@ export default function PostDetailPage() {
                 className="min-h-[80px] bg-zinc-800/50 border-zinc-700 mb-2"
               />
               <div className="flex justify-end">
-                <Button disabled={!commentText.trim()}>
-                  <Send className="h-4 w-4 mr-1" />
+                <Button
+                  onClick={handleSubmitComment}
+                  disabled={!commentText.trim() || createComment.isPending}
+                >
+                  {createComment.isPending ? (
+                    <Loader2 className="h-4 w-4 mr-1 animate-spin" />
+                  ) : (
+                    <Send className="h-4 w-4 mr-1" />
+                  )}
                   댓글 등록
                 </Button>
               </div>
             </div>
 
-            {/* 댓글 정렬 */}
-            <div className="flex items-center gap-2 mb-4 text-sm">
-              <button className="text-primary font-medium">추천순</button>
-              <span className="text-muted-foreground">|</span>
-              <button className="text-muted-foreground hover:text-foreground">최신순</button>
-            </div>
+            {/* 댓글 로딩 */}
+            {commentsLoading && (
+              <div className="space-y-4">
+                {[...Array(3)].map((_, i) => (
+                  <div key={i} className="p-4 rounded-lg bg-zinc-800/50">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Skeleton className="h-7 w-7 rounded-full" />
+                      <Skeleton className="h-4 w-20" />
+                    </div>
+                    <Skeleton className="h-4 w-full" />
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* 댓글 목록 */}
-            <div className="space-y-4">
-              {commentsData.map((comment) => (
-                <Comment key={comment.id} comment={comment} />
-              ))}
-            </div>
+            {!commentsLoading && comments && comments.length > 0 && (
+              <div className="space-y-4">
+                {comments.map((comment) => (
+                  <Comment
+                    key={comment.id}
+                    comment={comment}
+                    postId={postId}
+                    postAuthorId={post.author_id}
+                  />
+                ))}
+              </div>
+            )}
 
-            {/* 더보기 */}
-            <div className="text-center mt-6">
-              <Button variant="outline">댓글 더보기</Button>
-            </div>
+            {/* 댓글 없음 */}
+            {!commentsLoading && (!comments || comments.length === 0) && (
+              <div className="text-center py-8 text-muted-foreground">
+                <MessageSquare className="h-10 w-10 mx-auto mb-2 opacity-50" />
+                <p>첫 번째 댓글을 작성해보세요!</p>
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>
