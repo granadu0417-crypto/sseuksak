@@ -203,12 +203,12 @@ async function insertNewPolitician(
   await db.prepare(`
     INSERT INTO politicians (
       id, name, party_id, region, position,
-      birth_date, contact_email, contact_phone, website_url,
+      birth_date, contact_email, contact_phone, website_url, avatar_url,
       assembly_id, hj_nm, eng_nm, elect_gbn_nm, reele_gbn_nm,
       unique_key, data_source, last_synced_at, sync_hash, is_active
     ) VALUES (
       ?, ?, ?, ?, ?,
-      ?, ?, ?, ?,
+      ?, ?, ?, ?, ?,
       ?, ?, ?, ?, ?,
       ?, 'api', datetime('now'), ?, 1
     )
@@ -222,6 +222,7 @@ async function insertNewPolitician(
     member.contactEmail || null,
     member.contactPhone || null,
     member.websiteUrl || null,
+    member.avatarUrl || null,
     member.assemblyId,
     member.hjNm || null,
     member.engNm || null,
@@ -267,6 +268,7 @@ async function updatePolitician(
         contact_email = ?,
         contact_phone = ?,
         website_url = ?,
+        avatar_url = ?,
         elect_gbn_nm = ?,
         reele_gbn_nm = ?,
         sync_hash = ?,
@@ -281,6 +283,7 @@ async function updatePolitician(
     member.contactEmail || null,
     member.contactPhone || null,
     member.websiteUrl || null,
+    member.avatarUrl || null,
     member.electGbnNm || null,
     member.reeleGbnNm || null,
     member.syncHash,

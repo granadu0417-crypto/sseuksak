@@ -25,7 +25,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { usePolitician } from '@/lib/api/hooks';
@@ -126,6 +126,9 @@ export default function PoliticianDetailPage() {
           <CardContent className="p-6">
             <div className="flex flex-col md:flex-row items-start gap-6">
               <Avatar className="h-24 w-24 border-4" style={{ borderColor: politician.party_color || '#808080' }}>
+                {politician.avatar_url && (
+                  <AvatarImage src={politician.avatar_url} alt={politician.name} />
+                )}
                 <AvatarFallback
                   className="text-3xl font-bold text-white"
                   style={{ backgroundColor: politician.party_color || '#808080' }}

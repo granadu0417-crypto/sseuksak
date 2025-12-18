@@ -5,9 +5,31 @@
  *
  * API 문서: https://open.assembly.go.kr/portal/openapi/main.do
  * 공공데이터포털: https://www.data.go.kr/data/15012647/openapi.do
+ *
+ * ⚠️ 중요: 현직 의원 필터링 문제 해결 (2025-12-18)
+ * - ALLNAMEMBER: 역대 모든 국회의원 포함 (사퇴자도 포함됨)
+ * - nwvrqwxyaytdsfvhu: 현직 국회의원만 제공 (권장)
+ *
+ * 문제 사례: 강유정 의원이 2025.6.4 사퇴했지만 ALLNAMEMBER에서는
+ * "제22대" 당선 이력이 있어 현역으로 표시되는 문제 발생
  */
 
-// 국회 API 응답 타입 (ALLNAMEMBER API)
+// 현직 국회의원 API 응답 타입 (nwvrqwxyaytdsfvhu)
+// 이 API는 현재 활동 중인 의원만 반환합니다 (사퇴자 제외)
+interface CurrentMemberApiResponse {
+  nwvrqwxyaytdsfvhu: Array<{
+    head?: Array<{
+      list_total_count?: number;
+      RESULT?: {
+        CODE: string;
+        MESSAGE: string;
+      };
+    }>;
+    row?: AssemblyMemberRaw[];
+  }>;
+}
+
+// 국회 API 응답 타입 (ALLNAMEMBER API - 역대 의원, 폴백용)
 interface AssemblyApiResponse {
   ALLNAMEMBER: Array<{
     head?: Array<{
@@ -63,6 +85,7 @@ export interface PoliticianSyncData {
   contactEmail: string;     // 이메일
   contactPhone: string;     // 전화번호
   websiteUrl: string;       // 홈페이지
+  avatarUrl: string;        // 프로필 사진 URL
   uniqueKey: string;        // 고유키 (이름+선거구)
   syncHash: string;         // 데이터 해시
 }
@@ -79,6 +102,10 @@ export interface SyncResult {
 
 /**
  * 국회 API 클라이언트
+ *
+ * 현직 국회의원 조회 우선순위:
+ * 1. nwvrqwxyaytdsfvhu API (현직 의원만 제공, 권장)
+ * 2. ALLNAMEMBER API (역대 모든 의원, 폴백)
  */
 export class AssemblyApiClient {
   private apiKey: string;
@@ -90,7 +117,57 @@ export class AssemblyApiClient {
   }
 
   /**
-   * 현역 국회의원 목록 조회 (ALLNAMEMBER API)
+   * 현직 국회의원 목록 조회 (nwvrqwxyaytdsfvhu API)
+   * ⭐ 권장: 사퇴자가 자동으로 제외됨
+   */
+  async getCurrentMemberList(pageNo: number = 1, numOfRows: number = 300): Promise<AssemblyMemberRaw[]> {
+    const url = new URL(`${this.baseUrl}/nwvrqwxyaytdsfvhu`);
+    url.searchParams.set('KEY', this.apiKey);
+    url.searchParams.set('Type', 'json');
+    url.searchParams.set('pIndex', String(pageNo));
+    url.searchParams.set('pSize', String(numOfRows));
+
+    try {
+      const response = await fetch(url.toString(), {
+        headers: {
+          'User-Agent': 'Politica/1.0 (https://sseuksak.com)',
+          'Accept': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`현직 API 요청 실패: ${response.status}`);
+      }
+
+      const data = await response.json() as CurrentMemberApiResponse;
+
+      // nwvrqwxyaytdsfvhu API 응답 구조 파싱
+      const apiData = data.nwvrqwxyaytdsfvhu;
+      if (!apiData || apiData.length === 0) {
+        return [];
+      }
+
+      // head에서 에러 체크
+      const headItem = apiData.find(item => item.head);
+      if (headItem?.head) {
+        const result = headItem.head.find(h => h.RESULT)?.RESULT;
+        if (result && result.CODE !== 'INFO-000') {
+          throw new Error(`현직 API 오류: ${result.MESSAGE}`);
+        }
+      }
+
+      // row 데이터 추출
+      const rowItem = apiData.find(item => item.row);
+      return rowItem?.row || [];
+    } catch (error) {
+      console.error('현직 국회의원 API 호출 오류:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * 역대 국회의원 목록 조회 (ALLNAMEMBER API - 폴백용)
+   * ⚠️ 주의: 사퇴자도 포함됨, getCurrentMemberList 사용 권장
    */
   async getMemberList(pageNo: number = 1, numOfRows: number = 300): Promise<AssemblyMemberRaw[]> {
     const url = new URL(`${this.baseUrl}/ALLNAMEMBER`);
@@ -138,12 +215,28 @@ export class AssemblyApiClient {
   }
 
   /**
-   * 현역 국회의원만 가져오기 (제22대)
+   * 현직 국회의원 전체 가져오기
    *
-   * API는 역대 모든 국회의원을 반환하므로, GTELT_ERACO 필드에서
-   * "제22대"가 포함된 의원만 필터링합니다.
+   * 우선순위:
+   * 1. nwvrqwxyaytdsfvhu API 사용 (현직만 제공, 사퇴자 자동 제외)
+   * 2. 실패 시 ALLNAMEMBER + 제22대 필터링 (폴백)
    */
   async getAllMembers(): Promise<AssemblyMemberRaw[]> {
+    // 1. 먼저 현직 의원 API 시도
+    try {
+      console.log('현직 국회의원 API (nwvrqwxyaytdsfvhu) 호출 중...');
+      const currentMembers = await this.getCurrentMemberList(1, 300);
+
+      if (currentMembers.length > 0) {
+        console.log(`✅ 현직 API 성공: ${currentMembers.length}명 조회`);
+        return currentMembers;
+      }
+    } catch (error) {
+      console.warn('⚠️ 현직 API 실패, ALLNAMEMBER로 폴백:', error);
+    }
+
+    // 2. 폴백: ALLNAMEMBER API + 제22대 필터링
+    console.log('ALLNAMEMBER API (폴백) 호출 중...');
     const allMembers: AssemblyMemberRaw[] = [];
     let pageNo = 1;
     const pageSize = 300;
@@ -165,12 +258,13 @@ export class AssemblyApiClient {
     }
 
     // 현역 국회의원만 필터링 (제22대)
+    // ⚠️ 주의: 이 방식은 사퇴자도 포함될 수 있음 (폴백용)
     const currentMembers = allMembers.filter(member => {
       const eraco = member.GTELT_ERACO || '';
       return eraco.includes('제22대');
     });
 
-    console.log(`총 ${allMembers.length}명 중 현역 ${currentMembers.length}명 필터링`);
+    console.log(`⚠️ 폴백 사용: 총 ${allMembers.length}명 중 제22대 ${currentMembers.length}명 필터링 (사퇴자 포함 가능)`);
     return currentMembers;
   }
 }
@@ -199,6 +293,15 @@ export function transformMemberData(raw: AssemblyMemberRaw): PoliticianSyncData 
   // 해시 생성: 주요 필드 조합 (변경 감지용)
   const syncHash = generateSyncHash(raw);
 
+  // 이미지 URL 처리 (국회 API가 상대 경로 또는 전체 URL 반환)
+  let avatarUrl = raw.NAAS_PIC?.trim() || '';
+  if (avatarUrl && !avatarUrl.startsWith('http')) {
+    // 상대 경로인 경우 국회 사이트 기본 URL 추가
+    avatarUrl = avatarUrl.startsWith('/')
+      ? `https://www.assembly.go.kr${avatarUrl}`
+      : `https://www.assembly.go.kr/photo/9770000/${avatarUrl}`;
+  }
+
   return {
     assemblyId: raw.NAAS_CD?.trim() || '',
     name,
@@ -215,6 +318,7 @@ export function transformMemberData(raw: AssemblyMemberRaw): PoliticianSyncData 
     contactEmail: raw.NAAS_EMAIL_ADDR?.trim() || '',
     contactPhone: raw.NAAS_TEL_NO?.trim() || '',
     websiteUrl: raw.NAAS_HP_URL?.trim() || '',
+    avatarUrl,
     uniqueKey,
     syncHash,
   };

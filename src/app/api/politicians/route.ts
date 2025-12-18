@@ -27,6 +27,12 @@ export async function GET(request: NextRequest) {
     const conditions: string[] = [];
     const params: (string | number)[] = [];
 
+    // 기본: 활성화된 정치인만 (사퇴자 제외)
+    const includeInactive = searchParams.get("include_inactive") === "true";
+    if (!includeInactive) {
+      conditions.push("pol.is_active = 1");
+    }
+
     if (partyId && partyId !== "all") {
       conditions.push("pol.party_id = ?");
       params.push(partyId);

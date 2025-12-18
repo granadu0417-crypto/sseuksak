@@ -19,7 +19,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Skeleton } from '@/components/ui/skeleton';
 import {
   Select,
@@ -64,6 +64,9 @@ function PoliticianCard({ politician }: { politician: PoliticianWithParty }) {
         <CardContent className="p-4">
           <div className="flex items-start gap-4">
             <Avatar className="h-16 w-16 border-2" style={{ borderColor: politician.party_color || '#808080' }}>
+              {politician.avatar_url && (
+                <AvatarImage src={politician.avatar_url} alt={politician.name} />
+              )}
               <AvatarFallback
                 className="text-lg font-bold text-white"
                 style={{ backgroundColor: politician.party_color || '#808080' }}
@@ -142,6 +145,9 @@ function PoliticianListItem({ politician }: { politician: PoliticianWithParty })
     <Link href={`/politicians/${politician.id}`}>
       <div className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-all cursor-pointer">
         <Avatar className="h-12 w-12 border-2" style={{ borderColor: politician.party_color || '#808080' }}>
+          {politician.avatar_url && (
+            <AvatarImage src={politician.avatar_url} alt={politician.name} />
+          )}
           <AvatarFallback
             className="text-lg font-bold text-white"
             style={{ backgroundColor: politician.party_color || '#808080' }}
