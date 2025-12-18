@@ -376,6 +376,98 @@ export function useRecoverPassword() {
 // ============================================
 
 // 정치인 상세 정보 타입
+interface ActivityStats {
+  total_votes: number;
+  yes_votes: number;
+  no_votes: number;
+  abstain_votes: number;
+  absent_votes: number;
+  bills_sponsored: number;
+  bills_cosponsored: number;
+  bills_passed: number;
+  plenary_attendance_rate: number;
+  committee_attendance_rate: number;
+}
+
+interface BillSponsorship {
+  id: string;
+  bill_name: string;
+  sponsor_type: string;
+  propose_date: string | null;
+  committee: string | null;
+  proc_result: string | null;
+}
+
+interface VotingRecord {
+  id: string;
+  bill_name: string | null;
+  vote_result: string;
+  vote_date: string | null;
+}
+
+interface CommitteeActivity {
+  id: string;
+  committee_name: string;
+  position: string | null;
+  is_current: number;
+}
+
+interface ElectionHistory {
+  id: string;
+  election_id: string;
+  election_type: string;
+  election_date: string;
+  constituency: string | null;
+  party_name: string | null;
+  vote_count: number | null;
+  vote_rate: number | null;
+  is_elected: number;
+  assembly_age: number | null;
+}
+
+interface ElectionPromise {
+  id: string;
+  promise_no: number;
+  category: string | null;
+  title: string;
+  content: string | null;
+  status: string;
+  progress: number;
+}
+
+interface AssetSummary {
+  total_assets: number;
+  total_real_estate: number;
+  total_securities: number;
+  total_deposits: number;
+  total_debts: number;
+  asset_change: number | null;
+  asset_change_rate: number | null;
+  latest_report_date: string | null;
+}
+
+interface ContributionSummary {
+  total_contributions: number;
+  total_donors: number;
+  latest_year: number | null;
+  latest_amount: number | null;
+  avg_yearly_amount: number | null;
+  max_single_donation: number | null;
+}
+
+interface PartyPosition {
+  id: string;
+  party_name: string;
+  party_color: string | null;
+  position_type: string;
+  position_level: number;
+  position_name: string;
+  term_number: number | null;
+  appointment_type: string;
+  start_date: string | null;
+  region: string | null;
+}
+
 interface PoliticianDetail extends PoliticianWithParty {
   birth_date: string | null;
   education: string | null;
@@ -387,6 +479,7 @@ interface PoliticianDetail extends PoliticianWithParty {
   sns_instagram: string | null;
   created_at: string;
   updated_at: string;
+  tags: string[];
   activities: {
     id: string;
     activity_type: string;
@@ -404,6 +497,15 @@ interface PoliticianDetail extends PoliticianWithParty {
     progress: number;
     target_date: string | null;
   }[];
+  activity_stats: ActivityStats;
+  recent_bills: BillSponsorship[];
+  recent_votes: VotingRecord[];
+  committee_activities: CommitteeActivity[];
+  election_history: ElectionHistory[];
+  election_promises: ElectionPromise[];
+  asset_summary: AssetSummary | null;
+  contribution_summary: ContributionSummary | null;
+  party_positions: PartyPosition[];
 }
 
 // 정치인 목록 조회 파라미터
