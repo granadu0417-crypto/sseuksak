@@ -14,6 +14,8 @@ import {
   FileText,
   CheckCircle2,
   Star,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -244,9 +246,13 @@ export default function PoliticiansPage() {
   const [region, setRegion] = useState('all');
   const [sort, setSort] = useState('name');
   const [showTrending, setShowTrending] = useState(false);
+  const [page, setPage] = useState(1);
+  const limit = 20;
 
   const { data: parties } = useParties();
   const { data, isLoading, isError } = usePoliticians({
+    page,
+    limit,
     party: party !== 'all' ? party : undefined,
     region: region !== 'all' ? region : undefined,
     search: search || undefined,
@@ -254,6 +260,14 @@ export default function PoliticiansPage() {
     sort,
     order: sort === 'name' ? 'asc' : 'desc',
   });
+
+  // 필터 변경 시 페이지 리셋
+  const handleFilterChange = (setter: (value: string) => void, value: string) => {
+    setter(value);
+    setPage(1);
+  };
+
+  const totalPages = data ? Math.ceil(data.total / limit) : 0;
 
   return (
     <div className="min-h-screen">
@@ -295,11 +309,11 @@ export default function PoliticiansPage() {
               <Input
                 placeholder="이름, 지역, 직위 검색..."
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={(e) => { setSearch(e.target.value); setPage(1); }}
                 className="pl-9 bg-zinc-800/50 border-zinc-700"
               />
             </div>
-            <Select value={party} onValueChange={setParty}>
+            <Select value={party} onValueChange={(v) => handleFilterChange(setParty, v)}>
               <SelectTrigger className="w-[140px] bg-zinc-800/50 border-zinc-700">
                 <SelectValue placeholder="정당" />
               </SelectTrigger>
@@ -318,7 +332,7 @@ export default function PoliticiansPage() {
                 ))}
               </SelectContent>
             </Select>
-            <Select value={region} onValueChange={setRegion}>
+            <Select value={region} onValueChange={(v) => handleFilterChange(setRegion, v)}>
               <SelectTrigger className="w-[130px] bg-zinc-800/50 border-zinc-700">
                 <SelectValue placeholder="지역" />
               </SelectTrigger>
@@ -328,7 +342,7 @@ export default function PoliticiansPage() {
                 ))}
               </SelectContent>
             </Select>
-            <Select value={sort} onValueChange={setSort}>
+            <Select value={sort} onValueChange={(v) => handleFilterChange(setSort, v)}>
               <SelectTrigger className="w-[130px] bg-zinc-800/50 border-zinc-700">
                 <SelectValue placeholder="정렬" />
               </SelectTrigger>
@@ -342,7 +356,7 @@ export default function PoliticiansPage() {
             <Button
               variant={showTrending ? 'default' : 'outline'}
               size="sm"
-              onClick={() => setShowTrending(!showTrending)}
+              onClick={() => { setShowTrending(!showTrending); setPage(1); }}
               className={showTrending ? 'bg-orange-500 hover:bg-orange-600' : ''}
             >
               <TrendingUp className="h-4 w-4 mr-1" />
@@ -399,6 +413,102 @@ export default function PoliticiansPage() {
                   <PoliticianListItem key={politician.id} politician={politician} />
                 ))}
               </div>
+            )}
+
+            {/* 페이지네이션 */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 mt-8">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setPage(p => Math.max(1, p - 1))}
+                  disabled={page === 1}
+                  className="bg-zinc-800/50 border-zinc-700"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  이전
+                </Button>
+
+                <div className="flex items-center gap-1">
+                  {/* 첫 페이지 */}
+                  {page > 3 && (
+                    <>
+                      <Button
+                        variant={page === 1 ? 'default' : 'outline'}
+                        size="sm"
+                        onClick={() => setPage(1)}
+                        className="w-9 bg-zinc-800/50 border-zinc-700"
+                      >
+                        1
+                      </Button>
+                      {page > 4 && <span className="px-2 text-muted-foreground">...</span>}
+                    </>
+                  )}
+
+                  {/* 현재 페이지 주변 */}
+                  {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                    let pageNum: number;
+                    if (totalPages <= 5) {
+                      pageNum = i + 1;
+                    } else if (page <= 3) {
+                      pageNum = i + 1;
+                    } else if (page >= totalPages - 2) {
+                      pageNum = totalPages - 4 + i;
+                    } else {
+                      pageNum = page - 2 + i;
+                    }
+
+                    if (pageNum < 1 || pageNum > totalPages) return null;
+                    if (page > 3 && pageNum === 1) return null;
+                    if (page < totalPages - 2 && pageNum === totalPages) return null;
+
+                    return (
+                      <Button
+                        key={pageNum}
+                        variant={page === pageNum ? 'default' : 'outline'}
+                        size="sm"
+                        onClick={() => setPage(pageNum)}
+                        className={`w-9 ${page === pageNum ? '' : 'bg-zinc-800/50 border-zinc-700'}`}
+                      >
+                        {pageNum}
+                      </Button>
+                    );
+                  })}
+
+                  {/* 마지막 페이지 */}
+                  {page < totalPages - 2 && totalPages > 5 && (
+                    <>
+                      {page < totalPages - 3 && <span className="px-2 text-muted-foreground">...</span>}
+                      <Button
+                        variant={page === totalPages ? 'default' : 'outline'}
+                        size="sm"
+                        onClick={() => setPage(totalPages)}
+                        className="w-9 bg-zinc-800/50 border-zinc-700"
+                      >
+                        {totalPages}
+                      </Button>
+                    </>
+                  )}
+                </div>
+
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                  disabled={page === totalPages}
+                  className="bg-zinc-800/50 border-zinc-700"
+                >
+                  다음
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </div>
+            )}
+
+            {/* 페이지 정보 */}
+            {totalPages > 1 && (
+              <p className="text-center text-sm text-muted-foreground mt-4">
+                {page} / {totalPages} 페이지
+              </p>
             )}
           </>
         )}
