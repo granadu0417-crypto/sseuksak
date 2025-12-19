@@ -1,0 +1,39 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "politica"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+# 메인 엔트리포인트 (opennextjs/cloudflare가 생성)
+main = ".open-next/worker.js"
+
+# 정적 에셋
+assets = { directory = ".open-next/assets", binding = "ASSETS" }
+
+# KV 네임스페이스 (캐시용)
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "your-kv-namespace-id"
+
+# D1 데이터베이스
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "political-arena-db"
+# database_id = "your-database-id"
+
+# R2 버킷 (이미지 저장용)
+# [[r2_buckets]]
+# binding = "STORAGE"
+# bucket_name = "political-arena-storage"
+
+# Durable Objects (실시간 기능용)
+# [[durable_objects.bindings]]
+# name = "CHAT"
+# class_name = "ChatRoom"
+
+# 환경 변수
+[vars]
+NEXT_PUBLIC_APP_URL = "https://political-arena.pages.dev"
+
+# 프로덕션 환경
+[env.production]
+name = "politica"

@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-19",
+    "description": "법적 근거와 조사를 통해 검증된 예산 항목 매핑 데이터베이스",
+    "principle": "같은 사업임이 확인된 경우에만 매핑. 불확실하면 매핑하지 않음."
+  },
+  "verifiedMappings": [
+    {
+      "id": "edu-expense-subsidy",
+      "canonicalName": "교육경비보조금",
+      "category": "EDUCATION",
+      "sectionCode": "072",
+      "sectionName": "평생.직업교육",
+      "legalBasis": "지방교육재정교부금법 제11조, 지방자치단체의 교육경비 보조에 관한 규정",
+      "definition": "지방자치단체에서 각급 학교, 유치원을 대상으로 교육과정 운영프로그램 및 교육환경 개선을 위해 지급하는 재정적 지원",
+      "source": "https://narasallim.net/wiki/693",
+      "verifiedDate": "2025-12-19",
+      "aliases": [
+        {
+          "name": "학교 교육경비 지원",
+          "foundIn": ["성동구"],
+          "verified": true,
+          "evidence": "성동구 예산서 세부사업명"
+        },
+        {
+          "name": "학교 지원",
+          "foundIn": ["마포구"],
+          "verified": true,
+          "evidence": "마포구 예산서 세부사업명, 교육경비보조금 조례 대조"
+        }
+      ],
+      "confidence": 100,
+      "notes": "세부항목(급식시설, 교육정보화, 시설개선, 교육과정운영 등)은 별도 분류"
+    },
+    {
+      "id": "basic-pension",
+      "canonicalName": "기초연금",
+      "category": "WELFARE",
+      "sectionCode": "081",
+      "sectionName": "기초생활보장",
+      "legalBasis": "기초연금법",
+      "definition": "만 65세 이상 대한민국 국적자 중 소득하위 70%에게 지급하는 연금",
+      "source": "https://www.law.go.kr",
+      "verifiedDate": "2025-12-19",
+      "aliases": [
+        {
+          "name": "기초연금 지급(보조)(80:10:10)",
+          "foundIn": ["성동구"],
+          "verified": true,
+          "evidence": "국비80:시비10:구비10 분담비율 표기"
+        },
+        {
+          "name": "기초연금 지급",
+          "foundIn": ["마포구"],
+          "verified": true,
+          "evidence": "분담비율 생략한 형태"
+        }
+      ],
+      "confidence": 100,
+      "notes": "분담비율(80:10:10 등) 표기 여부만 다름"
+    },
+    {
+      "id": "living-expense",
+      "canonicalName": "생계급여",
+      "category": "WELFARE",
+      "sectionCode": "081",
+      "sectionName": "기초생활보장",
+      "legalBasis": "국민기초생활보장법 제8조",
+      "definition": "기초생활보장 수급자에게 의복, 음식물 및 연료비와 그 밖에 일상생활에 기본적으로 필요한 금품을 지급",
+      "source": "https://www.law.go.kr",
+      "verifiedDate": "2025-12-19",
+      "aliases": [
+        {
+          "name": "생계급여(보조)(60:28:12)",
+          "foundIn": ["성동구"],
+          "verified": true,
+          "evidence": "국비60:시비28:구비12 분담비율 표기"
+        },
+        {
+          "name": "생계급여",
+          "foundIn": ["마포구"],
+          "verified": true,
+          "evidence": "분담비율 생략한 형태"
+        }
+      ],
+      "confidence": 100,
+      "notes": "국민기초생활보장법에 따른 법정 급여"
+    },
+    {
+      "id": "housing-benefit",
+      "canonicalName": "주거급여",
+      "category": "WELFARE",
+      "sectionCode": "081",
+      "sectionName": "기초생활보장",
+      "legalBasis": "국민기초생활보장법 제11조, 주거급여법",
+      "definition": "수급자에게 주거 안정에 필요한 임차료, 수선유지비, 그 밖의 수급품을 지급",
+      "source": "https://www.law.go.kr",
+      "verifiedDate": "2025-12-19",
+      "aliases": [
+        {
+          "name": "주거급여(보조)(60:28:12)",
+          "foundIn": ["성동구"],
+          "verified": true,
+          "evidence": "분담비율 표기"
+        },
+        {
+          "name": "주거급여",
+          "foundIn": ["마포구"],
+          "verified": true,
+          "evidence": "분담비율 생략"
+        }
+      ],
+      "confidence": 100,
+      "notes": "국토교통부 소관 법정 급여"
+    },
+    {
+      "id": "childcare-fee",
+      "canonicalName": "영유아보육료",
+      "category": "WELFARE",
+      "sectionCode": "08A",
+      "sectionName": "보육",
+      "legalBasis": "영유아보육법 제34조",
+      "definition": "어린이집 이용 영유아에 대한 보육료 지원",
+      "source": "https://www.law.go.kr",
+      "verifiedDate": "2025-12-19",
+      "aliases": [
+        {
+          "name": "영유아보육료 지원(보조)(45:38.5:16.5)",
+          "foundIn": ["성동구"],
+          "verified": true,
+          "evidence": "분담비율 표기"
+        },
+        {
+          "name": "영유아보육료 지원",
+          "foundIn": ["마포구"],
+          "verified": true,
+          "evidence": "분담비율 생략"
+        }
+      ],
+      "confidence": 100,
+      "notes": "보건복지부 보육사업 지침에 따른 지원"
+    },
+    {
+      "id": "eco-school-meal",
+      "canonicalName": "친환경 학교급식",
+      "category": "EDUCATION",
+      "sectionCode": "072",
+      "sectionName": "평생.직업교육",
+      "legalBasis": "학교급식법, 서울특별시 친환경 무상급식 등 지원에 관한 조례",
+      "definition": "친환경 식재료를 사용한 학교 급식 지원 (시30%:구20%:교육청50% 분담)",
+      "source": "https://news.seoul.go.kr/welfare/archives/305670",
+      "verifiedDate": "2025-12-19",
+      "aliases": [
+        {
+          "name": "친환경 학교급식 지원",
+          "foundIn": ["성동구", "마포구"],
+          "verified": true,
+          "evidence": "서울시 친환경무상급식조례에 따른 통일된 사업명"
+        }
+      ],
+      "confidence": 100,
+      "notes": "학교급식은 '무상급식'으로 불리기도 함. '무료급식'(노인 등 빈민층 대상)과는 완전히 다른 사업임!"
+    },
+    {
+      "id": "senior-jobs",
+      "canonicalName": "노인일자리 및 사회활동지원",
+      "category": "ECONOMY",
+      "sectionCode": "08C",
+      "sectionName": "노인",
+      "legalBasis": "노인복지법 제23조의2",
+      "definition": "65세 이상 노인에게 공익활동, 사회서비스형, 시장형 등 다양한 일자리 제공",
+      "source": "https://www.law.go.kr",
+      "verifiedDate": "2025-12-19",
+      "aliases": [
+        {
+          "name": "노인일자리 및 사회활동지원 확대(보조)",
+          "foundIn": ["성동구"],
+          "verified": true,
+          "evidence": "확대 및 보조 표기"
+        },
+        {
+          "name": "노인일자리 및 사회활동지원 확대",
+          "foundIn": ["마포구"],
+          "verified": true,
+          "evidence": "보조 생략"
+        }
+      ],
+      "confidence": 100,
+      "notes": "보건복지부 노인일자리사업 운영지침에 따름"
+    }
+  ],
+  "rejectedMappings": [
+    {
+      "id": "reject-free-meal-confusion",
+      "item1": "무상급식",
+      "item2": "무료급식",
+      "reason": "완전히 다른 사업임",
+      "explanation": {
+        "무상급식": "초중고 학생 대상, 세금 재원, 보편적 교육복지",
+        "무료급식": "저소득층/노인 대상, 후원금/기부 재원, 선별적 사회복지"
+      },
+      "source": "https://namu.wiki/w/무료급식",
+      "verifiedDate": "2025-12-19",
+      "warning": "이 두 항목을 절대 매핑하면 안 됨!"
+    }
+  ],
+  "pendingVerification": [
+    {
+      "item1": "구립체육시설 운영",
+      "item2": "서대문문화체육시설 운영",
+      "status": "needs_investigation",
+      "notes": "체육시설 관련 사업으로 보이나 범위가 다를 수 있음"
+    },
+    {
+      "item1": "성동문화재단 지원",
+      "item2": "도시관리공단 대행사업비 지원",
+      "status": "needs_investigation",
+      "notes": "문화/체육 관련 공단 지원이나 성격이 다를 수 있음"
+    }
+  ],
+  "namingPatterns": [
+    {
+      "pattern": "(보조)",
+      "meaning": "국비/시비 보조금 사업임을 표시",
+      "example": "기초연금 지급(보조)",
+      "matchWith": "기초연금 지급",
+      "autoMatch": true,
+      "confidence": 100
+    },
+    {
+      "pattern": "(XX:XX:XX)",
+      "meaning": "국비:시비:구비 분담비율",
+      "example": "(80:10:10)",
+      "matchWith": "분담비율 없는 버전",
+      "autoMatch": true,
+      "confidence": 100
+    },
+    {
+      "pattern": "확대",
+      "meaning": "기존 사업 확대 시행",
+      "example": "노인일자리 및 사회활동지원 확대",
+      "matchWith": "노인일자리 및 사회활동지원",
+      "autoMatch": true,
+      "confidence": 95
+    }
+  ]
+}

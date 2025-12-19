@@ -1,0 +1,19 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/login/route": "app/api/auth/login/route.js",
+  "/api/auth/logout/route": "app/api/auth/logout/route.js",
+  "/api/auth/me/route": "app/api/auth/me/route.js",
+  "/api/auth/register/route": "app/api/auth/register/route.js",
+  "/budget/page": "app/budget/page.js",
+  "/community/page": "app/community/page.js",
+  "/factcheck/page": "app/factcheck/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/politicians/[id]/page": "app/politicians/[id]/page.js",
+  "/politicians/page": "app/politicians/page.js",
+  "/posts/[id]/page": "app/posts/[id]/page.js",
+  "/predictions/page": "app/predictions/page.js",
+  "/promises/page": "app/promises/page.js",
+  "/write/page": "app/write/page.js"
+}
