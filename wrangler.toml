@@ -1,17 +1,19 @@
 name = "sseuksak-blog"
 main = ".open-next/worker.js"
 compatibility_date = "2024-12-01"
-compatibility_flags = ["nodejs_compat"]
+compatibility_flags = ["nodejs_compat_v2"]
 
 # KV namespace for incremental cache
 # Run: npx wrangler kv namespace create NEXT_INC_CACHE_KV
 # Then replace <KV_NAMESPACE_ID> with the actual ID
 [[kv_namespaces]]
 binding = "NEXT_INC_CACHE_KV"
-id = "<KV_NAMESPACE_ID>"
+id = "730393564acb444b84d96c45e82a6ff8"
 
-[site]
-bucket = ".open-next/assets"
+# Static assets binding (required for @opennextjs/cloudflare)
+[assets]
+binding = "ASSETS"
+directory = ".open-next/assets"
 
 # Environment variables (optional)
 [vars]

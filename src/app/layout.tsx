@@ -3,7 +3,7 @@ import { Noto_Sans_KR } from 'next/font/google';
 import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { generateWebsiteJsonLd } from '@/lib/metadata';
+import { generateWebsiteJsonLd, generateOrganizationJsonLd } from '@/lib/metadata';
 import './globals.css';
 
 const notoSansKR = Noto_Sans_KR({
@@ -57,7 +57,10 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'YOUR_GOOGLE_VERIFICATION_CODE',
+    google: '05uSSCwIsJLxLnMlswVBzMSOwEeGCOkpMhx9YJMZcng',
+    other: {
+      'naver-site-verification': 'f82b9ef52a15379f29a3f6d9ffe4dd6b9d6cc43b',
+    },
   },
   other: {
     'google-adsense-account': 'ca-pub-XXXXXXXXXX',
@@ -69,7 +72,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = generateWebsiteJsonLd();
+  const websiteJsonLd = generateWebsiteJsonLd();
+  const organizationJsonLd = generateOrganizationJsonLd();
 
   return (
     <html lang="ko">
@@ -82,7 +86,11 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
       <body className={`${notoSansKR.className} antialiased bg-white`}>

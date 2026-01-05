@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { PostMeta } from '@/lib/posts';
 
 interface PostCardProps {
@@ -26,10 +27,12 @@ export default function PostCard({ post }: PostCardProps) {
       {post.thumbnail && (
         <Link href={`/posts/${post.slug}`}>
           <div className="relative h-48 bg-gray-100">
-            <img
+            <Image
               src={post.thumbnail}
               alt={post.title}
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover"
             />
           </div>
         </Link>
