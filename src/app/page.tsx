@@ -11,8 +11,12 @@ const categoryLabels: Record<string, string> = {
   lifestyle: '생활정보',
 };
 
+const LATEST_POSTS_COUNT = 5;
+
 export default function Home() {
-  const posts = getAllPosts();
+  const allPosts = getAllPosts();
+  const posts = allPosts.slice(0, LATEST_POSTS_COUNT);
+  const hasMorePosts = allPosts.length > LATEST_POSTS_COUNT;
   const categories = getAllCategories();
 
   return (
@@ -47,13 +51,48 @@ export default function Home() {
 
       {/* Latest Posts */}
       <section>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">최신 글</h2>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-gray-900">최신 글</h2>
+          {hasMorePosts && (
+            <Link
+              href="/posts/page/1"
+              className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
+            >
+              전체 글 보기 →
+            </Link>
+          )}
+        </div>
         {posts.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map((post) => (
-              <PostCard key={post.slug} post={post} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {posts.map((post) => (
+                <PostCard key={post.slug} post={post} />
+              ))}
+            </div>
+            {hasMorePosts && (
+              <div className="text-center mt-10">
+                <Link
+                  href="/posts/page/1"
+                  className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+                >
+                  전체 글 보기
+                  <svg
+                    className="ml-2 w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            )}
+          </>
         ) : (
           <div className="text-center py-12 bg-gray-50 rounded-lg">
             <p className="text-gray-500">아직 게시글이 없습니다.</p>

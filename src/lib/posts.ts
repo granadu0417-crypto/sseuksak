@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkGfm from 'remark-gfm';
 import readingTime from 'reading-time';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
@@ -63,8 +64,15 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   const { data, content } = matter(fileContents);
   const stats = readingTime(content);
 
-  const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
+  const processedContent = await remark().use(remarkGfm).use(html).process(content);
+  let contentHtml = processedContent.toString();
+
+  // Add IDs to headings for TOC navigation
+  let headingIndex = 0;
+  contentHtml = contentHtml.replace(/<(h[2-3])>(.*?)<\/\1>/gi, (match, tag, text) => {
+    const id = `heading-${headingIndex++}`;
+    return `<${tag} id="${id}">${text}</${tag}>`;
+  });
 
   return {
     slug,
@@ -131,4 +139,41 @@ export function getRelatedPosts(slug: string, limit = 3): PostMeta[] {
     .slice(0, limit);
 
   return posts;
+}
+
+// Pagination utilities
+export const POSTS_PER_PAGE = 9;
+
+export interface PaginatedPosts {
+  posts: PostMeta[];
+  currentPage: number;
+  totalPages: number;
+  totalPosts: number;
+  hasNextPage: boolean;
+  hasPrevPage: boolean;
+}
+
+export function getPaginatedPosts(page: number): PaginatedPosts {
+  const allPosts = getAllPosts();
+  const totalPosts = allPosts.length;
+  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+  const currentPage = Math.max(1, Math.min(page, totalPages));
+
+  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+  const endIndex = startIndex + POSTS_PER_PAGE;
+  const posts = allPosts.slice(startIndex, endIndex);
+
+  return {
+    posts,
+    currentPage,
+    totalPages,
+    totalPosts,
+    hasNextPage: currentPage < totalPages,
+    hasPrevPage: currentPage > 1,
+  };
+}
+
+export function getTotalPages(): number {
+  const allPosts = getAllPosts();
+  return Math.ceil(allPosts.length / POSTS_PER_PAGE);
 }

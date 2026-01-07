@@ -3,6 +3,7 @@ import { Noto_Sans_KR } from 'next/font/google';
 import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 import { generateWebsiteJsonLd, generateOrganizationJsonLd } from '@/lib/metadata';
 import './globals.css';
 
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    'google-adsense-account': 'ca-pub-XXXXXXXXXX',
+    'google-adsense-account': 'ca-pub-3591490977493759',
   },
 };
 
@@ -80,9 +81,9 @@ export default function RootLayout({
       <head>
         <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3591490977493759"
           crossOrigin="anonymous"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
         <script
           type="application/ld+json"
@@ -99,6 +100,7 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>
+        <ScrollToTop />
       </body>
     </html>
   );

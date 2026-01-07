@@ -22,7 +22,7 @@ export function generateMetadata({
   title,
   description = DEFAULT_DESCRIPTION,
   keywords = [],
-  image = '/og-image.png',
+  image,
   url = '',
   type = 'website',
   publishedTime,
@@ -33,7 +33,11 @@ export function generateMetadata({
 }: MetadataProps = {}): Metadata {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
   const fullUrl = `${SITE_URL}${url}`;
-  const fullImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
+
+  // Handle image URL - use provided image or default
+  const DEFAULT_OG_IMAGE = '/images/og-default.png';
+  const imageUrl = image || DEFAULT_OG_IMAGE;
+  const fullImage = imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}`;
 
   return {
     title: fullTitle,
@@ -103,12 +107,17 @@ export function generateArticleJsonLd({
   modifiedTime?: string;
   author?: string;
 }) {
+  // Handle image URL properly
+  const DEFAULT_OG_IMAGE = '/images/og-default.png';
+  const imageUrl = image || DEFAULT_OG_IMAGE;
+  const fullImage = imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}`;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
     description,
-    image: image ? `${SITE_URL}${image}` : `${SITE_URL}/og-image.png`,
+    image: fullImage,
     datePublished: publishedTime,
     dateModified: modifiedTime || publishedTime,
     author: {
@@ -120,7 +129,7 @@ export function generateArticleJsonLd({
       name: SITE_NAME,
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/logo.png`,
+        url: `${SITE_URL}/logo.svg`,
       },
     },
     mainEntityOfPage: {
@@ -169,7 +178,7 @@ export function generateOrganizationJsonLd() {
     url: SITE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: `${SITE_URL}/logo.png`,
+      url: `${SITE_URL}/logo.svg`,
     },
     sameAs: [],
     contactPoint: {

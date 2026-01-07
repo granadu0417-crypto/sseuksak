@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts, getAllCategories, getAllTags } from '@/lib/posts';
+import { getAllPosts, getAllCategories, getAllTags, getTotalPages } from '@/lib/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://sseuksak.com';
@@ -65,5 +65,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...postPages, ...categoryPages, ...tagPages];
+  // Pagination pages for posts list
+  const totalPages = getTotalPages();
+  const paginationPages = Array.from({ length: totalPages }, (_, i) => ({
+    url: `${baseUrl}/posts/page/${i + 1}`,
+    lastModified: new Date(),
+    changeFrequency: 'daily' as const,
+    priority: i === 0 ? 0.7 : 0.5,
+  }));
+
+  return [...staticPages, ...postPages, ...categoryPages, ...tagPages, ...paginationPages];
 }

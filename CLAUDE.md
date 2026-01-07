@@ -131,6 +131,15 @@ content/posts/     # 마크다운 게시글
 
 ## 코딩 규칙
 
+### 도구 사용 규칙
+
+| 도구 | 사용 여부 | 비고 |
+|------|----------|------|
+| **Playwright MCP** | ✅ 필수 사용 | 웹 페이지 접근, 브라우저 자동화 |
+| **WebFetch** | ❌ 사용 금지 | Playwright로 대체 |
+
+웹 페이지 접근이 필요한 모든 작업에서 반드시 Playwright MCP를 사용합니다.
+
 ### 컴포넌트
 - 함수형 컴포넌트 사용
 - Props 인터페이스는 컴포넌트 파일 내에 정의
@@ -146,6 +155,61 @@ content/posts/     # 마크다운 게시글
 
 ---
 
+## SEO 및 색인 관련 규칙
+
+### 색인 준비 상태
+- **sitemap.xml**: 자동 생성 (`src/app/sitemap.ts`)
+- **robots.txt**: Googlebot, Yeti(네이버) 허용 (`src/app/robots.ts`)
+- **검증 태그**: Google/네이버 모두 설정됨 (`src/app/layout.tsx`)
+
+### OG 이미지 규칙
+
+⚠️ **주의사항**: Unsplash API는 **한글 검색어를 지원하지 않습니다**.
+
+```typescript
+// ❌ 잘못된 방법 (한글 태그 - 검색 실패)
+const searchQuery = post.tags[0] || post.category;
+
+// ✅ 올바른 방법 (영어 카테고리 사용)
+const searchQuery = post.category || 'blog';
+```
+
+**카테고리 → Unsplash 검색어 매핑**:
+| 카테고리 | 검색어 |
+|----------|--------|
+| lifestyle | lifestyle |
+| finance | finance |
+| tech | tech, technology |
+| health | health |
+| education | education |
+| insurance | insurance |
+
+### JSON-LD 구조화 데이터
+- **로고 파일**: `public/logo.svg` (PNG 아님!)
+- **Article**: 개별 게시글 페이지
+- **BreadcrumbList**: 네비게이션 경로
+- **WebSite**: 사이트 전체 정보
+- **Organization**: 발행자 정보
+
+---
+
+## 콘텐츠 작성 시 주의사항
+
+### 연도별 정보 정확성
+
+⚠️ **트렌드 코리아 시리즈 주의**:
+- 2025년: SNAKE SENSE (을사년, 뱀띠)
+- 2026년: HORSE POWER (병오년, 말띠)
+
+게시글 작성 시 연도와 키워드가 일치하는지 반드시 확인!
+
+### 띠별 운세 작성 시
+- 2026년 = 병오년 (丙午年) = 붉은 말의 해
+- 60년 주기 (갑자 순환)
+
+---
+
 ## 참고 문서
 - [프론트엔드 아키텍처](docs/FRONTEND_ARCHITECTURE.md)
 - [진행 현황](docs/PROGRESS.md)
+- [배포 가이드](docs/DEPLOYMENT_GUIDE.md)
