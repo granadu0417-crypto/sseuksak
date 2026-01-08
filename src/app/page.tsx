@@ -11,7 +11,7 @@ const categoryLabels: Record<string, string> = {
   lifestyle: '생활정보',
 };
 
-const LATEST_POSTS_COUNT = 5;
+const LATEST_POSTS_COUNT = 3;
 
 export default function Home() {
   const allPosts = getAllPosts();
@@ -34,7 +34,7 @@ export default function Home() {
       {/* Categories */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">카테고리</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
           {categories.map((category) => (
             <Link
               key={category}
@@ -46,6 +46,24 @@ export default function Home() {
               </span>
             </Link>
           ))}
+          {/* 일정 - 주황색으로 강조 */}
+          <Link
+            href="/calendar"
+            className="flex items-center justify-center p-4 bg-orange-50 hover:bg-orange-100 border border-orange-300 hover:border-orange-400 rounded-lg transition-colors text-center"
+          >
+            <span className="font-medium text-orange-700 hover:text-orange-800">
+              일정
+            </span>
+          </Link>
+          {/* 도구 - 녹색으로 강조 */}
+          <Link
+            href="/tools"
+            className="flex items-center justify-center p-4 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 hover:border-emerald-400 rounded-lg transition-colors text-center"
+          >
+            <span className="font-medium text-emerald-700 hover:text-emerald-800">
+              도구
+            </span>
+          </Link>
         </div>
       </section>
 
@@ -65,8 +83,8 @@ export default function Home() {
         {posts.length > 0 ? (
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {posts.map((post) => (
-                <PostCard key={post.slug} post={post} />
+              {posts.map((post, index) => (
+                <PostCard key={post.slug} post={post} priority={index === 0} />
               ))}
             </div>
             {hasMorePosts && (
@@ -96,7 +114,7 @@ export default function Home() {
         ) : (
           <div className="text-center py-12 bg-gray-50 rounded-lg">
             <p className="text-gray-500">아직 게시글이 없습니다.</p>
-            <p className="text-sm text-gray-400 mt-2">
+            <p className="text-sm text-gray-500 mt-2">
               곧 유용한 정보로 찾아뵙겠습니다!
             </p>
           </div>
