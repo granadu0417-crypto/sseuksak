@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
 // 위드마크 공식 상수
@@ -56,44 +56,71 @@ function calculateTimeToBAC(
   return (currentBAC - targetBAC) / ELIMINATION_RATE;
 }
 
+// 결과 타입
+interface CalculationResult {
+  currentBAC: number;
+  timeToSafe: number;
+  timeToZero: number;
+  timeline: { time: number; bac: number }[];
+}
+
 export default function AlcoholCalculatorPage() {
   const [gender, setGender] = useState<'male' | 'female'>('male');
-  const [weight, setWeight] = useState(70);
+  const [weight, setWeight] = useState<string>('70'); // string으로 변경하여 빈 값 허용
   const [selectedDrinks, setSelectedDrinks] = useState<{ id: string; count: number }[]>([]);
   const [hoursElapsed, setHoursElapsed] = useState(0);
   const [customDrink, setCustomDrink] = useState({ ml: 0, abv: 0, count: 0 });
+  const [result, setResult] = useState<CalculationResult | null>(null); // 계산 결과 상태
 
-  // 총 알코올 그램 계산
-  const totalAlcoholGrams = useMemo(() => {
-    let total = 0;
+  // 계산 실행 함수
+  const handleCalculate = () => {
+    const weightNum = Number(weight) || 70; // 빈 값이면 기본값 70
+
+    // 총 알코올 그램 계산
+    let totalAlcoholGrams = 0;
 
     // 선택된 음료
     selectedDrinks.forEach((selected) => {
       const drink = DRINKS.find((d) => d.id === selected.id);
       if (drink) {
-        total += calculateAlcoholGrams(drink.ml, drink.abv) * selected.count;
+        totalAlcoholGrams += calculateAlcoholGrams(drink.ml, drink.abv) * selected.count;
       }
     });
 
     // 커스텀 음료
     if (customDrink.ml > 0 && customDrink.abv > 0 && customDrink.count > 0) {
-      total += calculateAlcoholGrams(customDrink.ml, customDrink.abv) * customDrink.count;
+      totalAlcoholGrams += calculateAlcoholGrams(customDrink.ml, customDrink.abv) * customDrink.count;
     }
 
-    return total;
-  }, [selectedDrinks, customDrink]);
+    // BAC 계산
+    const currentBAC = calculateBAC(totalAlcoholGrams, weightNum, gender, hoursElapsed);
+    const timeToSafe = calculateTimeToBAC(currentBAC, BAC_LIMITS.safe);
+    const timeToZero = calculateTimeToBAC(currentBAC, 0);
 
-  // 현재 BAC 계산
-  const currentBAC = useMemo(() => {
-    return calculateBAC(totalAlcoholGrams, weight, gender, hoursElapsed);
-  }, [totalAlcoholGrams, weight, gender, hoursElapsed]);
+    // 타임라인 생성
+    const timeline: { time: number; bac: number }[] = [];
+    if (currentBAC > 0) {
+      let time = 0;
+      let bac = currentBAC;
+      while (bac > 0 && time <= 24) {
+        timeline.push({ time, bac });
+        time += 0.5;
+        bac = Math.max(0, currentBAC - ELIMINATION_RATE * time);
+      }
+      timeline.push({ time, bac: 0 });
+    }
 
-  // 운전 가능 시간 계산
-  const timeToSafe = calculateTimeToBAC(currentBAC, BAC_LIMITS.safe);
-  const timeToZero = calculateTimeToBAC(currentBAC, 0);
+    setResult({ currentBAC, timeToSafe, timeToZero, timeline });
+  };
+
+  // 입력 변경 시 결과 초기화
+  const resetResult = () => {
+    setResult(null);
+  };
 
   // 음료 추가/제거
   const updateDrinkCount = (drinkId: string, delta: number) => {
+    resetResult(); // 입력 변경 시 결과 초기화
     setSelectedDrinks((prev) => {
       const existing = prev.find((d) => d.id === drinkId);
       if (existing) {
@@ -131,32 +158,16 @@ export default function AlcoholCalculatorPage() {
   };
 
   // BAC 상태 판정
-  const getBACStatus = () => {
-    if (currentBAC === 0) return { level: 'safe', text: '정상', color: 'text-green-600', bg: 'bg-green-50' };
-    if (currentBAC < BAC_LIMITS.safe) return { level: 'caution', text: '주의', color: 'text-yellow-600', bg: 'bg-yellow-50' };
-    if (currentBAC < BAC_LIMITS.criminal) return { level: 'warning', text: '면허정지', color: 'text-orange-600', bg: 'bg-orange-50' };
+  const getBACStatus = (bac: number) => {
+    if (bac === 0) return { level: 'safe', text: '정상', color: 'text-green-600', bg: 'bg-green-50' };
+    if (bac < BAC_LIMITS.safe) return { level: 'caution', text: '주의', color: 'text-yellow-600', bg: 'bg-yellow-50' };
+    if (bac < BAC_LIMITS.criminal) return { level: 'warning', text: '면허정지', color: 'text-orange-600', bg: 'bg-orange-50' };
     return { level: 'danger', text: '형사처벌', color: 'text-red-600', bg: 'bg-red-50' };
   };
 
-  const bacStatus = getBACStatus();
-
-  // 타임라인 데이터 생성
-  const timeline = useMemo(() => {
-    if (currentBAC === 0) return [];
-
-    const points = [];
-    let time = 0;
-    let bac = currentBAC;
-
-    while (bac > 0 && time <= 24) {
-      points.push({ time, bac });
-      time += 0.5;
-      bac = Math.max(0, currentBAC - ELIMINATION_RATE * time);
-    }
-    points.push({ time, bac: 0 });
-
-    return points;
-  }, [currentBAC]);
+  // 총 음료 수량 계산
+  const totalDrinkCount = selectedDrinks.reduce((sum, d) => sum + d.count, 0) +
+    (customDrink.ml > 0 && customDrink.abv > 0 ? customDrink.count : 0);
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -191,7 +202,7 @@ export default function AlcoholCalculatorPage() {
                 <label className="block text-sm text-gray-600 mb-2">성별</label>
                 <div className="flex gap-2">
                   <button
-                    onClick={() => setGender('male')}
+                    onClick={() => { setGender('male'); resetResult(); }}
                     className={`flex-1 py-2 px-4 rounded-lg border transition-colors ${
                       gender === 'male'
                         ? 'bg-blue-600 text-white border-blue-600'
@@ -201,7 +212,7 @@ export default function AlcoholCalculatorPage() {
                     남성
                   </button>
                   <button
-                    onClick={() => setGender('female')}
+                    onClick={() => { setGender('female'); resetResult(); }}
                     className={`flex-1 py-2 px-4 rounded-lg border transition-colors ${
                       gender === 'female'
                         ? 'bg-pink-600 text-white border-pink-600'
@@ -219,10 +230,12 @@ export default function AlcoholCalculatorPage() {
                 <input
                   type="number"
                   value={weight}
-                  onChange={(e) => setWeight(Number(e.target.value) || 60)}
+                  onChange={(e) => { setWeight(e.target.value); resetResult(); }}
+                  onBlur={() => { if (!weight || Number(weight) < 30) setWeight('70'); }}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   min={30}
                   max={200}
+                  placeholder="70"
                 />
               </div>
 
@@ -234,7 +247,7 @@ export default function AlcoholCalculatorPage() {
                 <input
                   type="range"
                   value={hoursElapsed}
-                  onChange={(e) => setHoursElapsed(Number(e.target.value))}
+                  onChange={(e) => { setHoursElapsed(Number(e.target.value)); resetResult(); }}
                   className="w-full"
                   min={0}
                   max={12}
@@ -298,7 +311,7 @@ export default function AlcoholCalculatorPage() {
                   <input
                     type="number"
                     value={customDrink.ml || ''}
-                    onChange={(e) => setCustomDrink((prev) => ({ ...prev, ml: Number(e.target.value) }))}
+                    onChange={(e) => { setCustomDrink((prev) => ({ ...prev, ml: Number(e.target.value) })); resetResult(); }}
                     className="w-full px-2 py-1 text-sm border border-gray-300 rounded"
                     placeholder="500"
                   />
@@ -308,7 +321,7 @@ export default function AlcoholCalculatorPage() {
                   <input
                     type="number"
                     value={customDrink.abv || ''}
-                    onChange={(e) => setCustomDrink((prev) => ({ ...prev, abv: Number(e.target.value) }))}
+                    onChange={(e) => { setCustomDrink((prev) => ({ ...prev, abv: Number(e.target.value) })); resetResult(); }}
                     className="w-full px-2 py-1 text-sm border border-gray-300 rounded"
                     placeholder="5"
                   />
@@ -318,7 +331,7 @@ export default function AlcoholCalculatorPage() {
                   <input
                     type="number"
                     value={customDrink.count || ''}
-                    onChange={(e) => setCustomDrink((prev) => ({ ...prev, count: Number(e.target.value) }))}
+                    onChange={(e) => { setCustomDrink((prev) => ({ ...prev, count: Number(e.target.value) })); resetResult(); }}
                     className="w-full px-2 py-1 text-sm border border-gray-300 rounded"
                     placeholder="1"
                   />
@@ -326,54 +339,83 @@ export default function AlcoholCalculatorPage() {
               </div>
             </div>
           </div>
+
+          {/* 계산하기 버튼 */}
+          <button
+            onClick={handleCalculate}
+            disabled={totalDrinkCount === 0}
+            className={`w-full py-4 rounded-xl font-bold text-lg transition-colors ${
+              totalDrinkCount > 0
+                ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+            }`}
+          >
+            {totalDrinkCount > 0 ? '계산하기' : '음주량을 입력하세요'}
+          </button>
         </div>
 
         {/* 결과 섹션 */}
         <div className="space-y-6">
-          {/* BAC 결과 */}
-          <div className={`rounded-xl border p-6 ${bacStatus.bg} border-gray-200`}>
-            <div className="text-center">
-              <p className="text-sm text-gray-600 mb-1">현재 추정 혈중 알코올 농도</p>
-              <p className={`text-5xl font-bold ${bacStatus.color}`}>
-                {currentBAC.toFixed(3)}%
-              </p>
-              <p className={`mt-2 text-lg font-semibold ${bacStatus.color}`}>
-                {bacStatus.text}
-              </p>
-            </div>
-
-            {currentBAC > 0 && (
-              <div className="mt-6 space-y-3">
-                <div className="flex justify-between items-center p-3 bg-white/50 rounded-lg">
-                  <span className="text-sm text-gray-600">운전 가능 (0.03% 미만)</span>
-                  <span className="font-semibold">
-                    {timeToSafe > 0 ? (
-                      <>
-                        {formatTime(timeToSafe)} 후
-                        <span className="text-xs text-gray-500 ml-1">
-                          ({getExpectedTime(timeToSafe)})
-                        </span>
-                      </>
-                    ) : (
-                      <span className="text-green-600">가능</span>
-                    )}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white/50 rounded-lg">
-                  <span className="text-sm text-gray-600">완전 분해 (0%)</span>
-                  <span className="font-semibold">
-                    {formatTime(timeToZero)} 후
-                    <span className="text-xs text-gray-500 ml-1">
-                      ({getExpectedTime(timeToZero)})
-                    </span>
-                  </span>
-                </div>
+          {/* BAC 결과 - 계산 전 */}
+          {!result && (
+            <div className="rounded-xl border p-6 bg-gray-50 border-gray-200">
+              <div className="text-center py-8">
+                <div className="text-6xl mb-4">🍺</div>
+                <p className="text-gray-500 text-lg">음주량을 입력하고</p>
+                <p className="text-gray-500 text-lg">계산하기 버튼을 눌러주세요</p>
               </div>
-            )}
-          </div>
+            </div>
+          )}
+
+          {/* BAC 결과 - 계산 후 */}
+          {result && (() => {
+            const bacStatus = getBACStatus(result.currentBAC);
+            return (
+              <div className={`rounded-xl border p-6 ${bacStatus.bg} border-gray-200`}>
+                <div className="text-center">
+                  <p className="text-sm text-gray-600 mb-1">현재 추정 혈중 알코올 농도</p>
+                  <p className={`text-5xl font-bold ${bacStatus.color}`}>
+                    {result.currentBAC.toFixed(3)}%
+                  </p>
+                  <p className={`mt-2 text-lg font-semibold ${bacStatus.color}`}>
+                    {bacStatus.text}
+                  </p>
+                </div>
+
+                {result.currentBAC > 0 && (
+                  <div className="mt-6 space-y-3">
+                    <div className="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                      <span className="text-sm text-gray-600">운전 가능 (0.03% 미만)</span>
+                      <span className="font-semibold">
+                        {result.timeToSafe > 0 ? (
+                          <>
+                            {formatTime(result.timeToSafe)} 후
+                            <span className="text-xs text-gray-500 ml-1">
+                              ({getExpectedTime(result.timeToSafe)})
+                            </span>
+                          </>
+                        ) : (
+                          <span className="text-green-600">가능</span>
+                        )}
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                      <span className="text-sm text-gray-600">완전 분해 (0%)</span>
+                      <span className="font-semibold">
+                        {formatTime(result.timeToZero)} 후
+                        <span className="text-xs text-gray-500 ml-1">
+                          ({getExpectedTime(result.timeToZero)})
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })()}
 
           {/* 타임라인 */}
-          {currentBAC > 0 && (
+          {result && result.currentBAC > 0 && (
             <div className="bg-white rounded-xl border border-gray-200 p-6">
               <h3 className="font-bold text-gray-900 mb-4">시간별 예상 혈중 알코올 농도</h3>
 
@@ -388,8 +430,8 @@ export default function AlcoholCalculatorPage() {
 
                 {/* 그래프 바 */}
                 <div className="absolute inset-0 flex items-end gap-1">
-                  {timeline.slice(0, 16).map((point, index) => {
-                    const height = Math.min(100, (point.bac / Math.max(currentBAC, 0.1)) * 100);
+                  {result.timeline.slice(0, 16).map((point, index) => {
+                    const height = Math.min(100, (point.bac / Math.max(result.currentBAC, 0.1)) * 100);
                     const getBarColor = () => {
                       if (point.bac >= BAC_LIMITS.criminal) return 'bg-red-500';
                       if (point.bac >= BAC_LIMITS.safe) return 'bg-orange-400';
