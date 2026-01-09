@@ -1,6 +1,33 @@
 # sseuksak.com 프로젝트 진행 현황
 
-> 마지막 업데이트: 2026-01-07
+> 마지막 업데이트: 2026-01-09
+
+## 2026-01-09 작업 기록
+
+### 완료된 작업
+| 시간 | 작업 내용 | 상태 |
+|------|----------|------|
+| - | 연말정산 환급액 계산기 구현 | ✅ 완료 |
+| - | 2025년 귀속 세율 및 공제율 적용 | ✅ 완료 |
+| - | 국세청 공식 자료 링크 추가 | ✅ 완료 |
+
+### 새로운 도구
+| 도구명 | 경로 | 기능 |
+|--------|------|------|
+| 연말정산 환급액 계산기 | `/tools/tax-refund-calculator` | 2025년 귀속 연말정산 예상 환급액 계산 |
+
+### 적용된 공식 데이터 (국세청 기준)
+- 2025년 귀속 근로소득세율표 (6%~45%, 8단계)
+- 근로소득공제 계산식
+- 인적공제 (1인당 150만원)
+- 세액공제 (근로소득세액공제, 자녀세액공제, 연금저축, 보험료, 의료비, 교육비, 기부금, 월세)
+
+### 참고 링크
+- 국세청 연말정산 안내: https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2304&cntntsId=238938
+- 홈택스: https://www.hometax.go.kr
+- 연말정산 상담도우미: https://call.nts.go.kr/call/taxInfo/selectTaxInfo.do?mi=1317
+
+---
 
 ## 프로젝트 개요
 
@@ -8,7 +35,7 @@
 |------|------|
 | 프로젝트 | sseuksak.com AdSense 블로그 |
 | 시작일 | 2026-01-02 |
-| 현재 상태 | 🟢 라이브 |
+| 현재 상태 | 🟢 라이브 (AdSense 심사 중) |
 | 사이트 URL | https://sseuksak.com |
 
 ---
@@ -22,21 +49,36 @@
 - [x] Unsplash API 통합
 - [x] SEO 및 색인 준비 완료
 - [x] Unsplash Production API 신청 (심사 중)
+- [x] **Google Analytics 4 설치** (`G-CMZF467RLD`)
+- [x] **Google Search Console 인증 및 sitemap 제출**
+- [x] **네이버 서치어드바이저 인증**
+- [x] **AdSense 설치 및 신청** (`ca-pub-3591490977493759`)
+- [x] **콘텐츠 30개 달성**
+- [x] **인터랙티브 도구 8개 구현**
+- [x] **2026년 일정 캘린더 페이지 추가**
+- [x] **모바일 최적화 완료**
 
-### 🎯 현재 우선순위
-1. ~~**콘텐츠 확충** (현재 12개 → 목표 20개 이상)~~ ✅ 완료 (20개)
-2. **검색엔진 색인 요청** (Google, 네이버)
-3. **AdSense 신청** (콘텐츠 20개 조건 충족!)
+### 🎯 현재 상태
+| 항목 | 상태 | 비고 |
+|------|------|------|
+| 콘텐츠 | ✅ 30개 | 목표 초과 달성 |
+| 도구 | ✅ 8개 | 연말정산 환급액, 연봉계산기, 알코올계산기 등 |
+| GA4 | ✅ 설치됨 | G-CMZF467RLD |
+| Search Console | ✅ 연동됨 | sitemap 제출 완료 |
+| 네이버 | ✅ 연동됨 | 인증 완료 |
+| AdSense | 🔄 심사 중 | ca-pub-3591490977493759 |
 
 ### 대기 중
-- [ ] AdSense 신청 (콘텐츠 조건 충족 ✅)
+- [ ] AdSense 승인 (심사 중)
 - [ ] Unsplash Production 심사 결과 (5-10 영업일)
+- [ ] 검색엔진 색인 확인 (색인 요청 완료)
 
-### 선택적 (나중에)
+### 선택적 개선 (나중에)
 > 현재 사이트가 정상 작동하므로 급하지 않음
-- [ ] shadcn/ui 설치 (UI 라이브러리)
-- [ ] constants/ 폴더 생성 (상수 관리)
-- [ ] 컴포넌트 구조 리팩토링
+- [ ] 추가 도구 개발 (BMI 계산기, 대출이자 계산기)
+- [ ] 포스트 내부 링크 강화
+- [ ] 동적 OG 이미지 생성
+- [ ] 댓글 시스템 (Giscus)
 
 ---
 
@@ -709,8 +751,244 @@ KV 캐시: 267개 에셋 업로드
 | AdSense 조건 | ✅ 충족 (20개 이상) |
 | 라이브 URL | https://sseuksak.com |
 
+---
+
+### 2026-01-08 - PageSpeed 성능 최적화
+
+#### 완료된 작업
+
+| 시간 | 작업 내용 | 상태 |
+|------|----------|------|
+| - | PageSpeed Insights 분석 (Performance 65점) | ✅ 완료 |
+| - | 렌더링 차단 리소스 최적화 | ✅ 완료 |
+| - | robots.txt 중복 규칙 수정 | ✅ 완료 |
+| - | LCP 이미지 priority 적용 | ✅ 완료 |
+| - | 접근성 색상 대비 수정 | ✅ 완료 |
+
+#### PageSpeed 분석 결과 (최적화 전)
+
+| 지표 | 점수/값 | 상태 |
+|------|---------|------|
+| Performance | 65 | 개선 필요 |
+| Accessibility | 92 | 양호 |
+| Best Practices | 96 | 양호 |
+| SEO | 92 | 양호 |
+| FCP | 3.9s | 느림 |
+| LCP | 7.3s | 매우 느림 (목표 <2.5s) |
+| TBT | 30ms | 양호 |
+| CLS | 0.001 | 양호 |
+
+#### 최적화 작업 내역
+
+**1. 렌더링 차단 리소스 최적화 (`layout.tsx`)**
+- 폰트 웨이트 최적화: `['400', '500', '600', '700']` → `['400', '600', '700']`
+- 폰트 preload 및 fallback 추가
+- preconnect 링크 추가 (Google Fonts, AdSense, Unsplash)
+- AdSense 스크립트 전략 변경: `afterInteractive` → `lazyOnload`
+
+**2. robots.txt 중복 규칙 수정**
+- 문제: Cloudflare 관리 규칙과 Next.js 규칙 중복
+- 해결: `User-Agent: *` 규칙 제거 (Cloudflare가 관리)
+
+**3. LCP 이미지 최적화**
+- `PostCard` 컴포넌트에 `priority` prop 추가
+- 첫 번째 이미지에 `priority={true}` 적용
+- 적용 페이지: 홈, 카테고리, 태그, 전체글 목록
+
+**4. 접근성 색상 대비 수정**
+- `text-gray-400` → `text-gray-500` 변경
+- WCAG 2.1 AA 기준 충족
+
+#### 수정된 파일
+
+| 파일 | 주요 수정 |
+|------|----------|
+| `src/app/layout.tsx` | preconnect, 폰트 최적화, AdSense lazyOnload |
+| `src/app/robots.ts` | 중복 User-Agent 규칙 제거 |
+| `src/components/PostCard.tsx` | priority prop, 색상 대비 수정 |
+| `src/app/page.tsx` | PostCard priority 전달, 색상 수정 |
+| `src/app/category/[slug]/page.tsx` | PostCard priority 전달 |
+| `src/app/posts/page/[page]/page.tsx` | PostCard priority 전달 |
+| `src/app/tag/[slug]/page.tsx` | PostCard priority 전달 |
+
+#### PageSpeed 최적화 결과 (1차)
+
+| 지표 | 이전 | 이후 | 변화 |
+|------|------|------|------|
+| Performance | 65 | **80** | +15 ✅ |
+| Accessibility | 92 | **96** | +4 ✅ |
+| FCP | 3.9s | 3.2s | -0.7s |
+| LCP | 7.3s | **3.8s** | -3.5s ✅ |
+| TBT | 30ms | 80ms | +50ms |
+| CLS | 0.001 | 0 | 개선 |
+
+---
+
+### 2026-01-08 (오후 세션) - 미사용 JavaScript 제거
+
+#### 완료된 작업
+
+| 시간 | 작업 내용 | 상태 |
+|------|----------|------|
+| - | 번들 분석으로 미사용 JS 식별 | ✅ 완료 |
+| - | AdSense.tsx 컴포넌트 삭제 (미사용) | ✅ 완료 |
+| - | UnsplashImage.tsx 컴포넌트 삭제 (미사용) | ✅ 완료 |
+| - | unsplash.ts 미사용 함수 제거 | ✅ 완료 |
+| - | next.config.ts 최적화 설정 추가 | ✅ 완료 |
+| - | remark-slug 미사용 패키지 제거 | ✅ 완료 |
+| - | critters 패키지 설치 (CSS 최적화) | ✅ 완료 |
+| - | Cloudflare Workers 배포 | ✅ 완료 |
+
+#### 제거된 미사용 코드
+
+| 파일/함수 | 설명 |
+|-----------|------|
+| `src/components/AdSense.tsx` | 어디에서도 import되지 않음 |
+| `src/components/UnsplashImage.tsx` | 어디에서도 import되지 않음 |
+| `triggerDownload()` | unsplash.ts 내 미사용 함수 |
+| `getPhotoByQuery()` | unsplash.ts 내 미사용 함수 |
+| `getPhotosForCategory()` | unsplash.ts 내 미사용 함수 |
+| `remark-slug` | npm 패키지 (heading ID는 수동 생성) |
+
+#### next.config.ts 최적화 설정
+
+```typescript
+// 프로덕션 빌드 최적화
+compiler: {
+  removeConsole: process.env.NODE_ENV === 'production' ? {
+    exclude: ['error', 'warn'],
+  } : false,
+},
+experimental: {
+  optimizeCss: true,  // critters 패키지 필요
+},
+```
+
+#### PageSpeed 결과 (2차 측정)
+
+| 지표 | 값 | 상태 |
+|------|-----|------|
+| Performance | 78 | 양호 |
+| Accessibility | 96 | 양호 |
+| Best Practices | 96 | 양호 |
+| SEO | 92 | 양호 |
+| FCP | 3.2s | - |
+| LCP | 4.1s | - |
+| TBT | 50ms | 개선 |
+| CLS | 0 | - |
+
+**분석**:
+- TBT 개선: 80ms → 50ms (console 제거, CSS 최적화 효과)
+- 번들 크기: 102KB (React 런타임이 대부분, 추가 최적화 한계)
+- 남은 "미사용 JS" 156KB는 React hydration에 필요한 코드
+
+#### 배포 정보
+
+```yaml
+버전 ID: af158511-20ed-45c1-8213-7a0a640b1c76
+빌드: 228개 페이지
+신규 업로드: 3개 파일
+```
+
+---
+
+### 2026-01-08 (저녁 세션) - 캘린더/일정 페이지 추가
+
+#### 완료된 작업
+
+| 시간 | 작업 내용 | 상태 |
+|------|----------|------|
+| - | 2026년 주요 일정 캘린더 페이지 신규 구현 | ✅ 완료 |
+| - | 국세청(NTS) 공식 자료 기반 세금 일정 검증 | ✅ 완료 |
+| - | 기한의특례(국세기본법 제5조) 적용하여 마감일 수정 | ✅ 완료 |
+| - | Q-Net 공식 자료 기반 기사/산업기사 시험일정 검증 | ✅ 완료 |
+| - | 헤더 및 메인 페이지에 일정 메뉴 추가 | ✅ 완료 |
+| - | 모바일 네비게이션 컴포넌트 분리 | ✅ 완료 |
+| - | Cloudflare Workers 배포 | ✅ 완료 |
+| - | 라이브 사이트 검증 (sseuksak.com/calendar) | ✅ 완료 |
+| - | Git 커밋 완료 | ✅ 완료 |
+
+#### 캘린더 기능 상세
+
+**주요 기능**:
+- 월별 탭 (1-12월) - 현재 월 하이라이트
+- 카테고리 필터 (세금, 자격증, 지원금, 보험, 학사)
+- 일정 카드에 관련 게시글 링크
+- 중요 일정 표시
+
+**카테고리 색상**:
+| 카테고리 | 라벨 | 색상 |
+|----------|------|------|
+| tax | 세금 | 빨강 |
+| certification | 자격증 | 파랑 |
+| support | 지원금 | 초록 |
+| insurance | 보험 | 보라 |
+| education | 학사 | 노랑 |
+
+#### 세금 일정 검증 (기한의특례 적용)
+
+| 원래 기한 | 연장 기한 | 사유 | 일정명 |
+|-----------|-----------|------|--------|
+| 1/25 (일) | **1/26** (월) | 공휴일 연장 | 4분기 부가세 확정신고 |
+| 2/28 (토) | **3/2** (월) | 토요일 연장 | 연말정산 신고 마감 |
+| 5/31 (일) | **6/1** (월) | 공휴일 연장 | 종합소득세 신고 마감 |
+| 7/25 (토) | **7/27** (월) | 토요일 연장 | 2분기 부가세 확정신고 |
+| 10/25 (일) | **10/26** (월) | 공휴일 연장 | 3분기 부가세 예정신고 |
+
+**검증 출처**:
+- 국세청 홈택스 2026년 세금신고 일정
+- 국세기본법 제5조 (기한의특례)
+
+#### 자격증 시험일정 검증
+
+| 회차 | 필기접수 | 필기시험 | 필기발표 | 실기접수 | 실기시험 | 최종발표 |
+|------|----------|----------|----------|----------|----------|----------|
+| 1회 | 1/12~15 | 1/30~3/3 | 3/11 | 3/23~26 | 4/18~5/6 | 6/5 |
+| 2회 | 4/20~23 | 5/9~29 | 6/10 | 6/22~25 | 7/18~8/5 | 9/4 |
+| 3회 | 7/20~23 | 8/7~9/1 | 9/9 | 9/21~28 | 10/24~11/13 | 12/11 |
+
+**검증 출처**: Q-Net (한국산업인력공단)
+
+#### 생성된 파일
+
+| 파일 | 경로 | 설명 |
+|------|------|------|
+| 캘린더 데이터 | `src/lib/calendar-data.ts` | 2026년 일정 데이터 (375줄) |
+| 캘린더 페이지 | `src/app/calendar/page.tsx` | 월별 탭, 필터 UI (225줄) |
+| 모바일 네비게이션 | `src/components/MobileNav.tsx` | 클라이언트 컴포넌트 분리 |
+| 헤더 수정 | `src/components/Header.tsx` | 일정 링크 추가 |
+| 메인 페이지 수정 | `src/app/page.tsx` | 카테고리에 일정 카드 추가 |
+
+#### Git 커밋 정보
+
+```yaml
+커밋 ID: ae8d31d
+메시지: feat: 2026년 주요 일정 캘린더 페이지 추가
+변경 파일: 5개 (+716 lines)
+```
+
 #### 다음 세션 할 일
 
-1. AdSense 신청
-2. Google/네이버 색인 요청 확인
-3. Unsplash Production 심사 결과 확인
+1. **원격 저장소 푸시** (`git push origin main`)
+2. **캘린더 페이지 SEO 최적화** (메타데이터, 사이트맵 추가)
+3. AdSense 신청
+4. Google/네이버 색인 요청 확인
+5. Unsplash Production 심사 결과 확인
+
+#### 알아두면 좋은 것
+
+**캘린더 데이터 구조**:
+```typescript
+interface CalendarEvent {
+  month: number;           // 1-12
+  day?: number;            // 특정일 (없으면 월 전체)
+  endDay?: number;         // 기간 종료일
+  title: string;
+  description: string;
+  category: EventCategory; // tax, certification, support, insurance, education
+  relatedPost?: string;    // 관련 글 slug
+  important?: boolean;     // 중요 표시
+}
+```
+
+**URL**: https://sseuksak.com/calendar

@@ -3,10 +3,15 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '유용한 도구 모음 | 쓱싹',
-  description: '연봉 실수령액 계산기, 수면 사이클 계산기, FIRE 은퇴 계산기 등 생활에 유용한 도구들을 무료로 이용하세요.',
+  description: '연말정산 환급액 계산기, 연봉 실수령액 계산기, 수면 사이클 계산기, FIRE 은퇴 계산기 등 생활에 유용한 도구들을 무료로 이용하세요.',
 };
 
 const financeTools = [
+  {
+    slug: 'tax-refund-calculator',
+    title: '연말정산 환급액 계산기',
+    description: '2025년 귀속 연말정산 예상 환급액을 계산해요',
+  },
   {
     slug: 'salary-calculator',
     title: '연봉 실수령액 계산기',
