@@ -94,11 +94,12 @@
 # 로컬 개발
 npm run dev
 
-# 배포 (빌드 + 배포 한 번에)
+# 배포 (캐시 삭제 + 빌드 + 배포)
 CLOUDFLARE_API_TOKEN="PVRNKyVYVAr_i_boHjTfvuKwlzq5dFrpVNfiCkQ2" npm run cf:deploy
 ```
 
-> **참고**: `cf:deploy`는 빌드를 자동 포함합니다. 별도로 `cf:build` 실행 불필요.
+> **참고**: `cf:deploy`는 캐시 삭제(`cf:clean`) → 빌드(`cf:build`) → 배포를 순차 실행합니다.
+> 새 파일이 감지 안 되는 OpenNext 캐시 문제를 방지합니다.
 > 토큰: granadu0417@gmail.com 계정 (sseuksak-deploy). 다른 Cloudflare 로그인 상태여도 정상 작동.
 
 ---
