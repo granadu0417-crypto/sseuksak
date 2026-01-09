@@ -57,10 +57,7 @@ export default function ToolsPage() {
 
       {/* 금융 계산기 */}
       <div className="mb-10">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-2xl">💰</span>
-          <h2 className="text-xl font-bold text-gray-900">금융 계산기</h2>
-        </div>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">금융 계산기</h2>
         <div className="grid gap-4 md:grid-cols-2">
           {financeTools.map((tool) => (
             <Link
@@ -77,10 +74,7 @@ export default function ToolsPage() {
 
       {/* 라이프 도구 */}
       <div>
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-2xl">🌱</span>
-          <h2 className="text-xl font-bold text-gray-900">라이프 도구</h2>
-        </div>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">라이프 도구</h2>
         <div className="grid gap-4 md:grid-cols-2">
           {lifeTools.map((tool) => (
             <Link

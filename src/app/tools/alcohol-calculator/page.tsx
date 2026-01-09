@@ -20,14 +20,14 @@ const BAC_LIMITS = {
 
 // 주류 정보
 const DRINKS = [
-  { id: 'soju-glass', name: '소주 1잔', ml: 50, abv: 17, icon: '🍶' },
-  { id: 'soju-bottle', name: '소주 1병', ml: 360, abv: 17, icon: '🍶' },
-  { id: 'beer-glass', name: '맥주 1잔', ml: 350, abv: 5, icon: '🍺' },
-  { id: 'beer-500', name: '맥주 500ml', ml: 500, abv: 5, icon: '🍺' },
-  { id: 'makgeolli', name: '막걸리 1사발', ml: 300, abv: 6, icon: '🥛' },
-  { id: 'wine', name: '와인 1잔', ml: 150, abv: 13, icon: '🍷' },
-  { id: 'whiskey', name: '위스키 1잔', ml: 45, abv: 40, icon: '🥃' },
-  { id: 'highball', name: '하이볼 1잔', ml: 350, abv: 8, icon: '🍹' },
+  { id: 'soju-glass', name: '소주 1잔', ml: 50, abv: 17 },
+  { id: 'soju-bottle', name: '소주 1병', ml: 360, abv: 17 },
+  { id: 'beer-glass', name: '맥주 1잔', ml: 350, abv: 5 },
+  { id: 'beer-500', name: '맥주 500ml', ml: 500, abv: 5 },
+  { id: 'makgeolli', name: '막걸리 1사발', ml: 300, abv: 6 },
+  { id: 'wine', name: '와인 1잔', ml: 150, abv: 13 },
+  { id: 'whiskey', name: '위스키 1잔', ml: 45, abv: 40 },
+  { id: 'highball', name: '하이볼 1잔', ml: 350, abv: 8 },
 ];
 
 // 순수 알코올 그램 계산
@@ -278,8 +278,7 @@ export default function AlcoholCalculatorPage() {
                     }`}
                   >
                     <div className="text-center mb-2">
-                      <span className="text-2xl">{drink.icon}</span>
-                      <p className="text-xs text-gray-600 mt-1">{drink.name}</p>
+                      <p className="text-sm text-gray-700 font-medium">{drink.name}</p>
                     </div>
                     <div className="flex items-center justify-center gap-2">
                       <button
@@ -360,7 +359,6 @@ export default function AlcoholCalculatorPage() {
           {!result && (
             <div className="rounded-xl border p-6 bg-gray-50 border-gray-200">
               <div className="text-center py-8">
-                <div className="text-6xl mb-4">🍺</div>
                 <p className="text-gray-500 text-lg">음주량을 입력하고</p>
                 <p className="text-gray-500 text-lg">계산하기 버튼을 눌러주세요</p>
               </div>
