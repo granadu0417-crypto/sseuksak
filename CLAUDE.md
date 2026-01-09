@@ -94,14 +94,12 @@
 # 로컬 개발
 npm run dev
 
-# Cloudflare Workers 빌드
-npm run cf:build
-
-# Cloudflare Workers 배포
-CLOUDFLARE_API_KEY="c3a9f4fe1100c03ea1a3287c0655a7bbd1675" \
-CLOUDFLARE_EMAIL="granadu0417@gmail.com" \
-npm run cf:deploy
+# 배포 (빌드 + 배포 한 번에)
+CLOUDFLARE_API_TOKEN="PVRNKyVYVAr_i_boHjTfvuKwlzq5dFrpVNfiCkQ2" npm run cf:deploy
 ```
+
+> **참고**: `cf:deploy`는 빌드를 자동 포함합니다. 별도로 `cf:build` 실행 불필요.
+> 토큰: granadu0417@gmail.com 계정 (sseuksak-deploy). 다른 Cloudflare 로그인 상태여도 정상 작동.
 
 ---
 
