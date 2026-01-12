@@ -219,3 +219,5 @@ const searchQuery = post.category || 'blog';
 - [프론트엔드 아키텍처](docs/FRONTEND_ARCHITECTURE.md)
 - [진행 현황](docs/PROGRESS.md)
 - [배포 가이드](docs/DEPLOYMENT_GUIDE.md)
+- [SEO 색인 관리](docs/SEO_INDEXING.md)
+- [콘텐츠 검증 가이드](docs/CONTENT_VERIFICATION.md)
