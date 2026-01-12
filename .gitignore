@@ -17,6 +17,12 @@
 /.next/
 /out/
 
+# OpenNext (Cloudflare Workers build)
+/.open-next/
+
+# Playwright MCP screenshots
+/.playwright-mcp/
+
 # production
 /build
 
