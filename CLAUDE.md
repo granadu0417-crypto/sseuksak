@@ -94,12 +94,19 @@
 # 로컬 개발
 npm run dev
 
-# 배포 (캐시 삭제 + 빌드 + 배포)
+# 빠른 배포 (글 수정, 내용 변경 시) - 약 40초
+CLOUDFLARE_API_TOKEN="PVRNKyVYVAr_i_boHjTfvuKwlzq5dFrpVNfiCkQ2" npm run cf:quick
+
+# 전체 배포 (새 기능, 설정 변경, 오류 시) - 약 100초
 CLOUDFLARE_API_TOKEN="PVRNKyVYVAr_i_boHjTfvuKwlzq5dFrpVNfiCkQ2" npm run cf:deploy
 ```
 
-> **참고**: `cf:deploy`는 캐시 삭제(`cf:clean`) → 빌드(`cf:build`) → 배포를 순차 실행합니다.
-> 새 파일이 감지 안 되는 OpenNext 캐시 문제를 방지합니다.
+| 명령어 | 용도 | 소요 시간 |
+|--------|------|----------|
+| `cf:quick` | 글 수정, 내용 변경 | ~40초 |
+| `cf:deploy` | 새 기능, 설정 변경, 오류 해결 | ~100초 |
+
+> **참고**: `cf:deploy`는 캐시 삭제 → 빌드 → 배포, `cf:quick`은 빌드 → 배포만 실행.
 > 토큰: granadu0417@gmail.com 계정 (sseuksak-deploy). 다른 Cloudflare 로그인 상태여도 정상 작동.
 
 ---
