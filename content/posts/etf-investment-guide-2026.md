@@ -3,7 +3,7 @@ title: "ETF 투자 입문 가이드: 초보자도 쉽게 시작하는 ETF 완벽
 description: "ETF가 뭔지 몰라도 괜찮아요! 초보자도 이해할 수 있는 ETF 기초부터 추천 종목, 투자 방법까지 2026년 ETF 투자의 모든 것을 정리했습니다."
 date: "2026-01-05"
 category: "finance"
-tags: ["ETF", "투자입문", "주식투자", "S&P500", "적립식투자", "분산투자", "KODEX", "TIGER"]
+tags: ["ETF", "투자입문", "주식투자", "SP500", "적립식투자", "분산투자", "KODEX", "TIGER"]
 thumbnail: ""
 ---
 

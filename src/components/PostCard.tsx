@@ -5,6 +5,7 @@ import { getPhotoForCategory, getOptimizedImageUrl, getAttribution } from '@/lib
 
 interface PostCardProps {
   post: PostMeta;
+  priority?: boolean;  // LCP 최적화를 위한 우선 로딩
 }
 
 const categoryLabels: Record<string, string> = {
@@ -16,7 +17,7 @@ const categoryLabels: Record<string, string> = {
   lifestyle: '생활정보',
 };
 
-export default async function PostCard({ post }: PostCardProps) {
+export default async function PostCard({ post, priority = false }: PostCardProps) {
   const formattedDate = new Date(post.date).toLocaleDateString('ko-KR', {
     year: 'numeric',
     month: 'long',
@@ -50,6 +51,8 @@ export default async function PostCard({ post }: PostCardProps) {
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
+              priority={priority}
+              loading={priority ? 'eager' : 'lazy'}
             />
             {attribution && (
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent px-2 py-1 text-[10px] text-white/70">
@@ -74,7 +77,7 @@ export default async function PostCard({ post }: PostCardProps) {
           >
             {categoryLabels[post.category] || post.category}
           </Link>
-          <span className="text-xs text-gray-400">{post.readingTime}</span>
+          <span className="text-xs text-gray-500">{post.readingTime}</span>
         </div>
 
         <Link href={`/posts/${post.slug}`}>
@@ -88,7 +91,7 @@ export default async function PostCard({ post }: PostCardProps) {
         </p>
 
         <div className="flex items-center justify-between">
-          <time className="text-xs text-gray-400" dateTime={post.date}>
+          <time className="text-xs text-gray-500" dateTime={post.date}>
             {formattedDate}
           </time>
           {post.tags.length > 0 && (

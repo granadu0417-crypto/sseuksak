@@ -3,14 +3,17 @@ import { Noto_Sans_KR } from 'next/font/google';
 import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ScrollToTop from '@/components/ScrollToTop';
+import ScrollToTopWrapper from '@/components/ScrollToTopWrapper';
 import { generateWebsiteJsonLd, generateOrganizationJsonLd } from '@/lib/metadata';
 import './globals.css';
 
+// 폰트 웨이트 최적화: 400(본문), 600(제목), 700(강조)만 로드
 const notoSansKR = Noto_Sans_KR({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600', '700'],
   display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
@@ -79,11 +82,32 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        {/* 외부 도메인 preconnect - 초기 연결 시간 단축 */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+        {/* Google Analytics */}
         <Script
-          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-CMZF467RLD"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CMZF467RLD');
+          `}
+        </Script>
+
+        {/* AdSense - lazyOnload로 렌더링 차단 방지 */}
+        <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3591490977493759"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <script
           type="application/ld+json"
@@ -100,7 +124,7 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>
-        <ScrollToTop />
+        <ScrollToTopWrapper />
       </body>
     </html>
   );

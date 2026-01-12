@@ -316,9 +316,9 @@ export const calendarEvents: CalendarEvent[] = [
   // 11월
   {
     month: 11,
-    day: 14,
+    day: 19,
     title: '대학수학능력시험',
-    description: '2027학년도 수능 시험일',
+    description: '2027학년도 수능 시험일 (목요일)',
     category: 'education',
     important: true,
   },

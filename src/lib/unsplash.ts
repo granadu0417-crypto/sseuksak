@@ -170,27 +170,6 @@ export async function getPhotoForCategory(
 }
 
 /**
- * Get photo by specific query (for tags or custom search)
- */
-export async function getPhotoByQuery(query: string): Promise<UnsplashPhoto | null> {
-  const cacheKey = `query_${query}`;
-
-  if (imageCache.has(cacheKey)) {
-    return imageCache.get(cacheKey)!;
-  }
-
-  const result = await searchPhotos(query, { perPage: 1 });
-
-  if (result && result.results.length > 0) {
-    const photo = result.results[0];
-    imageCache.set(cacheKey, photo);
-    return photo;
-  }
-
-  return null;
-}
-
-/**
  * Get optimized image URL with custom dimensions
  * Unsplash supports dynamic resizing via URL parameters
  */
@@ -227,33 +206,3 @@ export function getAttribution(photo: UnsplashPhoto): {
   };
 }
 
-/**
- * Trigger download event (required by Unsplash API guidelines)
- * Should be called when a photo is "used" (displayed prominently, downloaded, etc.)
- */
-export async function triggerDownload(photo: UnsplashPhoto): Promise<void> {
-  try {
-    await fetch(photo.links.download_location, {
-      headers: {
-        Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
-      },
-    });
-  } catch (error) {
-    console.error('Failed to trigger download:', error);
-  }
-}
-
-/**
- * Get multiple photos for a category (useful for galleries or carousels)
- */
-export async function getPhotosForCategory(
-  category: string,
-  count: number = 5
-): Promise<UnsplashPhoto[]> {
-  const keywords = categoryKeywords[category] || categoryKeywords.lifestyle;
-  const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
-
-  const result = await searchPhotos(randomKeyword, { perPage: count });
-
-  return result?.results || [];
-}
