@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '심리테스트 - 재미있는 테스트 모음 | 쓱삭',
-  description: '정신연령 테스트, 소비유형 테스트, 재테크 성향 테스트, 연애스타일 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
-  keywords: ['심리테스트', '성격테스트', '정신연령', '소비유형', '재테크성향', '연애스타일', '재미있는 테스트'],
+  description: '정신연령 테스트, 직장 동물 테스트, 번아웃 위험도 테스트, 2026 운세 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
+  keywords: ['심리테스트', '성격테스트', '정신연령', '직장동물', '번아웃테스트', '운세테스트', '재미있는 테스트'],
 };
 
 // 테스트 목록
@@ -53,31 +53,67 @@ const TESTS = [
     duration: '2분',
     questions: 12,
     plays: '3,800',
-    tags: ['신규', '연애'],
+    tags: ['연애'],
     gradient: 'from-pink-500 to-rose-500',
     bgGradient: 'from-pink-50 to-rose-50',
+  },
+  {
+    slug: 'office-animal',
+    title: '회사에서 나는 무슨 동물?',
+    description: '직장에서 나의 동물 유형은?',
+    icon: '동물',
+    duration: '2분',
+    questions: 12,
+    plays: '2,100',
+    tags: ['신규', '직장인'],
+    gradient: 'from-orange-500 to-yellow-500',
+    bgGradient: 'from-orange-50 to-yellow-50',
+  },
+  {
+    slug: 'fortune-2026',
+    title: '2026 나의 운세 키워드',
+    description: '올해 나를 이끌어줄 키워드는?',
+    icon: '운세',
+    duration: '2분',
+    questions: 12,
+    plays: '1,500',
+    tags: ['신규', '신년'],
+    gradient: 'from-indigo-500 to-purple-500',
+    bgGradient: 'from-indigo-50 to-purple-50',
+  },
+  {
+    slug: 'burnout-risk',
+    title: '번아웃 위험도 테스트',
+    description: '나의 에너지 레벨은 안전할까?',
+    icon: '번아웃',
+    duration: '2분',
+    questions: 12,
+    plays: '4,200',
+    tags: ['신규', '멘탈'],
+    gradient: 'from-red-500 to-orange-500',
+    bgGradient: 'from-red-50 to-orange-50',
   },
 ];
 
 // 준비 중인 테스트
 const COMING_SOON = [
   {
-    title: '회사에서 나는 무슨 동물?',
-    icon: '동물',
-    tags: ['직장인'],
-    color: 'from-orange-500 to-yellow-500',
+    title: 'MBTI 궁합 테스트',
+    icon: 'MBTI',
+    tags: ['성격'],
+    color: 'from-cyan-500 to-blue-500',
   },
   {
-    title: '2026 나의 운세 키워드',
-    icon: '운세',
-    tags: ['신년'],
-    color: 'from-indigo-500 to-purple-500',
+    title: '나의 전생 직업은?',
+    icon: '전생',
+    tags: ['운세'],
+    color: 'from-violet-500 to-purple-500',
   },
   {
-    title: '번아웃 위험도 테스트',
-    icon: '번아웃',
+    title: '스트레스 해소법 추천',
+    icon: '힐링',
     tags: ['멘탈'],
-    color: 'from-red-500 to-orange-500',
+    color: 'from-teal-500 to-green-500',
   },
 ];
 
