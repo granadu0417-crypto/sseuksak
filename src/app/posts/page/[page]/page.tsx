@@ -5,6 +5,9 @@ import { getPaginatedPosts, getTotalPages } from '@/lib/posts';
 import PostCard from '@/components/PostCard';
 import Pagination from '@/components/Pagination';
 
+// ISR: 6시간마다 재생성 (글 목록 페이지)
+export const revalidate = 21600;
+
 interface PageProps {
   params: Promise<{ page: string }>;
 }

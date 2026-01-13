@@ -5,6 +5,9 @@ import { generateMetadata as genMeta } from '@/lib/metadata';
 import PostCard from '@/components/PostCard';
 import Breadcrumb from '@/components/Breadcrumb';
 
+// ISR: 24시간마다 재생성
+export const revalidate = 86400;
+
 const categoryLabels: Record<string, string> = {
   finance: '금융/투자',
   insurance: '보험/법률',

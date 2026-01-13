@@ -10,8 +10,9 @@
     "cf:clean": "rm -rf .open-next",
     "cf:build": "npx @opennextjs/cloudflare build",
     "cf:dev": "npx @opennextjs/cloudflare dev",
-    "cf:quick": "npm run cf:build && npx @opennextjs/cloudflare deploy",
-    "cf:deploy": "npm run cf:clean && npm run cf:build && npx @opennextjs/cloudflare deploy"
+    "cf:preview": "npm run cf:build && wrangler deploy",
+    "cf:quick": "npm run cf:build && npx @opennextjs/cloudflare deploy --cacheChunkSize 50",
+    "cf:deploy": "npm run cf:clean && npm run cf:build && npx @opennextjs/cloudflare deploy --cacheChunkSize 50"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.14.7",

@@ -14,6 +14,9 @@ import PostNavigation from '@/components/PostNavigation';
 import RelatedPosts from '@/components/RelatedPosts';
 import TableOfContents from '@/components/TableOfContents';
 
+// ISR: 24시간마다 재생성
+export const revalidate = 86400;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }

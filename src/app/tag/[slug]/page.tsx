@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getPostsByTag, getAllTags } from '@/lib/posts';
+import { getPostsByTag } from '@/lib/posts';
 import { generateMetadata as genMeta } from '@/lib/metadata';
 import PostCard from '@/components/PostCard';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -9,9 +9,13 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  const tags = getAllTags();
-  return tags.map((slug) => ({ slug }));
+// SSR: 태그 페이지는 빌드 시 생성하지 않고 요청 시 동적 렌더링
+// 빌드 시간 최적화 (191+ 페이지 → 0페이지)
+export const dynamicParams = true;
+
+export function generateStaticParams() {
+  // 빌드 시 생성할 태그 없음 (모두 SSR)
+  return [];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -2,6 +2,9 @@ import { getAllPosts, getAllCategories } from '@/lib/posts';
 import PostCard from '@/components/PostCard';
 import Link from 'next/link';
 
+// ISR: 1시간마다 재생성 (최신 글 빠른 반영)
+export const revalidate = 3600;
+
 const categoryLabels: Record<string, string> = {
   finance: '금융/투자',
   insurance: '보험/법률',
