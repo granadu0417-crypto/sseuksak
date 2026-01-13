@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '심리테스트 - 재미있는 테스트 모음 | 쓱삭',
-  description: '정신연령 테스트, 성격 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
-  keywords: ['심리테스트', '성격테스트', '정신연령', 'MBTI', '재미있는 테스트'],
+  description: '정신연령 테스트, 소비유형 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
+  keywords: ['심리테스트', '성격테스트', '정신연령', '소비유형', '재테크성향', '재미있는 테스트'],
 };
 
 // 테스트 목록
@@ -20,6 +20,18 @@ const TESTS = [
     tags: ['인기', '성격'],
     gradient: 'from-purple-500 to-pink-500',
     bgGradient: 'from-purple-50 to-pink-50',
+  },
+  {
+    slug: 'spending-type',
+    title: '소비유형 테스트',
+    description: '나는 어떤 소비 스타일일까?',
+    icon: '소비',
+    duration: '2분',
+    questions: 12,
+    plays: '8,500',
+    tags: ['신규', '재테크'],
+    gradient: 'from-emerald-500 to-teal-500',
+    bgGradient: 'from-emerald-50 to-teal-50',
   },
 ];
 
