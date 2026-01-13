@@ -1,14 +1,6 @@
 import Link from 'next/link';
 import MobileNav from './MobileNav';
-
-const categories = [
-  { name: '금융/투자', slug: 'finance' },
-  { name: '보험/법률', slug: 'insurance' },
-  { name: '건강/의료', slug: 'health' },
-  { name: 'IT/테크', slug: 'tech' },
-  { name: '교육/자격증', slug: 'education' },
-  { name: '생활정보', slug: 'lifestyle' },
-];
+import DesktopNav from './DesktopNav';
 
 export default function Header() {
   return (
@@ -20,33 +12,11 @@ export default function Header() {
             <span className="text-2xl font-bold text-blue-600">쓱싹</span>
           </Link>
 
-          {/* Desktop Navigation - 서버 렌더링 */}
-          <div className="hidden md:flex items-center space-x-8">
-            {categories.map((category) => (
-              <Link
-                key={category.slug}
-                href={`/category/${category.slug}`}
-                className="text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium"
-              >
-                {category.name}
-              </Link>
-            ))}
-            <Link
-              href="/calendar"
-              className="text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium"
-            >
-              일정
-            </Link>
-            <Link
-              href="/tools"
-              className="text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium"
-            >
-              도구
-            </Link>
-          </div>
+          {/* Desktop Navigation - 클라이언트 컴포넌트 */}
+          <DesktopNav />
 
           {/* Mobile Navigation - 클라이언트 컴포넌트 */}
-          <MobileNav categories={categories} />
+          <MobileNav />
         </div>
       </nav>
     </header>
