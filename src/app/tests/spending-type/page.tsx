@@ -270,7 +270,8 @@ function SpendingTypeTestContent() {
 
   const [state, setState] = useState<TestState>(sharedType ? 'result' : 'intro');
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<Scores[]>([]);
+  // 각 질문의 선택된 옵션 인덱스를 저장
+  const [selectedAnswers, setSelectedAnswers] = useState<number[]>([]);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [resultType, setResultType] = useState<string | null>(sharedType);
@@ -279,35 +280,56 @@ function SpendingTypeTestContent() {
   const startTest = useCallback(() => {
     setState('question');
     setCurrentQuestion(0);
-    setAnswers([]);
+    setSelectedAnswers([]);
     setSelectedOption(null);
     setResultType(null);
   }, []);
 
   // 답변 선택
-  const selectOption = useCallback((scores: Scores, index: number) => {
+  const selectOption = useCallback((index: number) => {
     if (isAnimating) return;
 
     setSelectedOption(index);
     setIsAnimating(true);
 
     setTimeout(() => {
-      const newAnswers = [...answers, scores];
-      setAnswers(newAnswers);
+      // 이미 답변한 질문이면 교체, 아니면 추가
+      const newSelectedAnswers = [...selectedAnswers];
+      if (currentQuestion < newSelectedAnswers.length) {
+        newSelectedAnswers[currentQuestion] = index;
+      } else {
+        newSelectedAnswers.push(index);
+      }
+      setSelectedAnswers(newSelectedAnswers);
 
       if (currentQuestion < QUESTIONS.length - 1) {
         setCurrentQuestion(prev => prev + 1);
-        setSelectedOption(null);
+        // 다음 질문에 이미 답변이 있으면 그것을 선택 상태로
+        const nextAnswer = newSelectedAnswers[currentQuestion + 1];
+        setSelectedOption(nextAnswer !== undefined ? nextAnswer : null);
       } else {
-        // 결과 계산
-        const totalScores = calculateScores(newAnswers);
+        // 결과 계산 - 선택된 인덱스로부터 점수 계산
+        const allScores = newSelectedAnswers.map((answerIndex, qIndex) =>
+          QUESTIONS[qIndex].options[answerIndex].scores
+        );
+        const totalScores = calculateScores(allScores);
         const topType = getTopType(totalScores);
         setResultType(topType);
         setState('result');
       }
       setIsAnimating(false);
     }, 400);
-  }, [answers, currentQuestion, isAnimating]);
+  }, [selectedAnswers, currentQuestion, isAnimating]);
+
+  // 이전 질문으로
+  const goBack = useCallback(() => {
+    if (currentQuestion > 0 && !isAnimating) {
+      const prevQuestion = currentQuestion - 1;
+      setCurrentQuestion(prevQuestion);
+      // 이전 질문의 답변을 선택 상태로 복원
+      setSelectedOption(selectedAnswers[prevQuestion] ?? null);
+    }
+  }, [currentQuestion, selectedAnswers, isAnimating]);
 
   // 다시 하기
   const restart = useCallback(() => {
@@ -316,7 +338,7 @@ function SpendingTypeTestContent() {
     }
     setState('intro');
     setCurrentQuestion(0);
-    setAnswers([]);
+    setSelectedAnswers([]);
     setSelectedOption(null);
     setResultType(null);
   }, [sharedType]);
@@ -437,7 +459,7 @@ function SpendingTypeTestContent() {
                 {QUESTIONS[currentQuestion].options.map((option, index) => (
                   <button
                     key={index}
-                    onClick={() => selectOption(option.scores, index)}
+                    onClick={() => selectOption(index)}
                     disabled={isAnimating}
                     className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-200 ${
                       selectedOption === index
@@ -450,6 +472,17 @@ function SpendingTypeTestContent() {
                 ))}
               </div>
             </div>
+
+            {/* 이전 버튼 */}
+            {currentQuestion > 0 && (
+              <button
+                onClick={goBack}
+                disabled={isAnimating}
+                className="w-full py-3 text-gray-500 hover:text-emerald-600 text-sm font-medium transition-colors disabled:opacity-50"
+              >
+                ← 이전 질문으로
+              </button>
+            )}
           </div>
         )}
 

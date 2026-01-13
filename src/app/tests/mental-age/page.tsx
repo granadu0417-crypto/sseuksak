@@ -206,7 +206,8 @@ function MentalAgeTestContent() {
 
   const [state, setState] = useState<TestState>(isValidSharedScore ? 'result' : 'intro');
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<number[]>([]);
+  // 각 질문의 선택된 옵션 인덱스를 저장
+  const [selectedAnswers, setSelectedAnswers] = useState<number[]>([]);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [sharedScore, setSharedScore] = useState<number | null>(isValidSharedScore ? initialSharedScore : null);
@@ -215,30 +216,48 @@ function MentalAgeTestContent() {
   const startTest = useCallback(() => {
     setState('question');
     setCurrentQuestion(0);
-    setAnswers([]);
+    setSelectedAnswers([]);
     setSelectedOption(null);
   }, []);
 
   // 답변 선택
-  const selectOption = useCallback((score: number, index: number) => {
+  const selectOption = useCallback((index: number) => {
     if (isAnimating) return;
 
     setSelectedOption(index);
     setIsAnimating(true);
 
     setTimeout(() => {
-      const newAnswers = [...answers, score];
-      setAnswers(newAnswers);
+      // 이미 답변한 질문이면 교체, 아니면 추가
+      const newSelectedAnswers = [...selectedAnswers];
+      if (currentQuestion < newSelectedAnswers.length) {
+        newSelectedAnswers[currentQuestion] = index;
+      } else {
+        newSelectedAnswers.push(index);
+      }
+      setSelectedAnswers(newSelectedAnswers);
 
       if (currentQuestion < QUESTIONS.length - 1) {
         setCurrentQuestion(prev => prev + 1);
-        setSelectedOption(null);
+        // 다음 질문에 이미 답변이 있으면 그것을 선택 상태로
+        const nextAnswer = newSelectedAnswers[currentQuestion + 1];
+        setSelectedOption(nextAnswer !== undefined ? nextAnswer : null);
       } else {
         setState('result');
       }
       setIsAnimating(false);
     }, 400);
-  }, [answers, currentQuestion, isAnimating]);
+  }, [selectedAnswers, currentQuestion, isAnimating]);
+
+  // 이전 질문으로
+  const goBack = useCallback(() => {
+    if (currentQuestion > 0 && !isAnimating) {
+      const prevQuestion = currentQuestion - 1;
+      setCurrentQuestion(prevQuestion);
+      // 이전 질문의 답변을 선택 상태로 복원
+      setSelectedOption(selectedAnswers[prevQuestion] ?? null);
+    }
+  }, [currentQuestion, selectedAnswers, isAnimating]);
 
   // 다시 하기
   const restart = useCallback(() => {
@@ -248,14 +267,21 @@ function MentalAgeTestContent() {
     }
     setState('intro');
     setCurrentQuestion(0);
-    setAnswers([]);
+    setSelectedAnswers([]);
     setSelectedOption(null);
     setSharedScore(null);
   }, [sharedScore]);
 
+  // 선택된 답변에서 총점 계산
+  const calculateTotalScore = useCallback(() => {
+    return selectedAnswers.reduce((sum, answerIndex, qIndex) => {
+      return sum + QUESTIONS[qIndex].options[answerIndex].score;
+    }, 0);
+  }, [selectedAnswers]);
+
   // 공유하기
   const shareResult = useCallback(async () => {
-    const currentScore = sharedScore ?? answers.reduce((sum, score) => sum + score, 0);
+    const currentScore = sharedScore ?? calculateTotalScore();
     const result = getResult(currentScore);
     const shareText = `나의 정신연령은 ${result.age}! ${result.title}\n\n당신의 정신연령은?\n`;
 
@@ -280,11 +306,11 @@ function MentalAgeTestContent() {
       await navigator.clipboard.writeText(shareText + shareUrl);
       alert('링크가 복사되었습니다!');
     }
-  }, [answers, sharedScore]);
+  }, [calculateTotalScore, sharedScore]);
 
   // 진행률
   const progress = ((currentQuestion + 1) / QUESTIONS.length) * 100;
-  const totalScore = sharedScore ?? answers.reduce((sum, score) => sum + score, 0);
+  const totalScore = sharedScore ?? calculateTotalScore();
   const result = state === 'result' ? getResult(totalScore) : null;
   const isSharedResult = sharedScore !== null;
 
@@ -366,7 +392,7 @@ function MentalAgeTestContent() {
                 {QUESTIONS[currentQuestion].options.map((option, index) => (
                   <button
                     key={index}
-                    onClick={() => selectOption(option.score, index)}
+                    onClick={() => selectOption(index)}
                     disabled={isAnimating}
                     className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-200 ${
                       selectedOption === index
@@ -379,6 +405,17 @@ function MentalAgeTestContent() {
                 ))}
               </div>
             </div>
+
+            {/* 이전 버튼 */}
+            {currentQuestion > 0 && (
+              <button
+                onClick={goBack}
+                disabled={isAnimating}
+                className="w-full py-3 text-gray-500 hover:text-purple-600 text-sm font-medium transition-colors disabled:opacity-50"
+              >
+                ← 이전 질문으로
+              </button>
+            )}
           </div>
         )}
 
