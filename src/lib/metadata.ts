@@ -188,3 +188,95 @@ export function generateOrganizationJsonLd() {
     },
   };
 }
+
+// JSON-LD for tools/calculators (WebApplication schema)
+export function generateToolJsonLd({
+  name,
+  description,
+  url,
+  category = '계산기',
+}: {
+  name: string;
+  description: string;
+  url: string;
+  category?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name,
+    description,
+    url: `${SITE_URL}${url}`,
+    applicationCategory: category,
+    operatingSystem: 'All',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'KRW',
+    },
+    provider: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    inLanguage: 'ko-KR',
+  };
+}
+
+// JSON-LD for tests/quizzes
+export function generateQuizJsonLd({
+  name,
+  description,
+  url,
+  questionCount = 12,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  questionCount?: number;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Quiz',
+    name,
+    description,
+    url: `${SITE_URL}${url}`,
+    educationalAlignment: {
+      '@type': 'AlignmentObject',
+      alignmentType: 'educationalSubject',
+      targetName: '심리테스트',
+    },
+    provider: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    numberOfQuestions: questionCount,
+    inLanguage: 'ko-KR',
+  };
+}
+
+// JSON-LD for calendar/events
+export function generateEventCollectionJsonLd({
+  name,
+  description,
+  url,
+}: {
+  name: string;
+  description: string;
+  url: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name,
+    description,
+    url: `${SITE_URL}${url}`,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    provider: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+  };
+}

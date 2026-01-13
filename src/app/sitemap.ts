@@ -74,5 +74,75 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: i === 0 ? 0.7 : 0.5,
   }));
 
-  return [...staticPages, ...postPages, ...categoryPages, ...tagPages, ...paginationPages];
+  // Calendar page
+  const calendarPages = [
+    {
+      url: `${baseUrl}/calendar`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+  ];
+
+  // Tools pages
+  const toolsList = [
+    'salary-calculator',
+    'tax-refund-calculator',
+    'fire-calculator',
+    'sleep-calculator',
+    'alcohol-calculator',
+    'life-in-weeks',
+    'true-hourly-wage',
+    'subscription-audit',
+  ];
+  const toolsPages = [
+    {
+      url: `${baseUrl}/tools`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    ...toolsList.map((tool) => ({
+      url: `${baseUrl}/tools/${tool}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ];
+
+  // Tests pages
+  const testsList = [
+    'mental-age',
+    'spending-type',
+    'burnout-risk',
+    'investment-style',
+    'love-style',
+    'office-animal',
+    'fortune-2026',
+  ];
+  const testsPages = [
+    {
+      url: `${baseUrl}/tests`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    ...testsList.map((test) => ({
+      url: `${baseUrl}/tests/${test}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ];
+
+  return [
+    ...staticPages,
+    ...postPages,
+    ...categoryPages,
+    ...tagPages,
+    ...paginationPages,
+    ...calendarPages,
+    ...toolsPages,
+    ...testsPages,
+  ];
 }
