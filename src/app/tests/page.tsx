@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '심리테스트 - 재미있는 테스트 모음 | 쓱삭',
-  description: '정신연령 테스트, 소비유형 테스트, 재테크 성향 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
-  keywords: ['심리테스트', '성격테스트', '정신연령', '소비유형', '재테크성향', '투자성향', '재미있는 테스트'],
+  description: '정신연령 테스트, 소비유형 테스트, 재테크 성향 테스트, 연애스타일 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
+  keywords: ['심리테스트', '성격테스트', '정신연령', '소비유형', '재테크성향', '연애스타일', '재미있는 테스트'],
 };
 
 // 테스트 목록
@@ -41,9 +41,21 @@ const TESTS = [
     duration: '2분',
     questions: 12,
     plays: '5,200',
-    tags: ['신규', '재테크'],
+    tags: ['재테크'],
     gradient: 'from-indigo-500 to-blue-500',
     bgGradient: 'from-indigo-50 to-blue-50',
+  },
+  {
+    slug: 'love-style',
+    title: '연애스타일 테스트',
+    description: '나는 어떤 연애 유형일까?',
+    icon: '연애',
+    duration: '2분',
+    questions: 12,
+    plays: '3,800',
+    tags: ['신규', '연애'],
+    gradient: 'from-pink-500 to-rose-500',
+    bgGradient: 'from-pink-50 to-rose-50',
   },
 ];
 
