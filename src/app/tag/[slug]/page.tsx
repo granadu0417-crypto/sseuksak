@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getPostsByTag } from '@/lib/posts';
+import { getPostsByTag, getAllTags } from '@/lib/posts';
 import { generateMetadata as genMeta } from '@/lib/metadata';
 import PostCard from '@/components/PostCard';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -9,13 +9,15 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-// SSR: 태그 페이지는 빌드 시 생성하지 않고 요청 시 동적 렌더링
-// 빌드 시간 최적화 (191+ 페이지 → 0페이지)
-export const dynamicParams = true;
+// ISR: 24시간마다 재생성
+// Cloudflare Workers에서는 런타임 파일 시스템 접근 불가 → SSG 필수
+export const revalidate = 86400;
 
 export function generateStaticParams() {
-  // 빌드 시 생성할 태그 없음 (모두 SSR)
-  return [];
+  const tags = getAllTags();
+  return tags.map((tag) => ({
+    slug: tag,
+  }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
