@@ -3,12 +3,48 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '심리테스트 - 재미있는 테스트 모음 | 쓱삭',
-  description: '정신연령 테스트, 직장 동물 테스트, 번아웃 위험도 테스트, 2026 운세 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
-  keywords: ['심리테스트', '성격테스트', '정신연령', '직장동물', '번아웃테스트', '운세테스트', '재미있는 테스트'],
+  description: 'SNS 피로도 테스트, 카페인 의존도 테스트, 수면 유형 테스트, 번아웃 위험도 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
+  keywords: ['심리테스트', '성격테스트', 'SNS피로도', '디지털디톡스', '카페인의존도', '수면유형', '정신연령', '번아웃테스트', '재미있는 테스트'],
 };
 
 // 테스트 목록
 const TESTS = [
+  {
+    slug: 'sleep-type',
+    title: '수면 유형 테스트',
+    description: '나는 사자형? 곰형? 늑대형? 돌고래형?',
+    icon: '수면',
+    duration: '2분',
+    questions: 12,
+    plays: '850',
+    tags: ['신규', '건강'],
+    gradient: 'from-indigo-500 to-cyan-500',
+    bgGradient: 'from-indigo-50 to-cyan-50',
+  },
+  {
+    slug: 'caffeine-dependency',
+    title: '카페인 의존도 테스트',
+    description: '나는 자유인? 애호가? 의존자? 중독 위험?',
+    icon: '커피',
+    duration: '2분',
+    questions: 12,
+    plays: '620',
+    tags: ['신규', '건강'],
+    gradient: 'from-amber-500 to-orange-500',
+    bgGradient: 'from-amber-50 to-orange-50',
+  },
+  {
+    slug: 'sns-fatigue',
+    title: 'SNS 피로도 테스트',
+    description: '나는 디지털 균형파? SNS 피로 상태?',
+    icon: 'SNS',
+    duration: '2분',
+    questions: 12,
+    plays: '480',
+    tags: ['신규', '멘탈'],
+    gradient: 'from-violet-500 to-purple-500',
+    bgGradient: 'from-violet-50 to-purple-50',
+  },
   {
     slug: 'mental-age',
     title: '정신연령 테스트',
