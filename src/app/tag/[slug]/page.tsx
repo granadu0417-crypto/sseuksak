@@ -24,11 +24,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const decodedSlug = decodeURIComponent(slug);
 
-  return genMeta({
+  const baseMeta = genMeta({
     title: `#${decodedSlug} 태그`,
     description: `#${decodedSlug} 태그가 포함된 모든 게시글을 확인하세요.`,
     url: `/tag/${slug}`,
   });
+
+  // 태그 페이지는 noindex 처리 - 크롤 예산 절약 및 중복 콘텐츠 방지
+  return {
+    ...baseMeta,
+    robots: {
+      index: false,
+      follow: true, // 링크는 따라가도록 유지
+      googleBot: {
+        index: false,
+        follow: true,
+      },
+    },
+  };
 }
 
 export default async function TagPage({ params }: Props) {

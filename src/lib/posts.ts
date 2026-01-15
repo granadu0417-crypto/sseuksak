@@ -64,7 +64,20 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   const { data, content } = matter(fileContents);
   const stats = readingTime(content);
 
-  const processedContent = await remark().use(remarkGfm).use(html).process(content);
+  // Convert YouTube tags BEFORE remark processing (to prevent HTML escaping)
+  const contentWithYouTube = content.replace(
+    /<youtube\s+id="([^"]+)"(?:\s+title="([^"]*)")?\s*\/>/gi,
+    (match, videoId, title = 'YouTube video') => {
+      return `
+<div class="youtube-embed">
+<iframe src="https://www.youtube.com/embed/${videoId}" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:16/9;border-radius:0.5rem;"></iframe>
+<p style="text-align:center;font-size:0.875rem;color:#6b7280;margin-top:0.5rem;">${title}</p>
+</div>
+`;
+    }
+  );
+
+  const processedContent = await remark().use(remarkGfm).use(html, { sanitize: false }).process(contentWithYouTube);
   let contentHtml = processedContent.toString();
 
   // Add IDs to headings for TOC navigation

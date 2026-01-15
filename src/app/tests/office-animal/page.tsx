@@ -377,7 +377,7 @@ function OfficeAnimalTestContent() {
       if (navigator.share) {
         try {
           await navigator.share({ title: '회사에서 나는 무슨 동물?', text: shareText, url: shareUrl });
-        } catch (error) {
+        } catch {
           console.log('Share cancelled');
         }
       } else {

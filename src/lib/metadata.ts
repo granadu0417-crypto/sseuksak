@@ -280,3 +280,72 @@ export function generateEventCollectionJsonLd({
     },
   };
 }
+
+// JSON-LD for FAQ pages - Google 검색결과에 FAQ 드롭다운 표시
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export function generateFAQJsonLd(faqs: FAQItem[]) {
+  if (!faqs || faqs.length === 0) return null;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+// 게시글 HTML에서 FAQ 추출 (Q&A 패턴 감지)
+export function extractFAQFromContent(htmlContent: string): FAQItem[] {
+  const faqs: FAQItem[] = [];
+
+  // Q1. Q2. Q3. 패턴 또는 ### Q1. 패턴 매칭
+  const qPattern = /(?:<h3[^>]*>|<p[^>]*><strong>)(?:Q\d+[\.:]\s*)(.+?)(?:<\/h3>|<\/strong><\/p>)/gi;
+  const aPattern = /(?:<p[^>]*>A[\.:]\s*)(.+?)(?:<\/p>)/gi;
+
+  const questions: string[] = [];
+  const answers: string[] = [];
+
+  let match;
+  while ((match = qPattern.exec(htmlContent)) !== null) {
+    // HTML 태그 제거
+    const question = match[1].replace(/<[^>]+>/g, '').trim();
+    questions.push(question);
+  }
+
+  while ((match = aPattern.exec(htmlContent)) !== null) {
+    // HTML 태그 제거하고 텍스트만 추출
+    let answer = match[1].replace(/<[^>]+>/g, '').trim();
+    // 콜론 이후 내용도 포함
+    if (answer.length < 10) {
+      // 짧으면 다음 p 태그들도 포함 (리스트 형태의 답변)
+      const nextContent = htmlContent.slice(match.index + match[0].length);
+      const nextPMatch = nextContent.match(/^([\s\S]*?)(?=<h|<p[^>]*>(?:A\d*[\.:]))/i);
+      if (nextPMatch) {
+        answer += ' ' + nextPMatch[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      }
+    }
+    answers.push(answer);
+  }
+
+  // 질문과 답변 매칭
+  for (let i = 0; i < Math.min(questions.length, answers.length); i++) {
+    if (questions[i] && answers[i]) {
+      faqs.push({
+        question: questions[i],
+        answer: answers[i].slice(0, 500), // 답변 길이 제한
+      });
+    }
+  }
+
+  return faqs;
+}

@@ -7,12 +7,14 @@ import {
   getAdjacentPosts,
   getRelatedPosts,
 } from '@/lib/posts';
-import { generateMetadata as genMeta, generateArticleJsonLd, generateBreadcrumbJsonLd } from '@/lib/metadata';
+import { generateMetadata as genMeta, generateArticleJsonLd, generateBreadcrumbJsonLd, generateFAQJsonLd, extractFAQFromContent } from '@/lib/metadata';
 import { getPhotoForCategory, getOptimizedImageUrl, getAttribution } from '@/lib/unsplash';
 import Breadcrumb from '@/components/Breadcrumb';
 import PostNavigation from '@/components/PostNavigation';
 import RelatedPosts from '@/components/RelatedPosts';
+import RelatedContent from '@/components/RelatedContent';
 import TableOfContents from '@/components/TableOfContents';
+import { getRelatedTools, getRelatedTests } from '@/lib/related-content';
 
 // ISR: 24시간마다 재생성
 export const revalidate = 86400;
@@ -71,6 +73,10 @@ export default async function PostPage({ params }: Props) {
   const { prev, next } = getAdjacentPosts(slug);
   const relatedPosts = getRelatedPosts(slug, 3);
 
+  // 관련 도구 및 테스트 가져오기
+  const relatedTools = getRelatedTools(post.category, post.tags, post.title, 2);
+  const relatedTests = getRelatedTests(post.category, post.tags, post.title, 2);
+
   // Fetch hero image from Unsplash (using slug for consistent image)
   let heroImageUrl: string | null = null;
   let heroAttribution: { text: string; photographerUrl: string; unsplashUrl: string } | null = null;
@@ -99,6 +105,10 @@ export default async function PostPage({ params }: Props) {
     { name: post.title, url: `/posts/${slug}` },
   ]);
 
+  // FAQ 추출 및 JSON-LD 생성
+  const faqs = extractFAQFromContent(post.content);
+  const faqJsonLd = generateFAQJsonLd(faqs);
+
   const formattedDate = new Date(post.date).toLocaleDateString('ko-KR', {
     year: 'numeric',
     month: 'long',
@@ -115,6 +125,12 @@ export default async function PostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb
@@ -179,6 +195,7 @@ export default async function PostPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
+        <RelatedContent tools={relatedTools} tests={relatedTests} />
         <PostNavigation prev={prev} next={next} />
         <RelatedPosts posts={relatedPosts} />
       </article>

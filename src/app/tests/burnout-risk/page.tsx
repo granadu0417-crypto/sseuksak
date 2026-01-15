@@ -379,7 +379,7 @@ function BurnoutRiskTestContent() {
       if (navigator.share) {
         try {
           await navigator.share({ title: '번아웃 위험도 테스트', text: shareText, url: shareUrl });
-        } catch (error) {
+        } catch {
           console.log('Share cancelled');
         }
       } else {

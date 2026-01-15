@@ -1,10 +1,10 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts, getAllCategories, getAllTags, getTotalPages } from '@/lib/posts';
+import { getAllPosts, getAllCategories } from '@/lib/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://sseuksak.com';
 
-  // Static pages
+  // Static pages - 핵심 페이지만 포함
   const staticPages = [
     {
       url: baseUrl,
@@ -16,63 +16,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/terms`,
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.3,
     },
   ];
 
-  // Dynamic post pages
+  // Dynamic post pages - 최고 우선순위 (핵심 콘텐츠)
   const posts = getAllPosts();
   const postPages = posts.map((post) => ({
     url: `${baseUrl}/posts/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: 'weekly' as const,
-    priority: 0.8,
+    priority: 0.9, // 게시글 우선순위 상향
   }));
 
-  // Category pages
+  // Category pages - 중요 네비게이션
   const categories = getAllCategories();
   const categoryPages = categories.map((category) => ({
     url: `${baseUrl}/category/${category}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: 0.6,
+    priority: 0.7,
   }));
 
-  // Tag pages
-  const tags = getAllTags();
-  const tagPages = tags.map((tag) => ({
-    url: `${baseUrl}/tag/${tag}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.5,
-  }));
+  // 태그 페이지 제외 - 크롤 예산 절약 (191개 → 0개)
+  // 태그 페이지는 noindex 처리하여 검색엔진 색인에서 제외
 
-  // Pagination pages for posts list
-  const totalPages = getTotalPages();
-  const paginationPages = Array.from({ length: totalPages }, (_, i) => ({
-    url: `${baseUrl}/posts/page/${i + 1}`,
-    lastModified: new Date(),
-    changeFrequency: 'daily' as const,
-    priority: i === 0 ? 0.7 : 0.5,
-  }));
+  // Pagination pages - 첫 페이지만 포함
+  const paginationPages = [
+    {
+      url: `${baseUrl}/posts/page/1`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.6,
+    },
+  ];
 
   // Calendar page
   const calendarPages = [
@@ -139,7 +122,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPages,
     ...postPages,
     ...categoryPages,
-    ...tagPages,
+    // tagPages 제외 - noindex 처리됨
     ...paginationPages,
     ...calendarPages,
     ...toolsPages,

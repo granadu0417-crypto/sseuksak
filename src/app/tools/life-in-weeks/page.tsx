@@ -74,7 +74,6 @@ function WeekGrid({ livedWeeks }: { livedWeeks: number }) {
       >
         {Array.from({ length: TOTAL_WEEKS }).map((_, index) => {
           const isLived = index < livedWeeks;
-          const yearBoundary = index % WEEKS_PER_YEAR === 0;
           const decadeBoundary = index % (WEEKS_PER_YEAR * 10) === 0;
 
           return (

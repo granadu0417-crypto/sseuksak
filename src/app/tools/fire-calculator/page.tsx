@@ -68,7 +68,6 @@ function calculateFire(
   annualExpense: number,
   returnRate: number
 ): FireResult | null {
-  const savingsRate = (annualIncome - annualExpense) / annualIncome;
   const annualSavings = annualIncome - annualExpense;
 
   // 4% Rule: 연간 지출의 25배가 은퇴 자금

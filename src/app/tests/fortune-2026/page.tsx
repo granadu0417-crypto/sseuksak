@@ -397,7 +397,7 @@ function Fortune2026TestContent() {
       if (navigator.share) {
         try {
           await navigator.share({ title: '2026 나의 운세 키워드', text: shareText, url: shareUrl });
-        } catch (error) {
+        } catch {
           console.log('Share cancelled');
         }
       } else {
