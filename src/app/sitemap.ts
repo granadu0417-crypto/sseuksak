@@ -102,6 +102,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'love-style',
     'office-animal',
     'fortune-2026',
+    'sleep-type',
+    'caffeine-dependency',
+    'sns-fatigue',
   ];
   const testsPages = [
     {

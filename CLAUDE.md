@@ -31,21 +31,17 @@
 # 로컬 개발
 npm run dev
 
-# 초고속 프리뷰 (KV 스킵) - ~4분
-CLOUDFLARE_API_TOKEN="PVRNKyVYVAr_i_boHjTfvuKwlzq5dFrpVNfiCkQ2" npm run cf:preview
-
-# 일반 배포 (KV 증분) - ~5분
+# 일반 배포 (KV 증분 + IndexNow) - ~5분
 CLOUDFLARE_API_TOKEN="PVRNKyVYVAr_i_boHjTfvuKwlzq5dFrpVNfiCkQ2" npm run cf:quick
 
-# 전체 배포 (캐시 초기화) - ~6분
+# 전체 배포 (캐시 초기화 + IndexNow) - ~6분
 CLOUDFLARE_API_TOKEN="PVRNKyVYVAr_i_boHjTfvuKwlzq5dFrpVNfiCkQ2" npm run cf:deploy
 ```
 
-| 명령어 | KV 캐시 | 용도 | 소요 시간 |
-|--------|---------|------|----------|
-| `cf:preview` | ❌ 스킵 | 빠른 확인, UI 테스트 | ~4분 |
-| `cf:quick` | ✅ 증분 | 글 수정, 일반 배포 | ~5분 |
-| `cf:deploy` | ✅ 전체 | 새 기능, 캐시 초기화 | ~6분 |
+| 명령어 | KV 캐시 | IndexNow | 용도 | 소요 시간 |
+|--------|---------|----------|------|----------|
+| `cf:quick` | ✅ 증분 | ✅ | 글 수정, 일반 배포 | ~5분 |
+| `cf:deploy` | ✅ 전체 | ✅ | 새 기능, 캐시 초기화 | ~6분 |
 
 ---
 
