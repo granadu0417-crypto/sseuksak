@@ -339,5 +339,5 @@ thumbnail: ""
 ---
 
 **관련 글 추천:**
-- [집에서 하는 홈트레이닝 루틴 가이드](/posts/home-training-routine-2026)
+- [2026년 건강검진 완벽 가이드](/posts/health-checkup-2026)
 - [2026년 건강 트렌드: AI 헬스케어의 진화](/posts/ces-2026-tech-trends)

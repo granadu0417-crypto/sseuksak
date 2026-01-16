@@ -367,7 +367,7 @@ thumbnail: ""
 **관련 글 추천:**
 - [ETF 투자 입문 가이드: 초보자도 쉽게 시작하는 2026년 ETF 완벽 정리](/posts/etf-investment-guide-2026)
 - [2026년 재테크 전략 가이드: 초보자 자산관리 로드맵](/posts/2026-investment-strategy-guide)
-- [2026년 연말정산 완벽 가이드](/posts/year-end-tax-guide-2026)
+- [2026년 연말정산 완벽 가이드](/posts/year-end-tax-settlement-2026)
 
 ---
 
