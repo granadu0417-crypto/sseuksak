@@ -14,6 +14,7 @@ import PostNavigation from '@/components/PostNavigation';
 import RelatedPosts from '@/components/RelatedPosts';
 import RelatedContent from '@/components/RelatedContent';
 import TableOfContents from '@/components/TableOfContents';
+import AuthorInfo from '@/components/AuthorInfo';
 import { getRelatedTools, getRelatedTests } from '@/lib/related-content';
 
 // ISR: 24시간마다 재생성
@@ -194,6 +195,8 @@ export default async function PostPage({ params }: Props) {
           className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+
+        <AuthorInfo publishedDate={post.date} />
 
         <RelatedContent tools={relatedTools} tests={relatedTests} />
         <PostNavigation prev={prev} next={next} />

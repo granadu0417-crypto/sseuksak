@@ -90,6 +90,13 @@ export function generateMetadata({
   };
 }
 
+// 저자 정보 상수 (E-E-A-T)
+const AUTHOR_INFO = {
+  name: '쓱싹 에디터',
+  url: `${SITE_URL}/about`,
+  email: 'granadu0417@gmail.com',
+};
+
 export function generateArticleJsonLd({
   title,
   description,
@@ -97,7 +104,6 @@ export function generateArticleJsonLd({
   image,
   publishedTime,
   modifiedTime,
-  author = SITE_NAME,
 }: {
   title: string;
   description: string;
@@ -105,7 +111,6 @@ export function generateArticleJsonLd({
   image?: string;
   publishedTime: string;
   modifiedTime?: string;
-  author?: string;
 }) {
   // Handle image URL properly
   const DEFAULT_OG_IMAGE = '/images/og-default.png';
@@ -122,11 +127,14 @@ export function generateArticleJsonLd({
     dateModified: modifiedTime || publishedTime,
     author: {
       '@type': 'Person',
-      name: author,
+      name: AUTHOR_INFO.name,
+      url: AUTHOR_INFO.url,
+      email: AUTHOR_INFO.email,
     },
     publisher: {
       '@type': 'Organization',
       name: SITE_NAME,
+      url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_URL}/logo.svg`,
@@ -136,6 +144,7 @@ export function generateArticleJsonLd({
       '@type': 'WebPage',
       '@id': `${SITE_URL}${url}`,
     },
+    inLanguage: 'ko-KR',
   };
 }
 
