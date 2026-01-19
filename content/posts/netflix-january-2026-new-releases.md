@@ -227,3 +227,14 @@ thumbnail: "https://images.unsplash.com/photo-1717295248299-74c084c31184?ixid=M3
 - [2026 설날 KTX·SRT 예매 완벽 가이드](/posts/lunar-new-year-train-ticket-2026)
 - [트렌드 코리아 2026 핵심 키워드 10가지](/posts/trend-korea-2026-keywords)
 - [ChatGPT 무료 vs 유료 차이점 완벽 비교](/posts/chatgpt-free-vs-plus-comparison)
+
+---
+
+**참고 자료:**
+- 넷플릭스 코리아 공식 (netflix.com/kr)
+- 넷플릭스 미디어센터 (media.netflix.com)
+- 각 작품 공식 예고편 및 보도자료
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 콘텐츠 공개 일정은 변경될 수 있으니 넷플릭스 앱에서 최신 정보를 확인하세요.*

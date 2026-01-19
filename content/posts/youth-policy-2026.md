@@ -361,3 +361,16 @@ thumbnail: "https://images.unsplash.com/photo-1596441248825-45b1f60ce4b2?ixid=M3
 **관련 글 추천:**
 - [2026년 최저임금 완벽 가이드](/posts/minimum-wage-2026)
 - [2026년 연말정산 완벽 가이드](/posts/year-end-tax-settlement-2026)
+
+---
+
+**참고 자료:**
+- 온통청년 정책포털 (youthcenter.go.kr)
+- 고용노동부 청년정책 (moel.go.kr)
+- 국토교통부 청년 주거정책 (molit.go.kr)
+- 서민금융진흥원 청년금융지원 (kinfa.or.kr)
+- 한국장학재단 국가장학금 안내 (kosaf.go.kr)
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 청년정책 관련 상세 내용은 온통청년 포털 또는 콜센터 1688-1920으로 문의하세요.*

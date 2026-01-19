@@ -460,3 +460,14 @@ thumbnail: "https://images.unsplash.com/photo-1758205308181-d52b41e00cef?ixid=M3
 - [2026년 건강보험료 변경사항 총정리](/posts/health-insurance-premium-2026)
 - [2026년 5세대 실손보험 완벽 가이드](/posts/5th-generation-health-insurance-guide-2026)
 - [2026년 독감 예방접종 무료 대상자 총정리](/posts/flu-vaccination-2026)
+
+---
+
+**참고 자료:**
+- 국민건강보험공단 건강검진 안내 (nhis.or.kr)
+- 보건복지부 국가건강검진 안내 (mohw.go.kr)
+- 국민건강보험공단 검진기관 찾기 (hi.nhis.or.kr)
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 건강검진 관련 상세 내용은 국민건강보험공단 콜센터 1577-1000으로 문의하세요.*

@@ -322,3 +322,14 @@ thumbnail: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixid=M3
 - [2026년 재테크 전략 가이드](/posts/2026-investment-strategy-guide)
 - [ETF 투자 입문 가이드](/posts/etf-investment-guide-2026)
 - [추천 신용카드 비교 가이드](/posts/2026-credit-card-comparison)
+
+---
+
+**참고 자료:**
+- 금융감독원 금융상품통합비교공시 (finlife.fss.or.kr)
+- 예금보험공사 예금자보호 안내 (kdic.or.kr)
+- 은행연합회 소비자포털 (portal.kfb.or.kr)
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 적금 금리는 시장 상황에 따라 변동될 수 있으니 각 금융기관에서 최신 정보를 확인하세요.*

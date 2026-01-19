@@ -518,3 +518,16 @@ AI 도구는 이제 선택이 아니라 **필수**가 됐어요.
 **관련 글 추천:**
 - [CES 2026 기술 트렌드 총정리](/posts/ces-2026-tech-trends)
 - [트렌드 코리아 2026 핵심 키워드 해설](/posts/trend-korea-2026-keywords)
+
+---
+
+**참고 자료:**
+- OpenAI 공식 블로그 및 가격 정책 (openai.com)
+- Anthropic Claude 공식 문서 (anthropic.com)
+- 노션(Notion) AI 공식 가이드 (notion.so)
+- Microsoft Copilot 공식 안내 (microsoft.com)
+- Perplexity AI 공식 홈페이지 (perplexity.ai)
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었으며, AI 도구의 기능과 가격은 수시로 변경될 수 있습니다. 최신 정보는 각 서비스 공식 홈페이지에서 확인하시기 바랍니다.*

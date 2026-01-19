@@ -335,3 +335,14 @@ thumbnail: "https://images.unsplash.com/photo-1730371851241-aad9cf97525f?ixid=M3
 - [트렌드 코리아 2026 핵심 키워드 10가지](/posts/trend-korea-2026-keywords)
 - [신년 다이어트 식단: 4주 완벽 가이드](/posts/2026-new-year-diet-plan)
 - [2026 설날 KTX·SRT 예매 가이드](/posts/lunar-new-year-train-ticket-2026)
+
+---
+
+**참고 자료:**
+- 한국민속대백과사전 - 띠와 삼재 (folkency.nfm.go.kr)
+- 국립민속박물관 세시풍속 자료 (nfm.go.kr)
+- 한국천문연구원 역서 정보 (astro.kasi.re.kr)
+
+---
+
+*본 글의 운세 정보는 전통 역학과 민속 자료를 참고하여 작성되었습니다. 운세는 참고용으로만 활용하시고, 중요한 결정은 객관적인 분석과 전문가 상담을 통해 내리시기 바랍니다.*

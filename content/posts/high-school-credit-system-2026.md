@@ -305,3 +305,14 @@ thumbnail: "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixid=M3
 **관련 글 추천:**
 - [2026년 신설 국가자격증 가이드](/posts/new-certifications-2026-guide)
 - [2026년 국가기술자격 시험일정 총정리](/posts/national-technical-exam-schedule-2026)
+
+---
+
+**참고 자료:**
+- 교육부 고교학점제 안내 (moe.go.kr)
+- 고교학점제 종합추진계획 (2021, 교육부)
+- 2022 개정 교육과정 총론
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 고교학점제 세부 내용은 각 학교 또는 교육청에 문의하세요.*

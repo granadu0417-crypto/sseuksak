@@ -485,3 +485,14 @@ thumbnail: "https://images.unsplash.com/photo-1715173679369-18006e84d6a8?ixid=M3
 **관련 글 추천:**
 - [2026년 신설 국가자격증 가이드](/posts/new-certifications-2026-guide)
 - [2026년 건강보험료 변경사항 총정리](/posts/health-insurance-premium-2026)
+
+---
+
+**참고 자료:**
+- 한국산업인력공단 큐넷 (q-net.or.kr)
+- 국가자격 시험일정 공식 공고
+- 한국산업인력공단 기술자격제도 안내
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 정확한 시험일정은 큐넷(Q-net)에서 확인하세요.*

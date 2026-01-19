@@ -336,3 +336,14 @@ thumbnail: "https://images.unsplash.com/photo-1691139600816-4707f196a85f?ixid=M3
 **관련 글 추천:**
 - [2026년 건강보험료 변경사항 총정리](/posts/health-insurance-premium-2026)
 - [2026년 5세대 실손보험 완벽 가이드](/posts/5th-generation-health-insurance-guide-2026)
+
+---
+
+**참고 자료:**
+- 질병관리청 예방접종도우미 (nip.kdca.go.kr)
+- 보건복지부 인플루엔자 예방접종 안내 (mohw.go.kr)
+- 대한예방의학회 예방접종 가이드라인
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 예방접종 관련 상세 내용은 질병관리청 콜센터 1339로 문의하세요.*

@@ -312,6 +312,14 @@ thumbnail: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixid=M3
 
 ---
 
+**참고 자료:**
+- 금융감독원 보도자료 (fss.or.kr)
+- 금융위원회 실손의료보험 제도개선 발표
+- 보험개발원 실손보험 통계
+- 각 보험사 공식 상품안내서
+
+---
+
 **관련 글 추천:**
 - [2026년 건강보험료 변경사항 총정리](/posts/health-insurance-premium-2026)
 - [2026년 추천 신용카드 비교 가이드](/posts/2026-credit-card-comparison)

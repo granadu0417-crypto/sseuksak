@@ -313,3 +313,14 @@ thumbnail: "https://images.unsplash.com/photo-1596248675029-bd9b0c7dc479?ixid=M3
 **관련 글 추천:**
 - [2026년 건강보험료 변경사항 총정리](/posts/health-insurance-premium-2026)
 - [2026년 추천 신용카드 비교 가이드](/posts/2026-credit-card-comparison)
+
+---
+
+**참고 자료:**
+- 고용노동부 최저임금제도 안내 (moel.go.kr)
+- 최저임금위원회 공식 발표 (minimumwage.go.kr)
+- 고용노동부 근로기준법 안내 (moel.go.kr)
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 최저임금 관련 상세 내용은 고용노동부 콜센터 1350으로 문의하세요.*

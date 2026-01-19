@@ -340,3 +340,14 @@ thumbnail: "https://images.unsplash.com/photo-1757663664225-be7c45372b96?ixid=M3
 **관련 글 추천:**
 - [2026년 최저임금 완벽 가이드](/posts/minimum-wage-2026)
 - [2026년 연말정산 완벽 가이드](/posts/year-end-tax-settlement-2026)
+
+---
+
+**참고 자료:**
+- 소상공인시장진흥공단 정책자금 안내 (semas.or.kr)
+- 중소벤처기업부 소상공인 지원정책 (mss.go.kr)
+- 고용노동부 두루누리 사회보험 (insurancesupport.or.kr)
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 정책은 변경될 수 있으니 소상공인 상담센터 1357로 최신 정보를 확인하세요.*

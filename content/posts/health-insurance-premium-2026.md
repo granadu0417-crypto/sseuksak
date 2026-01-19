@@ -369,3 +369,14 @@ thumbnail: "https://images.unsplash.com/photo-1666886573199-88a2ed65470d?ixid=M3
 **관련 글 추천:**
 - [2026년 5세대 실손보험 완벽 가이드](/posts/5th-generation-health-insurance-guide-2026)
 - [2026년 추천 신용카드 비교 가이드](/posts/2026-credit-card-comparison)
+
+---
+
+**참고 자료:**
+- 국민건강보험공단 공식 발표 (nhis.or.kr)
+- 보건복지부 건강보험료 고시 (mohw.go.kr)
+- 국민건강보험공단 건강보험료 계산기 (nhis.or.kr)
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 건강보험료 관련 상세 내용은 국민건강보험공단 콜센터 1577-1000으로 문의하세요.*

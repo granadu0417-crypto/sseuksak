@@ -367,3 +367,15 @@ thumbnail: "https://images.unsplash.com/photo-1762427354397-854a52e0ded7?ixid=M3
 **관련 글 추천:**
 - [2026년 최저임금 완벽 가이드](/posts/minimum-wage-2026)
 - [2026년 건강보험료 변경사항 총정리](/posts/health-insurance-premium-2026)
+
+---
+
+**참고 자료:**
+- 국세청 연말정산 안내 (nts.go.kr)
+- 국세청 홈택스 연말정산 간소화 서비스 (hometax.go.kr)
+- 기획재정부 세법개정안 (moef.go.kr)
+- 국세청 연말정산 가이드북 (매년 발행)
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 연말정산 관련 상세 내용은 국세청 콜센터 126으로 문의하세요.*

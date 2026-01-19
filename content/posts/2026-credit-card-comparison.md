@@ -372,3 +372,15 @@ thumbnail: "https://images.unsplash.com/photo-1716388163697-bfb3989d15c8?ixid=M3
 **관련 글 추천:**
 - [2026년 재테크 전략 가이드](/posts/2026-investment-strategy-guide)
 - [ETF 투자 입문 가이드](/posts/etf-investment-guide-2026)
+
+---
+
+**참고 자료:**
+- 금융감독원 금융상품통합비교공시 (finlife.fss.or.kr)
+- 여신금융협회 카드 정보 포털 (cardportal.crefia.or.kr)
+- 각 카드사 공식 홈페이지 (삼성카드, 현대카드, KB국민카드, 신한카드, 하나카드)
+- 금융감독원 금융소비자정보포털 (consumer.fss.or.kr)
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었으며, 카드 상품 및 혜택은 변경될 수 있으니 카드사 공식 홈페이지에서 최신 정보를 확인하시기 바랍니다.*

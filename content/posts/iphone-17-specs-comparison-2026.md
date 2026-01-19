@@ -267,3 +267,14 @@ thumbnail: "https://images.unsplash.com/photo-1636494653548-aaecb99798ee?ixid=M3
 - [CES 2026 기술 트렌드 총정리](/posts/ces-2026-tech-trends)
 - [업무 효율 200% 높이는 AI 도구 활용법](/posts/ai-productivity-tools-2026)
 
+---
+
+**참고 자료:**
+- Apple 공식 사이트 (apple.com/kr)
+- Apple Newsroom (apple.com/kr/newsroom)
+- 9to5Mac, MacRumors 등 애플 전문 매체
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 정확한 제품 정보와 가격은 Apple 공식 발표를 확인하세요.*
+

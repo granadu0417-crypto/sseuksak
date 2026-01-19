@@ -502,3 +502,14 @@ thumbnail: "https://images.unsplash.com/photo-1697086279220-bcaea17a8734?ixid=M3
 **관련 글 추천:**
 - [2026년 국가기술자격 시험일정 총정리](/posts/national-technical-exam-schedule-2026)
 - [2026년 건강보험료 변경사항 총정리](/posts/health-insurance-premium-2026)
+
+---
+
+**참고 자료:**
+- 한국산업인력공단 큐넷 (q-net.or.kr)
+- 고용노동부 국가기술자격 안내 (moel.go.kr)
+- 국가법령정보센터 - 국가기술자격법 시행령 (law.go.kr)
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 시험 일정과 응시 자격은 큐넷에서 최신 정보를 확인하세요.*

@@ -306,3 +306,14 @@ S FE(팬 에디션)나 슬림 모델에 대한 루머도 있으나, 현재까지
 - [아이폰17 스펙 총정리: 일반 vs 프로 vs 에어](/posts/iphone-17-specs-comparison-2026)
 - [CES 2026 기술 트렌드 총정리](/posts/ces-2026-tech-trends)
 - [업무 효율 200% 높이는 AI 도구 활용법](/posts/ai-productivity-tools-2026)
+
+---
+
+**참고 자료:**
+- 삼성전자 뉴스룸 (news.samsung.com/kr)
+- 삼성 갤럭시 공식 사이트 (samsung.com/sec/galaxy)
+- 매일경제, 파이낸셜뉴스 등 경제 매체 보도
+
+---
+
+*본 글은 2026년 1월 기준으로 작성되었습니다. 정확한 출시 정보와 가격은 삼성전자 공식 발표를 확인하세요.*
