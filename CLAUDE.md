@@ -21,7 +21,8 @@
 | SEO/색인 관련 | `docs/SEO_INDEXING.md` |
 | 콘텐츠 검증 | `docs/CONTENT_VERIFICATION.md` |
 | 배포 상세 | `docs/DEPLOYMENT_GUIDE.md` |
-| **게시글 스타일링** | `docs/CONTENT_STYLING.md` |
+| 게시글 스타일링 | `docs/CONTENT_STYLING.md` |
+| **콘텐츠 작성 가이드** | `docs/CONTENT_WRITING_GUIDE.md` |
 
 ---
 
