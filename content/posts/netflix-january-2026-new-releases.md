@@ -4,7 +4,7 @@ description: "2026년 1월 중순 이후 넷플릭스에서 공개되는 기대�
 date: "2026-01-15"
 category: "lifestyle"
 tags: ["넷플릭스", "넷플릭스신작", "이사랑통역되나요", "솔로지옥5", "더립", "브리저튼시즌4", "OTT추천", "드라마추천"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1717295248299-74c084c31184?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxuZXRmbGl4JTIwc3RyZWFtaW5nfGVufDB8MHx8fDE3Njg1NDAzNjl8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 1월 넷플릭스 신작 총정리: 놓치면 후회할 기대작 4선
@@ -220,3 +220,10 @@ thumbnail: ""
 연예 리얼리티로 가볍게 즐기고 싶다면 **솔로지옥5**, 화려한 시대극 로맨스를 원하신다면 **브리저튼 시즌4**를 선택하세요!
 
 이번 달도 즐거운 넷플릭스 라이프 되세요!
+
+---
+
+**관련 글 추천:**
+- [2026 설날 KTX·SRT 예매 완벽 가이드](/posts/lunar-new-year-train-ticket-2026)
+- [트렌드 코리아 2026 핵심 키워드 10가지](/posts/trend-korea-2026-keywords)
+- [ChatGPT 무료 vs 유료 차이점 완벽 비교](/posts/chatgpt-free-vs-plus-comparison)

@@ -4,7 +4,7 @@ description: "2026년 국가건강검진 대상자 조회 방법과 무료 검�
 date: "2026-01-12"
 category: "health"
 tags: ["건강검진", "국가건강검진", "암검진", "건강검진대상자", "무료건강검진", "2026년건강검진", "직장인건강검진"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1758205308181-d52b41e00cef?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxtZWRpY2FsJTIwY2hlY2t1cHxlbnwwfDB8fHwxNzY4NTQwMzYxfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 건강검진 대상자 확인 방법: 무료 검진 항목, 암검진, 예약까지 총정리

@@ -4,7 +4,7 @@ description: "트렌드 코리아 2026에서 선정한 10대 소비 트렌드 �
 date: "2026-01-05"
 category: "lifestyle"
 tags: ["트렌드코리아", "2026트렌드", "소비트렌드", "HORSEPOWER", "휴먼인더루프", "필코노미", "켄타우로스", "AI트렌드"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1708391603514-f9061963ec8b?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw2fHxrb3JlYSUyMHRyZW5kfGVufDB8MHx8fDE3Njg1NDAzNzN8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 트렌드 코리아 2026 핵심 키워드 10가지 완벽 해설: HORSE POWER

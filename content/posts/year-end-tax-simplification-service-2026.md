@@ -4,7 +4,7 @@ description: "2026년 연말정산 간소화 서비스 오픈 일정부터 홈�
 date: "2026-01-13"
 category: "finance"
 tags: ["연말정산", "간소화서비스", "홈택스", "세금환급", "직장인", "2026"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1617283011395-41c9ce26db49?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHx0YXglMjBmaWxpbmclMjBzaW1wbGV8ZW58MHwwfHx8MTc2ODU0MDM3Nnww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 연말정산 간소화 서비스 완벽 가이드

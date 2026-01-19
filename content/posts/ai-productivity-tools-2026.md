@@ -4,7 +4,7 @@ description: "ChatGPT, 클로드, 노션 AI 등 2026년 업무에 필수인 AI �
 date: "2026-01-05"
 category: "tech"
 tags: ["AI도구", "ChatGPT", "Claude", "업무효율", "생산성", "노션AI", "프롬프트"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1758876201598-67fd2a5570ed?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxwcm9kdWN0aXZpdHklMjB3b3Jrc3BhY2V8ZW58MHwwfHx8MTc2ODU0MDM1M3ww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 업무 효율 200% 높이는 AI 도구 활용법: 2026년 필수 AI 툴 총정리

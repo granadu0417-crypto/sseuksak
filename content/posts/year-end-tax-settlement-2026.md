@@ -4,7 +4,7 @@ description: "2026년 연말정산 시즌이 시작됩니다. 올해 달라진 �
 date: "2026-01-06"
 category: "finance"
 tags: ["연말정산", "절세", "세금환급", "소득공제", "세액공제", "직장인"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1762427354397-854a52e0ded7?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8dGF4JTIwZG9jdW1lbnR8ZW58MHwwfHx8MTc2ODU0MDM3NXww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 연말정산 완벽 가이드: 절세 팁, 공제 항목, 달라진 점 총정리

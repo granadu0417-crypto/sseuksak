@@ -4,7 +4,7 @@ description: "2026년 청년을 위한 정부 지원 정책을 총정리했습�
 date: "2026-01-06"
 category: "finance"
 tags: ["청년정책", "청년미래적금", "청년지원금", "정부지원", "청년월세", "청년취업"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1596441248825-45b1f60ce4b2?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw1fHx5b3VuZyUyMHBlb3BsZSUyMGNhcmVlcnxlbnwwfDB8fHwxNzY4NTQwMzc3fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 청년 정책 총정리: 청년미래적금, 청년내일저축, 주거지원까지

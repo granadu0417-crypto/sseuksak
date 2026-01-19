@@ -4,7 +4,7 @@ description: "2026년 최저임금이 확정되었습니다. 시급, 월급 환�
 date: "2026-01-06"
 category: "finance"
 tags: ["최저임금", "급여", "주휴수당", "아르바이트", "근로기준법", "2026년"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1596248675029-bd9b0c7dc479?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxzYWxhcnklMjBwYXljaGVja3xlbnwwfDB8fHwxNzY4NTQwMzY2fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 최저임금 완벽 가이드: 시급, 월급 계산, 주휴수당까지 총정리

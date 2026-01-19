@@ -4,7 +4,7 @@ date: "2026-01-15"
 description: "2026년 설날 KTX·SRT 예매 일정과 성공 전략을 총정리했습니다. 코레일 1월 19~21일, SRT 1월 28~29일 노선별 예매 일정부터 취소표 잡는 법, 명당 좌석 추천까지 상세히 안내합니다."
 category: "lifestyle"
 tags: ["설날", "KTX예매", "SRT예매", "기차표", "명절귀성", "코레일", "2026설날"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1546713458-bf14315ef31e?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwyfHx0cmFpbiUyMHN0YXRpb24lMjB0cmF2ZWx8ZW58MHwwfHx8MTc2ODU0MDM2NXww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026 설날 KTX·SRT 예매 완벽 가이드
@@ -407,10 +407,10 @@ A. **잔여석 판매 시에만** 가능합니다.
 
 ---
 
-### 함께 읽으면 좋은 글
-- 2026년 공휴일 및 황금연휴 총정리
-- 연봉 실수령액 계산기
-- 2026년 일정 캘린더
+**관련 글 추천:**
+- [2026년 병오년 띠별 운세 총정리](/posts/2026-zodiac-fortune-guide)
+- [트렌드 코리아 2026 핵심 키워드 10가지](/posts/trend-korea-2026-keywords)
+- [2026년 1월 넷플릭스 신작 총정리](/posts/netflix-january-2026-new-releases)
 
 ---
 

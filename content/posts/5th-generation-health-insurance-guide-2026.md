@@ -4,7 +4,7 @@ description: "2026년 1월 출시된 5세대 실손보험의 모든 것을 알�
 date: "2026-01-06"
 category: "insurance"
 tags: ["실손보험", "5세대실손", "보험료절약", "의료보험", "건강보험", "보험가입"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8aGVhbHRoJTIwaW5zdXJhbmNlfGVufDB8MHx8fDE3Njg1NDAzNTJ8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 5세대 실손보험 완벽 가이드: 4세대와 비교, 가입 전략 총정리

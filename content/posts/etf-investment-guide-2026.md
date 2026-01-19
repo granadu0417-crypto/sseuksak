@@ -4,7 +4,7 @@ description: "ETF가 뭔지 몰라도 괜찮아요! 초보자도 이해할 수 �
 date: "2026-01-05"
 category: "finance"
 tags: ["ETF", "투자입문", "주식투자", "SP500", "적립식투자", "분산투자", "KODEX", "TIGER"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxzdG9jayUyMGludmVzdG1lbnR8ZW58MHwwfHx8MTc2ODU0MDM1OHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # ETF 투자 입문 가이드: 초보자도 쉽게 시작하는 2026년 ETF 완벽 정리

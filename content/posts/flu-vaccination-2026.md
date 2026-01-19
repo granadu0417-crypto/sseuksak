@@ -4,7 +4,7 @@ description: "2026년 독감(인플루엔자) 예방접종 정보를 총정리�
 date: "2026-01-06"
 category: "health"
 tags: ["독감", "예방접종", "인플루엔자", "백신", "건강관리", "무료접종"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1691139600816-4707f196a85f?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHx2YWNjaW5lJTIwaGVhbHRoY2FyZXxlbnwwfDB8fHwxNzY4NTQwMzYwfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 독감 예방접종 안내: 무료 대상, 접종 시기, 주의사항 총정리

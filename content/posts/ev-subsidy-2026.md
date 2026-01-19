@@ -4,7 +4,7 @@ description: "2026년 전기차 보조금 정책을 총정리했습니다. 차�
 date: "2026-01-06"
 category: "lifestyle"
 tags: ["전기차", "보조금", "자동차", "친환경차", "정부지원", "테슬라"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1607171028974-319ba56cb013?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw2fHxlbGVjdHJpYyUyMGNhcnxlbnwwfDB8fHwxNzY4NTQwMzU5fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 전기차 보조금 완벽 가이드: 차종별 지원금, 신청방법 총정리

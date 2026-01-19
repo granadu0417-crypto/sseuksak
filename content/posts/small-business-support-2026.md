@@ -4,7 +4,7 @@ description: "2026년 소상공인을 위한 정부 지원 정책을 총정리�
 date: "2026-01-06"
 category: "finance"
 tags: ["소상공인", "정책자금", "사업자지원", "세금감면", "정부지원금", "자영업"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1757663664225-be7c45372b96?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxzbWFsbCUyMGJ1c2luZXNzJTIwc2hvcHxlbnwwfDB8fHwxNzY4NTQwMzcyfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 소상공인 지원금 총정리: 정책자금, 세금 혜택, 신청방법까지

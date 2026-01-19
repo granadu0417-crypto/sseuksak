@@ -4,7 +4,7 @@ description: "2025년 3월 도입된 AI 디지털교과서가 본격화됩니다
 date: "2026-01-06"
 category: "education"
 tags: ["AI교육", "디지털교과서", "에듀테크", "학부모가이드", "초등교육", "중등교육"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1758598738106-f8f9d4c5d9d2?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxkaWdpdGFsJTIwZWR1Y2F0aW9uJTIwdGFibGV0fGVufDB8MHx8fDE3Njg1NDAzNTJ8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # AI 디지털교과서 완벽 가이드: 2026년 학부모가 알아야 할 핵심 정보

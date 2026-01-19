@@ -4,7 +4,7 @@ description: "2026년 경제 전망과 함께 초보자도 쉽게 따라할 수 
 date: "2026-01-05"
 category: "finance"
 tags: ["재테크", "자산관리", "투자", "2026전망", "ETF", "예금", "적금", "주식"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1727072206145-bf6f47befe9b?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxpbnZlc3RtZW50JTIwc3RyYXRlZ3l8ZW58MHwwfHx8MTc2ODU0MDM0OXww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 재테크 전략 가이드: 초보자도 따라할 수 있는 자산관리 로드맵

@@ -4,7 +4,7 @@ date: "2026-01-07"
 description: "2026년 부동산 세금을 한눈에 정리했습니다. 취득세, 양도소득세, 종합부동산세의 세율과 계산 방법, 절세 전략까지 꼭 알아야 할 핵심 내용을 확인하세요."
 category: "finance"
 tags: ["부동산세금", "취득세", "양도소득세", "종합부동산세", "부동산절세", "2026년세금", "다주택자세금"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1635108197332-54105c0ec888?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxyZWFsJTIwZXN0YXRlJTIwcHJvcGVydHl8ZW58MHwwfHx8MTc2ODU0MDM3MHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 부동산 세금 총정리
@@ -335,10 +335,10 @@ A. 일반적으로:
 
 ---
 
-### 함께 읽으면 좋은 글
-- 2026년 주택담보대출 금리 비교
-- 전세대출 조건 비교 가이드
-- 부동산 경매 입문 가이드
+**관련 글 추천:**
+- [주택담보대출 금리 비교 완벽 가이드](/posts/mortgage-rate-comparison-2026)
+- [전세대출 조건 비교 가이드](/posts/jeonse-loan-comparison-2026)
+- [2026년 연말정산 완벽 가이드](/posts/year-end-tax-settlement-2026)
 
 ---
 

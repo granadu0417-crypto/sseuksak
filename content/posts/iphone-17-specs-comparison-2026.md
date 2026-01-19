@@ -4,7 +4,7 @@ description: "2025년 출시된 아이폰17 시리즈 완벽 비교! 아이폰17
 date: "2026-01-16"
 category: "tech"
 tags: ["아이폰17", "아이폰17프로", "아이폰에어", "iPhone17", "스마트폰", "애플", "스펙비교"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1636494653548-aaecb99798ee?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxpcGhvbmUlMjBzbWFydHBob25lfGVufDB8MHx8fDE3Njg1NDAzNjN8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 아이폰17 스펙 총정리: 일반 vs 프로 vs 에어 어떤 모델 살까?

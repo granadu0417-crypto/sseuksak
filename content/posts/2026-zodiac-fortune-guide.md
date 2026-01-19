@@ -4,7 +4,7 @@ description: "2026년 병오년(붉은 말의 해) 띠별 운세를 총정리합
 date: "2026-01-05"
 category: "lifestyle"
 tags: ["2026운세", "띠별운세", "병오년", "신년운세", "토정비결", "삼재"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1730371851241-aad9cf97525f?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxmb3J0dW5lJTIwYXN0cm9sb2d5fGVufDB8MHx8fDE3Njg1NDAzNTF8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 병오년 띠별 운세 총정리: 12띠 신년운세 완벽 가이드
@@ -328,3 +328,10 @@ thumbnail: ""
 **말(馬)처럼 힘차게 달리고, 말(言)하는 대로 이루는 2026년 되세요!**
 
 새해 복 많이 받으세요!
+
+---
+
+**관련 글 추천:**
+- [트렌드 코리아 2026 핵심 키워드 10가지](/posts/trend-korea-2026-keywords)
+- [신년 다이어트 식단: 4주 완벽 가이드](/posts/2026-new-year-diet-plan)
+- [2026 설날 KTX·SRT 예매 가이드](/posts/lunar-new-year-train-ticket-2026)

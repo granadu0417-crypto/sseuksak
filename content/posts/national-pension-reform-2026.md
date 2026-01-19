@@ -4,7 +4,7 @@ description: "2026년 1월부터 시행되는 국민연금 개정안의 모든 �
 date: "2026-01-07"
 category: "finance"
 tags: ["국민연금", "연금개혁", "보험료율", "소득대체율", "노후준비", "2026년", "국민연금개정"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1624953336495-0b5af4d962f2?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw2fHxyZXRpcmVtZW50JTIwcGVuc2lvbnxlbnwwfDB8fHwxNzY4NTQwMzY3fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 국민연금 개정 총정리: 보험료율 인상부터 소득대체율까지 완벽 가이드

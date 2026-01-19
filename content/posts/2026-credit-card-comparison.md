@@ -4,7 +4,7 @@ description: "2026년 가장 혜택이 좋은 신용카드들을 비교 분석�
 date: "2026-01-02"
 category: "finance"
 tags: ["신용카드", "재테크", "할인", "포인트", "카드추천", "연회비"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1716388163697-bfb3989d15c8?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw3fHxjcmVkaXQlMjBjYXJkJTIwcGF5bWVudHxlbnwwfDB8fHwxNzY4NTQwMzQ4fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 추천 신용카드 비교 가이드: 혜택별 BEST 카드 총정리

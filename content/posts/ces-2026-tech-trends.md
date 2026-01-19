@@ -4,7 +4,7 @@ description: "CES 2026에서 공개된 최신 기술 트렌드를 정리했습�
 date: "2026-01-05"
 category: "tech"
 tags: ["CES2026", "기술트렌드", "AI", "로봇", "전기차", "XR", "스마트홈"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1609619385076-36a873425636?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbnxlbnwwfDB8fHwxNzY4NTQwNDQzfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # CES 2026 기술 트렌드 총정리: 올해 주목해야 할 혁신 기술 TOP 10

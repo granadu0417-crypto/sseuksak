@@ -4,7 +4,7 @@ description: "2026년 1월 1일부터 시행되는 신설 국가자격증 7종�
 date: "2026-01-06"
 category: "education"
 tags: ["자격증", "국가자격증", "스마트공장", "바이오", "취업", "커리어"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1697086279220-bcaea17a8734?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBjZXJ0aWZpY2F0ZXxlbnwwfDB8fHwxNzY4NTQwMzcwfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 신설 국가자격증 가이드: 스마트공장·바이오·모빌리티 7종목 완벽 정리

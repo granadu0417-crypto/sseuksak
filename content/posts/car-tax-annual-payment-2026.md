@@ -4,7 +4,7 @@ description: "2026년 자동차세 연납으로 최대 4.57% 할인받는 방법
 date: "2026-01-12"
 category: "finance"
 tags: ["자동차세", "연납", "자동차세연납", "위택스", "세금절약", "자동차세할인", "2026년세금"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1641846948845-60e99fa0f072?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8Y2FyJTIwdGF4JTIwcGF5bWVudHxlbnwwfDB8fHwxNzY4NTQwMzU1fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 자동차세 연납 신청 가이드: 할인율, 신청방법, 계산법 총정리

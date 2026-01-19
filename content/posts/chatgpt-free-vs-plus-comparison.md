@@ -4,7 +4,7 @@ description: "ChatGPT 무료와 유료(Plus, Pro) 버전의 기능, 사용 한�
 date: "2026-01-15"
 category: "tech"
 tags: ["ChatGPT", "AI", "ChatGPT Plus", "인공지능", "생산성"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1679403766669-17890714e491?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxhaSUyMGNoYXRib3QlMjB0ZWNobm9sb2d5fGVufDB8MHx8fDE3Njg1NDAzNTd8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 "ChatGPT 유료 결제할 만한 가치가 있을까?"

@@ -4,7 +4,7 @@ description: "2025년 3월 전면 시행된 고교학점제가 1년을 맞이합
 date: "2026-01-06"
 category: "education"
 tags: ["고교학점제", "고등학교", "교육제도", "진로교육", "학부모가이드"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8aGlnaCUyMHNjaG9vbCUyMHN0dWRlbnR8ZW58MHwwfHx8MTc2ODU0MDM2Mnww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 고교학점제 1년, 학부모가 알아야 할 모든 것: 2026년 핵심 가이드

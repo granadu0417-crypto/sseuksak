@@ -4,7 +4,7 @@ description: "2026년 국가기술자격 시험 일정을 총정리했습니다.
 date: "2026-01-06"
 category: "education"
 tags: ["국가기술자격", "기사시험", "자격증시험", "시험일정", "큐넷", "취업준비"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1715173679369-18006e84d6a8?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxleGFtJTIwY2VydGlmaWNhdGlvbnxlbnwwfDB8fHwxNzY4NTQwMzY4fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 국가기술자격 시험일정 총정리: 기사·산업기사·기능사 완벽 가이드

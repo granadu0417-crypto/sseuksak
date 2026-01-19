@@ -4,7 +4,7 @@ description: "2026년 1월 적금 금리 비교! 금융감독원 공식 자료 �
 date: "2026-01-16"
 category: "finance"
 tags: ["적금", "적금금리", "저축은행", "인터넷은행", "재테크", "금리비교", "고금리적금"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwyfHxzYXZpbmdzJTIwYmFuayUyMG1vbmV5fGVufDB8MHx8fDE3Njg1NDAzNzF8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 적금 금리 비교: 시중은행 vs 저축은행 vs 인터넷은행 총정리

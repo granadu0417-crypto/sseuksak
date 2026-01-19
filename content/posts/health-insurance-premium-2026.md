@@ -4,7 +4,7 @@ description: "2026년 1월부터 적용되는 건강보험료 변경사항을 �
 date: "2026-01-06"
 category: "health"
 tags: ["건강보험료", "4대보험", "건강보험", "보험료계산", "직장인", "지역가입자"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1666886573199-88a2ed65470d?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxoZWFsdGglMjBpbnN1cmFuY2UlMjBtZWRpY2FsfGVufDB8MHx8fDE3Njg1NDAzNjJ8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 건강보험료 변경사항 총정리: 인상률, 계산법, 절약 팁까지

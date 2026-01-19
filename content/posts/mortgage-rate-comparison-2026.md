@@ -4,7 +4,7 @@ date: "2026-01-07"
 description: "2026년 주택담보대출 금리를 은행별로 비교하고, 보금자리론부터 시중은행 주담대까지 최저금리 찾는 방법을 알려드립니다. 스트레스 DSR 3단계 적용과 대출 한도 계산법도 함께 확인하세요."
 category: "finance"
 tags: ["주택담보대출", "주담대금리", "보금자리론", "DSR", "대출금리비교", "스트레스DSR", "2026년대출"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1744782351841-9cc6b86a5add?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxob21lJTIwbW9ydGdhZ2V8ZW58MHwwfHx8MTc2ODU0MDM2Nnww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 주택담보대출 금리 비교 완벽 가이드
@@ -244,10 +244,10 @@ A. 네, 2026년 6월까지 **스트레스 DSR 2단계 적용**으로 수도권 �
 
 ---
 
-### 함께 읽으면 좋은 글
-- 2026년 전세대출 조건 비교
-- 청년 주거 지원 정책 총정리
-- DSR 계산기 사용법
+**관련 글 추천:**
+- [전세대출 조건 비교 가이드](/posts/jeonse-loan-comparison-2026)
+- [부동산 세금 총정리 - 취득세, 양도세, 종부세](/posts/real-estate-tax-guide-2026)
+- [2026년 적금 금리 비교 총정리](/posts/savings-account-comparison-2026)
 
 ---
 

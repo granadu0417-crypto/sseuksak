@@ -300,7 +300,9 @@ S FE(팬 에디션)나 슬림 모델에 대한 루머도 있으나, 현재까지
 
 이 글은 **2026년 1월 7일 기준** 최신 정보를 바탕으로 작성되었으며, 새로운 정보가 공개되는 대로 업데이트할 예정입니다.
 
-**관련 글 더보기:**
-- [2026년 ETF 투자 가이드](/posts/etf-investment-guide-2026)
-- [AI 업무 생산성 도구 추천](/posts/ai-productivity-tools-2026)
-- [CES 2026 기술 트렌드](/posts/ces-2026-tech-trends)
+---
+
+**관련 글 추천:**
+- [아이폰17 스펙 총정리: 일반 vs 프로 vs 에어](/posts/iphone-17-specs-comparison-2026)
+- [CES 2026 기술 트렌드 총정리](/posts/ces-2026-tech-trends)
+- [업무 효율 200% 높이는 AI 도구 활용법](/posts/ai-productivity-tools-2026)

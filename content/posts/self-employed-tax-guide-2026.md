@@ -4,7 +4,7 @@ date: "2026-01-07"
 description: "개인사업자를 위한 2026년 절세 전략을 총정리했습니다. 종합소득세 신고, 부가가치세, 간이과세자 기준, 비용처리 방법까지 사업자가 꼭 알아야 할 세금 정보를 확인하세요."
 category: "finance"
 tags: ["개인사업자", "절세", "종합소득세", "부가가치세", "간이과세자", "사업자세금", "2026년세금"]
-thumbnail: ""
+thumbnail: "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8c21hbGwlMjBidXNpbmVzc3xlbnwwfDB8fHwxNzY4NTQwMzcyfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 # 2026년 개인사업자 절세 가이드
@@ -316,10 +316,10 @@ A. 일반적으로:
 
 ---
 
-### 함께 읽으면 좋은 글
-- 2026년 연말정산 달라지는 점
-- 부동산 세금 총정리
-- 법인 전환 가이드
+**관련 글 추천:**
+- [2026년 1월 부가세 확정신고 완벽 가이드](/posts/vat-filing-guide-january-2026)
+- [2026년 연말정산 완벽 가이드](/posts/year-end-tax-settlement-2026)
+- [2026년 소상공인 지원금 총정리](/posts/small-business-support-2026)
 
 ---
 
