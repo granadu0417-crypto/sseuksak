@@ -34,8 +34,8 @@ export function generateMetadata({
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
   const fullUrl = `${SITE_URL}${url}`;
 
-  // Handle image URL - use provided image or default
-  const DEFAULT_OG_IMAGE = '/images/og-default.png';
+  // Handle image URL - use provided image or default (Unsplash static image)
+  const DEFAULT_OG_IMAGE = 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80';
   const imageUrl = image || DEFAULT_OG_IMAGE;
   const fullImage = imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}`;
 
@@ -112,8 +112,8 @@ export function generateArticleJsonLd({
   publishedTime: string;
   modifiedTime?: string;
 }) {
-  // Handle image URL properly
-  const DEFAULT_OG_IMAGE = '/images/og-default.png';
+  // Handle image URL properly (Unsplash static image as default)
+  const DEFAULT_OG_IMAGE = 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80';
   const imageUrl = image || DEFAULT_OG_IMAGE;
   const fullImage = imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}`;
 

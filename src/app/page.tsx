@@ -2,8 +2,9 @@ import { getAllPosts, getAllCategories } from '@/lib/posts';
 import PostCard from '@/components/PostCard';
 import Link from 'next/link';
 
-// ISR: 1시간마다 재생성 (최신 글 빠른 반영)
-export const revalidate = 3600;
+// Cloudflare Workers에서 런타임 fs 접근 불가로 인해 정적 생성 강제
+// 새 게시글 반영을 위해서는 재배포 필요
+export const dynamic = 'force-static';
 
 const categoryLabels: Record<string, string> = {
   finance: '금융/투자',

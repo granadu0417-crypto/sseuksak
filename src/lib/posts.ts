@@ -80,6 +80,9 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   const processedContent = await remark().use(remarkGfm).use(html, { sanitize: false }).process(contentWithYouTube);
   let contentHtml = processedContent.toString();
 
+  // Convert H1 to H2 in content (page title is already H1, SEO requires single H1)
+  contentHtml = contentHtml.replace(/<h1>(.*?)<\/h1>/gi, '<h2>$1</h2>');
+
   // Add IDs to headings for TOC navigation
   let headingIndex = 0;
   contentHtml = contentHtml.replace(/<(h[2-3])>(.*?)<\/\1>/gi, (match, tag, text) => {

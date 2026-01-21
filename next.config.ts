@@ -10,6 +10,27 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // 잘못된 URL 리다이렉트 (네이버 크롤러 수집 오류 수정)
+  async redirects() {
+    return [
+      // 테스트 URL: -test 접미사 제거
+      {
+        source: '/tests/sns-fatigue-test',
+        destination: '/tests/sns-fatigue',
+        permanent: true,
+      },
+      {
+        source: '/tests/caffeine-dependency-test',
+        destination: '/tests/caffeine-dependency',
+        permanent: true,
+      },
+      {
+        source: '/tests/sleep-type-test',
+        destination: '/tests/sleep-type',
+        permanent: true,
+      },
+    ];
+  },
   // 프로덕션 빌드 최적화
   compiler: {
     // 프로덕션에서 console.log 제거
