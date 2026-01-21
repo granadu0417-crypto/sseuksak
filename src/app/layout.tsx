@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: '다양한 주제의 유용한 정보를 제공하는 블로그',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80',
         width: 1200,
         height: 630,
         alt: '쓱싹',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '쓱싹 - 유용한 정보 블로그',
     description: '다양한 주제의 유용한 정보를 제공하는 블로그',
-    images: ['/og-image.png'],
+    images: ['https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80'],
   },
   robots: {
     index: true,
