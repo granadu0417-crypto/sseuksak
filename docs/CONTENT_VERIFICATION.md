@@ -88,6 +88,7 @@ sseuksak.com 블로그 콘텐츠의 정확성을 보장하기 위한 검증 프�
 
 | 날짜 | 파일명 | 정확도 | 상태 |
 |------|--------|--------|------|
+| 01-22 | youth-savings-comparison-2026.md | 100% | ✅ |
 | 01-22 | unemployment-benefits-guide-2026.md | 100% | ✅ |
 | 01-21 | earned-income-tax-credit-2026.md | 100% | ✅ |
 | 01-21 | youth-rent-support-2026.md | 100% | ✅ |
