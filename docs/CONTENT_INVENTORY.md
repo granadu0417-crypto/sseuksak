@@ -10,17 +10,17 @@
 
 | 카테고리 | 게시글 수 |
 |----------|-----------|
-| Finance (금융/재테크) | **23개** |
-| Lifestyle (생활/트렌드) | 9개 |
+| Finance (금융/재테크) | **24개** |
+| Lifestyle (생활/트렌드) | 11개 |
 | Tech (기술/IT) | 6개 |
 | Insurance (보험) | 5개 |
 | Education (교육) | 4개 |
 | Health (건강) | 4개 |
-| **총계** | **51개** |
+| **총계** | **54개** |
 
 ---
 
-## Finance (금융/재테크) - 23개
+## Finance (금융/재테크) - 24개
 
 | 파일명 | 제목 | 키워드 |
 |--------|------|--------|
@@ -47,13 +47,15 @@
 | `2026-credit-card-comparison.md` | 추천 신용카드 비교 가이드 | 신용카드, 혜택 |
 | `car-insurance-renewal-guide-2026.md` | 자동차보험 갱신 비교 가이드 | 자동차보험, 갱신 |
 | `resignation-checklist-2026.md` | 퇴사 전 체크리스트 | 퇴사, 실업급여 |
+| `parental-leave-benefit-guide-2026.md` | 2026년 육아휴직급여 신청 가이드 | 육아휴직, 육아휴직급여, 부모육아휴직제 |
 
 ---
 
-## Lifestyle (생활/트렌드) - 8개
+## Lifestyle (생활/트렌드) - 11개
 
 | 파일명 | 제목 | 키워드 |
 |--------|------|--------|
+| `2026-golden-holiday-annual-leave-guide.md` | 2026년 황금연휴 연차 활용법 | 황금연휴, 연차, 공휴일, 대체공휴일 |
 | `trend-korea-2026-keywords.md` | 트렌드 코리아 2026 핵심 키워드 | 트렌드코리아, HORSE POWER |
 | `2026-new-laws-guide.md` | 2026년 새롭게 바뀌는 법률 15가지 | 법률, 제도변경 |
 | `2026-zodiac-fortune-guide.md` | 2026년 병오년 띠별 운세 | 띠별운세, 병오년 |
@@ -61,6 +63,7 @@
 | `ev-subsidy-2026.md` | 2026년 전기차 보조금 가이드 | 전기차, 보조금 |
 | `mvno-phone-plan-comparison-2026.md` | 2026년 알뜰폰 요금제 비교 | 알뜰폰, 요금제 |
 | `netflix-january-2026-new-releases.md` | 2026년 1월 넷플릭스 신작 | 넷플릭스, OTT |
+| `netflix-february-2026-new-releases.md` | 2026년 2월 넷플릭스 신작 | 넷플릭스, OTT, 레이디두아, 미스터리수사단 |
 | `water-meter-freeze-prevention-tips-2026.md` | 수도계량기 동파 방지 꿀팁 7가지 | 수도계량기, 동파방지, 한파대비 |
 | `winter-heating-cost-saving-tips-2026.md` | 겨울 난방비 절약 꿀팁 10가지 | 난방비, 보일러, 단열 |
 

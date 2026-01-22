@@ -3,10 +3,30 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '유용한 도구 모음 | 쓱싹',
-  description: '연말정산 환급액 계산기, 연봉 실수령액 계산기, 수면 사이클 계산기, FIRE 은퇴 계산기 등 생활에 유용한 도구들을 무료로 이용하세요.',
+  description: '대출이자 계산기, 시급 계산기, 퇴직금 계산기, 주휴수당 계산기, BMI 계산기, 연봉 실수령액 계산기, 연말정산 환급액 계산기 등 생활에 유용한 도구들을 무료로 이용하세요.',
 };
 
 const financeTools = [
+  {
+    slug: 'loan-calculator',
+    title: '대출이자 계산기',
+    description: '대출 조건별 월 상환금과 총 이자를 비교 계산해요',
+  },
+  {
+    slug: 'hourly-wage-calculator',
+    title: '시급 계산기',
+    description: '시급↔월급↔연봉 변환, 2026년 최저시급 비교',
+  },
+  {
+    slug: 'severance-calculator',
+    title: '퇴직금 계산기',
+    description: '근속기간과 급여로 예상 퇴직금과 실수령액을 계산해요',
+  },
+  {
+    slug: 'weekly-holiday-pay-calculator',
+    title: '주휴수당 계산기',
+    description: '주 15시간 이상 근무 시 받는 주휴수당을 계산해요',
+  },
   {
     slug: 'tax-refund-calculator',
     title: '연말정산 환급액 계산기',
@@ -35,6 +55,11 @@ const financeTools = [
 ];
 
 const lifeTools = [
+  {
+    slug: 'bmi-calculator',
+    title: 'BMI 계산기',
+    description: '키와 체중으로 비만도를 측정하고 건강 위험을 확인해요',
+  },
   {
     slug: 'alcohol-calculator',
     title: '알코올 분해 시간 계산기',
