@@ -48,6 +48,18 @@
 | - Cloudflare Workers 배포 (422페이지) | ✅ |
 | - IndexNow 85개 URL 제출 | ✅ |
 
+### 완료된 작업 (검색 기능 버그 수정)
+| 작업 내용 | 상태 |
+|----------|------|
+| **검색 기능 Cloudflare Workers 호환성 수정** | ✅ |
+| - 문제: Cloudflare Workers 런타임에서 파일시스템 접근 불가로 검색 결과 빈 배열 반환 | ✅ |
+| - 해결: 빌드 시점에 정적 JSON 인덱스 생성 방식으로 변경 | ✅ |
+| - `scripts/generate-search-index.js` 생성 | ✅ |
+| - `SearchResults.tsx` 클라이언트 측 검색으로 전환 | ✅ |
+| - `package.json` cf:build 스크립트에 인덱스 생성 추가 | ✅ |
+| - Playwright 테스트로 라이브 검색 정상 동작 확인 | ✅ |
+| - Commit `609174a`: 검색 기능 수정 | ✅ |
+
 ---
 
 ### 완료된 작업 (배포 및 라이브 확인)
