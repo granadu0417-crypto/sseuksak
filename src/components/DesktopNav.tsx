@@ -28,7 +28,7 @@ export default function DesktopNav() {
   }, []);
 
   return (
-    <div className="hidden md:flex items-center space-x-8">
+    <div className="flex items-center space-x-8">
       {/* 정보 드롭다운 */}
       <div className="relative" ref={dropdownRef}>
         <button

@@ -193,3 +193,38 @@ export function getTotalPages(): number {
   const allPosts = getAllPosts();
   return Math.ceil(allPosts.length / POSTS_PER_PAGE);
 }
+
+// 검색 기능
+export function searchPosts(query: string): PostMeta[] {
+  if (!query.trim()) return [];
+
+  const normalizedQuery = query.toLowerCase().trim();
+  const searchTerms = normalizedQuery.split(/\s+/);
+
+  const allPosts = getAllPosts();
+
+  const results = allPosts
+    .map((post) => {
+      let score = 0;
+      const titleLower = post.title.toLowerCase();
+      const descLower = post.description.toLowerCase();
+      const tagsLower = post.tags.map(t => t.toLowerCase());
+
+      for (const term of searchTerms) {
+        // 제목에 포함 (가중치 높음)
+        if (titleLower.includes(term)) score += 10;
+        // 설명에 포함
+        if (descLower.includes(term)) score += 5;
+        // 태그에 포함
+        if (tagsLower.some(tag => tag.includes(term))) score += 3;
+        // 카테고리에 포함
+        if (post.category.toLowerCase().includes(term)) score += 2;
+      }
+
+      return { ...post, score };
+    })
+    .filter((post) => post.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+  return results;
+}

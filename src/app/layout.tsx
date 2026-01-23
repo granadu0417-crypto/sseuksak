@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: '쓱싹 - 유용한 정보 블로그',
     template: '%s | 쓱싹',
   },
-  description: '다양한 주제의 유용한 정보를 제공하는 블로그. 금융, 건강, IT, 생활정보 등 쉽게 알려드립니다.',
+  description: '금융, 세금, 복지, 생활 정보를 공식 자료 기반으로 쉽게 정리해드립니다.',
   keywords: '금융, 투자, 건강, IT, 테크, 생활정보, 자격증, 보험',
   authors: [{ name: '쓱싹' }],
   creator: '쓱싹',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: 'https://sseuksak.com',
     siteName: '쓱싹',
     title: '쓱싹 - 유용한 정보 블로그',
-    description: '다양한 주제의 유용한 정보를 제공하는 블로그',
+    description: '금융, 세금, 복지, 생활 정보를 공식 자료 기반으로 쉽게 정리해드립니다',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '쓱싹 - 유용한 정보 블로그',
-    description: '다양한 주제의 유용한 정보를 제공하는 블로그',
+    description: '금융, 세금, 복지, 생활 정보를 공식 자료 기반으로 쉽게 정리해드립니다',
     images: ['https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80'],
   },
   robots: {
@@ -119,9 +119,16 @@ export default function RootLayout({
         />
       </head>
       <body className={`${notoSansKR.className} antialiased bg-white`}>
+        {/* 접근성: 본문으로 건너뛰기 링크 */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:outline-none"
+        >
+          본문으로 건너뛰기
+        </a>
         <div className="min-h-screen flex flex-col">
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main id="main-content" className="flex-grow">{children}</main>
           <Footer />
         </div>
         <ScrollToTopWrapper />

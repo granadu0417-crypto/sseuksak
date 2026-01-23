@@ -97,9 +97,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-200">
+        <div className="mt-8 pt-8 border-t border-gray-200 space-y-2">
           <p className="text-center text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} 쓱싹. All rights reserved.
+          </p>
+          <p className="text-center text-gray-400 text-xs">
+            본 사이트의 정보는 참고용이며, 정확한 내용은 관련 기관 공식 사이트를 확인하시기 바랍니다.
           </p>
         </div>
       </div>

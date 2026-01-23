@@ -64,10 +64,10 @@ export default function Home() {
       {/* Hero Section - 모바일에서 더 컴팩트하게 */}
       <section className="text-center py-8 md:py-12 mb-6 md:mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
-          유용한 정보, 쓱싹
+          정책부터 생활까지, 알찬 정보
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-          금융, 건강, IT 등 다양한 주제의 유용한 정보를 쉽게 알려드립니다.
+          금융, 세금, 복지, 생활 정보를 공식 자료 기반으로 쉽게 정리해드립니다.
         </p>
       </section>
 

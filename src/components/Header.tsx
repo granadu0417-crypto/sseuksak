@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import MobileNav from './MobileNav';
 import DesktopNav from './DesktopNav';
+import SearchButton from './SearchButton';
 
 export default function Header() {
   return (
@@ -12,11 +13,17 @@ export default function Header() {
             <span className="text-2xl font-bold text-blue-600">쓱싹</span>
           </Link>
 
-          {/* Desktop Navigation - 클라이언트 컴포넌트 */}
-          <DesktopNav />
+          {/* Desktop Navigation + Search */}
+          <div className="hidden md:flex items-center space-x-4">
+            <DesktopNav />
+            <SearchButton />
+          </div>
 
-          {/* Mobile Navigation - 클라이언트 컴포넌트 */}
-          <MobileNav />
+          {/* Mobile Navigation + Search */}
+          <div className="flex md:hidden items-center space-x-2">
+            <SearchButton />
+            <MobileNav />
+          </div>
         </div>
       </nav>
     </header>
