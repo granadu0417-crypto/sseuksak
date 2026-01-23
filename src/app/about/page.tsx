@@ -62,6 +62,32 @@ export default function AboutPage() {
           </p>
         </section>
 
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            운영자 정보
+          </h2>
+          <div className="bg-gray-50 rounded-lg p-6">
+            <dl className="space-y-3">
+              <div className="flex">
+                <dt className="w-24 font-medium text-gray-900">운영자</dt>
+                <dd className="text-gray-700">쓱싹</dd>
+              </div>
+              <div className="flex">
+                <dt className="w-24 font-medium text-gray-900">설립일</dt>
+                <dd className="text-gray-700">2026년 1월</dd>
+              </div>
+              <div className="flex">
+                <dt className="w-24 font-medium text-gray-900">연락처</dt>
+                <dd className="text-gray-700">
+                  <a href="/contact" className="text-blue-600 hover:underline">
+                    문의하기
+                  </a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
         <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">
             문의하기
