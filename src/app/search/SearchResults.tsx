@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 
@@ -30,19 +30,12 @@ export default function SearchResults() {
 
   const [query, setQuery] = useState(initialQuery);
   const [results, setResults] = useState<SearchResult[]>([]);
+  const [allPosts, setAllPosts] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(!!initialQuery);
 
-  // URL 쿼리 파라미터 변경 감지
-  useEffect(() => {
-    const q = searchParams.get('q') || '';
-    setQuery(q);
-    if (q) {
-      performSearch(q);
-    }
-  }, [searchParams]);
-
-  const performSearch = async (searchQuery: string) => {
+  // 클라이언트 측 검색 함수
+  const performSearch = useCallback((searchQuery: string, posts: SearchResult[]) => {
     if (!searchQuery.trim()) {
       setResults([]);
       setHasSearched(false);
@@ -52,16 +45,35 @@ export default function SearchResults() {
     setIsLoading(true);
     setHasSearched(true);
 
-    try {
-      const res = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}`);
-      const data = await res.json();
-      setResults(data.results || []);
-    } catch {
-      setResults([]);
-    } finally {
-      setIsLoading(false);
+    const queryLower = searchQuery.toLowerCase();
+    const filtered = posts.filter((post) => {
+      const titleMatch = post.title.toLowerCase().includes(queryLower);
+      const descMatch = post.description.toLowerCase().includes(queryLower);
+      const tagMatch = post.tags.some((tag) => tag.toLowerCase().includes(queryLower));
+      return titleMatch || descMatch || tagMatch;
+    });
+
+    setResults(filtered);
+    setIsLoading(false);
+  }, []);
+
+  // 검색 인덱스 로드 (최초 1회)
+  useEffect(() => {
+    fetch('/search-index.json')
+      .then((res) => res.json())
+      .then((data) => setAllPosts(data))
+      .catch(() => setAllPosts([]));
+  }, []);
+
+  // URL 쿼리 파라미터 변경 감지
+  useEffect(() => {
+    const q = searchParams.get('q') || '';
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setQuery(q);
+    if (q && allPosts.length > 0) {
+      performSearch(q, allPosts);
     }
-  };
+  }, [searchParams, allPosts, performSearch]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

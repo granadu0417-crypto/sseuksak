@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "cf:clean": "rm -rf .open-next",
-    "cf:build": "npx @opennextjs/cloudflare build",
+    "cf:build": "node scripts/generate-search-index.js && npx @opennextjs/cloudflare build",
     "cf:dev": "npx @opennextjs/cloudflare dev",
     "cf:quick": "npm run cf:build && npx @opennextjs/cloudflare deploy --cacheChunkSize 50 && npm run indexnow",
     "cf:deploy": "npm run cf:clean && npm run cf:build && npx @opennextjs/cloudflare deploy --cacheChunkSize 50 && npm run indexnow",
