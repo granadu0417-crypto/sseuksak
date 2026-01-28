@@ -99,6 +99,35 @@ sseuksak.com 블로그의 검색엔진 색인 관리를 위한 문서입니다.
 
 ## 색인 요청 기록
 
+### 2026-01-28
+
+| 작업 | 대상 | 결과 |
+|------|------|------|
+| H1 중복 이슈 분석 | 28개 페이지 | ✅ 이미 수정됨 (캐시 문제) |
+| 수집 제한 분석 | 10개 페이지 | ✅ 완료 |
+| 네이버 재크롤링 요청 | 8개 URL | ✅ 제출 완료 |
+
+**재크롤링 요청한 URL:**
+1. /posts/minimum-wage-2026
+2. /posts/health-insurance-premium-2026
+3. /posts/national-pension-reform-2026
+4. /posts/trend-korea-2026-keywords
+5. /posts/car-tax-annual-payment-2026
+6. /posts/car-insurance-policy-changes-2026
+7. /posts/year-end-tax-simplification-service-2026
+8. /posts/lunar-new-year-train-ticket-2026
+
+**수집 제한 페이지 분석 결과:**
+
+| 유형 | 개수 | 상태 | 조치 |
+|------|------|------|------|
+| 리다이렉션 | 3개 | 정상 | URL 구조 변경 (-test 제거) |
+| 접근 불가 (정상 작동) | 4개 | 캐시 오류 | 재크롤링 요청 |
+| 접근 불가 (OG 이미지) | 2개 | 404 | Unsplash로 대체, 자동 해결 |
+| 접근 불가 (삭제됨) | 1개 | 404 | ktx-discount-2026, 자동 제거 |
+
+---
+
 ### 2026-01-19
 
 | 작업 | 대상 | 결과 |
