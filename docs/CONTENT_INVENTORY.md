@@ -12,11 +12,11 @@
 |----------|-----------|
 | Finance (금융/재테크) | **31개** |
 | Lifestyle (생활/트렌드) | **13개** |
-| Tech (기술/IT) | 6개 |
+| Tech (기술/IT) | **7개** |
 | Insurance (보험) | 5개 |
 | Education (교육) | 4개 |
 | Health (건강) | **5개** |
-| **총계** | **64개** |
+| **총계** | **65개** |
 
 ---
 
@@ -78,10 +78,11 @@
 
 ---
 
-## Tech (기술/IT) - 6개
+## Tech (기술/IT) - 7개
 
 | 파일명 | 제목 | 키워드 |
 |--------|------|--------|
+| `google-gemini-subscription-guide-2026.md` | 구글 제미나이 무료 vs 유료 차이｜AI 플러스·프로·울트라 선택 가이드 (2026) | 구글AI, 제미나이, Gemini, AI구독 |
 | `ces-2026-tech-trends.md` | CES 2026 기술 트렌드 총정리 | CES, 혁신기술 |
 | `chatgpt-free-vs-plus-comparison.md` | ChatGPT 무료 vs 유료 비교 | ChatGPT, AI |
 | `ai-productivity-tools-2026.md` | AI 도구 활용법 | AI툴, 업무효율 |
