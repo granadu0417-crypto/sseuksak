@@ -7,8 +7,6 @@ tags: ["실손보험", "5세대실손", "보험료절약", "의료보험", "건�
 thumbnail: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8aGVhbHRoJTIwaW5zdXJhbmNlfGVufDB8MHx8fDE3Njg1NDAzNTJ8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 5세대 실손보험 완벽 가이드: 4세대와 비교, 가입 전략 총정리
-
 "실손보험료가 또 올랐다는데, 어떻게 해야 하나요?"
 
 2026년 상반기, **5세대 실손보험**이 출시됩니다. 기존 4세대 실손보험은 5세대 출시와 함께 판매가 중단되고, 이후에는 5세대만 새로 가입할 수 있어요.

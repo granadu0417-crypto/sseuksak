@@ -7,8 +7,6 @@ tags: ["운전자보험", "자동차보험", "보험비교", "변호사선임비
 thumbnail: "https://images.unsplash.com/photo-1611508106567-6218ae6c5f6a?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxjYXIlMjBkcml2aW5nfGVufDB8MHx8fDE3Njg1NDAzNTd8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 운전자보험 완벽 가이드
-
 자동차를 운전하다 보면 예상치 못한 사고가 발생할 수 있습니다. 자동차보험에 가입했는데 왜 운전자보험이 또 필요할까요? 금융감독원 공식 자료를 바탕으로 운전자보험의 모든 것을 정리했습니다.
 
 ---

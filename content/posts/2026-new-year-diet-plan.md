@@ -7,8 +7,6 @@ tags: ["다이어트", "식단표", "체중감량", "건강식단", "신년다�
 thumbnail: "https://images.unsplash.com/photo-1642339800099-921df1a0a958?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxoZWFsdGh5JTIwZm9vZCUyMGRpZXR8ZW58MHwwfHx8MTc2ODU0MDM1MHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 신년 다이어트 식단: 건강하게 살 빼는 4주 식단표 완벽 가이드
-
 "올해는 진짜 살 빼야지!"
 
 새해 첫날, 이렇게 다짐하신 분들 많으시죠?

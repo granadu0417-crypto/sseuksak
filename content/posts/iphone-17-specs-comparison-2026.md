@@ -7,8 +7,6 @@ tags: ["아이폰17", "아이폰17프로", "아이폰에어", "iPhone17", "스�
 thumbnail: "https://images.unsplash.com/photo-1636494653548-aaecb99798ee?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxpcGhvbmUlMjBzbWFydHBob25lfGVufDB8MHx8fDE3Njg1NDAzNjN8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 아이폰17 스펙 총정리: 일반 vs 프로 vs 에어 어떤 모델 살까?
-
 "아이폰17 시리즈 나왔는데, 뭘 사야 할지 모르겠어요."
 
 2025년 9월 출시된 아이폰17 시리즈! 이번엔 라인업이 완전히 바뀌었어요. 기존 Plus 모델이 사라지고, **역대 가장 얇은 아이폰 에어**가 새로 등장했거든요.

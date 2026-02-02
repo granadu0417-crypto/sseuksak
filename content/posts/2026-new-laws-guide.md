@@ -7,8 +7,6 @@ tags: ["2026년법률", "법률변경", "구하라법", "노동절", "AI기본�
 thumbnail: "https://images.unsplash.com/photo-1767972463877-b64ba4283cd0?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwyfHxsYXclMjBsZWdhbHxlbnwwfDB8fHwxNzY4NTQwMzQ5fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 새롭게 바뀌는 법률 15가지 총정리
-
 2026년 새해가 시작되면서 국민 생활 전반에 영향을 미치는 다양한 법률이 새롭게 시행됩니다. 육아 지원부터 세금, 교통법규, 상속법까지 꼭 알아야 할 **15가지 핵심 법률 변경사항**을 정리했습니다.
 
 ---

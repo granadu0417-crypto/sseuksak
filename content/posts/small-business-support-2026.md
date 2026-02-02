@@ -7,8 +7,6 @@ tags: ["소상공인", "정책자금", "사업자지원", "세금감면", "정�
 thumbnail: "https://images.unsplash.com/photo-1757663664225-be7c45372b96?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxzbWFsbCUyMGJ1c2luZXNzJTIwc2hvcHxlbnwwfDB8fHwxNzY4NTQwMzcyfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 소상공인 지원금 총정리: 정책자금, 세금 혜택, 신청방법까지
-
 "소상공인 지원금, 뭐가 있는지 모르겠어요."
 
 2026년에도 소상공인을 위한 다양한 정부 지원 정책이 시행됩니다. **정책자금**부터 **세금 혜택**까지, 놓치지 말아야 할 정보를 정리해드릴게요!

@@ -1,6 +1,6 @@
 # sseuksak.com 진행 현황
 
-> 마지막 업데이트: 2026-01-30
+> 마지막 업데이트: 2026-02-02
 
 ## 프로젝트 현황
 
@@ -24,6 +24,88 @@
 - [2026년 1월 2주차](archive/PROGRESS_2026_01_WEEK2.md) (01-08 ~ 01-14)
 - [2026년 1월 3주차](archive/PROGRESS_2026_01_WEEK3.md) (01-15 ~ 01-21)
 - [2026년 1월 4주차](archive/PROGRESS_2026_01_WEEK4.md) (01-22 ~ 01-27)
+
+---
+
+## 2026-02-02
+
+### 완료된 작업 (SEO 개선 4단계 계획 - Stage 1~2)
+| 작업 내용 | 상태 |
+|----------|------|
+| **Stage 1-1: 사이트맵 재등록** | ✅ |
+| - 네이버 서치어드바이저 sitemap.xml 재제출 | ✅ |
+| **Stage 1-2: 수동 색인 요청 (10개 URL)** | ✅ |
+| - /posts/hair-loss-treatment-guide-2026 | ✅ |
+| - /posts/driver-license-renewal-2026 | ✅ |
+| - /posts/free-early-education-expansion-2026 | ✅ |
+| - /posts/small-business-support-2026 | ✅ |
+| - /posts/jeonse-loan-comparison-2026 | ✅ |
+| - /posts/ev-subsidy-2026 | ✅ |
+| - /posts/etf-investment-guide-2026 | ✅ |
+| - /posts/self-employed-tax-guide-2026 | ✅ |
+| - /posts/youth-future-savings-2026 | ✅ |
+| - /posts/youth-rent-support-2026 | ✅ |
+| **Stage 1-3: 내부 링크 강화 (11개 파일)** | ✅ |
+| - netflix-january → february 연결 | ✅ |
+| - 독감예방접종 → 건강검진 연결 | ✅ |
+| - 연말정산 ↔ 근로장려금 ↔ 최저임금 상호 연결 | ✅ |
+| - 육아휴직 → 관련 정책 연결 | ✅ |
+| - 청년정책 → 청년 저축상품 연결 | ✅ |
+| - 예금 비교 → 청년 저축상품 연결 | ✅ |
+| - 청년전세 → 관련 정책 연결 | ✅ |
+| - 청년 미래 저축 → 관련 정책 연결 | ✅ |
+| - 건강보험료 → 건강검진 연결 | ✅ |
+| **Stage 2: H1 중복 이슈 해결 (46개 파일)** | ✅ |
+| - posts.ts L84: H1→H2 변환 코드 확인 | ✅ |
+| - 마크다운 파일 분석: 46개 파일에서 H1 중복 발견 | ✅ |
+| - frontmatter title과 동일한 H1 태그 46개 파일에서 제거 | ✅ |
+| - 원인: frontmatter title + markdown H1 중복 | ✅ |
+| - 해결: Python 스크립트로 일괄 H1 제거 | ✅ |
+| **배포 완료 (Stage 2)** | ✅ |
+| - Cloudflare Workers 배포 (81개 게시글, 616페이지) | ✅ |
+| - KV 캐시 639개 assets 업로드 | ✅ |
+| - IndexNow 112개 URL 제출 (HTTP 200 OK) | ✅ |
+| **Stage 3: Google CTR 개선 (메타 타이틀/설명 최적화)** | ✅ |
+| - 제목이 너무 긴 게시글 11개 최적화 (100bytes → 75-84bytes) | ✅ |
+| - 설명이 너무 짧은 게시글 2개 보강 (155-169 → 212-225bytes) | ✅ |
+| **최적화된 게시글 목록** | |
+| - google-gemini-subscription-guide-2026 (101→80 bytes) | ✅ |
+| - hair-loss-treatment-guide-2026 (116→84 bytes) | ✅ |
+| - health-checkup-2026 (101→81 bytes) | ✅ |
+| - ima-investment-account-guide-2026 (102→82 bytes) | ✅ |
+| - national-pension-reform-2026 (110→81 bytes) | ✅ |
+| - new-certifications-2026-guide (104→84 bytes) | ✅ |
+| - obesity-medication-guide-2026 (106→81 bytes) | ✅ |
+| - pet-insurance-comparison-2026 (106→77 bytes) | ✅ |
+| - year-end-tax-simplification-service-2026 (110→77 bytes) | ✅ |
+| - youth-future-savings-2026 (102→82 bytes) | ✅ |
+| - youth-savings-comparison-2026 (120→75 bytes) | ✅ |
+| - ces-2026-tech-trends description (169→225 bytes) | ✅ |
+| - chatgpt-free-vs-plus-comparison description (155→212 bytes) | ✅ |
+| **배포 완료 (Stage 3)** | ✅ |
+| - IndexNow 112개 URL 제출 (HTTP 200 OK) | ✅ |
+
+| **Stage 4: 크롤링 제한 해결 (6개 페이지)** | ✅ |
+| - 6개 문제 페이지 접근성 확인 (전부 HTTP 200) | ✅ |
+| - sitemap.xml 정상 (112개 URL) | ✅ |
+| - robots.txt 설정 확인 (검색엔진 모두 허용) | ✅ |
+| **검증된 페이지 목록** | |
+| - /posts/minimum-wage-2026 | ✅ |
+| - /posts/health-insurance-premium-2026 | ✅ |
+| - /posts/national-pension-reform-2026 | ✅ |
+| - /posts/trend-korea-2026-keywords | ✅ |
+| - /posts/car-tax-annual-payment-2026 | ✅ |
+| - /posts/car-insurance-policy-changes-2026 | ✅ |
+
+### SEO 개선 4단계 계획 완료
+| Stage | 작업 | 상태 |
+|-------|------|------|
+| 1-1 | 사이트맵 재등록 | ✅ |
+| 1-2 | 수동 색인 요청 (10개 URL) | ✅ |
+| 1-3 | 내부 링크 강화 (11개 파일) | ✅ |
+| 2 | H1 중복 이슈 해결 (46개 파일) | ✅ |
+| 3 | Google CTR 개선 (13개 파일) | ✅ |
+| 4 | 크롤링 제한 해결 (6개 페이지) | ✅ |
 
 ---
 

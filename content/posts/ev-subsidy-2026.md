@@ -7,8 +7,6 @@ tags: ["전기차", "보조금", "자동차", "친환경차", "정부지원", "�
 thumbnail: "https://images.unsplash.com/photo-1607171028974-319ba56cb013?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw2fHxlbGVjdHJpYyUyMGNhcnxlbnwwfDB8fHwxNzY4NTQwMzU5fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 전기차 보조금 완벽 가이드: 차종별 지원금, 신청방법 총정리
-
 "전기차 보조금, 올해는 얼마나 받을 수 있나요?"
 
 2026년에도 전기차 구매 시 정부 보조금이 지급됩니다. 다만 예산 소진 시 조기 마감될 수 있으니 **빠른 신청**이 중요합니다!

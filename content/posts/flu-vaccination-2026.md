@@ -7,8 +7,6 @@ tags: ["독감", "예방접종", "인플루엔자", "백신", "건강관리", "�
 thumbnail: "https://images.unsplash.com/photo-1691139600816-4707f196a85f?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHx2YWNjaW5lJTIwaGVhbHRoY2FyZXxlbnwwfDB8fHwxNzY4NTQwMzYwfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 독감 예방접종 안내: 무료 대상, 접종 시기, 주의사항 총정리
-
 "독감 주사 맞아야 하나요? 무료로 맞을 수 있나요?"
 
 독감(인플루엔자) 시즌이 다가옵니다. **무료 접종 대상**인지 확인하고, 적절한 시기에 예방접종을 받으세요!
@@ -334,6 +332,7 @@ thumbnail: "https://images.unsplash.com/photo-1691139600816-4707f196a85f?ixid=M3
 ---
 
 **관련 글 추천:**
+- [2026년 건강검진 대상자 확인 및 무료 검진 총정리](/posts/health-checkup-2026)
 - [2026년 건강보험료 변경사항 총정리](/posts/health-insurance-premium-2026)
 - [2026년 5세대 실손보험 완벽 가이드](/posts/5th-generation-health-insurance-guide-2026)
 

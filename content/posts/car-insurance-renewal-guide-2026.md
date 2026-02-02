@@ -7,8 +7,6 @@ tags: ["자동차보험", "보험갱신", "보험료절약", "다이렉트보험
 thumbnail: "https://images.unsplash.com/photo-1567113463730-77e3df20363c?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxhdXRvJTIwaW5zdXJhbmNlfGVufDB8MHx8fDE3Njg1NDAzNTV8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 자동차보험 갱신 비교 가이드
-
 2026년 자동차보험료가 **5년 만에 첫 인상**을 앞두고 있습니다. 보험료 인상 전에 갱신하거나, 현명한 비교를 통해 보험료를 절약하는 방법을 알아보겠습니다.
 
 ---

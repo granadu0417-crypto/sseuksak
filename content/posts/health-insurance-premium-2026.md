@@ -7,8 +7,6 @@ tags: ["건강보험료", "4대보험", "건강보험", "보험료계산", "직�
 thumbnail: "https://images.unsplash.com/photo-1666886573199-88a2ed65470d?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxoZWFsdGglMjBpbnN1cmFuY2UlMjBtZWRpY2FsfGVufDB8MHx8fDE3Njg1NDAzNjJ8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 건강보험료 변경사항 총정리: 인상률, 계산법, 절약 팁까지
-
 "월급은 그대로인데 건강보험료는 왜 또 올랐지?"
 
 2026년 1월, 건강보험료율이 **7.19%**로 확정되었습니다. 2025년 대비 소폭 인상된 건데요, 내 월급에서 얼마나 빠져나가는지 궁금하시죠?
@@ -367,6 +365,7 @@ thumbnail: "https://images.unsplash.com/photo-1666886573199-88a2ed65470d?ixid=M3
 ---
 
 **관련 글 추천:**
+- [2026년 건강검진 대상자 확인 및 무료 검진 총정리](/posts/health-checkup-2026)
 - [2026년 5세대 실손보험 완벽 가이드](/posts/5th-generation-health-insurance-guide-2026)
 - [2026년 추천 신용카드 비교 가이드](/posts/2026-credit-card-comparison)
 

@@ -7,8 +7,6 @@ tags: ["부동산세금", "취득세", "양도소득세", "종합부동산세", 
 thumbnail: "https://images.unsplash.com/photo-1635108197332-54105c0ec888?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxyZWFsJTIwZXN0YXRlJTIwcHJvcGVydHl8ZW58MHwwfHx8MTc2ODU0MDM3MHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 부동산 세금 총정리
-
 부동산을 취득하거나 보유, 양도할 때 다양한 세금이 발생합니다. 2026년에도 여러 세제 변화가 있는데요, 이 글에서는 **취득세, 양도소득세, 종합부동산세**를 중심으로 핵심 내용을 정리해 드립니다.
 
 ---

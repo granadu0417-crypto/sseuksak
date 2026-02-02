@@ -7,8 +7,6 @@ tags: ["트렌드코리아", "2026트렌드", "소비트렌드", "HORSEPOWER", "
 thumbnail: "https://images.unsplash.com/photo-1708391603514-f9061963ec8b?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw2fHxrb3JlYSUyMHRyZW5kfGVufDB8MHx8fDE3Njg1NDAzNzN8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 트렌드 코리아 2026 핵심 키워드 10가지 완벽 해설: HORSE POWER
-
 매년 연말이면 화제가 되는 책이 있죠. 바로 서울대 소비트렌드분석센터에서 발간하는 **'트렌드 코리아'**입니다!
 
 2026년은 병오년, **붉은 말의 해**인데요. 트렌드 코리아 2026에서는 **'HORSE POWER'**라는 키워드로 10대 소비 트렌드를 정리했어요.

@@ -1,6 +1,6 @@
 ---
 title: "ChatGPT 무료 vs 유료(Plus) 차이점 완벽 비교 (2026년)"
-description: "ChatGPT 무료와 유료(Plus, Pro) 버전의 기능, 사용 한도, 가격을 비교합니다. 어떤 요금제가 나에게 맞는지 확인해보세요."
+description: "ChatGPT 무료와 유료(Plus, Pro) 버전의 기능, 사용 한도, 가격을 상세 비교합니다. GPT-4o, 이미지 생성, 음성 대화 기능까지 어떤 요금제가 나에게 맞는지 확인하세요."
 date: "2026-01-15"
 category: "tech"
 tags: ["ChatGPT", "AI", "ChatGPT Plus", "인공지능", "생산성"]

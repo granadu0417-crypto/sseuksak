@@ -7,8 +7,6 @@ tags: ["AI교육", "디지털교과서", "에듀테크", "학부모가이드", "
 thumbnail: "https://images.unsplash.com/photo-1758598738106-f8f9d4c5d9d2?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxkaWdpdGFsJTIwZWR1Y2F0aW9uJTIwdGFibGV0fGVufDB8MHx8fDE3Njg1NDAzNTJ8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# AI 디지털교과서 완벽 가이드: 2026년 학부모가 알아야 할 핵심 정보
-
 "우리 아이 학교에서 태블릿으로 수업한다는데, 괜찮은 걸까요?"
 
 2025년 3월부터 전국 학교에 **AI 디지털교과서**가 도입되었습니다. 기존 종이 교과서와 함께 디지털 기기를 활용한 새로운 학습 방식이 시작된 것입니다.

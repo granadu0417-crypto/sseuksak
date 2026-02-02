@@ -1,13 +1,11 @@
 ---
-title: "2026년 신설 국가자격증 가이드: 스마트공장·바이오·모빌리티 7종목 완벽 정리"
+title: "2026년 신설 국가자격증 7종목｜스마트공장·바이오 취득 가이드"
 description: "2026년 1월 1일부터 시행되는 신설 국가자격증 7종목을 총정리했습니다. 스마트공장산업기사, 바이오공정기능사, 이륜자동차정비기능사 등 정확한 시험 정보와 취득 전략을 알려드립니다."
 date: "2026-01-06"
 category: "education"
 tags: ["자격증", "국가자격증", "스마트공장", "바이오", "취업", "커리어"]
 thumbnail: "https://images.unsplash.com/photo-1697086279220-bcaea17a8734?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBjZXJ0aWZpY2F0ZXxlbnwwfDB8fHwxNzY4NTQwMzcwfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
-
-# 2026년 신설 국가자격증 가이드: 스마트공장·바이오·모빌리티 7종목 완벽 정리
 
 "2026년에 새로 생긴 자격증, 뭐가 있을까?"
 

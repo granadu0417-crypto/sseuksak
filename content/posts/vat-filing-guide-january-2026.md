@@ -7,8 +7,6 @@ tags: ["부가가치세", "부가세신고", "홈택스", "소상공인", "세�
 thumbnail: "https://images.unsplash.com/photo-1762151662378-f40e20901824?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHx0YXglMjBmaWxpbmd8ZW58MHwwfHx8MTc2ODU0MDM3NHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 1월 부가세 확정신고 완벽 가이드
-
 **신고 마감: 2026년 1월 26일(월)**까지 부가가치세 확정신고를 완료해야 합니다. 이번 신고에서 **소상공인 124만명**은 납부기한이 **2개월 연장**(3월 26일까지)되는 세정지원 혜택을 받을 수 있습니다.
 
 ---

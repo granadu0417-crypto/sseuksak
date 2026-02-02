@@ -7,8 +7,6 @@ tags: ["주택담보대출", "주담대금리", "보금자리론", "DSR", "대�
 thumbnail: "https://images.unsplash.com/photo-1744782351841-9cc6b86a5add?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxob21lJTIwbW9ydGdhZ2V8ZW58MHwwfHx8MTc2ODU0MDM2Nnww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 주택담보대출 금리 비교 완벽 가이드
-
 2026년 주택담보대출을 계획하고 계신가요? 금리 인하 기대감과 함께 스트레스 DSR 3단계 시행으로 대출 환경이 크게 변화했습니다. 이 글에서는 **최신 금리 정보**와 **은행별 비교**, 그리고 **최저금리를 받는 방법**까지 상세하게 안내해 드립니다.
 
 ---

@@ -7,8 +7,6 @@ tags: ["자동차세", "연납", "자동차세연납", "위택스", "세금절�
 thumbnail: "https://images.unsplash.com/photo-1641846948845-60e99fa0f072?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8Y2FyJTIwdGF4JTIwcGF5bWVudHxlbnwwfDB8fHwxNzY4NTQwMzU1fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 자동차세 연납 신청 가이드: 할인율, 신청방법, 계산법 총정리
-
 **"1년치 자동차세, 한 번에 내면 최대 4.57% 할인!"**
 
 2026년 자동차세 연납 신청 기간이 시작됩니다. 1월에 신청하면 가장 큰 할인을 받을 수 있으니, 놓치지 마세요!

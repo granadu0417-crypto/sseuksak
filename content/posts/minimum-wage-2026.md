@@ -7,8 +7,6 @@ tags: ["최저임금", "급여", "주휴수당", "아르바이트", "근로기�
 thumbnail: "https://images.unsplash.com/photo-1596248675029-bd9b0c7dc479?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxzYWxhcnklMjBwYXljaGVja3xlbnwwfDB8fHwxNzY4NTQwMzY2fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 최저임금 완벽 가이드: 시급, 월급 계산, 주휴수당까지 총정리
-
 "2026년 최저임금이 얼마야?"
 
 2026년 최저임금이 확정되었습니다. 알바생, 직장인, 사업주 모두가 알아야 할 **핵심 정보**를 정리해드릴게요!
@@ -311,6 +309,8 @@ thumbnail: "https://images.unsplash.com/photo-1596248675029-bd9b0c7dc479?ixid=M3
 ---
 
 **관련 글 추천:**
+- [2026년 연말정산 완벽 가이드](/posts/year-end-tax-settlement-2026)
+- [2026년 근로장려금·자녀장려금 신청 가이드](/posts/earned-income-tax-credit-2026)
 - [2026년 건강보험료 변경사항 총정리](/posts/health-insurance-premium-2026)
 - [2026년 추천 신용카드 비교 가이드](/posts/2026-credit-card-comparison)
 

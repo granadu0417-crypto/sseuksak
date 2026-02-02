@@ -1,13 +1,11 @@
 ---
 title: "CES 2026 기술 트렌드 총정리: 올해 주목해야 할 혁신 기술 TOP 10"
-description: "CES 2026에서 공개된 최신 기술 트렌드를 정리했습니다. AI, 로봇, 전기차, XR 등 올해 우리 생활을 바꿀 혁신 기술들을 확인하세요."
+description: "CES 2026에서 공개된 최신 기술 트렌드 TOP 10을 정리했습니다. AI 에이전트, 휴머노이드 로봇, 전기차, XR 등 올해 우리 생활을 바꿀 혁신 기술과 주목할 제품들을 확인하세요."
 date: "2026-01-05"
 category: "tech"
 tags: ["CES2026", "기술트렌드", "AI", "로봇", "전기차", "XR", "스마트홈"]
 thumbnail: "https://images.unsplash.com/photo-1609619385076-36a873425636?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbnxlbnwwfDB8fHwxNzY4NTQwNDQzfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
-
-# CES 2026 기술 트렌드 총정리: 올해 주목해야 할 혁신 기술 TOP 10
 
 매년 1월, 전 세계 테크 업계가 주목하는 행사가 있죠. 바로 **CES(Consumer Electronics Show)**입니다!
 

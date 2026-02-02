@@ -7,8 +7,6 @@ tags: ["2026운세", "띠별운세", "병오년", "신년운세", "토정비결"
 thumbnail: "https://images.unsplash.com/photo-1730371851241-aad9cf97525f?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxmb3J0dW5lJTIwYXN0cm9sb2d5fGVufDB8MHx8fDE3Njg1NDAzNTF8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 병오년 띠별 운세 총정리: 12띠 신년운세 완벽 가이드
-
 새해가 밝으면 누구나 "올해는 어떤 해가 될까?" 궁금해지죠. 운세를 100% 믿진 않더라도, 한 번쯤 확인해보고 싶은 게 사람 마음이니까요.
 
 2026년은 **병오년(丙午年)**, 60년 만에 돌아온 **'붉은 말의 해'**입니다. 말이 힘차게 달리듯, 열정과 도전이 빛나는 한 해가 될 거라고 하는데요. 과연 내 띠는 어떤 운을 타고 있을까요?

@@ -7,8 +7,6 @@ tags: ["AI도구", "ChatGPT", "Claude", "업무효율", "생산성", "노션AI",
 thumbnail: "https://images.unsplash.com/photo-1758876201598-67fd2a5570ed?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxwcm9kdWN0aXZpdHklMjB3b3Jrc3BhY2V8ZW58MHwwfHx8MTc2ODU0MDM1M3ww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 업무 효율 200% 높이는 AI 도구 활용법: 2026년 필수 AI 툴 총정리
-
 "AI 쓰면 좋다는데, 뭘 어떻게 써야 하지?"
 
 ChatGPT가 나온 지 벌써 3년이 지났는데요. 아직도 AI를 제대로 활용 못 하고 계신 분들 많으시죠?

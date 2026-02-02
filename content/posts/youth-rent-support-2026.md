@@ -227,6 +227,11 @@ description: "2026년 청년월세지원 자격요건, 소득기준, 신청방�
 
 2026년부터 상시제도로 전환되어 더 안정적으로 운영되니, 자격요건에 해당한다면 꼭 신청하세요.
 
+**관련 글 추천:**
+- [2026년 청년 정책 총정리](/posts/youth-policy-2026)
+- [2026년 전세대출 금리 비교](/posts/jeonse-loan-comparison-2026)
+- [2026년 청년 목돈 마련 가이드](/posts/youth-savings-comparison-2026)
+
 **관련 링크**
 - [복지로 청년월세지원](https://www.bokjiro.go.kr)
 - [정부24](https://www.gov.kr)

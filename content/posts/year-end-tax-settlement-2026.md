@@ -7,8 +7,6 @@ tags: ["연말정산", "절세", "세금환급", "소득공제", "세액공제",
 thumbnail: "https://images.unsplash.com/photo-1762427354397-854a52e0ded7?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8dGF4JTIwZG9jdW1lbnR8ZW58MHwwfHx8MTc2ODU0MDM3NXww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 연말정산 완벽 가이드: 절세 팁, 공제 항목, 달라진 점 총정리
-
 "13월의 월급, 얼마나 받을 수 있을까?"
 
 2026년 연말정산 시즌이 시작됩니다! 2025년 귀속 소득에 대한 연말정산을 2026년 1~2월에 진행하게 됩니다.
@@ -372,6 +370,7 @@ thumbnail: "https://images.unsplash.com/photo-1762427354397-854a52e0ded7?ixid=M3
 ---
 
 **관련 글 추천:**
+- [2026년 근로장려금·자녀장려금 신청 가이드](/posts/earned-income-tax-credit-2026)
 - [2026년 최저임금 완벽 가이드](/posts/minimum-wage-2026)
 - [2026년 건강보험료 변경사항 총정리](/posts/health-insurance-premium-2026)
 

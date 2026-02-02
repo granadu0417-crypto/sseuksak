@@ -188,6 +188,10 @@ description: "2026년 근로장려금과 자녀장려금 신청 자격, 지급 �
 
 매년 5월 정기신청 기간을 놓치지 말고, 자격이 되는지 미리 확인해보세요. 홈택스에서 간편하게 자격 조회와 신청이 가능합니다.
 
+**관련 글 추천:**
+- [2026년 연말정산 완벽 가이드](/posts/year-end-tax-settlement-2026)
+- [2026년 최저임금 완벽 가이드](/posts/minimum-wage-2026)
+
 **관련 링크**
 - [국세청 근로장려금 안내](https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2452&cntntsId=7781)
 - [홈택스 장려금 신청](https://www.hometax.go.kr)

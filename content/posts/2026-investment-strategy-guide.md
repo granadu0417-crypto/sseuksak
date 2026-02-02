@@ -7,8 +7,6 @@ tags: ["재테크", "자산관리", "투자", "2026전망", "ETF", "예금", "�
 thumbnail: "https://images.unsplash.com/photo-1727072206145-bf6f47befe9b?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxpbnZlc3RtZW50JTIwc3RyYXRlZ3l8ZW58MHwwfHx8MTc2ODU0MDM0OXww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 재테크 전략 가이드: 초보자도 따라할 수 있는 자산관리 로드맵
-
 "올해는 돈 좀 모아야지!"
 
 새해마다 하는 다짐인데, 막상 뭘 어떻게 해야 할지 모르겠죠?

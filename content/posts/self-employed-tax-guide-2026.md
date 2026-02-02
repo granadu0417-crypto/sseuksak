@@ -7,8 +7,6 @@ tags: ["개인사업자", "절세", "종합소득세", "부가가치세", "간�
 thumbnail: "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8c21hbGwlMjBidXNpbmVzc3xlbnwwfDB8fHwxNzY4NTQwMzcyfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 개인사업자 절세 가이드
-
 개인사업자라면 **종합소득세**와 **부가가치세**는 피할 수 없는 세금입니다. 하지만 합법적인 절세 방법을 알면 상당한 세금을 아낄 수 있습니다. 2026년 기준 개인사업자가 반드시 알아야 할 세금 정보와 절세 전략을 정리했습니다.
 
 ---

@@ -7,8 +7,6 @@ tags: ["넷플릭스", "넷플릭스신작", "이사랑통역되나요", "솔로
 thumbnail: "https://images.unsplash.com/photo-1717295248299-74c084c31184?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxuZXRmbGl4JTIwc3RyZWFtaW5nfGVufDB8MHx8fDE3Njg1NDAzNjl8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 1월 넷플릭스 신작 총정리: 놓치면 후회할 기대작 4선
-
 새해가 시작되고 벌써 1월 중순이 지났는데요. 아직도 뭘 볼지 고민 중이시라면, 이번 달 넷플릭스 신작 라인업을 꼭 확인해보세요!
 
 1월 후반부에 공개되는 작품들이 정말 대단합니다. K-드라마부터 할리우드 블록버스터, 연애 리얼리티까지 다양한 장르가 준비되어 있거든요.
@@ -224,6 +222,7 @@ thumbnail: "https://images.unsplash.com/photo-1717295248299-74c084c31184?ixid=M3
 ---
 
 **관련 글 추천:**
+- [2026년 2월 넷플릭스 신작 총정리](/posts/netflix-february-2026-new-releases)
 - [2026 설날 KTX·SRT 예매 완벽 가이드](/posts/lunar-new-year-train-ticket-2026)
 - [트렌드 코리아 2026 핵심 키워드 10가지](/posts/trend-korea-2026-keywords)
 - [ChatGPT 무료 vs 유료 차이점 완벽 비교](/posts/chatgpt-free-vs-plus-comparison)

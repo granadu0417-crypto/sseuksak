@@ -7,8 +7,6 @@ tags: ["자동차보험", "보험제도변경", "비교추천서비스", "운전
 thumbnail: "https://images.unsplash.com/photo-1558898268-92ae44e7670e?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxjYXIlMjBpbnN1cmFuY2V8ZW58MHwwfHx8MTc2ODU0MDM1NHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 자동차보험 제도 변경 총정리
-
 2025년부터 2026년까지 자동차보험 제도에 큰 변화가 있습니다. 금융감독원과 금융위원회가 발표한 공식 자료를 바탕으로, 운전자라면 반드시 알아야 할 5가지 핵심 변경 사항을 정리했습니다.
 
 ---

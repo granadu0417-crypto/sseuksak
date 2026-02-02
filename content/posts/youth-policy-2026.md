@@ -7,8 +7,6 @@ tags: ["청년정책", "청년미래적금", "청년지원금", "정부지원", 
 thumbnail: "https://images.unsplash.com/photo-1596441248825-45b1f60ce4b2?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw1fHx5b3VuZyUyMHBlb3BsZSUyMGNhcmVlcnxlbnwwfDB8fHwxNzY4NTQwMzc3fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 청년 정책 총정리: 청년미래적금, 청년내일저축, 주거지원까지
-
 "청년 혜택이 많다는데, 뭐가 있는지 모르겠어요."
 
 2026년에도 청년을 위한 다양한 정부 지원 정책이 시행됩니다. **청년도약계좌**는 2025년 12월 말 신규 가입이 종료되었고, 2026년 6월 **청년미래적금**이 출시될 예정입니다. **자격 조건**만 맞으면 받을 수 있는 혜택들, 놓치지 마세요!
@@ -368,6 +366,8 @@ thumbnail: "https://images.unsplash.com/photo-1596441248825-45b1f60ce4b2?ixid=M3
 ---
 
 **관련 글 추천:**
+- [2026년 청년 목돈 마련 가이드 - 청년도약계좌 vs 청년미래적금](/posts/youth-savings-comparison-2026)
+- [2026년 청년월세지원 신청 가이드](/posts/youth-rent-support-2026)
 - [2026년 최저임금 완벽 가이드](/posts/minimum-wage-2026)
 - [2026년 연말정산 완벽 가이드](/posts/year-end-tax-settlement-2026)
 

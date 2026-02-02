@@ -7,8 +7,6 @@ tags: ["신용카드", "재테크", "할인", "포인트", "카드추천", "연�
 thumbnail: "https://images.unsplash.com/photo-1716388163697-bfb3989d15c8?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw3fHxjcmVkaXQlMjBjYXJkJTIwcGF5bWVudHxlbnwwfDB8fHwxNzY4NTQwMzQ4fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 추천 신용카드 비교 가이드: 혜택별 BEST 카드 총정리
-
 "카드 종류가 너무 많아서 뭘 골라야 할지 모르겠어요!"
 
 맞아요, 신용카드 종류가 정말 많죠. 각 카드사마다 수십 종의 카드를 출시하고 있으니까요.

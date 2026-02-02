@@ -7,8 +7,6 @@ tags: ["국가기술자격", "기사시험", "자격증시험", "시험일정", 
 thumbnail: "https://images.unsplash.com/photo-1715173679369-18006e84d6a8?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxleGFtJTIwY2VydGlmaWNhdGlvbnxlbnwwfDB8fHwxNzY4NTQwMzY4fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026년 국가기술자격 시험일정 총정리: 기사·산업기사·기능사 완벽 가이드
-
 "기사 시험 언제 접수하지? 이번에 놓치면 또 기다려야 하는데..."
 
 국가기술자격 시험은 **정해진 일정**에만 접수와 시험이 가능해서, 일정을 놓치면 몇 개월을 기다려야 합니다.

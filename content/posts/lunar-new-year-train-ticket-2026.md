@@ -7,8 +7,6 @@ tags: ["설날", "KTX예매", "SRT예매", "기차표", "명절귀성", "코레�
 thumbnail: "https://images.unsplash.com/photo-1546713458-bf14315ef31e?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwyfHx0cmFpbiUyMHN0YXRpb24lMjB0cmF2ZWx8ZW58MHwwfHx8MTc2ODU0MDM2NXww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
-# 2026 설날 KTX·SRT 예매 완벽 가이드
-
 **KTX 일반 예매 시작: 2026년 1월 19일(월) 오전 7시**부터 순차적으로 진행됩니다. 올해는 예매 기간이 기존 2일에서 **3일로 확대**되어 접속 분산이 기대되지만, 인기 노선은 여전히 치열한 경쟁이 예상됩니다.
 
 ---
