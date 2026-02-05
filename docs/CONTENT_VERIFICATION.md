@@ -88,6 +88,8 @@ sseuksak.com 블로그 콘텐츠의 정확성을 보장하기 위한 검증 프�
 
 | 날짜 | 파일명 | 정확도 | 상태 |
 |------|--------|--------|------|
+| 02-05 | cold-flu-covid-symptoms-guide-2026.md | 100% | ✅ |
+| 02-05 | winter-driving-safety-guide-2026.md | 100% | ✅ |
 | 02-05 | liver-cancer-early-symptoms-checklist-2026.md | 100% | ✅ |
 | 02-05 | young-adults-pancreatic-cancer-alcohol-2026.md | 100% | ✅ |
 | 02-04 | just-give-welfare-program-2026.md | 100% | ✅ |
