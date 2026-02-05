@@ -2,7 +2,7 @@
 
 sseuksak.com 블로그 콘텐츠의 정확성을 보장하기 위한 검증 프로세스 문서입니다.
 
-> **마지막 업데이트**: 2026-02-04
+> **마지막 업데이트**: 2026-02-05
 >
 > **참고**: 상세 검증 기록은 git history에서 확인 가능합니다.
 
@@ -88,6 +88,8 @@ sseuksak.com 블로그 콘텐츠의 정확성을 보장하기 위한 검증 프�
 
 | 날짜 | 파일명 | 정확도 | 상태 |
 |------|--------|--------|------|
+| 02-05 | liver-cancer-early-symptoms-checklist-2026.md | 100% | ✅ |
+| 02-05 | young-adults-pancreatic-cancer-alcohol-2026.md | 100% | ✅ |
 | 02-04 | just-give-welfare-program-2026.md | 100% | ✅ |
 | 02-04 | capital-gains-tax-surcharge-deadline-2026.md | 100% | ✅ |
 | 02-03 | cherry-blossom-forecast-2026.md | 100% | ✅ |
