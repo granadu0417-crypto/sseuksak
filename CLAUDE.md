@@ -25,6 +25,8 @@
 | 게시글 스타일링 | `docs/CONTENT_STYLING.md` |
 | **콘텐츠 작성 가이드** | `docs/CONTENT_WRITING_GUIDE.md` |
 | **콘텐츠 목록 (중복방지)** | `docs/CONTENT_INVENTORY.md` |
+| **Analytics 히스토리** | `docs/ANALYTICS_HISTORY.md` |
+| **Analytics 상세 보고서** | `docs/analytics/YYYY-MM-DD.md` |
 
 ---
 
@@ -45,6 +47,25 @@ CLOUDFLARE_API_TOKEN="PVRNKyVYVAr_i_boHjTfvuKwlzq5dFrpVNfiCkQ2" npm run cf:deplo
 |--------|---------|----------|------|----------|
 | `cf:quick` | ✅ 증분 | ✅ | 글 수정, 일반 배포 | ~5분 |
 | `cf:deploy` | ✅ 전체 | ✅ | 새 기능, 캐시 초기화 | ~6분 |
+
+### 배포 주의사항
+
+**절대 `npx wrangler deploy`를 직접 사용하지 마세요!**
+
+```bash
+# ❌ 금지 - KV 캐시 동기화 안됨 → 404 에러 발생
+npm run cf:build && npx wrangler deploy
+
+# ✅ 올바른 방법 - KV 캐시 포함
+npm run cf:quick   # 또는 cf:deploy
+```
+
+| 명령어 | KV 캐시 동기화 | 결과 |
+|--------|---------------|------|
+| `wrangler deploy` | ❌ | 페이지 404 에러 |
+| `cf:quick` / `cf:deploy` | ✅ | 정상 동작 |
+
+Next.js ISR 페이지들이 Cloudflare KV에 저장되므로, KV 캐시 없이 Worker만 배포하면 페이지를 찾을 수 없어 404가 발생합니다.
 
 ---
 

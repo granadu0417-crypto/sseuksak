@@ -93,6 +93,22 @@ export default function Footer() {
                   생활정보
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/category/education"
+                  className="text-gray-600 hover:text-blue-600 text-sm"
+                >
+                  교육/자격증
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/category/insurance"
+                  className="text-gray-600 hover:text-blue-600 text-sm"
+                >
+                  보험/법률
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

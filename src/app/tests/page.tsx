@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '심리테스트 - 재미있는 테스트 모음 | 쓱삭',
+  title: '심리테스트 - 재미있는 테스트 모음 | 쓱싹',
   description: 'SNS 피로도 테스트, 카페인 의존도 테스트, 수면 유형 테스트, 번아웃 위험도 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
   keywords: ['심리테스트', '성격테스트', 'SNS피로도', '디지털디톡스', '카페인의존도', '수면유형', '정신연령', '번아웃테스트', '재미있는 테스트'],
 };
