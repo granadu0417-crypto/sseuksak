@@ -77,7 +77,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     }
   );
 
-  const processedContent = await remark().use(remarkGfm).use(html, { sanitize: false }).process(contentWithYouTube);
+  const processedContent = await remark().use(remarkGfm, { singleTilde: false }).use(html, { sanitize: false }).process(contentWithYouTube);
   let contentHtml = processedContent.toString();
 
   // Convert H1 to H2 in content (page title is already H1, SEO requires single H1)
