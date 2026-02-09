@@ -1,22 +1,22 @@
 # 콘텐츠 리라이팅 진행 현황
 
-> 마지막 업데이트: 2026-02-06
-> 진행률: **58/95** (61.1%)
+> 마지막 업데이트: 2026-02-09
+> 진행률: **95/95** (100%) - 완료!
 
 ## 구조 분포 (균형 유지 목표)
 
 | 구조 | 설명 | 사용 횟수 | 비고 |
 |------|------|----------|------|
-| A | 역피라미드 | 8 | 사용 자제 |
-| B | 문제-해결 | 7 | |
-| C | 비교-분석 | 7 | |
-| D | 단계별 가이드 | 8 | |
-| E | PREP | 7 | |
-| F | FAQ/Q&A | 7 | |
-| G | 타임라인 | 7 | |
-| H | Before-After | 7 | |
+| A | 역피라미드 | 12 | |
+| B | 문제-해결 | 12 | |
+| C | 비교-분석 | 12 | |
+| D | 단계별 가이드 | 12 | |
+| E | PREP | 12 | |
+| F | FAQ/Q&A | 12 | |
+| G | 타임라인 | 12 | |
+| H | Before-After | 11 | |
 
-> **다음 배치 참고**: A(8), D(8)는 이미 많으므로, 남은 37개에서는 B/C/E/F/G/H 위주로 배분할 것.
+> **다음 배치 참고**: F 10개, 나머지 11개. 남은 8개를 F 우선 + 나머지 12개로 균등.
 > 목표: 최종적으로 각 구조당 11~12개 (95/8 = 11.875)
 
 ## 완료 목록 (58개)
@@ -89,45 +89,50 @@
 57. inheritance-forfeiture-system-2026.md (A+오해바로잡기)
 58. just-give-welfare-program-2026.md (D+뉴스/시사)
 
-## 미완료 목록 (37개)
+### 이전 세션 (59~66)
+59. iphone-17-specs-comparison-2026.md (B+경험담/일화)
+60. jeonse-loan-comparison-2026.md (C+결론먼저)
+61. liver-cancer-early-symptoms-checklist-2026.md (E+상황묘사)
+62. lunar-new-year-train-ticket-2026.md (F+숫자/통계)
+63. mobile-id-card-guide-2026.md (G+뉴스/시사)
+64. mortgage-rate-comparison-2026.md (H+비교/대조)
+65. national-pension-reform-2026.md (B+반전/의외)
+66. national-technical-exam-schedule-2026.md (A+정의/개념)
 
-알파벳순:
-- iphone-17-specs-comparison-2026.md
-- jeonse-loan-comparison-2026.md
-- liver-cancer-early-symptoms-checklist-2026.md
-- lunar-new-year-train-ticket-2026.md
-- mobile-id-card-guide-2026.md
-- mortgage-rate-comparison-2026.md
-- national-pension-reform-2026.md
-- national-technical-exam-schedule-2026.md
-- new-certifications-2026-guide.md
-- obesity-medication-guide-2026.md
-- parental-leave-benefit-guide-2026.md
-- passport-renewal-guide-2026.md
-- pet-insurance-comparison-2026.md
-- prenatal-insurance-guide-2026.md
-- real-estate-tax-guide-2026.md
-- resignation-checklist-2026.md
-- right-to-disconnect-guide-2026.md
-- samsung-special-dividend-guide-2026.md
-- self-employed-tax-guide-2026.md
-- seol-holiday-toll-free-2026.md
-- seollal-charye-guide-2026.md
-- sleep-hygiene-guide-2026.md
-- small-business-support-2026.md
-- sugar-tax-guide-2026.md
-- synthetic-nicotine-e-cigarette-regulation-2026.md
-- trend-korea-2026-keywords.md
-- vat-filing-guide-january-2026.md
-- winter-driving-safety-guide-2026.md
-- winter-heating-cost-saving-tips-2026.md
-- worker-meal-support-2026.md
-- young-adults-pancreatic-cancer-alcohol-2026.md
-- youth-future-savings-2026.md
-- youth-policy-2026.md
-- youth-rent-support-2026.md
-- youth-savings-comparison-2026.md
-- youth-tomorrow-savings-account-2026.md
+### 현재 세션 (67~69)
+67. new-certifications-2026-guide.md (C+오해바로잡기)
+68. obesity-medication-guide-2026.md (D+상황묘사)
+69. parental-leave-benefit-guide-2026.md (E+결론먼저)
+70. passport-renewal-guide-2026.md (F+경험담/일화)
+71. pet-insurance-comparison-2026.md (G+숫자/통계)
+72. prenatal-insurance-guide-2026.md (H+가정법/시나리오)
+73. real-estate-tax-guide-2026.md (A+비교/대조)
+74. resignation-checklist-2026.md (B+반전/의외)
+75. right-to-disconnect-guide-2026.md (C+명언/격언)
+76. samsung-special-dividend-guide-2026.md (D+숫자/통계)
+77. self-employed-tax-guide-2026.md (E+경험담/일화)
+78. seol-holiday-toll-free-2026.md (F+뉴스/시사)
+79. seollal-charye-guide-2026.md (G+경험담/일화)
+80. sleep-hygiene-guide-2026.md (H+상황묘사)
+81. small-business-support-2026.md (A+결론먼저)
+82. sugar-tax-guide-2026.md (B+정의/개념)
+83. synthetic-nicotine-e-cigarette-regulation-2026.md (G+뉴스/시사)
+84. trend-korea-2026-keywords.md (H+반전/의외)
+85. vat-filing-guide-january-2026.md (C+숫자/통계)
+86. winter-driving-safety-guide-2026.md (D+상황묘사)
+87. winter-heating-cost-saving-tips-2026.md (E+비교/대조)
+88. worker-meal-support-2026.md (F+목적/이유)
+89. young-adults-pancreatic-cancer-alcohol-2026.md (A+오해바로잡기)
+90. youth-future-savings-2026.md (B+가정법/시나리오)
+91. youth-policy-2026.md (G+뉴스/시사)
+92. youth-rent-support-2026.md (E+경험담/일화)
+93. youth-savings-comparison-2026.md (C+비교/대조)
+94. youth-tomorrow-savings-account-2026.md (D+결론먼저)
+95. year-end-tax-simplification-service-2026.md (F+숫자/통계)
+
+## 미완료 목록
+
+없음 - 전체 95개 리라이팅 완료!
 
 ## 다음 세션 작업 가이드
 
@@ -138,20 +143,19 @@
 4. 완료 후 이 파일 업데이트 + MEMORY.md 업데이트
 5. 일정량 완료 후 커밋 + 빌드 + 배포 (`npm run cf:deploy`)
 
-### 구조 배분 전략 (남은 37개)
-현재 A:8, D:8로 많음. 남은 37개의 이상적 배분:
+### 구조 배분 전략 (남은 8개)
 
 | 구조 | 현재 | 목표(95개 기준) | 남은 할당량 |
 |------|------|----------------|------------|
-| A | 8 | 12 | 4개 |
-| B | 7 | 12 | 5개 |
-| C | 7 | 12 | 5개 |
-| D | 8 | 12 | 4개 |
-| E | 7 | 12 | 5개 |
-| F | 7 | 12 | 5개 |
-| G | 7 | 12 | 5개 |
-| H | 7 | 11 | 4개 |
-| **합계** | **58** | **95** | **37개** |
+| A | 11 | 12 | 1개 |
+| B | 11 | 12 | 1개 |
+| C | 11 | 12 | 1개 |
+| D | 11 | 12 | 1개 |
+| E | 11 | 12 | 1개 |
+| F | 10 | 12 | 2개 |
+| G | 11 | 12 | 1개 |
+| H | 11 | 11 | 0개 |
+| **합계** | **87** | **95** | **8개** |
 
 ### 에이전트 프롬프트 템플릿
 각 에이전트에 아래 정보를 전달:
