@@ -1,5 +1,77 @@
 [
   {
+    "slug": "basic-livelihood-security-2026",
+    "title": "2026년 기초생활수급자 조건 완화: 부양의무자 기준 폐지 후 달라진 점",
+    "description": "2026년 기준중위소득 6.51% 인상으로 생계급여 선정기준이 완화됐다. 부양의무자 기준 폐지, 청년 소득공제 확대 등 달라진 조건과 신청 방법을 정리했다.",
+    "date": "2026-02-09",
+    "category": "finance",
+    "tags": [
+      "기준중위소득",
+      "생계급여",
+      "기초생활수급자",
+      "의료급여",
+      "주거급여",
+      "교육급여",
+      "복지로",
+      "부양의무자"
+    ],
+    "readingTime": "6 min read"
+  },
+  {
+    "slug": "car-individual-consumption-tax-2026",
+    "title": "자동차 개소세 30% 인하 6월 종료, 지금 사면 최대 143만원 절약",
+    "description": "2026년 6월 30일 자동차 개별소비세 30% 인하가 종료된다. 차량 가격대별 절감액 계산법, 전기차·하이브리드 추가 혜택, 지금 계약하면 언제까지 출고해야 하는지 정리했다.",
+    "date": "2026-02-09",
+    "category": "finance",
+    "tags": [
+      "개별소비세",
+      "자동차세금",
+      "개소세인하",
+      "신차구매",
+      "전기차",
+      "하이브리드",
+      "취득세",
+      "자동차구매"
+    ],
+    "readingTime": "6 min read"
+  },
+  {
+    "slug": "gift-tax-guide-2026",
+    "title": "2024년 국회에서 부결된 증여세 개편안, 2026년 세율은 어떻게 됐나",
+    "description": "2026년 증여세 면제 한도(배우자 6억, 성년 자녀 5천만원)와 세율표, 10년 합산 규칙, 홈택스 신고 방법까지. 정부 개정안 부결 후 현행 유지된 증여세의 모든 것.",
+    "date": "2026-02-09",
+    "category": "finance",
+    "tags": [
+      "증여세",
+      "증여세율",
+      "증여세면제한도",
+      "재산증여",
+      "상속세",
+      "절세",
+      "세금신고",
+      "홈택스"
+    ],
+    "readingTime": "7 min read"
+  },
+  {
+    "slug": "move-in-registration-guide-2026",
+    "title": "전입신고 14일 넘기면 과태료? 2026년 전입신고 방법 총정리",
+    "description": "이사 후 전입신고 방법 3가지(주민센터, 정부24, 앱), 필요 서류, 확정일자와 대항력, 2025년 임대차신고제 과태료 시행까지. 세입자라면 꼭 알아야 할 전입신고의 모든 것.",
+    "date": "2026-02-09",
+    "category": "lifestyle",
+    "tags": [
+      "전입신고",
+      "주민등록",
+      "확정일자",
+      "대항력",
+      "임대차신고제",
+      "전세보증금",
+      "이사",
+      "정부24"
+    ],
+    "readingTime": "6 min read"
+  },
+  {
     "slug": "cold-flu-covid-symptoms-guide-2026",
     "title": "2026년 겨울 호흡기 질환 A to Z: 감기·독감·RSV·코로나 한눈에 비교",
     "description": "감기, 독감, 코로나, RSV까지 겨울철 호흡기 질환이 헷갈리시나요? 증상별 구분법과 각 질환의 특징, 병원 가야 할 타이밍까지 질병관리청 자료를 바탕으로 정리했습니다.",
@@ -54,7 +126,7 @@
       "B형간염",
       "간암자가진단"
     ],
-    "readingTime": "5 min read"
+    "readingTime": "6 min read"
   },
   {
     "slug": "sleep-hygiene-guide-2026",
@@ -72,7 +144,7 @@
       "생체리듬",
       "수면환경"
     ],
-    "readingTime": "5 min read"
+    "readingTime": "6 min read"
   },
   {
     "slug": "winter-driving-safety-guide-2026",
@@ -90,7 +162,7 @@
       "자동차관리",
       "운전팁"
     ],
-    "readingTime": "5 min read"
+    "readingTime": "9 min read"
   },
   {
     "slug": "young-adults-pancreatic-cancer-alcohol-2026",
@@ -193,7 +265,7 @@
       "담배세",
       "2026규제"
     ],
-    "readingTime": "4 min read"
+    "readingTime": "6 min read"
   },
   {
     "slug": "youth-tomorrow-savings-account-2026",
@@ -208,7 +280,7 @@
       "정부지원금",
       "저소득청년"
     ],
-    "readingTime": "4 min read"
+    "readingTime": "7 min read"
   },
   {
     "slug": "bitcoin-crash-factcheck-2026",
@@ -239,7 +311,7 @@
       "워라밸",
       "직장인"
     ],
-    "readingTime": "5 min read"
+    "readingTime": "7 min read"
   },
   {
     "slug": "anti-scalping-law-guide-2026",
@@ -292,12 +364,12 @@
       "전자신분증",
       "디지털신분증"
     ],
-    "readingTime": "7 min read"
+    "readingTime": "5 min read"
   },
   {
     "slug": "obesity-medication-guide-2026",
-    "title": "비만치료제 가이드 2026｜위고비·삭센다·마운자로 가격 비교",
-    "description": "2026년 최신 비만치료제 완벽 가이드입니다. 위고비, 삭센다, 마운자로의 가격, 효과, 부작용, 처방 조건을 상세히 비교했습니다. GLP-1 작용제의 모든 것을 알아보세요.",
+    "title": "비만치료제 위고비·삭센다·마운자로 선택 가이드｜2026년 가격 비교",
+    "description": "비만치료제 처방 시작부터 유지까지 실전 가이드입니다. 위고비, 삭센다, 마운자로 중 어떤 약을 선택해야 할지, 증량은 어떻게 진행되는지, 흔히 실패하는 이유까지 상세히 정리했습니다.",
     "date": "2026-01-30",
     "category": "health",
     "tags": [
@@ -312,7 +384,7 @@
       "티르제파티드",
       "체중감량"
     ],
-    "readingTime": "10 min read"
+    "readingTime": "9 min read"
   },
   {
     "slug": "samsung-special-dividend-guide-2026",
@@ -329,12 +401,12 @@
       "소액주주",
       "2026배당"
     ],
-    "readingTime": "5 min read"
+    "readingTime": "7 min read"
   },
   {
     "slug": "seollal-charye-guide-2026",
     "title": "설날 차례상 차리는 법 2026: 음식 배치부터 순서까지 완벽 가이드",
-    "description": "2026년 설날 차례상 차리는 방법을 상세히 알아봅니다. 홍동백서, 어동육서 등 전통 배치법부터 현대적 간소화 방법, 차례 지내는 순서까지 한눈에 정리했습니다.",
+    "description": "2026년 설날 차례상 차리는 방법을 상세히 알아봅니다. 홍동백서, 어동육서 등 전통 배치 원칙부터 현대적 간소화 방법, 차례 지내는 순서까지 한눈에 정리했습니다.",
     "date": "2026-01-30T00:00:00.000Z",
     "category": "lifestyle",
     "tags": [
@@ -346,7 +418,7 @@
       "차례",
       "음식배치"
     ],
-    "readingTime": "8 min read"
+    "readingTime": "7 min read"
   },
   {
     "slug": "driver-license-renewal-2026",
@@ -493,8 +565,8 @@
   },
   {
     "slug": "prenatal-insurance-guide-2026",
-    "title": "태아보험 가입 완벽 가이드｜22주 전 필수! 가입시기·특약·보험사 비교",
-    "description": "태아보험 가입 시기, 필수 특약, 손해보험사 vs 생명보험사 차이를 총정리했습니다. 임신 22주 전 가입이 중요한 이유와 보험사별 비교 정보를 확인하세요.",
+    "title": "태아보험 22주 전 가입이 운명을 바꾼다｜손해보험·생명보험 비교와 필수 특약",
+    "description": "태아보험을 22주 전에 가입한 부모와 그렇지 않은 부모의 이야기. 선천이상 수술비, 인큐베이터 비용 등 실제 사례로 보는 태아보험의 중요성과 가입 가이드를 제공합니다.",
     "date": "2026-01-28",
     "category": "insurance",
     "tags": [
@@ -520,7 +592,7 @@
       "귀성길",
       "2026설날"
     ],
-    "readingTime": "5 min read"
+    "readingTime": "4 min read"
   },
   {
     "slug": "sugar-tax-guide-2026",
@@ -569,7 +641,7 @@
       "중소기업지원",
       "2026년예산"
     ],
-    "readingTime": "6 min read"
+    "readingTime": "5 min read"
   },
   {
     "slug": "gold-investment-guide-2026",
@@ -606,8 +678,8 @@
   },
   {
     "slug": "passport-renewal-guide-2026",
-    "title": "여권 만료 확인하셨나요? 2026년 여권 갱신 비용·방법 완벽 정리",
-    "description": "2026년 3월 여권 수수료 인상 전에 갱신하세요. 여권 발급 비용, 온라인 신청 방법, 준비물, 처리 기간까지 한눈에 정리했습니다. 긴급여권 신청 방법도 안내합니다.",
+    "title": "여권 만료됐는데 비행기표는 끊었다면? 2026년 여권 갱신 완전정복",
+    "description": "2026년 3월 여권 수수료 인상 전에 갱신하세요. 온라인 신청 조건, 긴급여권 발급, ETIAS 준비까지 실전 경험을 바탕으로 정리했습니다.",
     "date": "2026-01-26",
     "category": "lifestyle",
     "tags": [
@@ -728,8 +800,8 @@
   },
   {
     "slug": "parental-leave-benefit-guide-2026",
-    "title": "2026년 육아휴직급여 신청 완벽 가이드: 금액, 자격, 신청방법 총정리",
-    "description": "2026년 육아휴직급여 신청 방법을 완벽 정리했습니다. 6+6 부모육아휴직제 최대 450만원, 일반 육아휴직 250만원 상한액, 고용24 온라인 신청까지!",
+    "title": "2026년 육아휴직급여 완전 가이드: 6+6제도 활용으로 부부 4천만원까지",
+    "description": "2026년 육아휴직급여는 6+6 부모육아휴직제 활용 시 부부 합산 최대 4,000만원까지 지급됩니다. 사후지급금 폐지로 휴직 중 전액 수령 가능, 자영업자 확대 등 변경사항을 실제 계산 예시와 함께 정리했습니다.",
     "date": "2026-01-22",
     "category": "finance",
     "tags": [
@@ -742,7 +814,7 @@
       "워킹대디",
       "육아지원"
     ],
-    "readingTime": "6 min read"
+    "readingTime": "5 min read"
   },
   {
     "slug": "unemployment-benefits-guide-2026",
@@ -868,7 +940,7 @@
   {
     "slug": "pet-insurance-comparison-2026",
     "title": "펫보험 비교 2026｜메리츠·삼성·현대 보험료·보장 총정리",
-    "description": "반려동물 보험 5개사(메리츠, 삼성, 현대, DB, KB)의 월 보험료, 보장 범위, MRI/CT 포함 여부를 비교했습니다. 가입 전 체크리스트와 할인 혜택까지 한눈에 확인하세요.",
+    "description": "반려동물 슬개골 탈구 수술비 평균 250만원, 건강보험 적용 0%. 2026년 5개 보험사의 펫보험 상품을 실보험료·MRI/CT 보장·자기부담금 기준으로 비교 분석합니다.",
     "date": "2026-01-19",
     "category": "insurance",
     "tags": [
@@ -899,7 +971,7 @@
       "이직",
       "4대보험"
     ],
-    "readingTime": "7 min read"
+    "readingTime": "8 min read"
   },
   {
     "slug": "travel-insurance-comparison-2026",
@@ -933,7 +1005,7 @@
       "정부지원금",
       "2026청년정책"
     ],
-    "readingTime": "7 min read"
+    "readingTime": "6 min read"
   },
   {
     "slug": "ai-basic-law-2026-guide",
@@ -1016,7 +1088,7 @@
       "코레일",
       "2026설날"
     ],
-    "readingTime": "10 min read"
+    "readingTime": "7 min read"
   },
   {
     "slug": "netflix-january-2026-new-releases",
@@ -1051,7 +1123,7 @@
       "2026년세금",
       "납부기한연장"
     ],
-    "readingTime": "8 min read"
+    "readingTime": "7 min read"
   },
   {
     "slug": "year-end-tax-simplification-service-2026",
@@ -1067,7 +1139,7 @@
       "직장인",
       "2026"
     ],
-    "readingTime": "9 min read"
+    "readingTime": "7 min read"
   },
   {
     "slug": "car-tax-annual-payment-2026",
@@ -1222,7 +1294,7 @@
       "스트레스DSR",
       "2026년대출"
     ],
-    "readingTime": "6 min read"
+    "readingTime": "7 min read"
   },
   {
     "slug": "national-pension-reform-2026",
@@ -1239,7 +1311,7 @@
       "2026년",
       "국민연금개정"
     ],
-    "readingTime": "9 min read"
+    "readingTime": "6 min read"
   },
   {
     "slug": "real-estate-tax-guide-2026",
@@ -1256,7 +1328,7 @@
       "2026년세금",
       "다주택자세금"
     ],
-    "readingTime": "8 min read"
+    "readingTime": "9 min read"
   },
   {
     "slug": "self-employed-tax-guide-2026",
@@ -1400,12 +1472,12 @@
       "큐넷",
       "취업준비"
     ],
-    "readingTime": "10 min read"
+    "readingTime": "7 min read"
   },
   {
     "slug": "new-certifications-2026-guide",
-    "title": "2026년 신설 국가자격증 7종목｜스마트공장·바이오 취득 가이드",
-    "description": "2026년 1월 1일부터 시행되는 신설 국가자격증 7종목을 총정리했습니다. 스마트공장산업기사, 바이오공정기능사, 이륜자동차정비기능사 등 정확한 시험 정보와 취득 전략을 알려드립니다.",
+    "title": "2026 신설 자격증 7종 비교 분석｜스마트공장·바이오 실전 가이드",
+    "description": "2026년 신설 국가자격증 7종을 산업별·취득 난이도별로 심층 비교했습니다. 스마트공장, 바이오, 이륜차 정비 등 실무자 관점의 취득 전략과 커리어 연계 가이드를 제공합니다.",
     "date": "2026-01-06",
     "category": "education",
     "tags": [
@@ -1416,7 +1488,7 @@
       "취업",
       "커리어"
     ],
-    "readingTime": "10 min read"
+    "readingTime": "11 min read"
   },
   {
     "slug": "small-business-support-2026",
@@ -1432,7 +1504,7 @@
       "정부지원금",
       "자영업"
     ],
-    "readingTime": "7 min read"
+    "readingTime": "5 min read"
   },
   {
     "slug": "year-end-tax-settlement-2026",
@@ -1464,7 +1536,7 @@
       "청년월세",
       "청년취업"
     ],
-    "readingTime": "9 min read"
+    "readingTime": "7 min read"
   },
   {
     "slug": "2026-investment-strategy-guide",
@@ -1585,7 +1657,7 @@
       "켄타우로스",
       "AI트렌드"
     ],
-    "readingTime": "11 min read"
+    "readingTime": "9 min read"
   },
   {
     "slug": "2026-credit-card-comparison",
