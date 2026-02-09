@@ -1,22 +1,25 @@
 # 콘텐츠 리라이팅 진행 현황
 
 > 마지막 업데이트: 2026-02-06
-> 진행률: **57/95** (60.0%)
+> 진행률: **58/95** (61.1%)
 
 ## 구조 분포 (균형 유지 목표)
 
-| 구조 | 설명 | 사용 횟수 |
-|------|------|----------|
-| A | 역피라미드 | 8 |
-| B | 문제-해결 | 7 |
-| C | 비교-분석 | 7 |
-| D | 단계별 가이드 | 7 |
-| E | PREP | 7 |
-| F | FAQ/Q&A | 7 |
-| G | 타임라인 | 7 |
-| H | Before-After | 7 |
+| 구조 | 설명 | 사용 횟수 | 비고 |
+|------|------|----------|------|
+| A | 역피라미드 | 8 | 사용 자제 |
+| B | 문제-해결 | 7 | |
+| C | 비교-분석 | 7 | |
+| D | 단계별 가이드 | 8 | |
+| E | PREP | 7 | |
+| F | FAQ/Q&A | 7 | |
+| G | 타임라인 | 7 | |
+| H | Before-After | 7 | |
 
-## 완료 목록 (57개)
+> **다음 배치 참고**: A(8), D(8)는 이미 많으므로, 남은 37개에서는 B/C/E/F/G/H 위주로 배분할 것.
+> 목표: 최종적으로 각 구조당 11~12개 (95/8 = 11.875)
+
+## 완료 목록 (58개)
 
 ### 이전 세션 (1~15)
 1. savings-account-comparison-2026.md (C+비교)
@@ -80,17 +83,17 @@
 53. hair-loss-treatment-guide-2026.md (E+오해바로잡기)
 54. health-insurance-premium-2026.md (F+결론먼저)
 
-### 이전 세션 (55~57)
+### 이전 세션 (55~58)
 55. high-school-credit-system-2026.md (G+비교/대조)
 56. ima-investment-account-guide-2026.md (H+숫자/통계)
 57. inheritance-forfeiture-system-2026.md (A+오해바로잡기)
+58. just-give-welfare-program-2026.md (D+뉴스/시사)
 
-## 미완료 목록 (38개)
+## 미완료 목록 (37개)
 
 알파벳순:
 - iphone-17-specs-comparison-2026.md
 - jeonse-loan-comparison-2026.md
-- just-give-welfare-program-2026.md
 - liver-cancer-early-symptoms-checklist-2026.md
 - lunar-new-year-train-ticket-2026.md
 - mobile-id-card-guide-2026.md
@@ -125,3 +128,41 @@
 - youth-rent-support-2026.md
 - youth-savings-comparison-2026.md
 - youth-tomorrow-savings-account-2026.md
+
+## 다음 세션 작업 가이드
+
+### 작업 방법
+1. 이 파일(`docs/REWRITE_PROGRESS.md`)과 `docs/CONTENT_WRITING_GUIDE.md` 참조
+2. 미완료 목록에서 3개씩 골라 병렬 에이전트로 리라이팅
+3. 구조(A~H)와 도입부 유형(12가지)을 조합하되, 구조 분포 균형 유지
+4. 완료 후 이 파일 업데이트 + MEMORY.md 업데이트
+5. 일정량 완료 후 커밋 + 빌드 + 배포 (`npm run cf:deploy`)
+
+### 구조 배분 전략 (남은 37개)
+현재 A:8, D:8로 많음. 남은 37개의 이상적 배분:
+
+| 구조 | 현재 | 목표(95개 기준) | 남은 할당량 |
+|------|------|----------------|------------|
+| A | 8 | 12 | 4개 |
+| B | 7 | 12 | 5개 |
+| C | 7 | 12 | 5개 |
+| D | 8 | 12 | 4개 |
+| E | 7 | 12 | 5개 |
+| F | 7 | 12 | 5개 |
+| G | 7 | 12 | 5개 |
+| H | 7 | 11 | 4개 |
+| **합계** | **58** | **95** | **37개** |
+
+### 에이전트 프롬프트 템플릿
+각 에이전트에 아래 정보를 전달:
+- 사용할 구조 (A~H 중 하나)
+- 도입부 유형 (12가지 중 하나)
+- 7가지 AI 핑거프린트 제거 규칙
+- E-E-A-T 요소 2개 이상 포함
+- YAML frontmatter 유지
+- 자연스러운 한국어, 최소 1500자
+
+### 커밋/배포 주의사항
+- 커밋 전 `npm run build`로 빌드 테스트
+- 배포: `CLOUDFLARE_API_TOKEN="PVRNKyVYVAr_i_boHjTfvuKwlzq5dFrpVNfiCkQ2" npm run cf:deploy`
+- 절대 `npx wrangler deploy` 직접 사용 금지 (KV 캐시 동기화 안 됨)

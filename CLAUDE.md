@@ -19,6 +19,7 @@
 | 아키텍처/기술 결정 | `docs/ARCHITECTURE.md` |
 | 테스트/퀴즈 개발 | `docs/TEST_DEVELOPMENT.md` |
 | SEO/색인 관련 | `docs/SEO_INDEXING.md` |
+| **noindex 처리 현황** | `docs/NOINDEX_REPORT.md` |
 | 콘텐츠 검증 | `docs/CONTENT_VERIFICATION.md` |
 | **팩트체크 기록** | `docs/FACTCHECK_LOG.md` |
 | 배포 상세 | `docs/DEPLOYMENT_GUIDE.md` |
