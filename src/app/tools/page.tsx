@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '유용한 도구 모음 | 쓱싹',
-  description: '대출이자 계산기, 시급 계산기, 퇴직금 계산기, 주휴수당 계산기, BMI 계산기, 연봉 실수령액 계산기, 연말정산 환급액 계산기 등 생활에 유용한 도구들을 무료로 이용하세요.',
+  description: '대출이자 계산기, 시급 계산기, 퇴직금 계산기, 주휴수당 계산기, BMI 계산기, 연봉 실수령액 계산기, 연말정산 환급액 계산기, 생계급여 계산기, 증여세 계산기 등 생활에 유용한 도구들을 무료로 이용하세요.',
 };
 
 const financeTools = [
@@ -51,6 +51,16 @@ const financeTools = [
     slug: 'fire-calculator',
     title: 'FIRE 조기은퇴 계산기',
     description: '저축률과 투자수익률로 몇 살에 은퇴 가능한지 계산해요',
+  },
+  {
+    slug: 'livelihood-benefit-calculator',
+    title: '생계급여 계산기',
+    description: '2026년 기준 소득인정액과 예상 생계급여를 계산해요',
+  },
+  {
+    slug: 'gift-tax-calculator',
+    title: '증여세 계산기',
+    description: '증여금액과 관계에 따른 증여세를 계산해요',
   },
 ];
 
