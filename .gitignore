@@ -45,3 +45,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Wrangler local state
+.wrangler/
+
+# Root screenshots & temp files
+/*.png
+/*.jpg
+/*.jpeg
+
+# Root temp markdown files (not in content/)
+/SEO_*.md
+/free-commercial-design-resources.md
+
+# Downloads folder (personal files)
+다운로드/
