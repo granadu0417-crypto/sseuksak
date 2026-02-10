@@ -43,6 +43,25 @@
 | - 95/95 리라이팅 + 4개 신규 콘텐츠 + 2개 계산기 반영 상태 | ✅ |
 | **Git push 완료** | ✅ |
 | - d226b4f (docs: 문서 정리 + 증여세·생계급여 계산기 추가) push | ✅ |
+| - 144c953 (docs: 4대 플랫폼 현황 파악 + AdSense 재검토 요청 제출) push | ✅ |
+
+### 완료된 작업 (신규 콘텐츠 색인 요청 - Naver + Google)
+| 작업 내용 | 상태 |
+|----------|------|
+| **Naver Search Advisor 크롤링 요청 (6개 URL)** | ✅ |
+| - /posts/move-in-registration-guide-2026 | ✅ |
+| - /posts/gift-tax-guide-2026 | ✅ |
+| - /posts/basic-livelihood-security-2026 | ✅ |
+| - /posts/car-individual-consumption-tax-2026 | ✅ |
+| - /tools/gift-tax-calculator | ✅ |
+| - /tools/livelihood-benefit-calculator | ✅ |
+| **Google Search Console 색인 생성 요청 (6개 URL)** | ✅ |
+| - /posts/move-in-registration-guide-2026 | ✅ |
+| - /posts/gift-tax-guide-2026 | ✅ |
+| - /posts/basic-livelihood-security-2026 | ✅ |
+| - /posts/car-individual-consumption-tax-2026 | ✅ |
+| - /tools/gift-tax-calculator | ✅ |
+| - /tools/livelihood-benefit-calculator | ✅ |
 
 **주요 인사이트:**
 - 네이버가 주 트래픽 엔진 (150클릭 vs Google 4클릭)
@@ -50,6 +69,7 @@
 - GA 활성사용자 +23%, 네이버 클릭 +100% 우상향 추세
 - Google 색인율 32% (41/128) — 개선 여지 큼
 - AdSense 재검토 결과 수일~2주 소요 예상
+- 신규 6개 URL 양 플랫폼(Naver+Google) 수동 색인 요청 완료
 
 ---
 
