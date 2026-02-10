@@ -1,7 +1,7 @@
 ---
 title: "부동산 세금 총정리 - 취득세, 양도세, 종부세 완벽 가이드"
 date: "2026-01-07"
-description: "2026년 부동산 세금을 한눈에 정리했습니다. 취득세, 양도소득세, 종합부동산세의 세율과 계산 방법, 절세 전략까지 꼭 알아야 할 핵심 내용을 확인하세요."
+description: "같은 8억 아파트, 1주택자 취득세 80만원 vs 3주택자 960만원. 2026년 5월 양도세 중과 유예 종료 전 필수 확인! 취득세·양도세·종부세 절세 전략 총정리."
 category: "finance"
 tags: ["부동산세금", "취득세", "양도소득세", "종합부동산세", "부동산절세", "2026년세금", "다주택자세금"]
 thumbnail: "https://images.unsplash.com/photo-1635108197332-54105c0ec888?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxyZWFsJTIwZXN0YXRlJTIwcHJvcGVydHl8ZW58MHwwfHx8MTc2ODU0MDM3MHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"

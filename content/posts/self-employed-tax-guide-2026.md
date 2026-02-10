@@ -1,7 +1,7 @@
 ---
 title: "개인사업자 절세 가이드 - 종합소득세, 부가세 완벽 정리"
 date: "2026-01-07"
-description: "개인사업자를 위한 2026년 절세 전략을 총정리했습니다. 종합소득세 신고, 부가가치세, 간이과세자 기준, 비용처리 방법까지 사업자가 꼭 알아야 할 세금 정보를 확인하세요."
+description: "같은 매출 5천만원인데 세금 680만원 vs 340만원. 장부 작성, 노란우산공제, 간이과세자 기준 변경까지, 2026년 개인사업자가 놓치면 손해보는 절세 전략 7가지."
 category: "finance"
 tags: ["개인사업자", "절세", "종합소득세", "부가가치세", "간이과세자", "사업자세금", "2026년세금"]
 thumbnail: "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8c21hbGwlMjBidXNpbmVzc3xlbnwwfDB8fHwxNzY4NTQwMzcyfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"

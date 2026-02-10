@@ -7,7 +7,7 @@ import {
   getAdjacentPosts,
   getRelatedPosts,
 } from '@/lib/posts';
-import { generateMetadata as genMeta, generateArticleJsonLd, generateBreadcrumbJsonLd, generateFAQJsonLd, extractFAQFromContent } from '@/lib/metadata';
+import { generateMetadata as genMeta, generateArticleJsonLd, generateBreadcrumbJsonLd, generateFAQJsonLd, extractFAQFromContent, generateHowToJsonLd, extractHowToSteps } from '@/lib/metadata';
 import { getPhotoForCategory, getOptimizedImageUrl, getAttribution } from '@/lib/unsplash';
 import Breadcrumb from '@/components/Breadcrumb';
 import PostNavigation from '@/components/PostNavigation';
@@ -72,7 +72,7 @@ export default async function PostPage({ params }: Props) {
   }
 
   const { prev, next } = getAdjacentPosts(slug);
-  const relatedPosts = getRelatedPosts(slug, 3);
+  const relatedPosts = getRelatedPosts(slug, 6);
 
   // 관련 도구 및 테스트 가져오기
   const relatedTools = getRelatedTools(post.category, post.tags, post.title, 2);
@@ -110,6 +110,16 @@ export default async function PostPage({ params }: Props) {
   const faqs = extractFAQFromContent(post.content);
   const faqJsonLd = generateFAQJsonLd(faqs);
 
+  // HowTo 단계 추출 및 JSON-LD 생성
+  const howToSteps = extractHowToSteps(post.content);
+  const howToJsonLd = generateHowToJsonLd({
+    name: post.title,
+    description: post.description,
+    url: `/posts/${slug}`,
+    steps: howToSteps,
+    image: heroImageUrl || post.thumbnail,
+  });
+
   const formattedDate = new Date(post.date).toLocaleDateString('ko-KR', {
     year: 'numeric',
     month: 'long',
@@ -130,6 +140,12 @@ export default async function PostPage({ params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
+      {howToJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
         />
       )}
 
@@ -168,7 +184,7 @@ export default async function PostPage({ params }: Props) {
           <div className="relative w-full h-64 md:h-96 mb-8 rounded-lg overflow-hidden">
             <Image
               src={heroImageUrl}
-              alt={post.title}
+              alt={`${post.title} - ${post.category} 관련 대표 이미지`}
               fill
               sizes="(max-width: 768px) 100vw, 896px"
               className="object-cover"

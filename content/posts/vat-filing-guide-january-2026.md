@@ -1,7 +1,7 @@
 ---
 title: "2026년 1월 부가세 확정신고 완벽 가이드 - 소상공인 납부기한 2개월 연장"
 date: "2026-01-14"
-description: "2026년 1월 26일까지 부가가치세 확정신고를 완료해야 합니다. 소상공인 124만명 납부기한 2개월 연장(3월 26일) 혜택과 홈택스 신고 방법, 미리채움 서비스 활용법을 상세히 안내합니다."
+description: "소상공인 124만명 납부기한 3월 26일까지 자동 연장! 941만명 대상 부가세 확정신고 마감일·홈택스 미리채움 32종 활용법·환급금 조기 수령 방법을 확인하세요."
 category: "finance"
 tags: ["부가가치세", "부가세신고", "홈택스", "소상공인", "세금신고", "2026년세금", "납부기한연장"]
 thumbnail: "https://images.unsplash.com/photo-1762151662378-f40e20901824?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHx0YXglMjBmaWxpbmd8ZW58MHwwfHx8MTc2ODU0MDM3NHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"

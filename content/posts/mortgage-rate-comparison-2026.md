@@ -1,7 +1,7 @@
 ---
 title: "주택담보대출 금리 비교 완벽 가이드"
 date: "2026-01-07"
-description: "2026년 주택담보대출 금리를 은행별로 비교하고, 보금자리론부터 시중은행 주담대까지 최저금리 찾는 방법을 알려드립니다. 스트레스 DSR 3단계 적용과 대출 한도 계산법도 함께 확인하세요."
+description: "금리 1.5%p 차이로 이자 9,400만원 차이! 2026년 보금자리론 3.9%~, 시중은행·인터넷은행 주담대 금리 비교와 스트레스 DSR 3단계 한도 계산법을 정리했습니다."
 category: "finance"
 tags: ["주택담보대출", "주담대금리", "보금자리론", "DSR", "대출금리비교", "스트레스DSR", "2026년대출"]
 thumbnail: "https://images.unsplash.com/photo-1744782351841-9cc6b86a5add?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxob21lJTIwbW9ydGdhZ2V8ZW58MHwwfHx8MTc2ODU0MDM2Nnww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"

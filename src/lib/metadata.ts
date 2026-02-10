@@ -313,6 +313,119 @@ export function generateFAQJsonLd(faqs: FAQItem[]) {
   };
 }
 
+// JSON-LD for HowTo guides - Google 검색결과에 단계별 가이드 표시
+export interface HowToStep {
+  name: string;
+  text: string;
+}
+
+export function generateHowToJsonLd({
+  name,
+  description,
+  url,
+  steps,
+  image,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  steps: HowToStep[];
+  image?: string;
+}) {
+  if (!steps || steps.length === 0) return null;
+
+  const DEFAULT_OG_IMAGE = 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80';
+  const imageUrl = image || DEFAULT_OG_IMAGE;
+  const fullImage = imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    image: fullImage,
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
+    provider: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}${url}`,
+    },
+    inLanguage: 'ko-KR',
+  };
+}
+
+// 게시글 HTML에서 HowTo 단계 추출 (순서가 있는 H2/H3 + 숫자 패턴)
+export function extractHowToSteps(htmlContent: string): HowToStep[] {
+  const steps: HowToStep[] = [];
+
+  // 패턴 1: "1. 제목", "2. 제목" 등의 H2/H3 제목 (numbered headings)
+  const numberedHeadingPattern = /<h[23][^>]*>(?:\s*)?(\d+)[\.\)]\s*(.+?)<\/h[23]>/gi;
+  let match;
+  const headingMatches: { index: number; num: number; title: string }[] = [];
+
+  while ((match = numberedHeadingPattern.exec(htmlContent)) !== null) {
+    headingMatches.push({
+      index: match.index,
+      num: parseInt(match[1]),
+      title: match[2].replace(/<[^>]+>/g, '').trim(),
+    });
+  }
+
+  // 연속된 번호 매기기가 있는 경우에만 HowTo로 인정 (최소 3단계)
+  if (headingMatches.length >= 3) {
+    const isSequential = headingMatches.every((h, i) => i === 0 || h.num > headingMatches[i - 1].num);
+    if (isSequential) {
+      for (const h of headingMatches) {
+        // 해당 제목 뒤의 첫 번째 <p> 태그 내용을 텍스트로 추출
+        const afterHeading = htmlContent.slice(h.index);
+        const pMatch = afterHeading.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+        const text = pMatch
+          ? pMatch[1].replace(/<[^>]+>/g, '').trim().slice(0, 300)
+          : h.title;
+
+        steps.push({ name: h.title, text });
+      }
+    }
+  }
+
+  // 패턴 2: "STEP 1", "Step 2" 등
+  if (steps.length === 0) {
+    const stepPattern = /<h[23][^>]*>(?:\s*)?(?:STEP|Step|step)\s*(\d+)[:\.\s]*(.+?)<\/h[23]>/gi;
+    const stepMatches: { index: number; num: number; title: string }[] = [];
+
+    while ((match = stepPattern.exec(htmlContent)) !== null) {
+      stepMatches.push({
+        index: match.index,
+        num: parseInt(match[1]),
+        title: match[2].replace(/<[^>]+>/g, '').trim(),
+      });
+    }
+
+    if (stepMatches.length >= 3) {
+      for (const s of stepMatches) {
+        const afterHeading = htmlContent.slice(s.index);
+        const pMatch = afterHeading.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+        const text = pMatch
+          ? pMatch[1].replace(/<[^>]+>/g, '').trim().slice(0, 300)
+          : s.title;
+
+        steps.push({ name: s.title, text });
+      }
+    }
+  }
+
+  return steps;
+}
+
 // 게시글 HTML에서 FAQ 추출 (Q&A 패턴 감지)
 export function extractFAQFromContent(htmlContent: string): FAQItem[] {
   const faqs: FAQItem[] = [];
