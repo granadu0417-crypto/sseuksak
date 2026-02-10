@@ -31,7 +31,10 @@ export function generateMetadata({
   section,
   tags,
 }: MetadataProps = {}): Metadata {
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
+  // title은 layout.tsx template('%s | 쓱싹')이 자동 적용하므로 원본만 반환
+  // OG/Twitter는 template 적용 안 되므로 직접 붙임
+  const pageTitle = title || `${SITE_NAME} - 유용한 정보 블로그`;
+  const socialTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} - 유용한 정보 블로그`;
   const fullUrl = `${SITE_URL}${url}`;
 
   // Handle image URL - use provided image or default (Unsplash static image)
@@ -40,12 +43,12 @@ export function generateMetadata({
   const fullImage = imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}`;
 
   return {
-    title: fullTitle,
+    title: pageTitle,
     description,
     keywords: keywords.join(', '),
     authors: [{ name: author }],
     openGraph: {
-      title: fullTitle,
+      title: socialTitle,
       description,
       url: fullUrl,
       siteName: SITE_NAME,
@@ -69,7 +72,7 @@ export function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: fullTitle,
+      title: socialTitle,
       description,
       images: [fullImage],
     },
@@ -426,46 +429,38 @@ export function extractHowToSteps(htmlContent: string): HowToStep[] {
   return steps;
 }
 
-// 게시글 HTML에서 FAQ 추출 (Q&A 패턴 감지)
+// 게시글 HTML에서 FAQ 추출 (3가지 패턴 감지)
 export function extractFAQFromContent(htmlContent: string): FAQItem[] {
   const faqs: FAQItem[] = [];
-
-  // Q1. Q2. Q3. 패턴 또는 ### Q1. 패턴 매칭
-  const qPattern = /(?:<h3[^>]*>|<p[^>]*><strong>)(?:Q\d+[\.:]\s*)(.+?)(?:<\/h3>|<\/strong><\/p>)/gi;
-  const aPattern = /(?:<p[^>]*>A[\.:]\s*)(.+?)(?:<\/p>)/gi;
-
-  const questions: string[] = [];
-  const answers: string[] = [];
-
   let match;
-  while ((match = qPattern.exec(htmlContent)) !== null) {
-    // HTML 태그 제거
+
+  // 패턴 1: <p><strong>(Q. )?질문?</strong> 답변</p> (인라인 Q&A)
+  const inlinePattern = /<p[^>]*><strong>(?:Q\.?\s*)?(.+?\?)<\/strong>\s*([\s\S]+?)<\/p>/gi;
+  while ((match = inlinePattern.exec(htmlContent)) !== null) {
     const question = match[1].replace(/<[^>]+>/g, '').trim();
-    questions.push(question);
-  }
-
-  while ((match = aPattern.exec(htmlContent)) !== null) {
-    // HTML 태그 제거하고 텍스트만 추출
-    let answer = match[1].replace(/<[^>]+>/g, '').trim();
-    // 콜론 이후 내용도 포함
-    if (answer.length < 10) {
-      // 짧으면 다음 p 태그들도 포함 (리스트 형태의 답변)
-      const nextContent = htmlContent.slice(match.index + match[0].length);
-      const nextPMatch = nextContent.match(/^([\s\S]*?)(?=<h|<p[^>]*>(?:A\d*[\.:]))/i);
-      if (nextPMatch) {
-        answer += ' ' + nextPMatch[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-      }
+    const answer = match[2].replace(/<[^>]+>/g, '').trim();
+    if (question && answer && answer.length > 5) {
+      faqs.push({ question, answer: answer.slice(0, 500) });
     }
-    answers.push(answer);
   }
 
-  // 질문과 답변 매칭
-  for (let i = 0; i < Math.min(questions.length, answers.length); i++) {
-    if (questions[i] && answers[i]) {
-      faqs.push({
-        question: questions[i],
-        answer: answers[i].slice(0, 500), // 답변 길이 제한
-      });
+  // 패턴 2: <p><strong>(Q. )?질문?</strong></p> + <p>(A. )?답변</p> (분리형)
+  const separatePattern = /<p[^>]*><strong>(?:Q\.?\s*)?(.+?\?)<\/strong><\/p>\s*<p[^>]*>(?:A\.?\s*)?([\s\S]+?)<\/p>/gi;
+  while ((match = separatePattern.exec(htmlContent)) !== null) {
+    const question = match[1].replace(/<[^>]+>/g, '').trim();
+    const answer = match[2].replace(/<[^>]+>/g, '').trim();
+    if (question && answer && answer.length > 5 && !faqs.some(f => f.question === question)) {
+      faqs.push({ question, answer: answer.slice(0, 500) });
+    }
+  }
+
+  // 패턴 3: <h3>질문?</h3> + <p>답변</p> (H3 제목형 FAQ)
+  const h3Pattern = /<h3[^>]*>([^<]*\?)<\/h3>\s*<p[^>]*>([\s\S]+?)<\/p>/gi;
+  while ((match = h3Pattern.exec(htmlContent)) !== null) {
+    const question = match[1].trim();
+    const answer = match[2].replace(/<[^>]+>/g, '').trim();
+    if (question && answer && answer.length > 5 && !faqs.some(f => f.question === question)) {
+      faqs.push({ question, answer: answer.slice(0, 500) });
     }
   }
 

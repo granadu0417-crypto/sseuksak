@@ -80,7 +80,7 @@ export default function RootLayout({
   const organizationJsonLd = generateOrganizationJsonLd();
 
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <head>
         {/* 외부 도메인 preconnect - 초기 연결 시간 단축 */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
