@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 // 위드마크 공식 상수
 const WIDMARK_FACTOR = {
@@ -171,6 +172,7 @@ export default function AlcoholCalculatorPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+      <ToolJsonLd name="알코올 분해 시간 계산기" description="음주 후 알코올 분해에 걸리는 시간을 계산합니다" url="/tools/alcohol-calculator" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:text-blue-800 text-sm">
           ← 도구 목록으로

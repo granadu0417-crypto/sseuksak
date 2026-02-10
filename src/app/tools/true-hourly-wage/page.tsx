@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 // YMOYL 4가지 업무 관련 비용 카테고리
 const EXPENSE_CATEGORIES = [
@@ -132,6 +133,7 @@ export default function TrueHourlyWagePage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
+      <ToolJsonLd name="진짜 시급 계산기" description="출퇴근, 야근 포함한 실제 시급을 계산합니다" url="/tools/true-hourly-wage" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           ← 도구 목록으로

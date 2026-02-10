@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 interface BMIResult {
   bmi: number;
@@ -99,6 +100,7 @@ export default function BMICalculatorPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
+      <ToolJsonLd name="BMI 계산기" description="키와 체중으로 체질량지수(BMI)와 비만도를 측정합니다" url="/tools/bmi-calculator" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           &larr; 도구 목록으로

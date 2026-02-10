@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 const LIFE_EXPECTANCY = 90;
 const WEEKS_PER_YEAR = 52;
@@ -107,6 +108,7 @@ export default function LifeInWeeksPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+      <ToolJsonLd name="Life in Weeks" description="당신의 인생을 주 단위로 시각화합니다" url="/tools/life-in-weeks" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           ← 도구 목록으로

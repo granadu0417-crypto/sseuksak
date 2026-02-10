@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 // 2025년 귀속 근로소득세율 (국세청 공식 데이터)
 const TAX_BRACKETS = [
@@ -214,6 +215,7 @@ export default function TaxRefundCalculator() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+      <ToolJsonLd name="연말정산 환급액 계산기" description="2025년 귀속 연말정산 예상 환급액을 계산합니다" url="/tools/tax-refund-calculator" />
       {/* Breadcrumb */}
       <nav className="mb-6 text-sm text-gray-500">
         <Link href="/" className="hover:text-blue-600">홈</Link>

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | 쓱싹 테스트',
+    template: '%s | 쓱싹',
     default: '재미있는 심리테스트 모음 | 쓱싹',
   },
   description: '정신연령, 소비유형, 번아웃 위험도, 연애스타일 등 다양한 심리테스트를 무료로 즐겨보세요. 친구들과 결과를 공유해보세요!',

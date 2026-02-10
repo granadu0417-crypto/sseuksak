@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: '심리테스트 - 재미있는 테스트 모음 | 쓱싹',
+  title: '심리테스트 - 재미있는 테스트 모음',
   description: 'SNS 피로도 테스트, 카페인 의존도 테스트, 수면 유형 테스트, 번아웃 위험도 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
   keywords: ['심리테스트', '성격테스트', 'SNS피로도', '디지털디톡스', '카페인의존도', '수면유형', '정신연령', '번아웃테스트', '재미있는 테스트'],
 };
@@ -156,6 +157,7 @@ const COMING_SOON = [
 export default function TestsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+      <Breadcrumb items={[{ name: '테스트' }]} />
       {/* 헤더 */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">심리테스트</h1>

@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 // 2026년 4대보험 요율 (근로자 부담분)
 const INSURANCE_RATES = {
@@ -143,6 +144,7 @@ export default function SalaryCalculatorPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
+      <ToolJsonLd name="연봉 실수령액 계산기" description="4대보험, 소득세 공제 후 실제 받는 월급을 계산합니다" url="/tools/salary-calculator" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           ← 도구 목록으로

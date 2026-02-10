@@ -29,6 +29,32 @@
 
 ## 2026-02-10
 
+### 완료된 작업 (SEO 6개 항목 개선 + 배포)
+| 작업 내용 | 상태 |
+|----------|------|
+| **1. Sitemap lastmod 수정** | ✅ |
+| - 정적 페이지 `new Date()` → 고정 날짜로 변경 | ✅ |
+| - 카테고리 페이지: 해당 카테고리 최신 글 날짜 사용 | ✅ |
+| - 누락된 도구 7개 사이트맵에 추가 (총 15개) | ✅ |
+| **2. React #418 hydration 에러 개선** | ✅ |
+| - TableOfContents: DOMParser 분기 제거 → regex 통일 | ✅ |
+| - `<body>` 태그에 `suppressHydrationWarning` 추가 | ✅ |
+| - AdSense/GA 외부 스크립트 기인 경고는 제거 불가 (알려진 이슈) | ℹ️ |
+| **3. 계산기 15개 JSON-LD 추가** | ✅ |
+| - `ToolJsonLd.tsx` 컴포넌트 신규 생성 (WebApplication 스키마) | ✅ |
+| - 15개 도구 페이지 전체에 개별 JSON-LD 삽입 | ✅ |
+| - tools/layout.tsx CollectionPage hasPart 15개로 확장 | ✅ |
+| **4. 홈페이지 최신글 3개 → 6개** | ✅ |
+| **5. ARIA 접근성 강화** | ✅ |
+| - DesktopNav: `aria-expanded`, `aria-haspopup` 추가 | ✅ |
+| - MobileNav: `aria-expanded`, 동적 `aria-label` 추가 | ✅ |
+| - TableOfContents: `aria-expanded`, `aria-controls` 추가 | ✅ |
+| **6. 도구/테스트 페이지 브레드크럼 추가** | ✅ |
+| - tools/page.tsx, tests/page.tsx에 Breadcrumb 컴포넌트 추가 | ✅ |
+| - 타이틀 중복 수정 (tools/tests layout template → `%s | 쓱싹`) | ✅ |
+| **배포 2회 완료** | ✅ |
+| - 754 페이지, 777 KV assets, IndexNow 제출 | ✅ |
+
 ### 완료된 작업 (4대 플랫폼 현황 파악 + AdSense 재검토 제출)
 | 작업 내용 | 상태 |
 |----------|------|

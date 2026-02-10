@@ -27,7 +27,8 @@ export default function MobileNav() {
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-        aria-label="메뉴 열기"
+        aria-label={isMenuOpen ? '메뉴 닫기' : '메뉴 열기'}
+        aria-expanded={isMenuOpen}
       >
         <svg
           className="h-6 w-6"
@@ -61,6 +62,7 @@ export default function MobileNav() {
             <div>
               <button
                 onClick={() => setIsInfoOpen(!isInfoOpen)}
+                aria-expanded={isInfoOpen}
                 className="w-full flex items-center justify-between px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
               >
                 <span>정보</span>

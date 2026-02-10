@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 // 2026년 최저시급
 const MINIMUM_WAGE_2026 = 10360;
@@ -85,6 +86,7 @@ export default function WeeklyHolidayPayCalculatorPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
+      <ToolJsonLd name="주휴수당 계산기" description="주 15시간 이상 근무 시 받는 주휴수당을 계산합니다" url="/tools/weekly-holiday-pay-calculator" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           &larr; 도구 목록으로

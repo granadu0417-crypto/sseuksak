@@ -5,34 +5,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://sseuksak.com';
 
   // Static pages - 핵심 페이지만 포함
+  // lastModified: 실제 마지막 수정일 기준 (new Date()는 매번 변경되어 크롤러에 비효율적)
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: new Date('2026-02-10'),
       changeFrequency: 'daily' as const,
       priority: 1,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-01-15'),
       changeFrequency: 'monthly' as const,
       priority: 0.3,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-01-15'),
       changeFrequency: 'monthly' as const,
       priority: 0.3,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-01-15'),
       changeFrequency: 'yearly' as const,
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-01-15'),
       changeFrequency: 'yearly' as const,
       priority: 0.3,
     },
@@ -47,23 +48,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9, // 게시글 우선순위 상향
   }));
 
-  // Category pages - 중요 네비게이션
+  // Category pages - 카테고리별 최신 게시글 날짜 기준
   const categories = getAllCategories();
-  const categoryPages = categories.map((category) => ({
-    url: `${baseUrl}/category/${category}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }));
+  const categoryPages = categories.map((category) => {
+    const categoryPosts = posts.filter((p) => p.category === category);
+    const latestDate = categoryPosts.length > 0
+      ? new Date(categoryPosts[0].date)
+      : new Date('2026-02-01');
+    return {
+      url: `${baseUrl}/category/${category}`,
+      lastModified: latestDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    };
+  });
 
   // 태그 페이지 제외 - 크롤 예산 절약 (191개 → 0개)
   // 태그 페이지는 noindex 처리하여 검색엔진 색인에서 제외
 
-  // Pagination pages - 첫 페이지만 포함
+  // Pagination pages - 최신 게시글 날짜 기준
+  const latestPostDate = posts.length > 0 ? new Date(posts[0].date) : new Date('2026-02-01');
   const paginationPages = [
     {
       url: `${baseUrl}/posts/page/1`,
-      lastModified: new Date(),
+      lastModified: latestPostDate,
       changeFrequency: 'daily' as const,
       priority: 0.6,
     },
@@ -73,13 +81,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const calendarPages = [
     {
       url: `${baseUrl}/calendar`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-01-20'),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
   ];
 
-  // Tools pages
+  // Tools pages - 전체 목록
   const toolsList = [
     'salary-calculator',
     'tax-refund-calculator',
@@ -89,17 +97,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'life-in-weeks',
     'true-hourly-wage',
     'subscription-audit',
+    'bmi-calculator',
+    'loan-calculator',
+    'hourly-wage-calculator',
+    'severance-calculator',
+    'weekly-holiday-pay-calculator',
+    'livelihood-benefit-calculator',
+    'gift-tax-calculator',
   ];
   const toolsPages = [
     {
       url: `${baseUrl}/tools`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-02-09'),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     ...toolsList.map((tool) => ({
       url: `${baseUrl}/tools/${tool}`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-02-09'),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),
@@ -121,13 +136,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const testsPages = [
     {
       url: `${baseUrl}/tests`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-02-01'),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     ...testsList.map((test) => ({
       url: `${baseUrl}/tests/${test}`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-02-01'),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 interface Subscription {
   id: string;
@@ -82,6 +83,7 @@ export default function SubscriptionAuditPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
+      <ToolJsonLd name="구독 서비스 총액 계산기" description="구독 서비스 총 비용을 계산하고 절약 방법을 찾습니다" url="/tools/subscription-audit" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           ← 도구 목록으로

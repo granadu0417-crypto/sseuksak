@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
 interface TocItem {
   id: string;
@@ -15,39 +15,18 @@ interface TableOfContentsProps {
 export default function TableOfContents({ content }: TableOfContentsProps) {
   const [isOpen, setIsOpen] = useState(true);
 
+  // 서버/클라이언트 동일한 로직으로 hydration mismatch 방지
   const items = useMemo(() => {
-    if (typeof window === 'undefined') {
-      // Server-side: use regex to parse headings
-      const headingRegex = /<h([2-3])\s+id="([^"]+)"[^>]*>([^<]+)<\/h\1>/gi;
-      const tocItems: TocItem[] = [];
-      let match;
-      while ((match = headingRegex.exec(content)) !== null) {
-        tocItems.push({
-          level: parseInt(match[1]),
-          id: match[2],
-          text: match[3],
-        });
-      }
-      return tocItems;
-    }
-
-    // Client-side: use DOMParser
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(content, 'text/html');
-    const headings = doc.querySelectorAll('h2, h3');
-
+    const headingRegex = /<h([2-3])\s+id="([^"]+)"[^>]*>([^<]+)<\/h\1>/gi;
     const tocItems: TocItem[] = [];
-    headings.forEach((heading) => {
-      const id = heading.id;
-      if (id) {
-        tocItems.push({
-          id,
-          text: heading.textContent || '',
-          level: parseInt(heading.tagName[1]),
-        });
-      }
-    });
-
+    let match;
+    while ((match = headingRegex.exec(content)) !== null) {
+      tocItems.push({
+        level: parseInt(match[1]),
+        id: match[2],
+        text: match[3],
+      });
+    }
     return tocItems;
   }, [content]);
 
@@ -59,6 +38,8 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
     <nav className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-8">
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-controls="toc-list"
         className="flex items-center justify-between w-full text-left font-semibold text-gray-900"
       >
         <span className="flex items-center gap-2">
@@ -93,7 +74,7 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
       </button>
 
       {isOpen && (
-        <ul className="mt-3 space-y-2 border-t border-gray-200 pt-3">
+        <ul id="toc-list" className="mt-3 space-y-2 border-t border-gray-200 pt-3">
           {items.map((item) => (
             <li
               key={item.id}

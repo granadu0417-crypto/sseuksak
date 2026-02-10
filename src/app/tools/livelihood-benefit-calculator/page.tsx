@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 // 2026년 기준중위소득 32% (생계급여 선정기준)
 const BENEFIT_STANDARDS: Record<number, number> = {
@@ -132,6 +133,7 @@ export default function LivelihoodBenefitCalculator() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
+      <ToolJsonLd name="생계급여 계산기" description="2026년 기준 소득인정액과 예상 생계급여를 계산합니다" url="/tools/livelihood-benefit-calculator" />
       {/* Breadcrumb */}
       <nav className="mb-6 text-sm text-gray-500">
         <Link href="/" className="hover:text-blue-600">홈</Link>

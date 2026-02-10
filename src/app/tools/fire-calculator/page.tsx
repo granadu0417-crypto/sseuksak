@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 // FIRE 유형별 정보
 const FIRE_TYPES = [
@@ -144,6 +145,7 @@ export default function FireCalculatorPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
+      <ToolJsonLd name="FIRE 조기은퇴 계산기" description="저축률과 투자수익률로 조기 은퇴 가능 시기를 계산합니다" url="/tools/fire-calculator" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           ← 도구 목록으로

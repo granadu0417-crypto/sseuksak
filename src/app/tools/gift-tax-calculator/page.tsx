@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 // 증여세 세율표 (2026년 현행 유지)
 const TAX_BRACKETS = [
@@ -162,6 +163,7 @@ export default function GiftTaxCalculator() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
+      <ToolJsonLd name="증여세 계산기" description="증여금액과 관계에 따른 증여세를 계산합니다" url="/tools/gift-tax-calculator" />
       {/* Breadcrumb */}
       <nav className="mb-6 text-sm text-gray-500">
         <Link href="/" className="hover:text-blue-600">홈</Link>

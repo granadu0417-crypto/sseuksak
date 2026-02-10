@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: '유용한 도구 모음 | 쓱싹',
+  title: '유용한 도구 모음',
   description: '대출이자 계산기, 시급 계산기, 퇴직금 계산기, 주휴수당 계산기, BMI 계산기, 연봉 실수령액 계산기, 연말정산 환급액 계산기, 생계급여 계산기, 증여세 계산기 등 생활에 유용한 도구들을 무료로 이용하세요.',
 };
 
@@ -90,6 +91,7 @@ const lifeTools = [
 export default function ToolsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+      <Breadcrumb items={[{ name: '도구' }]} />
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">유용한 도구 모음</h1>
         <p className="text-gray-600">생활에 도움이 되는 계산기와 도구들을 무료로 이용하세요.</p>

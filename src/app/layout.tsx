@@ -118,7 +118,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
-      <body className={`${notoSansKR.className} antialiased bg-white`}>
+      <body className={`${notoSansKR.className} antialiased bg-white`} suppressHydrationWarning>
         {/* 접근성: 본문으로 건너뛰기 링크 */}
         <a
           href="#main-content"

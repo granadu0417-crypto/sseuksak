@@ -15,7 +15,7 @@ const categoryLabels: Record<string, string> = {
   lifestyle: '생활정보',
 };
 
-const LATEST_POSTS_COUNT = 3;
+const LATEST_POSTS_COUNT = 6;
 
 // 모바일 퀵링크 데이터
 const quickLinks = [

@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 interface SeveranceResult {
   totalDays: number;
@@ -115,6 +116,7 @@ export default function SeveranceCalculatorPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
+      <ToolJsonLd name="퇴직금 계산기" description="근속기간과 급여로 예상 퇴직금과 실수령액을 계산합니다" url="/tools/severance-calculator" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           &larr; 도구 목록으로

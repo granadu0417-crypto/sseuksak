@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 type RepaymentMethod = 'equal_payment' | 'equal_principal' | 'bullet';
 
@@ -246,6 +247,7 @@ export default function LoanCalculatorPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
+      <ToolJsonLd name="대출이자 계산기" description="대출 조건별 월 상환금과 총 이자를 비교 계산합니다" url="/tools/loan-calculator" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           &larr; 도구 목록으로

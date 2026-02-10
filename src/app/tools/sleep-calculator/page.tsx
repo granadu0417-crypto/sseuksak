@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 const SLEEP_CYCLE_MINUTES = 90;
 const FALL_ASLEEP_MINUTES = 15;
@@ -107,6 +108,7 @@ export default function SleepCalculatorPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
+      <ToolJsonLd name="수면 사이클 계산기" description="수면 사이클에 맞는 최적 기상 시간을 계산합니다" url="/tools/sleep-calculator" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           ← 도구 목록으로

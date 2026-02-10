@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ToolJsonLd from '@/components/ToolJsonLd';
 
 type CalculationMode = 'hourly_to_monthly' | 'monthly_to_hourly' | 'yearly_to_hourly';
 
@@ -177,6 +178,7 @@ export default function HourlyWageCalculatorPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
+      <ToolJsonLd name="시급 계산기" description="시급, 월급, 연봉을 상호 변환하고 2026년 최저시급과 비교합니다" url="/tools/hourly-wage-calculator" />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           &larr; 도구 목록으로

@@ -33,6 +33,8 @@ export default function DesktopNav() {
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsInfoOpen(!isInfoOpen)}
+          aria-expanded={isInfoOpen}
+          aria-haspopup="true"
           className="flex items-center text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium"
         >
           정보
