@@ -70,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const latestPostDate = posts.length > 0 ? new Date(posts[0].date) : new Date('2026-02-01');
   const paginationPages = [
     {
-      url: `${baseUrl}/posts/page/1`,
+      url: `${baseUrl}/posts`,
       lastModified: latestPostDate,
       changeFrequency: 'daily' as const,
       priority: 0.6,

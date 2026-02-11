@@ -67,7 +67,7 @@ function getAllUrls() {
     '/calendar',
     '/tools',
     '/tests',
-    '/posts/page/1',
+    '/posts',
   ];
   staticPages.forEach(page => urls.push(CONFIG.siteUrl + page));
 

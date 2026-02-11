@@ -21,7 +21,7 @@ const LATEST_POSTS_COUNT = 6;
 const quickLinks = [
   {
     name: '정보',
-    href: '/posts/page/1',
+    href: '/posts',
     icon: '📰',
     iconText: '글',
     color: 'bg-blue-500',
@@ -134,7 +134,7 @@ export default function Home() {
           <h3 className="text-lg font-semibold text-gray-800">최신 글</h3>
           {hasMorePosts && (
             <Link
-              href="/posts/page/1"
+              href="/posts"
               className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
             >
               전체 글 보기 →

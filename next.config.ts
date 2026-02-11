@@ -13,6 +13,12 @@ const nextConfig: NextConfig = {
   // 잘못된 URL 리다이렉트 (네이버 크롤러 수집 오류 수정)
   async redirects() {
     return [
+      // 페이지네이션 1페이지 → /posts 정규화 (소프트 404 해결)
+      {
+        source: '/posts/page/1',
+        destination: '/posts',
+        permanent: true,
+      },
       // 테스트 URL: -test 접미사 제거
       {
         source: '/tests/sns-fatigue-test',
