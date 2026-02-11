@@ -1,14 +1,12 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function SearchButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
 
   // 외부 클릭 시 닫기
   useEffect(() => {
@@ -31,7 +29,7 @@ export default function SearchButton() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
-      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+      window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
       setIsOpen(false);
       setQuery('');
     }

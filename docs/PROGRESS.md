@@ -48,6 +48,19 @@
 | CONTENT_INVENTORY.md 업데이트 (101개) | ✅ |
 | 배포 완료 (cf:quick) | ✅ |
 
+### 완료된 작업 (모바일 성능 최적화)
+| 작업 내용 | 상태 |
+|----------|------|
+| **PageSpeed 모바일 성능: 54점 → 73점 (+19점)** | ✅ |
+| SearchButton에서 `useRouter` 제거 → `window.location.href` 대체 (JS 번들 축소) | ✅ |
+| SearchButton `next/dynamic` 동적 import로 코드 스플리팅 | ✅ |
+| GA 스크립트 `afterInteractive` → `lazyOnload` 변경 (TBT 430ms → 100ms) | ✅ |
+| 불필요한 preconnect 4개 제거 → `dns-prefetch` 경량화 (next/font 셀프호스팅) | ✅ |
+| `next.config.ts`에 `optimizePackageImports` 추가 (트리쉐이킹 향상) | ✅ |
+| 폰트 `adjustFontFallback: true` 추가 (CLS 방지) | ✅ |
+| **Core Web Vitals 개선**: FCP 4.7→3.9초, LCP 6.0→4.4초, TBT 430→100ms | ✅ |
+| 배포 완료 (cf:quick) | ✅ |
+
 ---
 
 ## 2026-02-10

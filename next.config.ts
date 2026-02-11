@@ -48,6 +48,8 @@ const nextConfig: NextConfig = {
   experimental: {
     // CSS 최적화
     optimizeCss: true,
+    // 패키지 임포트 최적화 (트리쉐이킹 향상)
+    optimizePackageImports: ['react-dom', 'remark', 'remark-gfm', 'remark-html'],
   },
 };
 

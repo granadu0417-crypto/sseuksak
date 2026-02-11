@@ -13,7 +13,8 @@ const notoSansKR = Noto_Sans_KR({
   weight: ['400', '600', '700'],
   display: 'swap',
   preload: true,
-  fallback: ['system-ui', 'sans-serif'],
+  fallback: ['system-ui', '-apple-system', 'sans-serif'],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -82,19 +83,17 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>
-        {/* 외부 도메인 preconnect - 초기 연결 시간 단축 */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
+        {/* 외부 도메인 preconnect - next/font이 폰트를 셀프호스팅하므로 Google Fonts preconnect 불필요 */}
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-        {/* Google Analytics */}
+        {/* Google Analytics - lazyOnload로 렌더링 차단 방지 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CMZF467RLD"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
