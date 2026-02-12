@@ -12,7 +12,7 @@ const notoSansKR = Noto_Sans_KR({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
   display: 'swap',
-  preload: true,
+  preload: false,
   fallback: ['system-ui', '-apple-system', 'sans-serif'],
   adjustFontFallback: true,
 });
@@ -85,7 +85,7 @@ export default function RootLayout({
       <head>
         {/* 외부 도메인 preconnect - next/font이 폰트를 셀프호스팅하므로 Google Fonts preconnect 불필요 */}
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
         {/* Google Analytics - lazyOnload로 렌더링 차단 방지 */}
