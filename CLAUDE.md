@@ -11,6 +11,21 @@
 
 ---
 
+## 세션 시작 시 필수 체크
+
+**새 세션을 시작하거나 작업 계획을 세울 때 반드시 아래 항목을 먼저 확인:**
+
+1. **Google Search Console** (https://search.google.com/search-console) - Playwright로 접속
+   - 색인 페이지 수 / 미색인 사유
+   - 클릭, 노출, CTR, 평균순위
+2. **Naver Search Advisor** (https://searchadvisor.naver.com) - Playwright로 접속
+   - 색인 현황 (색인, 수집제한, 색인제외)
+   - 콘텐츠 노출/클릭, CTR, 인기 키워드/페이지
+3. 확인 결과를 `docs/ANALYTICS_HISTORY.md`에 기록
+4. 색인 문제가 있으면 콘텐츠 작업보다 색인 개선을 우선
+
+---
+
 ## 문서 참조 가이드
 
 | 상황 | 참조 문서 |
