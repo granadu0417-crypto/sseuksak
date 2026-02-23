@@ -1,16 +1,17 @@
 # Google Search Console 색인 생성 요청 기록
 
-> 마지막 업데이트: 2026-02-13
+> 마지막 업데이트: 2026-02-23
 
 ## 요약
 
 | 항목 | 수치 |
 |------|------|
-| 총 요청 완료 | **94개** |
-| 거부 | 3건 (잘못된 슬러그/미발행) |
-| 스킵 | 3건 (이미 색인됨) |
-| 남은 URL | **6개** |
-| 작업일 | 2026-02-13 (URL 검사 용량 초과로 중단) |
+| 총 요청 완료 | **104개** (게시글) + 카테고리 4개 |
+| 404 URL 재요청 | **9개** (카테고리 4, 게시글 2, 태그 3) |
+| 거부 | 3건 (잘못된 슬러그/미발행) + 3건 (태그 noindex) |
+| 스킵 | 4건 (이미 색인됨) |
+| 남은 URL | **0개** |
+| 작업일 | 2026-02-13, 2026-02-23 (404 재요청 + 남은 6개 + 신규 5개 게시글 완료) |
 
 ## 완료된 URL (66개)
 
@@ -133,11 +134,68 @@
 | right-to-disconnect-guide-2026 | ⏭️ 이미 Google에 색인됨 |
 | water-meter-freeze-prevention-tips-2026 | ⏭️ 이미 Google에 색인됨 |
 
-## 남은 URL (6개) - 내일 계속 (URL 검사 용량 초과)
+## 8차 - 2026-02-23 404 URL 재색인 요청 (9개)
 
-1. year-end-tax-simplification-service-2026
-2. young-adults-pancreatic-cancer-alcohol-2026
-3. youth-future-savings-2026
-4. youth-rent-support-2026
-5. youth-savings-comparison-2026
-6. youth-tomorrow-savings-account-2026
+Google Search Console에서 "찾을 수 없음(404)"로 표시된 9개 URL에 대해 색인 생성 재요청.
+원인: Cloudflare Workers + KV 캐시 cold start 시 간헐적 404 반환.
+
+### 카테고리 페이지 (3개) - 색인 요청 성공
+
+| # | URL | 최근 크롤링 | 결과 |
+|---|-----|------------|------|
+| 1 | /category/tech | 2026.2.22 | 색인 생성 요청됨 |
+| 2 | /category/education | 2026.2.22 | 색인 생성 요청됨 |
+| 3 | /category/insurance | 2026.2.22 | 색인 생성 요청됨 |
+| 4 | /category/finance | 2026.2.23 (당일!) | 색인 생성 요청됨 |
+
+> /category/finance는 당일(2/23) 크롤링했는데도 404 반환 - KV 캐시 문제 지속 확인
+
+### 게시글 페이지 (2개) - 색인 요청 성공
+
+| # | URL | 최근 크롤링 | 결과 |
+|---|-----|------------|------|
+| 5 | /posts/youth-future-savings-2026 | 2026.2.21 | 색인 생성 요청됨 |
+| 6 | /posts/health-insurance-premium-2026 | 2026.2.19 | 색인 생성 요청됨 |
+
+### 태그 페이지 (3개) - noindex로 거부됨
+
+| # | URL | 최근 크롤링 | 결과 |
+|---|-----|------------|------|
+| 7 | /tag/TIGER | 2026.2.18 | 거부 (noindex 메타태그 감지) |
+| 8 | /tag/전세자금대출 | 2026.1.12 | 거부 (noindex 메타태그 감지) |
+| 9 | /tag/주담대금리 | 2026.1.11 | 거부 (noindex 메타태그 감지) |
+
+> 태그 페이지는 `robots: { index: false, follow: true }` 설정으로 noindex 처리됨.
+> Google 실시간 테스트에서 페이지 가져오기는 **성공(200)**하지만 noindex로 색인 거부.
+> 이전 404 → 현재 200+noindex로 상태 개선됨. 향후 재크롤링 시 404 에러 목록에서 제거될 예정.
+
+## 9차 - 2026-02-23 남은 게시글 색인 요청 (6개)
+
+2026-02-13 URL 검사 할당량 초과로 미완료였던 6개 게시글 색인 요청 완료.
+
+| # | URL | 상태 | 결과 |
+|---|-----|------|------|
+| 95 | year-end-tax-simplification-service-2026 | 이미 색인됨 | ⏭️ 스킵 |
+| 96 | young-adults-pancreatic-cancer-alcohol-2026 | 알려지지 않은 URL | ✅ 색인 생성 요청됨 |
+| 97 | youth-future-savings-2026 | 404 (2026.2.21 크롤링) | ✅ 색인 생성 요청됨 (재요청) |
+| 98 | youth-rent-support-2026 | 알려지지 않은 URL | ✅ 색인 생성 요청됨 |
+| 99 | youth-savings-comparison-2026 | 알려지지 않은 URL | ✅ 색인 생성 요청됨 |
+| 100 | youth-tomorrow-savings-account-2026 | 알려지지 않은 URL | ✅ 색인 생성 요청됨 |
+
+> 전체 게시글 100개 중 99개 색인 요청 완료 (1개는 이미 색인됨으로 스킵).
+> 남은 미색인 게시글: **0개**
+
+## 10차 - 2026-02-23 신규 게시글 색인 요청 (5개)
+
+신규 발행 게시글 #106~#110 색인 요청.
+
+| # | URL | 상태 | 결과 |
+|---|-----|------|------|
+| 101 | jeonse-fraud-prevention-guide-2026 | 알려지지 않은 URL | ✅ 색인 생성 요청됨 |
+| 102 | spring-allergy-rhinitis-guide-2026 | 알려지지 않은 URL | ✅ 색인 생성 요청됨 |
+| 103 | freelancer-side-job-income-tax-guide-2026 | 알려지지 않은 URL | ✅ 색인 생성 요청됨 |
+| 104 | health-checkup-results-guide-2026 | 알려지지 않은 URL | ✅ 색인 생성 요청됨 |
+| 105 | car-inspection-guide-2026 | 알려지지 않은 URL | ✅ 색인 생성 요청됨 |
+
+> 전체 게시글 105개 중 104개 색인 요청 완료 (1개는 이미 색인됨으로 스킵).
+> 남은 미색인 게시글: **0개**
