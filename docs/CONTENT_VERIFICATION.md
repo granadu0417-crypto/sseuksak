@@ -88,6 +88,9 @@ sseuksak.com 블로그 콘텐츠의 정확성을 보장하기 위한 검증 프�
 
 | 날짜 | 파일명 | 정확도 | 상태 |
 |------|--------|--------|------|
+| 02-23 | car-inspection-guide-2026.md | 95% | ✅ 수정됨 |
+| 02-23 | health-checkup-results-guide-2026.md | 95% | ✅ 수정됨 |
+| 02-23 | freelancer-side-job-income-tax-guide-2026.md | 95% | ✅ 수정됨 |
 | 02-23 | minor-stock-account-gift-tax-guide-2026.md | 100% | ✅ |
 | 02-05 | cold-flu-covid-symptoms-guide-2026.md | 100% | ✅ |
 | 02-05 | winter-driving-safety-guide-2026.md | 100% | ✅ |
