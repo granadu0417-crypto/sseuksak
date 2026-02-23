@@ -1,13 +1,13 @@
 # sseuksak.com 진행 현황
 
-> 마지막 업데이트: 2026-02-12
+> 마지막 업데이트: 2026-02-13
 
 ## 프로젝트 현황
 
 | 항목 | 상태 | 비고 |
 |------|------|------|
 | 사이트 URL | https://sseuksak.com | 라이브 |
-| 게시글 | **103개** | 금융 47, 라이프 22, 테크 9, 보험 6, 교육 6, 건강 13 |
+| 게시글 | **104개** | 금융 47, 라이프 23, 테크 9, 보험 6, 교육 6, 건강 13 |
 | 도구 | **15개** | 금융 계산기 10개 + 라이프 도구 5개 |
 | 테스트 | 10개 | 수면유형, 카페인의존도, SNS피로도, 정신연령, 소비유형, 재테크성향, 연애스타일, 직장동물, 운세2026, 번아웃 |
 | AdSense | ⏳ **준비 중** | 2026-02-10 재검토 요청 제출, Ads.txt 승인됨, 사이트 심사 진행 중 |
@@ -25,6 +25,34 @@
 - [2026년 1월 3주차](archive/PROGRESS_2026_01_WEEK3.md) (01-15 ~ 01-21)
 - [2026년 1월 4주차](archive/PROGRESS_2026_01_WEEK4.md) (01-22 ~ 01-27)
 - [2026년 2월 1주차](archive/PROGRESS_2026_02_WEEK1.md) (01-27 ~ 02-09)
+
+---
+
+## 2026-02-13
+
+### 완료된 작업 (3월 넷플릭스 신작 게시글 + 가독성 개선)
+| 작업 내용 | 상태 |
+|----------|------|
+| **netflix-march-2026-new-releases.md** 신규 게시글 작성 | ✅ |
+| 3월 넷플릭스 신작 6선: 월간남친, 공룡, ONE PIECE S2, 피키 블라인더스, BTS 컴백, Something Very Bad | ✅ |
+| YouTube 예고편 4개 삽입 (월간남친, 공룡, ONE PIECE S2, 피키 블라인더스) | ✅ |
+| 1월·2월 넷플릭스 게시글에 3월 글 관련 링크 추가 | ✅ |
+| 2월·3월 게시글 장르별 추천 섹션 리스트(`-`) 형식으로 가독성 개선 | ✅ |
+| docs/CONTENT_INVENTORY.md 업데이트 | ✅ |
+| 배포 2회 (cf:quick + IndexNow) | ✅ |
+
+### 완료된 작업 (Google 색인 생성 요청 - 추가 28개, 총 94개 완료)
+| 작업 내용 | 상태 |
+|----------|------|
+| **Google Search Console 수동 색인 요청 추가 28개 URL** | ✅ |
+| **6차 (14개)**: just-give-welfare-program ~ pet-insurance-comparison-2026 | ✅ |
+| **7차 (14개)**: prenatal-insurance-guide ~ worker-meal-support-2026 | ✅ |
+| ⏭️ 추가 스킵 2건: right-to-disconnect-guide-2026, water-meter-freeze-prevention-tips-2026 (이미 색인됨) | ℹ️ |
+| **총 누적**: 94개 요청 완료 + 거부 3건 + 스킵 3건 | ✅ |
+| **남은 6개**: year-end-tax-simplification-service ~ youth-tomorrow-savings-account-2026 | ⏳ |
+| URL 검사 용량 초과로 중단 (내일 갱신) | ℹ️ |
+| docs/GOOGLE_INDEX_REQUEST_LOG.md 업데이트 | ✅ |
+| docs/analytics/2026-02-13.md 업데이트 | ✅ |
 
 ---
 

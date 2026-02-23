@@ -83,10 +83,10 @@ MC 패널은 5년차 솔지 전문가 홍진경, 리액션 여왕 이다희, 슈
 ---
 
 **관련 글 추천:**
+- [2026년 3월 넷플릭스 신작 총정리](/posts/netflix-march-2026-new-releases)
 - [2026년 2월 넷플릭스 신작 총정리](/posts/netflix-february-2026-new-releases)
 - [2026 설날 KTX·SRT 예매 완벽 가이드](/posts/lunar-new-year-train-ticket-2026)
 - [트렌드 코리아 2026 핵심 키워드 10가지](/posts/trend-korea-2026-keywords)
-- [ChatGPT 무료 vs 유료 차이점 완벽 비교](/posts/chatgpt-free-vs-plus-comparison)
 
 ---
 

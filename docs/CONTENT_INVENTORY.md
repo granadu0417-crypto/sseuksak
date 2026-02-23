@@ -89,6 +89,7 @@
 | `mvno-phone-plan-comparison-2026.md` | 2026년 알뜰폰 요금제 비교 | 알뜰폰, 요금제 |
 | `netflix-january-2026-new-releases.md` | 2026년 1월 넷플릭스 신작 | 넷플릭스, OTT |
 | `netflix-february-2026-new-releases.md` | 2026년 2월 넷플릭스 신작 | 넷플릭스, OTT, 레이디두아, 미스터리수사단 |
+| `netflix-march-2026-new-releases.md` | 2026년 3월 넷플릭스 신작 | 넷플릭스, OTT, BTS, 원피스, 월간남친, 피키블라인더스 |
 | `water-meter-freeze-prevention-tips-2026.md` | 수도계량기 동파 방지 꿀팁 7가지 | 수도계량기, 동파방지, 한파대비 |
 | `winter-heating-cost-saving-tips-2026.md` | 겨울 난방비 절약 꿀팁 10가지 | 난방비, 보일러, 단열 |
 | `personal-customs-code-validity-2026.md` | 개인통관고유부호 유효기간 변경 2026 완벽 가이드 | 개인통관고유부호, 해외직구, 통관, P번호 |

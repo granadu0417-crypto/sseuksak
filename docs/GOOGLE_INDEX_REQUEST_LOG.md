@@ -1,16 +1,16 @@
 # Google Search Console 색인 생성 요청 기록
 
-> 마지막 업데이트: 2026-02-12
+> 마지막 업데이트: 2026-02-13
 
 ## 요약
 
 | 항목 | 수치 |
 |------|------|
-| 총 요청 완료 | **66개** |
+| 총 요청 완료 | **94개** |
 | 거부 | 3건 (잘못된 슬러그/미발행) |
-| 스킵 | 1건 (이미 색인됨) |
-| 남은 URL | **36개** |
-| 작업일 | 2026-02-12 |
+| 스킵 | 3건 (이미 색인됨) |
+| 남은 URL | **6개** |
+| 작업일 | 2026-02-13 (URL 검사 용량 초과로 중단) |
 
 ## 완료된 URL (66개)
 
@@ -90,6 +90,38 @@
 65. high-school-credit-system-2026
 66. inheritance-forfeiture-system-2026
 
+### 6차 - 2026-02-13 전반 (14개)
+67. just-give-welfare-program-2026
+68. livelihood-support-fund-2026
+69. liver-cancer-early-symptoms-checklist-2026
+70. lunar-new-year-train-ticket-2026
+71. maternity-leave-benefit-guide-2026
+72. mobile-id-card-guide-2026
+73. move-in-registration-guide-2026
+74. mvno-phone-plan-comparison-2026
+75. national-scholarship-student-loan-guide-2026
+76. national-technical-exam-schedule-2026
+77. obesity-medication-guide-2026
+78. passport-renewal-guide-2026
+79. personal-customs-code-validity-2026
+80. pet-insurance-comparison-2026
+
+### 7차 - 2026-02-13 후반 (14개, 할당량 초과 후 재시도 성공)
+81. prenatal-insurance-guide-2026
+82. resignation-checklist-2026
+83. samsung-special-dividend-guide-2026
+84. seol-holiday-toll-free-2026
+85. seollal-charye-guide-2026
+86. small-business-support-2026
+87. sugar-tax-guide-2026
+88. synthetic-nicotine-e-cigarette-regulation-2026
+89. travel-insurance-comparison-2026
+90. trend-korea-2026-keywords
+91. vat-filing-guide-january-2026
+92. winter-driving-safety-guide-2026
+93. winter-heating-cost-saving-tips-2026
+94. worker-meal-support-2026
+
 ## 거부/스킵
 
 | URL | 사유 |
@@ -98,42 +130,14 @@
 | netflix-march-2026-new-releases | ❌ 아직 발행되지 않은 게시글 |
 | digital-detox-guide | ❌ 슬러그 존재하지 않음 |
 | savings-account-comparison-2026 | ⏭️ 이미 Google에 색인됨 |
+| right-to-disconnect-guide-2026 | ⏭️ 이미 Google에 색인됨 |
+| water-meter-freeze-prevention-tips-2026 | ⏭️ 이미 Google에 색인됨 |
 
-## 남은 URL (36개) - 내일 계속
+## 남은 URL (6개) - 내일 계속 (URL 검사 용량 초과)
 
-1. just-give-welfare-program-2026
-2. livelihood-support-fund-2026
-3. liver-cancer-early-symptoms-checklist-2026
-4. lunar-new-year-train-ticket-2026
-5. maternity-leave-benefit-guide-2026
-6. mobile-id-card-guide-2026
-7. move-in-registration-guide-2026
-8. mvno-phone-plan-comparison-2026
-9. national-scholarship-student-loan-guide-2026
-10. national-technical-exam-schedule-2026
-11. obesity-medication-guide-2026
-12. passport-renewal-guide-2026
-13. personal-customs-code-validity-2026
-14. pet-insurance-comparison-2026
-15. prenatal-insurance-guide-2026
-16. resignation-checklist-2026
-17. right-to-disconnect-guide-2026
-18. samsung-special-dividend-guide-2026
-19. seol-holiday-toll-free-2026
-20. seollal-charye-guide-2026
-21. small-business-support-2026
-22. sugar-tax-guide-2026
-23. synthetic-nicotine-e-cigarette-regulation-2026
-24. travel-insurance-comparison-2026
-25. trend-korea-2026-keywords
-26. vat-filing-guide-january-2026
-27. water-meter-freeze-prevention-tips-2026
-28. winter-driving-safety-guide-2026
-29. winter-heating-cost-saving-tips-2026
-30. worker-meal-support-2026
-31. year-end-tax-simplification-service-2026
-32. young-adults-pancreatic-cancer-alcohol-2026
-33. youth-future-savings-2026
-34. youth-rent-support-2026
-35. youth-savings-comparison-2026
-36. youth-tomorrow-savings-account-2026
+1. year-end-tax-simplification-service-2026
+2. young-adults-pancreatic-cancer-alcohol-2026
+3. youth-future-savings-2026
+4. youth-rent-support-2026
+5. youth-savings-comparison-2026
+6. youth-tomorrow-savings-account-2026
