@@ -6,7 +6,7 @@ import ToolJsonLd from '@/components/ToolJsonLd';
 
 // 2026년 기준 실업급여 상·하한액
 const DAILY_UPPER_LIMIT = 66000; // 1일 상한액
-const DAILY_LOWER_LIMIT = 64192; // 1일 하한액 (2026 최저시급 10,030원 × 80% × 8h)
+const DAILY_LOWER_LIMIT = 66048; // 1일 하한액 (2026 최저시급 10,320원 × 80% × 8h)
 
 // 소정급여일수 테이블 (나이 × 고용보험 가입기간)
 // [1년 미만, 1~3년, 3~5년, 5~10년, 10년 이상]

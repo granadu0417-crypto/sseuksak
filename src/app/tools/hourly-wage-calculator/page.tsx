@@ -6,7 +6,7 @@ import ToolJsonLd from '@/components/ToolJsonLd';
 
 type CalculationMode = 'hourly_to_monthly' | 'monthly_to_hourly' | 'yearly_to_hourly';
 
-const MINIMUM_WAGE_2026 = 10030; // 2026년 최저시급
+const MINIMUM_WAGE_2026 = 10320; // 2026년 최저시급
 const WEEKS_PER_MONTH = 4.345; // 월 평균 주수
 
 interface CalculationResult {
@@ -429,7 +429,7 @@ export default function HourlyWageCalculatorPage() {
               </tr>
             </thead>
             <tbody>
-              {[10030, 11000, 12000, 13000, 15000, 20000].map((wage) => {
+              {[10320, 11000, 12000, 13000, 15000, 20000].map((wage) => {
                 const monthly = wage * 209;
                 const yearly = monthly * 12;
                 const isMinimum = wage === MINIMUM_WAGE_2026;

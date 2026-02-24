@@ -5,7 +5,7 @@ import Link from 'next/link';
 import ToolJsonLd from '@/components/ToolJsonLd';
 
 // 2026년 최저시급
-const MINIMUM_WAGE_2026 = 10360;
+const MINIMUM_WAGE_2026 = 10320;
 
 interface WeeklyHolidayPayResult {
   weeklyWorkHours: number;
