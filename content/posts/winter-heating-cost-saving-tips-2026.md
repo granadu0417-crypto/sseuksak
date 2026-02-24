@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "겨울 난방비 절약 꿀팁 10가지: 보일러 설정부터 단열까지 완벽 가이드"
 date: "2026-01-21"
 category: "lifestyle"

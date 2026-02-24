@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "수도계량기 동파 방지 꿀팁 7가지: 한파에도 끄떡없는 예방법"
 date: "2026-01-21"
 category: "lifestyle"

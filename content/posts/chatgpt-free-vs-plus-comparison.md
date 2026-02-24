@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "ChatGPT 무료 vs 유료(Plus) 차이점 완벽 비교 (2026년)"
 description: "GPT-4o 무료 16회 vs Plus 80회, 월 $5 Go 요금제 신설. 2026년 ChatGPT 5개 요금제별 기능·한도·가격을 표로 비교해 내게 맞는 플랜을 찾아보세요."
 date: "2026-01-15"

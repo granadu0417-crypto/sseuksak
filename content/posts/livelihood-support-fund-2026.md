@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "2026년 민생지원금 신청 가이드: 지역별 지원금액 총정리"
 date: "2026-01-23"
 category: "finance"

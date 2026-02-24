@@ -36,6 +36,9 @@ export function getAllPosts(): PostMeta[] {
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const { data, content } = matter(fileContents);
+
+      if (data.draft === true) return null;
+
       const stats = readingTime(content);
 
       return {
@@ -48,7 +51,8 @@ export function getAllPosts(): PostMeta[] {
         thumbnail: data.thumbnail,
         readingTime: stats.text,
       };
-    });
+    })
+    .filter((post) => post !== null) as PostMeta[];
 
   return allPosts.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
@@ -62,6 +66,9 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
+
+  if (data.draft === true) return null;
+
   const stats = readingTime(content);
 
   // Convert YouTube tags BEFORE remark processing (to prevent HTML escaping)

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "2026년 AI 도구 활용 가이드: 입문부터 실무 적용까지 단계별 정리"
 description: "회의록 정리 2시간을 3분으로. ChatGPT·Claude·Gemini 무료 플랜으로 시작하는 4단계 AI 업무 활용법과 직무별 도구 조합을 지금 확인하세요."
 date: "2026-01-05"

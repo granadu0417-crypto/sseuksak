@@ -2,7 +2,7 @@
 title: "2026년 건강보험료율 7.19% 확정: 직장가입자·지역가입자 보험료 계산법과 절약 전략"
 description: "2026년 건강보험료율 7.19%로 인상! 월급 300만원 기준 월 122,020원 공제. 직장·지역가입자별 계산법, 피부양자 자격 요건, 보험료 절약 전략까지 한번에 확인하세요."
 date: "2026-01-06"
-category: "health"
+category: "insurance"
 tags: ["건강보험료", "4대보험", "건강보험", "보험료계산", "직장인", "지역가입자"]
 thumbnail: "https://images.unsplash.com/photo-1666886573199-88a2ed65470d?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxoZWFsdGglMjBpbnN1cmFuY2UlMjBtZWRpY2FsfGVufDB8MHx8fDE3Njg1NDAzNjJ8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
