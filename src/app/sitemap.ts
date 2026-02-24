@@ -104,17 +104,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'weekly-holiday-pay-calculator',
     'livelihood-benefit-calculator',
     'gift-tax-calculator',
+    'pyeong-calculator',
+    'age-calculator',
+    'vat-calculator',
+    'savings-interest-calculator',
+    'unemployment-benefit-calculator',
   ];
   const toolsPages = [
     {
       url: `${baseUrl}/tools`,
-      lastModified: new Date('2026-02-09'),
+      lastModified: new Date('2026-02-24'),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     ...toolsList.map((tool) => ({
       url: `${baseUrl}/tools/${tool}`,
-      lastModified: new Date('2026-02-09'),
+      lastModified: new Date('2026-02-24'),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),

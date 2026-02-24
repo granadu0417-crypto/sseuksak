@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: '유용한 도구 모음',
-  description: '대출이자 계산기, 시급 계산기, 퇴직금 계산기, 주휴수당 계산기, BMI 계산기, 연봉 실수령액 계산기, 연말정산 환급액 계산기, 생계급여 계산기, 증여세 계산기 등 생활에 유용한 도구들을 무료로 이용하세요.',
+  description: '대출이자 계산기, 시급 계산기, 퇴직금 계산기, 주휴수당 계산기, BMI 계산기, 연봉 실수령액 계산기, 연말정산 환급액 계산기, 적금이자 계산기, 실업급여 계산기, 부가세 계산기, 나이 계산기, 평수 계산기 등 생활에 유용한 도구들을 무료로 이용하세요.',
 };
 
 const financeTools = [
@@ -63,6 +63,21 @@ const financeTools = [
     title: '증여세 계산기',
     description: '증여금액과 관계에 따른 증여세를 계산해요',
   },
+  {
+    slug: 'vat-calculator',
+    title: '부가세 계산기',
+    description: '공급가액에서 부가세를 계산하거나 합계금액에서 역산해요',
+  },
+  {
+    slug: 'savings-interest-calculator',
+    title: '적금 이자 계산기',
+    description: '적금/예금 이자와 세후 실수령액을 계산해요',
+  },
+  {
+    slug: 'unemployment-benefit-calculator',
+    title: '실업급여 계산기',
+    description: '실업급여 예상 수령액과 수급 기간을 계산해요',
+  },
 ];
 
 const lifeTools = [
@@ -85,6 +100,16 @@ const lifeTools = [
     slug: 'life-in-weeks',
     title: 'Life in Weeks',
     description: '당신의 인생을 주 단위로 시각화해요',
+  },
+  {
+    slug: 'pyeong-calculator',
+    title: '평수 계산기',
+    description: '평수↔제곱미터를 간편하게 변환해요',
+  },
+  {
+    slug: 'age-calculator',
+    title: '나이 계산기',
+    description: '생년월일로 만 나이, 한국 나이, 띠, 별자리를 확인해요',
   },
 ];
 
