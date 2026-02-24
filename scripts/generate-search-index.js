@@ -15,26 +15,30 @@ function generateSearchIndex() {
 
   const files = fs.readdirSync(postsDirectory).filter((file) => file.endsWith('.md'));
 
-  const posts = files.map((filename) => {
-    const slug = filename.replace(/\.md$/, '');
-    const fullPath = path.join(postsDirectory, filename);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data } = matter(fileContents);
+  const posts = files
+    .map((filename) => {
+      const slug = filename.replace(/\.md$/, '');
+      const fullPath = path.join(postsDirectory, filename);
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const { data } = matter(fileContents);
 
-    // 읽기 시간 계산
-    const wordCount = fileContents.split(/\s+/).length;
-    const readingTime = `${Math.ceil(wordCount / 200)} min read`;
+      if (data.draft === true) return null;
 
-    return {
-      slug,
-      title: data.title || '',
-      description: data.description || '',
-      date: data.date || '',
-      category: data.category || '',
-      tags: data.tags || [],
-      readingTime,
-    };
-  });
+      // 읽기 시간 계산
+      const wordCount = fileContents.split(/\s+/).length;
+      const readingTime = `${Math.ceil(wordCount / 200)} min read`;
+
+      return {
+        slug,
+        title: data.title || '',
+        description: data.description || '',
+        date: data.date || '',
+        category: data.category || '',
+        tags: data.tags || [],
+        readingTime,
+      };
+    })
+    .filter((post) => post !== null);
 
   // 날짜순 정렬 (최신순)
   posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
