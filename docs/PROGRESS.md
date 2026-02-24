@@ -59,6 +59,26 @@
 | 경쟁 블로그 10개+ 분석 후 차별화 포인트 반영 | ✅ |
 | E-E-A-T 요소 각 글 2개 이상 포함 | ✅ |
 | CONTENT_INVENTORY.md, FACTCHECK_LOG.md 업데이트 | ✅ |
+| **라이브 사이트 검증 (모바일 375×812 + PC 1280×800)** | ✅ |
+| - 등기부등본(#111), 4대보험(#113), 근로계약서(#117) 외 전체 정상 | ✅ |
+| **Google Search Console 색인 요청 8개 완료 (10차)** | ✅ |
+| - property-register-guide-2026 (#111) | ✅ |
+| - certified-mail-guide-2026 (#112) | ✅ |
+| - four-major-insurance-guide-2026 (#113) | ✅ |
+| - small-claims-court-guide-2026 (#114) | ✅ |
+| - seal-certificate-guide-2026 (#115) | ✅ |
+| - funeral-cost-guide-2026 (#116) | ✅ |
+| - employment-contract-guide-2026 (#117) | ✅ |
+| - resident-registration-copy-guide-2026 (#118) | ✅ |
+| **Naver Search Advisor 수집 요청 8개 완료** | ✅ |
+| - property-register-guide-2026 (12:09:21) | ✅ |
+| - certified-mail-guide-2026 (12:09:56) | ✅ |
+| - four-major-insurance-guide-2026 (12:10:13) | ✅ |
+| - small-claims-court-guide-2026 (12:10:30) | ✅ |
+| - seal-certificate-guide-2026 (12:10:45) | ✅ |
+| - funeral-cost-guide-2026 (12:11:01) | ✅ |
+| - employment-contract-guide-2026 (12:11:18) | ✅ |
+| - resident-registration-copy-guide-2026 (12:11:36) | ✅ |
 
 ---
 
@@ -277,18 +297,17 @@
 ## 다음 할 일
 
 ### 우선순위 높음
-- [ ] **Google 색인 요청 나머지 36개 URL 완료** (66/102 완료, 36개 남음)
-  - just-give-welfare-program-2026 ~ youth-tomorrow-savings-account-2026
-- [ ] AdSense 재검토 결과 확인 (2/10 제출, 수일~2주 소요 예상)
+- [x] ~~Google 색인 요청 전체 완료~~ (112/118 게시글 요청, 1개 이미 색인, 5개 계산기)
+- [x] ~~Naver Search Advisor 수집 요청 완료~~ (신규 8개 #111~#118)
+- [ ] AdSense 재검토 결과 확인 (2/10 제출, 재심사 15일차)
 
 ### 우선순위 중간
-- [ ] 색인 반영 결과 확인 (66개 수동 요청 URL)
-- [ ] 넷플릭스 3월 신작 게시글 사전 준비
+- [ ] 색인 반영 결과 확인 (112개 수동 요청 URL)
 - [ ] 금융 콘텐츠 키워드 다각화 (적금, 대출, 보험 등)
 
 ### 콘텐츠 확장 (선택)
 - [ ] 추가 테스트/퀴즈 개발
-- [ ] 콘텐츠 지속 확충 (현재 103개)
+- [ ] 콘텐츠 지속 확충 (현재 118개)
 - [ ] GA4 ↔ Search Console 연결
 
 ---
