@@ -172,6 +172,7 @@ ISA는 3년 이상 유지해야 비과세 혜택이 적용되므로, 단기 목�
 
 **관련 글 추천:**
 - [ETF 투자 입문 가이드: 처음 시작하는 분을 위한 완벽 설명](/posts/etf-investment-guide-2026)
+- [FIRE 조기은퇴 시뮬레이션: 저축률별 은퇴 시점 비교](/posts/fire-early-retirement-simulation-2026)
 - [2026년 트렌드 코리아 핵심 키워드](/posts/trend-korea-2026-keywords)
 
 ---

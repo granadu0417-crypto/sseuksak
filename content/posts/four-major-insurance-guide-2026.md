@@ -305,6 +305,13 @@ tags: ["4대보험", "국민연금", "건강보험", "고용보험", "산재보�
 
 ---
 
+**관련 글 추천:**
+- [연봉 3000~5000만원 실수령액 비교 가이드](/posts/salary-take-home-comparison-2026)
+- [실업급여 수령액과 기간 총정리: 나이·근속별 비교](/posts/unemployment-benefit-amount-guide-2026)
+- [퇴직금 실수령액 가이드: 3년/5년/10년 근무별 비교](/posts/severance-pay-by-tenure-2026)
+
+---
+
 ## 참고 자료
 
 - 4대사회보험 정보연계센터 - 가입내역 조회 및 확인서 발급 (https://www.4insure.or.kr)

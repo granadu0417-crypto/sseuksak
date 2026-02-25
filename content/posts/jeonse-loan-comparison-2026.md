@@ -175,9 +175,9 @@ thumbnail: "https://images.unsplash.com/photo-1689939736254-5601f79ef838?ixid=M3
 
 ## 관련 글
 
+- [주담대 vs 신용대출, 이자 차이 실전 비교](/posts/mortgage-vs-credit-loan-interest-2026) -- 대출 유형별 이자 비교 분석
 - [경기도 전세보증금 이자지원 신청 가이드](/posts/gyeonggi-jeonse-interest-support-2026) -- 경기도 거주자라면 전세대출 이자의 일부를 지원받을 수 있다
 - [2026년 적금 금리 비교 총정리](/posts/savings-account-comparison-2026) -- 전세 자금 마련을 위한 적금 비교
-- [연말정산 환급 가이드](/posts/year-end-tax-settlement-2026) -- 월세 세액공제를 포함한 절세 전략
 - [청년내일저축계좌 가이드](/posts/youth-tomorrow-savings-account-2026) -- 청년 대상 자산 형성 지원 제도
 
 ---

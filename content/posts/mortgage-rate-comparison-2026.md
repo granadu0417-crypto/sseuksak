@@ -140,6 +140,7 @@ LTV 기준을 보면, 비규제지역 무주택자는 70%, 1주택자는 60%, �
 ---
 
 **관련 글 추천:**
+- [주담대 vs 신용대출, 이자 차이 실전 비교](/posts/mortgage-vs-credit-loan-interest-2026)
 - [전세대출 조건 비교 가이드](/posts/jeonse-loan-comparison-2026)
 - [부동산 세금 총정리 - 취득세, 양도세, 종부세](/posts/real-estate-tax-guide-2026)
 - [2026년 적금 금리 비교 총정리](/posts/savings-account-comparison-2026)

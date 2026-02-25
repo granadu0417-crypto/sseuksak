@@ -188,6 +188,12 @@ thumbnail: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h
 
 ---
 
+**관련 글 추천:**
+- [부모님께 1억 받으면 세금 얼마? 증여세 실전 가이드](/posts/gift-tax-practical-guide-2026)
+- [증여세 계산과 절세 전략 가이드](/posts/gift-tax-guide-2026)
+
+---
+
 ## 출처 및 참고문헌
 
 - [국세청] 증여세 개요·신고납부기한·가산세 (nts.go.kr)

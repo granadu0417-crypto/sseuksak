@@ -237,6 +237,7 @@ thumbnail: "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixid=M3w4N
 ---
 
 **관련 글 추천:**
+- [부가세 계산법과 간이과세자 vs 일반과세자 비교](/posts/vat-calculation-guide-2026)
 - [2026년 1월 부가세 확정신고 완벽 가이드](/posts/vat-filing-guide-january-2026)
 - [2026년 연말정산 완벽 가이드](/posts/year-end-tax-settlement-2026)
 - [2026년 소상공인 지원금 총정리](/posts/small-business-support-2026)

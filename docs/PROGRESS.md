@@ -7,7 +7,7 @@
 | 항목 | 상태 | 비고 |
 |------|------|------|
 | 사이트 URL | https://sseuksak.com | 라이브 |
-| 게시글 | **25개 공개** (93개 draft) | finance 18, insurance 7 |
+| 게시글 | **35개 공개** (93개 draft) | finance 28, insurance 7 |
 | 도구 | **16개** | 금융 계산기 14개 + 생활 계산기 2개 (평수, 나이) |
 | 테스트 | **2개 공개** (8개 숨김) | 소비유형, 재테크성향 |
 | AdSense | 🔄 **4차 심사 중** | 2/25 재신청 완료 (금융 니치 전환 후) |
@@ -25,6 +25,31 @@
 - [2026년 1월 3주차](archive/PROGRESS_2026_01_WEEK3.md) (01-15 ~ 01-21)
 - [2026년 1월 4주차](archive/PROGRESS_2026_01_WEEK4.md) (01-22 ~ 01-27)
 - [2026년 2월 1주차](archive/PROGRESS_2026_02_WEEK1.md) (01-27 ~ 02-09)
+
+---
+
+## 2026-02-26
+
+### 완료된 작업
+| 작업 내용 | 상태 |
+|----------|------|
+| **계산기 연동형 실전 가이드 10개 신규 작성** | ✅ |
+| - 연봉 실수령액 비교 (salary-take-home-comparison-2026) | ✅ |
+| - 주담대 vs 신용대출 이자 비교 (mortgage-vs-credit-loan-interest-2026) | ✅ |
+| - 퇴직금 근속별 비교 (severance-pay-by-tenure-2026) | ✅ |
+| - 증여세 실전 가이드 (gift-tax-practical-guide-2026) | ✅ |
+| - 실업급여 수령액·기간 (unemployment-benefit-amount-guide-2026) | ✅ |
+| - 연말정산 환급액 가이드 (tax-refund-deduction-guide-2026) | ✅ |
+| - 주휴수당 월급 계산 (weekly-holiday-pay-monthly-salary-2026) | ✅ |
+| - FIRE 조기은퇴 시뮬레이션 (fire-early-retirement-simulation-2026) | ✅ |
+| - 부가세 계산 가이드 (vat-calculation-guide-2026) | ✅ |
+| - 생계급여 자가진단 (livelihood-benefit-eligibility-check-2026) | ✅ |
+| **10개 글 팩트체크 완료** | ✅ |
+| - 계산기 코드 기반 숫자 검증, 공식 법률·고시 출처 대조 | ✅ |
+| **문서 업데이트** | ✅ |
+| - CONTENT_INVENTORY.md: 10개 글 추가 (118→128개) | ✅ |
+| - FACTCHECK_LOG.md: 10개 글 검증 기록 추가 | ✅ |
+| - PROGRESS.md: 작업 기록 | ✅ |
 
 ---
 
