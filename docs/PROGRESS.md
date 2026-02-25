@@ -50,6 +50,28 @@
 | - CONTENT_INVENTORY.md: 10개 글 추가 (118→128개) | ✅ |
 | - FACTCHECK_LOG.md: 10개 글 검증 기록 추가 | ✅ |
 | - PROGRESS.md: 작업 기록 | ✅ |
+| **Google Search Console 색인 요청 10개 완료** | ✅ |
+| - salary-take-home-comparison-2026 | ✅ |
+| - mortgage-vs-credit-loan-interest-2026 | ✅ |
+| - severance-pay-by-tenure-2026 | ✅ |
+| - livelihood-benefit-eligibility-check-2026 | ✅ |
+| - gift-tax-practical-guide-2026 | ✅ |
+| - unemployment-benefit-amount-guide-2026 | ✅ |
+| - tax-refund-deduction-guide-2026 | ✅ |
+| - weekly-holiday-pay-monthly-salary-2026 | ✅ |
+| - fire-early-retirement-simulation-2026 | ✅ |
+| - vat-calculation-guide-2026 | ✅ |
+| **Naver Search Advisor 수집 요청 10개 완료** | ✅ |
+| - salary-take-home-comparison-2026 (13:09:01) | ✅ |
+| - mortgage-vs-credit-loan-interest-2026 (13:09:18) | ✅ |
+| - severance-pay-by-tenure-2026 (13:09:35) | ✅ |
+| - gift-tax-practical-guide-2026 (13:09:52) | ✅ |
+| - unemployment-benefit-amount-guide-2026 (13:10:08) | ✅ |
+| - tax-refund-deduction-guide-2026 (13:10:25) | ✅ |
+| - weekly-holiday-pay-monthly-salary-2026 (13:10:42) | ✅ |
+| - fire-early-retirement-simulation-2026 (13:12:14) | ✅ |
+| - vat-calculation-guide-2026 (13:12:34) | ✅ |
+| - livelihood-benefit-eligibility-check-2026 (13:12:53) | ✅ |
 
 ---
 
