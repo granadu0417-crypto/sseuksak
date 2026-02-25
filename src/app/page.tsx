@@ -45,7 +45,7 @@ const quickLinks = [
     icon: '🎯',
     iconText: '?',
     color: 'bg-purple-500',
-    description: '심리테스트'
+    description: '금융테스트'
   },
 ];
 
@@ -228,10 +228,10 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-700 transition-colors">
-                재미있는 심리테스트
+                금융 성향 테스트
               </h3>
               <p className="text-gray-600 mt-1">
-                정신연령, 소비유형, 번아웃 위험도 등 다양한 테스트를 즐겨보세요
+                소비유형, 재테크 성향 등 나의 금융 습관을 알아보세요
               </p>
             </div>
             <div className="text-purple-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all">
