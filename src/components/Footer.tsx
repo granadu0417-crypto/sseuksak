@@ -9,8 +9,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-4">쓱싹</h3>
             <p className="text-gray-600 text-sm">
-              다양한 주제의 유용한 정보를 제공하는 블로그입니다.
-              금융, 건강, IT 등 생활에 도움이 되는 정보를 쉽게 알려드립니다.
+              금융 계산기와 보험·투자·세금 가이드를 공식 자료 기반으로 제공합니다.
+              연봉, 대출, 적금, 증여세 등 생활 금융 정보를 쉽게 알려드립니다.
             </p>
           </div>
 
@@ -71,42 +71,26 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/category/health"
-                  className="text-gray-600 hover:text-blue-600 text-sm"
-                >
-                  건강/의료
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/category/tech"
-                  className="text-gray-600 hover:text-blue-600 text-sm"
-                >
-                  IT/테크
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/category/lifestyle"
-                  className="text-gray-600 hover:text-blue-600 text-sm"
-                >
-                  생활정보
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/category/education"
-                  className="text-gray-600 hover:text-blue-600 text-sm"
-                >
-                  교육/자격증
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/category/insurance"
                   className="text-gray-600 hover:text-blue-600 text-sm"
                 >
                   보험/법률
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools"
+                  className="text-gray-600 hover:text-blue-600 text-sm"
+                >
+                  금융 계산기
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tests"
+                  className="text-gray-600 hover:text-blue-600 text-sm"
+                >
+                  금융 테스트
                 </Link>
               </li>
             </ul>

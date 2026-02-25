@@ -6,10 +6,6 @@ import Link from 'next/link';
 const categories = [
   { name: '금융/투자', slug: 'finance' },
   { name: '보험/법률', slug: 'insurance' },
-  { name: '건강/의료', slug: 'health' },
-  { name: 'IT/테크', slug: 'tech' },
-  { name: '교육/자격증', slug: 'education' },
-  { name: '생활정보', slug: 'lifestyle' },
 ];
 
 export default function MobileNav() {

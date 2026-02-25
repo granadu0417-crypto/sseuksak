@@ -3,7 +3,7 @@ import { generateMetadata as genMeta } from '@/lib/metadata';
 
 export const metadata: Metadata = genMeta({
   title: '소개',
-  description: '쓱싹 블로그 소개 - 다양한 주제의 유용한 정보를 제공하는 블로그입니다.',
+  description: '쓱싹 소개 - 금융 계산기와 보험·투자·세금 가이드를 공식 자료 기반으로 제공합니다.',
   url: '/about',
 });
 
@@ -18,35 +18,29 @@ export default function AboutPage() {
             쓱싹에 오신 것을 환영합니다
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            쓱싹은 일상생활에 유용한 정보를 쉽고 빠르게 전달하는 것을 목표로
-            하는 정보 블로그입니다. &apos;쓱싹&apos;이라는 이름처럼, 여러분이 필요로
-            하는 정보를 빠르게 찾아볼 수 있도록 다양한 주제의 콘텐츠를
+            쓱싹은 생활 금융 정보를 쉽고 정확하게 전달하는 금융 가이드
+            사이트입니다. &apos;쓱싹&apos;이라는 이름처럼, 복잡한 금융 정보를
+            빠르게 계산하고 이해할 수 있도록 금융 계산기와 실용 가이드를
             제공합니다.
           </p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            다루는 주제
+            주요 서비스
           </h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-2">
             <li>
-              <strong>금융/투자</strong>: 재테크, 주식, 신용카드 추천, 대출 정보
+              <strong>금융 계산기</strong>: 연봉 실수령액, 대출 이자, 적금 이자, 증여세, 부가세, 실업급여 등 20여 개 계산 도구
             </li>
             <li>
-              <strong>보험/법률</strong>: 보험 비교, 법률 상담 정보
+              <strong>금융/투자 가이드</strong>: 적금 금리 비교, ETF 투자, 재테크 전략, 신용점수 관리 등 공식 자료 기반 정보
             </li>
             <li>
-              <strong>건강/의료</strong>: 건강 관리, 다이어트, 영양 정보
+              <strong>보험/법률 가이드</strong>: 자동차보험, 건강보험, 여행자보험 비교 및 가입 가이드
             </li>
             <li>
-              <strong>IT/테크</strong>: 최신 기술, 가젯 리뷰, 활용 팁
-            </li>
-            <li>
-              <strong>교육/자격증</strong>: 학습 방법, 자격증 준비
-            </li>
-            <li>
-              <strong>생활정보</strong>: 정부 지원금, 절약 팁, 생활 노하우
+              <strong>금융 테스트</strong>: 재테크 성향, 소비유형 등 자신의 금융 습관을 알아보는 테스트
             </li>
           </ul>
         </section>
@@ -55,10 +49,15 @@ export default function AboutPage() {
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">
             운영 철학
           </h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            쓱싹은 정확하고 신뢰할 수 있는 금융 정보만을 제공하기 위해
+            노력합니다. 모든 콘텐츠는 국세청, 금융감독원, 국민건강보험공단 등
+            공식 기관 자료를 기반으로 작성되며, 법령 및 제도 변경 시
+            지속적으로 업데이트됩니다.
+          </p>
           <p className="text-gray-700 leading-relaxed">
-            저희는 정확하고 신뢰할 수 있는 정보만을 제공하기 위해 노력합니다.
-            모든 콘텐츠는 철저한 조사와 검증을 거쳐 작성되며, 최신 정보를
-            반영하여 지속적으로 업데이트됩니다.
+            금융 계산기는 실제 세율과 공제 기준을 반영하여 정확한 결과를
+            제공하며, 가이드 글은 공식 출처와 함께 팩트체크를 거쳐 게시됩니다.
           </p>
         </section>
 

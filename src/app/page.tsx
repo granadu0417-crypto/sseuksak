@@ -9,10 +9,6 @@ export const dynamic = 'force-static';
 const categoryLabels: Record<string, string> = {
   finance: '금융/투자',
   insurance: '보험/법률',
-  health: '건강/의료',
-  tech: 'IT/테크',
-  education: '교육/자격증',
-  lifestyle: '생활정보',
 };
 
 const LATEST_POSTS_COUNT = 6;
@@ -64,10 +60,10 @@ export default function Home() {
       {/* Hero Section - 모바일에서 더 컴팩트하게 */}
       <section className="text-center py-8 md:py-12 mb-6 md:mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
-          정책부터 생활까지, 알찬 정보
+          생활 금융 계산기 & 가이드
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-          금융, 세금, 복지, 생활 정보를 공식 자료 기반으로 쉽게 정리해드립니다.
+          연봉 실수령액, 대출이자, 적금 금리 비교부터 보험·투자·세금 가이드까지. 공식 자료 기반으로 쉽게 정리해드립니다.
         </p>
       </section>
 
@@ -204,7 +200,7 @@ export default function Home() {
                 유용한 계산기 모음
               </h3>
               <p className="text-gray-600 mt-1">
-                연봉 계산기, 대출 이자 계산기, BMI 계산기 등 생활에 필요한 도구
+                연봉 계산기, 대출 이자 계산기, 증여세 계산기 등 금융 계산 도구
               </p>
             </div>
             <div className="text-emerald-400 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all">
