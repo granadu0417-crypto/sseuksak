@@ -3,61 +3,13 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: '심리테스트 - 재미있는 테스트 모음',
-  description: 'SNS 피로도 테스트, 카페인 의존도 테스트, 수면 유형 테스트, 번아웃 위험도 테스트 등 다양한 심리테스트를 즐겨보세요. 친구들과 결과를 공유하고 비교해보세요!',
-  keywords: ['심리테스트', '성격테스트', 'SNS피로도', '디지털디톡스', '카페인의존도', '수면유형', '정신연령', '번아웃테스트', '재미있는 테스트'],
+  title: '금융 성향 테스트',
+  description: '나의 소비유형과 재테크 성향을 알아보세요. 소비 습관 분석, 투자 스타일 진단으로 나에게 맞는 금융 전략을 찾아보세요.',
+  keywords: ['소비유형테스트', '재테크성향테스트', '투자성향', '소비습관', '금융테스트'],
 };
 
-// 테스트 목록
+// 금융 관련 테스트만 표시
 const TESTS = [
-  {
-    slug: 'sleep-type',
-    title: '수면 유형 테스트',
-    description: '나는 사자형? 곰형? 늑대형? 돌고래형?',
-    icon: '수면',
-    duration: '2분',
-    questions: 12,
-    plays: '850',
-    tags: ['신규', '건강'],
-    gradient: 'from-indigo-500 to-cyan-500',
-    bgGradient: 'from-indigo-50 to-cyan-50',
-  },
-  {
-    slug: 'caffeine-dependency',
-    title: '카페인 의존도 테스트',
-    description: '나는 자유인? 애호가? 의존자? 중독 위험?',
-    icon: '커피',
-    duration: '2분',
-    questions: 12,
-    plays: '620',
-    tags: ['신규', '건강'],
-    gradient: 'from-amber-500 to-orange-500',
-    bgGradient: 'from-amber-50 to-orange-50',
-  },
-  {
-    slug: 'sns-fatigue',
-    title: 'SNS 피로도 테스트',
-    description: '나는 디지털 균형파? SNS 피로 상태?',
-    icon: 'SNS',
-    duration: '2분',
-    questions: 12,
-    plays: '480',
-    tags: ['신규', '멘탈'],
-    gradient: 'from-violet-500 to-purple-500',
-    bgGradient: 'from-violet-50 to-purple-50',
-  },
-  {
-    slug: 'mental-age',
-    title: '정신연령 테스트',
-    description: '실제 나이와 다른 나의 정신연령은?',
-    icon: '정신',
-    duration: '2분',
-    questions: 12,
-    plays: '1.2만',
-    tags: ['인기', '성격'],
-    gradient: 'from-purple-500 to-pink-500',
-    bgGradient: 'from-purple-50 to-pink-50',
-  },
   {
     slug: 'spending-type',
     title: '소비유형 테스트',
@@ -66,7 +18,7 @@ const TESTS = [
     duration: '2분',
     questions: 12,
     plays: '8,500',
-    tags: ['재테크'],
+    tags: ['인기', '재테크'],
     gradient: 'from-emerald-500 to-teal-500',
     bgGradient: 'from-emerald-50 to-teal-50',
   },
@@ -78,78 +30,30 @@ const TESTS = [
     duration: '2분',
     questions: 12,
     plays: '5,200',
-    tags: ['재테크'],
+    tags: ['인기', '재테크'],
     gradient: 'from-indigo-500 to-blue-500',
     bgGradient: 'from-indigo-50 to-blue-50',
-  },
-  {
-    slug: 'love-style',
-    title: '연애스타일 테스트',
-    description: '나는 어떤 연애 유형일까?',
-    icon: '연애',
-    duration: '2분',
-    questions: 12,
-    plays: '3,800',
-    tags: ['연애'],
-    gradient: 'from-pink-500 to-rose-500',
-    bgGradient: 'from-pink-50 to-rose-50',
-  },
-  {
-    slug: 'office-animal',
-    title: '회사에서 나는 무슨 동물?',
-    description: '직장에서 나의 동물 유형은?',
-    icon: '동물',
-    duration: '2분',
-    questions: 12,
-    plays: '2,100',
-    tags: ['신규', '직장인'],
-    gradient: 'from-orange-500 to-yellow-500',
-    bgGradient: 'from-orange-50 to-yellow-50',
-  },
-  {
-    slug: 'fortune-2026',
-    title: '2026 나의 운세 키워드',
-    description: '올해 나를 이끌어줄 키워드는?',
-    icon: '운세',
-    duration: '2분',
-    questions: 12,
-    plays: '1,500',
-    tags: ['신규', '신년'],
-    gradient: 'from-indigo-500 to-purple-500',
-    bgGradient: 'from-indigo-50 to-purple-50',
-  },
-  {
-    slug: 'burnout-risk',
-    title: '번아웃 위험도 테스트',
-    description: '나의 에너지 레벨은 안전할까?',
-    icon: '번아웃',
-    duration: '2분',
-    questions: 12,
-    plays: '4,200',
-    tags: ['신규', '멘탈'],
-    gradient: 'from-red-500 to-orange-500',
-    bgGradient: 'from-red-50 to-orange-50',
   },
 ];
 
 // 준비 중인 테스트
 const COMING_SOON = [
   {
-    title: 'MBTI 궁합 테스트',
-    icon: 'MBTI',
-    tags: ['성격'],
+    title: '절약 습관 진단 테스트',
+    icon: '절약',
+    tags: ['재테크'],
     color: 'from-cyan-500 to-blue-500',
   },
   {
-    title: '나의 전생 직업은?',
-    icon: '전생',
-    tags: ['운세'],
+    title: '보험 IQ 테스트',
+    icon: '보험',
+    tags: ['보험'],
     color: 'from-violet-500 to-purple-500',
   },
   {
-    title: '스트레스 해소법 추천',
-    icon: '힐링',
-    tags: ['멘탈'],
+    title: '노후 준비도 테스트',
+    icon: '연금',
+    tags: ['재테크'],
     color: 'from-teal-500 to-green-500',
   },
 ];
@@ -160,8 +64,8 @@ export default function TestsPage() {
       <Breadcrumb items={[{ name: '테스트' }]} />
       {/* 헤더 */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">심리테스트</h1>
-        <p className="text-gray-600">재미로 즐기는 다양한 테스트</p>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">금융 성향 테스트</h1>
+        <p className="text-gray-600">나의 소비 습관과 투자 성향을 알아보세요</p>
       </div>
 
       {/* 활성 테스트 목록 */}
@@ -248,7 +152,7 @@ export default function TestsPage() {
       {/* 안내 */}
       <div className="bg-blue-50 rounded-xl p-4 text-sm text-blue-800 border border-blue-100">
         <p className="font-medium">안내</p>
-        <p className="text-blue-600 mt-1">테스트 결과는 재미로만 봐주세요! 실제 성격이나 능력과 무관합니다.</p>
+        <p className="text-blue-600 mt-1">테스트 결과는 참고용입니다. 실제 투자 결정은 전문가 상담을 권장합니다.</p>
       </div>
     </div>
   );

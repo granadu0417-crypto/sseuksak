@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: '유용한 도구 모음',
-  description: '대출이자 계산기, 시급 계산기, 퇴직금 계산기, 주휴수당 계산기, BMI 계산기, 연봉 실수령액 계산기, 연말정산 환급액 계산기, 적금이자 계산기, 실업급여 계산기, 부가세 계산기, 나이 계산기, 평수 계산기 등 생활에 유용한 도구들을 무료로 이용하세요.',
+  title: '금융 계산기 모음',
+  description: '대출이자, 연봉 실수령액, 적금이자, 증여세, 부가세, 실업급여, 퇴직금, 시급, 주휴수당, FIRE 조기은퇴 등 금융 계산기를 무료로 이용하세요.',
 };
 
 const financeTools = [
@@ -82,34 +82,14 @@ const financeTools = [
 
 const lifeTools = [
   {
-    slug: 'bmi-calculator',
-    title: 'BMI 계산기',
-    description: '키와 체중으로 비만도를 측정하고 건강 위험을 확인해요',
-  },
-  {
-    slug: 'alcohol-calculator',
-    title: '알코올 분해 시간 계산기',
-    description: '음주 후 운전 가능 시간을 계산해요',
-  },
-  {
-    slug: 'sleep-calculator',
-    title: '수면 사이클 계산기',
-    description: '몇 시에 자면 몇 시에 일어나야 개운한지 알려드려요',
-  },
-  {
-    slug: 'life-in-weeks',
-    title: 'Life in Weeks',
-    description: '당신의 인생을 주 단위로 시각화해요',
-  },
-  {
     slug: 'pyeong-calculator',
     title: '평수 계산기',
-    description: '평수↔제곱미터를 간편하게 변환해요',
+    description: '평수↔제곱미터를 간편하게 변환해요 (부동산 거래 필수)',
   },
   {
     slug: 'age-calculator',
     title: '나이 계산기',
-    description: '생년월일로 만 나이, 한국 나이, 띠, 별자리를 확인해요',
+    description: '생년월일로 만 나이, 한국 나이를 확인해요 (보험·연금 기준)',
   },
 ];
 
@@ -118,8 +98,8 @@ export default function ToolsPage() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumb items={[{ name: '도구' }]} />
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">유용한 도구 모음</h1>
-        <p className="text-gray-600">생활에 도움이 되는 계산기와 도구들을 무료로 이용하세요.</p>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">금융 계산기 모음</h1>
+        <p className="text-gray-600">연봉, 대출, 세금, 투자 등 금융 계산기를 무료로 이용하세요.</p>
       </div>
 
       {/* 금융 계산기 */}
@@ -139,9 +119,9 @@ export default function ToolsPage() {
         </div>
       </div>
 
-      {/* 라이프 도구 */}
+      {/* 생활 계산기 */}
       <div>
-        <h2 className="text-xl font-bold text-gray-900 mb-4">라이프 도구</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">생활 계산기</h2>
         <div className="grid gap-4 md:grid-cols-2">
           {lifeTools.map((tool) => (
             <Link
