@@ -4,7 +4,6 @@ date: "2026-01-07"
 description: "금리 1.5%p 차이로 이자 9,400만원 차이! 2026년 보금자리론 3.9%~, 시중은행·인터넷은행 주담대 금리 비교와 스트레스 DSR 3단계 한도 계산법을 정리했습니다."
 category: "finance"
 tags: ["주택담보대출", "주담대금리", "보금자리론", "DSR", "대출금리비교", "스트레스DSR", "2026년대출"]
-thumbnail: "https://images.unsplash.com/photo-1744782351841-9cc6b86a5add?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxob21lJTIwbW9ydGdhZ2V8ZW58MHwwfHx8MTc2ODU0MDM2Nnww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 같은 아파트, 같은 시기에 대출을 받았는데 한 사람은 연 4.0%, 다른 사람은 연 5.5%를 내고 있다. 금리 차이 1.5%p가 별것 아닌 것 같지만, 3억원짜리 대출을 30년간 상환한다고 하면 이자 총액이 약 9,400만원 차이 난다. 1억원 가까운 돈이 대출 조건 하나로 갈린다.

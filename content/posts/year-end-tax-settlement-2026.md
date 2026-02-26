@@ -5,7 +5,6 @@ description: "결혼 세액공제 100만원, 월세 한도 1,000만원으로 확
 date: "2026-01-06"
 category: "finance"
 tags: ["연말정산", "절세", "세금환급", "소득공제", "세액공제", "직장인"]
-thumbnail: "https://images.unsplash.com/photo-1762427354397-854a52e0ded7?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8dGF4JTIwZG9jdW1lbnR8ZW58MHwwfHx8MTc2ODU0MDM3NXww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 만약 2025년에 결혼하고, 첫 아이가 태어나고, 헬스장 회원권을 끊은 직장인이 있다면? 연봉 5,500만 원인 이 직장인은 2026년 연말정산에서 얼마나 돌려받을 수 있을까?

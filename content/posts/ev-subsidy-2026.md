@@ -5,7 +5,6 @@ description: "아이오닉5 국비 564만+지방비 최대 450만원, 세금감�
 date: "2026-01-06"
 category: "lifestyle"
 tags: ["전기차", "보조금", "자동차", "친환경차", "정부지원", "테슬라"]
-thumbnail: "https://images.unsplash.com/photo-1607171028974-319ba56cb013?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw2fHxlbGVjdHJpYyUyMGNhcnxlbnwwfDB8fHwxNzY4NTQwMzU5fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 전기차 구매를 고민하는 소비자들이 2026년 보조금 정책의 변화를 정확히 파악하고 최대 혜택을 받을 수 있도록, 환경부 무공해차 통합누리집과 각 지방자치단체의 공식 자료를 기반으로 핵심 정보를 정리했습니다.

@@ -4,7 +4,6 @@ description: "2026년 건강보험료율 7.19%로 인상! 월급 300만원 기�
 date: "2026-01-06"
 category: "insurance"
 tags: ["건강보험료", "4대보험", "건강보험", "보험료계산", "직장인", "지역가입자"]
-thumbnail: "https://images.unsplash.com/photo-1666886573199-88a2ed65470d?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxoZWFsdGglMjBpbnN1cmFuY2UlMjBtZWRpY2FsfGVufDB8MHx8fDE3Njg1NDAzNjJ8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 2026년 건강보험료율은 7.19%입니다. 국민건강보험법 시행령 제44조에 따라 보건복지부 장관이 고시한 이 요율은, 2023년부터 3년간 7.09%로 동결되었던 것에서 0.1%p 인상된 수치입니다. 직장가입자 기준으로 본인 부담률은 3.595%이며, 월급 300만원을 받는 근로자라면 건강보험료 본인 부담분 약 107,850원에 장기요양보험료 14,170원을 더해 매월 약 122,020원이 급여에서 공제됩니다.

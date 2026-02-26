@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import Image from 'next/image';
 import {
   getPostBySlug,
   getAllPosts,
@@ -8,7 +7,6 @@ import {
   getRelatedPosts,
 } from '@/lib/posts';
 import { generateMetadata as genMeta, generateArticleJsonLd, generateBreadcrumbJsonLd, generateFAQJsonLd, extractFAQFromContent, generateHowToJsonLd, extractHowToSteps } from '@/lib/metadata';
-import { getPhotoForCategory, getOptimizedImageUrl, getAttribution } from '@/lib/unsplash';
 import Breadcrumb from '@/components/Breadcrumb';
 import PostNavigation from '@/components/PostNavigation';
 import RelatedPosts from '@/components/RelatedPosts';
@@ -39,22 +37,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
-  // Get OG image - use thumbnail if exists, otherwise fetch from Unsplash
-  let ogImage: string | undefined = post.thumbnail;
-
-  if (!ogImage || !ogImage.startsWith('http')) {
-    // Use category and slug for consistent Unsplash image
-    const photo = await getPhotoForCategory(post.category || 'lifestyle', slug);
-    if (photo) {
-      ogImage = getOptimizedImageUrl(photo, { width: 1200, quality: 85 });
-    }
-  }
-
   return genMeta({
     title: post.title,
     description: post.description,
     keywords: post.tags,
-    image: ogImage,
     url: `/posts/${slug}`,
     type: 'article',
     publishedTime: post.date,
@@ -78,26 +64,10 @@ export default async function PostPage({ params }: Props) {
   const relatedTools = getRelatedTools(post.category, post.tags, post.title, 2);
   const relatedTests = getRelatedTests(post.category, post.tags, post.title, 2);
 
-  // Fetch hero image from Unsplash (using slug for consistent image)
-  let heroImageUrl: string | null = null;
-  let heroAttribution: { text: string; photographerUrl: string; unsplashUrl: string } | null = null;
-
-  if (post.thumbnail && post.thumbnail.startsWith('http')) {
-    heroImageUrl = post.thumbnail;
-  } else {
-    // Use category and slug for consistent Unsplash image
-    const photo = await getPhotoForCategory(post.category || 'lifestyle', slug);
-    if (photo) {
-      heroImageUrl = getOptimizedImageUrl(photo, { width: 1200, quality: 85 });
-      heroAttribution = getAttribution(photo);
-    }
-  }
-
   const articleJsonLd = generateArticleJsonLd({
     title: post.title,
     description: post.description,
     url: `/posts/${slug}`,
-    image: heroImageUrl || post.thumbnail,
     publishedTime: post.date,
   });
 
@@ -117,7 +87,6 @@ export default async function PostPage({ params }: Props) {
     description: post.description,
     url: `/posts/${slug}`,
     steps: howToSteps,
-    image: heroImageUrl || post.thumbnail,
   });
 
   const formattedDate = new Date(post.date).toLocaleDateString('ko-KR', {
@@ -179,31 +148,6 @@ export default async function PostPage({ params }: Props) {
             </div>
           )}
         </header>
-
-        {heroImageUrl && (
-          <div className="relative w-full h-64 md:h-96 mb-8 rounded-lg overflow-hidden">
-            <Image
-              src={heroImageUrl}
-              alt={`${post.title} - ${post.category} 관련 대표 이미지`}
-              fill
-              sizes="(max-width: 768px) 100vw, 896px"
-              className="object-cover"
-              priority
-            />
-            {heroAttribution && (
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-4 py-2 text-xs text-white/80">
-                <a
-                  href={heroAttribution.photographerUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  {heroAttribution.text}
-                </a>
-              </div>
-            )}
-          </div>
-        )}
 
         <TableOfContents content={post.content} />
 

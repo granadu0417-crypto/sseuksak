@@ -4,7 +4,6 @@ description: "5세대 실손보험 월 2만원 vs 4세대 월 4만원, 10년이�
 date: "2026-01-06"
 category: "insurance"
 tags: ["실손보험", "5세대실손", "보험료절약", "의료보험", "건강보험", "보험가입"]
-thumbnail: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8aGVhbHRoJTIwaW5zdXJhbmNlfGVufDB8MHx8fDE3Njg1NDAzNTJ8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 4세대 실손보험 월 보험료 약 4만 원, 5세대 기본계약+특약1 월 약 2만 원. 보장 범위는 줄었지만 보험료는 절반입니다. 30세 남성 기준 추정치이며, 이 차이가 10년이면 약 240만 원에 달합니다. 단순히 "싸졌다"로 끝날 문제가 아닙니다. 5세대 실손보험이 무엇을 덜어냈고, 무엇을 남겼는지를 들여다봐야 전환 여부를 판단할 수 있습니다.

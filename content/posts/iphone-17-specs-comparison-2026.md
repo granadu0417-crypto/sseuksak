@@ -5,7 +5,6 @@ description: "아이폰17 116만원 vs 에어 145만원 vs 프로 160만원, 어
 date: "2026-01-16"
 category: "tech"
 tags: ["아이폰17", "아이폰17프로", "아이폰에어", "iPhone17", "스마트폰", "애플", "스펙비교"]
-thumbnail: "https://images.unsplash.com/photo-1636494653548-aaecb99798ee?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxpcGhvbmUlMjBzbWFydHBob25lfGVufDB8MHx8fDE3Njg1NDAzNjN8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 같이 사는 동생이 아이폰14를 2년 넘게 쓰다가, 작년 가을 아이폰17 시리즈가 나오자마자 "형, 뭘 사야 돼?"라고 물었다. 나도 아이폰15 프로를 쓰고 있어서 업그레이드를 고민하는 중이었다. 그래서 두 사람 사용 패턴에 맞춰 스펙을 직접 뜯어봤는데, 이번 라인업은 예전처럼 "무조건 프로"가 정답이 아니었다.

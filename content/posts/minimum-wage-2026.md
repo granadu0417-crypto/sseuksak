@@ -5,7 +5,6 @@ description: "2026년 최저임금 시급 10,320원, 월급 2,156,880원(209시�
 date: "2026-01-06"
 category: "finance"
 tags: ["최저임금", "급여", "주휴수당", "아르바이트", "근로기준법", "2026년"]
-thumbnail: "https://images.unsplash.com/photo-1596248675029-bd9b0c7dc479?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxzYWxhcnklMjBwYXljaGVja3xlbnwwfDB8fHwxNzY4NTQwMzY2fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 2026년 최저임금이 시급 1만 원대에 안착했다고 축하할 일만은 아닙니다. 통계청 소비자물가지수를 기준으로 계산하면, 2026년 최저임금의 실질 구매력은 2019년 8,350원 시절과 큰 차이가 없습니다. 7년 사이 명목 시급은 23.6% 올랐지만, 같은 기간 소비자물가는 약 20% 이상 상승했기 때문입니다. 숫자는 분명히 올랐는데, 체감하는 생활은 나아지지 않은 셈입니다.

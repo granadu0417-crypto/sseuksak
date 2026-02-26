@@ -5,7 +5,6 @@ description: "김선호X고윤정 로맨스, 맷 데이먼X벤 애플렉 스릴�
 date: "2026-01-15"
 category: "lifestyle"
 tags: ["넷플릭스", "넷플릭스신작", "이사랑통역되나요", "솔로지옥5", "더립", "브리저튼시즌4", "OTT추천", "드라마추천"]
-thumbnail: "https://images.unsplash.com/photo-1717295248299-74c084c31184?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxuZXRmbGl4JTIwc3RyZWFtaW5nfGVufDB8MHx8fDE3Njg1NDAzNjl8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 1월 16일, 넷플릭스가 동시에 두 편을 공개했다. 김선호X고윤정의 로맨틱 코미디 **이 사랑 통역 되나요?**와 맷 데이먼X벤 애플렉의 범죄 스릴러 **더 립**. 같은 날 나온 두 작품의 성격은 완전히 다르다. 여기에 1월 20일 **솔로지옥 시즌5**, 1월 29일 **브리저튼 시즌4**까지 합치면 장르별로 빈틈 없는 라인업이 완성된다.

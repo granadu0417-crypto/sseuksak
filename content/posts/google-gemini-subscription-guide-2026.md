@@ -5,7 +5,6 @@ description: "구글 AI 플러스 월 1.1만원 vs ChatGPT Plus 2.9만원, 가�
 date: "2026-01-28"
 category: "tech"
 tags: ["구글AI", "제미나이", "Gemini", "AI구독", "ChatGPT비교", "AI플러스"]
-thumbnail: ""
 ---
 
 회의 자료를 정리하려고 구글 제미나이를 열었다. 30페이지짜리 PDF를 올리니 "파일 분석은 유료 기능입니다"라는 안내가 뜬다. 옆자리 동료는 ChatGPT Plus를 쓰는데 월 2.9만원이 부담스럽다. 옆자리 동료가 쓰는 [ChatGPT 무료 vs 유료 차이](/posts/chatgpt-free-vs-plus-comparison)를 따져봤지만 월 2.9만원은 역시 부담이다. 그런데 구글이 월 1.1만원짜리 AI 플러스를 내놓았다는 뉴스가 눈에 들어온다. 2026년 1월, AI 구독 시장의 판도가 달라지고 있다.

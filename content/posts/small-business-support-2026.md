@@ -5,7 +5,6 @@ description: "정책자금 7천만원 연 3.5%, 청년고용 시 최대 1,200만
 date: "2026-01-06"
 category: "finance"
 tags: ["소상공인", "정책자금", "사업자지원", "세금감면", "정부지원금", "자영업"]
-thumbnail: "https://images.unsplash.com/photo-1757663664225-be7c45372b96?ixid=M3w4NTI6NzZ8MHwxfHNlYXJjaHw5fHxzbWFsbCUyMGJ1c2luZXNzJTIwc2hvcHxlbnwwfDB8fHwxNzY4NTQwMzcyfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 결론부터 말하면, 2026년 소상공인 지원의 핵심은 **정책자금 대출 한도 확대**와 **세금 감면 폭 유지**, 그리고 **청년 고용 시 최대 1,200만 원 지원**입니다. 작년에 음식점을 운영하다 정책자금 7천만 원을 연 3.5% 금리로 받았던 저의 경험상, 시중은행 8% 대비 절반 수준이라 월 이자만 30만 원 가까이 차이납니다. 이 글에서는 실제 사업자 입장에서 2026년에 받을 수 있는 지원금과 신청 전략을 구체적으로 다룹니다.

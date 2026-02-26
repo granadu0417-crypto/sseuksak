@@ -5,7 +5,6 @@ description: "1월 15일 오전 8시 오픈! 1,820만명이 이용하는 연말�
 date: "2026-01-13"
 category: "finance"
 tags: ["연말정산", "간소화서비스", "홈택스", "세금환급", "직장인", "2026"]
-thumbnail: "https://images.unsplash.com/photo-1617283011395-41c9ce26db49?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHx0YXglMjBmaWxpbmclMjBzaW1wbGV8ZW58MHwwfHx8MTc2ODU0MDM3Nnww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 국세청 통계에 따르면 2025년 연말정산 간소화 서비스 이용자는 1,820만 명을 돌파했다. 전체 근로자의 94%가 이 시스템으로 공제 자료를 제출한다는 뜻이다.

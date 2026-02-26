@@ -4,7 +4,6 @@ description: "신용점수는 연체만 안 한다고 오르지 않습니다. NI
 date: "2026-02-12"
 category: "finance"
 tags: ["신용점수", "신용등급", "NICE", "KCB", "신용점수올리기", "비금융정보", "신용관리"]
-thumbnail: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop"
 ---
 
 "연체만 안 하면 신용점수는 알아서 오른다."

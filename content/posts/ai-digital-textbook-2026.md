@@ -5,7 +5,6 @@ description: "2026년 AI 디지털교과서 초5~6·중2·고2 확대, 자기주
 date: "2026-01-06"
 category: "education"
 tags: ["AI교육", "디지털교과서", "에듀테크", "학부모가이드", "초등교육", "중등교육"]
-thumbnail: "https://images.unsplash.com/photo-1758598738106-f8f9d4c5d9d2?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxkaWdpdGFsJTIwZWR1Y2F0aW9uJTIwdGFibGV0fGVufDB8MHx8fDE3Njg1NDAzNTJ8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 교육부는 2025년 3월, 초등 3~4학년과 중학교 1학년, 고등학교 1학년을 대상으로 AI 디지털교과서를 도입했습니다. 이 정책은 [AI 기본법](/posts/ai-basic-law-2026-guide) 시행과 맞물려 교육 분야 AI 활용의 법적 근거가 한층 명확해진 시점에 이뤄졌습니다. 도입 1년이 지난 2026년, 적용 학년이 초등 5~6학년과 중2, 고2로 확대됩니다. 종이 교과서와 병행하면서 인공지능 기술로 학생 개인별 학습 경로를 설계하겠다는 정책인데, 현장에서는 기대와 우려가 공존하고 있습니다.

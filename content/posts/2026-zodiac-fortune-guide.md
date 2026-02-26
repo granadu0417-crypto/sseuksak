@@ -5,7 +5,6 @@ description: "2026년 병오년 가장 운 좋은 띠는 용띠·호랑이띠, �
 date: "2026-01-05"
 category: "lifestyle"
 tags: ["2026운세", "띠별운세", "병오년", "신년운세", "토정비결", "삼재"]
-thumbnail: "https://images.unsplash.com/photo-1730371851241-aad9cf97525f?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxmb3J0dW5lJTIwYXN0cm9sb2d5fGVufDB8MHx8fDE3Njg1NDAzNTF8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 결론부터 말하면, 2026년 병오년에 가장 운이 좋은 띠는 용띠와 호랑이띠다. 반대로 토끼띠, 양띠, 돼지띠는 눌삼재에 해당해 신중함이 필요하다.

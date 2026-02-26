@@ -5,7 +5,6 @@ description: "GPT-4o 무료 16회 vs Plus 80회, 월 $5 Go 요금제 신설. 202
 date: "2026-01-15"
 category: "tech"
 tags: ["ChatGPT", "AI", "ChatGPT Plus", "인공지능", "생산성"]
-thumbnail: "https://images.unsplash.com/photo-1679403766669-17890714e491?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxhaSUyMGNoYXRib3QlMjB0ZWNobm9sb2d5fGVufDB8MHx8fDE3Njg1NDAzNTd8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 같은 질문을 ChatGPT 무료 버전과 Plus 버전에 동시에 넣어보면, 응답 속도부터 내용의 깊이까지 차이가 분명합니다. ChatGPT 외에도 다양한 AI 도구를 실무에 적용하는 방법이 궁금하다면 [AI 도구 활용 가이드](/posts/ai-productivity-tools-2026)를 함께 참고하세요. GPT-4o 사용 횟수만 해도 무료는 3시간에 16회, Plus는 80회로 5배 차이가 납니다. 이미지 생성, 음성 대화, Deep Research처럼 Plus에서만 쓸 수 있는 기능도 여럿 있습니다.

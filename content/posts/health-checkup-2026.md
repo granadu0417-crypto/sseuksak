@@ -5,7 +5,6 @@ description: "2026년 건강검진 대상은 짝수년도 출생자! 직장인 �
 date: "2026-01-12"
 category: "health"
 tags: ["건강검진", "국가건강검진", "암검진", "건강검진대상자", "무료건강검진", "2026년건강검진", "직장인건강검진"]
-thumbnail: "https://images.unsplash.com/photo-1758205308181-d52b41e00cef?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxtZWRpY2FsJTIwY2hlY2t1cHxlbnwwfDB8fHwxNzY4NTQwMzYxfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 2026년 건강검진 대상자는 **짝수년도 출생자**다. 주민등록번호 뒷자리가 0, 2, 4, 6, 8로 끝나면 올해 안에 받아야 한다. 직장인이 기한 내에 안 받으면 과태료가 부과된다. [연봉 실수령액](/tools/salary-calculator)을 계산해 두면 검진비 예산 잡기에도 편리하다.

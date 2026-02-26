@@ -4,7 +4,6 @@ description: "연회비 1만원으로 연 24만원 순혜택? 2026년 소비 패
 date: "2026-01-02"
 category: "finance"
 tags: ["신용카드", "재테크", "할인", "포인트", "카드추천", "연회비"]
-thumbnail: "https://images.unsplash.com/photo-1716388163697-bfb3989d15c8?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw3fHxjcmVkaXQlMjBjYXJkJTIwcGF5bWVudHxlbnwwfDB8fHwxNzY4NTQwMzQ4fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 여신금융협회 2025년 통계에 따르면, 한국인 1인당 신용카드 보유 수는 평균 3.9장이다. 경제활동인구 기준으로 올려 잡으면 1인당 약 5장에 가깝다. 카드를 이렇게 많이 갖고 있으면서도, 자신의 [소비 패턴](/tests/spending-type)에 맞는 카드를 정확히 골라 쓰는 사람은 드물다. 연회비만 빠져나가고 혜택은 제대로 못 챙기는 카드가 지갑에 한두 장씩 끼어 있는 셈이다.

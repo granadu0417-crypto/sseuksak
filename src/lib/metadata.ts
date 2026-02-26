@@ -8,7 +8,6 @@ export interface MetadataProps {
   title?: string;
   description?: string;
   keywords?: string[];
-  image?: string;
   url?: string;
   type?: 'website' | 'article';
   publishedTime?: string;
@@ -22,7 +21,6 @@ export function generateMetadata({
   title,
   description = DEFAULT_DESCRIPTION,
   keywords = [],
-  image,
   url = '',
   type = 'website',
   publishedTime,
@@ -37,11 +35,6 @@ export function generateMetadata({
   const socialTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} - 유용한 정보 블로그`;
   const fullUrl = `${SITE_URL}${url}`;
 
-  // Handle image URL - use provided image or default (Unsplash static image)
-  const DEFAULT_OG_IMAGE = 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80';
-  const imageUrl = image || DEFAULT_OG_IMAGE;
-  const fullImage = imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}`;
-
   return {
     title: pageTitle,
     description,
@@ -52,14 +45,6 @@ export function generateMetadata({
       description,
       url: fullUrl,
       siteName: SITE_NAME,
-      images: [
-        {
-          url: fullImage,
-          width: 1200,
-          height: 630,
-          alt: title || SITE_NAME,
-        },
-      ],
       locale: 'ko_KR',
       type,
       ...(type === 'article' && {
@@ -71,10 +56,9 @@ export function generateMetadata({
       }),
     },
     twitter: {
-      card: 'summary_large_image',
+      card: 'summary',
       title: socialTitle,
       description,
-      images: [fullImage],
     },
     robots: {
       index: true,
@@ -104,28 +88,20 @@ export function generateArticleJsonLd({
   title,
   description,
   url,
-  image,
   publishedTime,
   modifiedTime,
 }: {
   title: string;
   description: string;
   url: string;
-  image?: string;
   publishedTime: string;
   modifiedTime?: string;
 }) {
-  // Handle image URL properly (Unsplash static image as default)
-  const DEFAULT_OG_IMAGE = 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80';
-  const imageUrl = image || DEFAULT_OG_IMAGE;
-  const fullImage = imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}`;
-
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
     description,
-    image: fullImage,
     datePublished: publishedTime,
     dateModified: modifiedTime || publishedTime,
     author: {
@@ -327,26 +303,19 @@ export function generateHowToJsonLd({
   description,
   url,
   steps,
-  image,
 }: {
   name: string;
   description: string;
   url: string;
   steps: HowToStep[];
-  image?: string;
 }) {
   if (!steps || steps.length === 0) return null;
-
-  const DEFAULT_OG_IMAGE = 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80';
-  const imageUrl = image || DEFAULT_OG_IMAGE;
-  const fullImage = imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}`;
 
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name,
     description,
-    image: fullImage,
     step: steps.map((step, index) => ({
       '@type': 'HowToStep',
       position: index + 1,

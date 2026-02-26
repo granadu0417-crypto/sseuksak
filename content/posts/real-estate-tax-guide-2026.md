@@ -5,7 +5,6 @@ date: "2026-01-07"
 description: "같은 8억 아파트, 1주택자 취득세 80만원 vs 3주택자 960만원. 2026년 5월 양도세 중과 유예 종료 전 필수 확인! 취득세·양도세·종부세 절세 전략 총정리."
 category: "finance"
 tags: ["부동산세금", "취득세", "양도소득세", "종합부동산세", "부동산절세", "2026년세금", "다주택자세금"]
-thumbnail: "https://images.unsplash.com/photo-1635108197332-54105c0ec888?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw5fHxyZWFsJTIwZXN0YXRlJTIwcHJvcGVydHl8ZW58MHwwfHx8MTc2ODU0MDM3MHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 같은 8억원 아파트를 매수하더라도, 1주택자는 취득세 80만원만 내면 되지만 조정대상지역 3주택자는 960만원을 부담합니다. 12배나 차이 나는 세금, 부동산 세금이 왜 중요한지 실감되시나요? 2026년 5월 9일까지 다주택자 양도세 중과 유예가 종료되면 상황은 더 극명해집니다. 3억원 차익에 대한 양도세가 일반 세율 35%에서 중과 적용 시 65%까지 올라갈 수 있기 때문입니다.

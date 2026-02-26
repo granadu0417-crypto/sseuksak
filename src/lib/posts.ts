@@ -15,7 +15,6 @@ export interface PostMeta {
   date: string;
   category: string;
   tags: string[];
-  thumbnail?: string;
   readingTime: string;
 }
 
@@ -48,7 +47,6 @@ export function getAllPosts(): PostMeta[] {
         date: data.date || '',
         category: data.category || '',
         tags: data.tags || [],
-        thumbnail: data.thumbnail,
         readingTime: stats.text,
       };
     })
@@ -104,7 +102,6 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     date: data.date || '',
     category: data.category || '',
     tags: data.tags || [],
-    thumbnail: data.thumbnail,
     readingTime: stats.text,
     content: contentHtml,
   };

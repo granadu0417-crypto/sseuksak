@@ -5,7 +5,6 @@ description: "100대 기업 87곳이 전략회의 교재로 채택한 트렌드 
 date: "2026-01-05"
 category: "lifestyle"
 tags: ["트렌드코리아", "2026트렌드", "소비트렌드", "HORSEPOWER", "휴먼인더루프", "필코노미", "켄타우로스", "AI트렌드"]
-thumbnail: "https://images.unsplash.com/photo-1708391603514-f9061963ec8b?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw2fHxrb3JlYSUyMHRyZW5kfGVufDB8MHx8fDE3Njg1NDAzNzN8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 트렌드 코리아의 연간 적중률이 60%대에 불과하다는 사실, 알고 계셨나요? 서울대 소비트렌드분석센터가 매년 발표하는 10개 키워드 중 실제 시장에서 의미 있는 변화로 이어진 건 평균 6개 정도입니다. 2023년 '디깅 모멘텀'은 거의 언급되지 않았고, 2024년 '퀸덤'도 업계 반응이 미미했죠.

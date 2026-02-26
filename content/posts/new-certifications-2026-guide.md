@@ -5,7 +5,6 @@ description: "2026년 신설 국가자격증 7종, 경쟁자 적은 지금이 �
 date: "2026-01-06"
 category: "education"
 tags: ["자격증", "국가자격증", "스마트공장", "바이오", "취업", "커리어"]
-thumbnail: "https://images.unsplash.com/photo-1697086279220-bcaea17a8734?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBjZXJ0aWZpY2F0ZXxlbnwwfDB8fHwxNzY4NTQwMzcwfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 "새 자격증은 아직 검증이 안 된 거라 취득해봤자 소용없다" — 현장에서 가장 많이 듣는 오해입니다.

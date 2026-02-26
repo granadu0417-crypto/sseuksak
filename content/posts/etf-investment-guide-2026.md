@@ -4,7 +4,6 @@ description: "국내 ETF 712개, 순자산 121조원 돌파. 수수료 0.15%로 
 date: "2026-01-05"
 category: "finance"
 tags: ["ETF", "투자입문", "주식투자", "SP500", "적립식투자", "분산투자", "KODEX", "TIGER"]
-thumbnail: "https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxzdG9jayUyMGludmVzdG1lbnR8ZW58MHwwfHx8MTc2ODU0MDM1OHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 > "넓게 분산된 저비용 인덱스 펀드에 정기적으로 투자하는 것이 대부분의 사람에게 가장 합리적인 방법이다."

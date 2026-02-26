@@ -2,7 +2,7 @@
 
 > **목적**: 콘텐츠 제작 시 중복 방지 및 기존 게시글 현황 파악
 >
-> **마지막 업데이트**: 2026-02-24
+> **마지막 업데이트**: 2026-02-28
 
 ---
 
@@ -10,17 +10,17 @@
 
 | 카테고리 | 게시글 수 |
 |----------|-----------|
-| Finance (금융/재테크) | **61개** |
+| Finance (금융/재테크) | **85개** |
 | Lifestyle (생활/트렌드) | **31개** |
 | Tech (기술/IT) | **9개** |
-| Insurance (보험) | **6개** |
+| Insurance (보험) | **9개** |
 | Education (교육) | **6개** |
 | Health (건강) | **15개** |
-| **총계** | **128개** |
+| **총계** | **155개** |
 
 ---
 
-## Finance (금융/재테크) - 51개
+## Finance (금융/재테크) - 64개
 
 | 파일명 | 제목 | 키워드 |
 |--------|------|--------|
@@ -85,6 +85,30 @@
 | `fire-early-retirement-simulation-2026.md` | FIRE 조기은퇴 저축률별 시뮬레이션 | FIRE, 조기은퇴, 저축률, 4%룰, 경제적자유 |
 | `vat-calculation-guide-2026.md` | 부가세 계산과 간이과세자 vs 일반과세자 비교 | 부가세계산, 간이과세자, 일반과세자, 세금계산서 |
 | `livelihood-benefit-eligibility-check-2026.md` | 생계급여 수급자격 자가진단 | 생계급여, 소득인정액, 기준중위소득, 기초생활수급자 |
+| `hourly-wage-monthly-salary-guide-2026.md` | 시급·월급·연봉 환산 비교표 (2026 최저시급 기준) | 시급계산, 월급환산, 최저시급, 주휴수당 |
+| `true-hourly-wage-guide-2026.md` | 출퇴근 포함 진짜 시급 계산 | 진짜시급, 실질시급, YMOYL, 출퇴근비용 |
+| `subscription-cost-save-guide-2026.md` | 구독료 정리로 월 5만원 아끼기 | 구독정리, 구독료절약, 고정비절감 |
+| `savings-interest-comparison-guide-2026.md` | 적금 vs 예금 vs CMA 이자 비교 | 적금예금비교, CMA, 이자비교, 세후수령액 |
+| `year-end-refund-march-2026.md` | 3월 연말정산 환급금 입금일과 금액 확인법 | 연말정산환급, 환급금입금일, 원천징수영수증, 차감징수세액 |
+| `health-insurance-settlement-guide-2026.md` | 4월 건강보험료 정산, 추가납부 줄이는 3가지 방법 | 건강보험료정산, 4월정산, 추가납부, 건강보험료 |
+| `credit-loan-comparison-guide-2026.md` | 신용대출 금리 비교: 은행별 한도와 금리 실전 비교 | 신용대출, 신용대출금리, 대출비교, 은행대출 |
+| `national-pension-expected-amount-2026.md` | 국민연금 예상 수령액: 20년 납부하면 월 얼마 받을까? | 국민연금수령액, 연금수령나이, 국민연금개혁, 노후준비 |
+| `pension-savings-vs-irp-guide-2026.md` | 연금저축 vs IRP: 세액공제 한도·수수료·인출 조건 비교 | 연금저축, IRP, 세액공제, 개인형퇴직연금 |
+| `rent-conversion-rate-guide-2026.md` | 전월세 전환율 계산법: 전세가 유리할까 월세가 유리할까 | 전월세전환율, 전세월세비교, 전세, 월세 |
+| `retirement-pension-dc-db-comparison-2026.md` | 퇴직연금 DC형 vs DB형: 나에게 유리한 선택은? | 퇴직연금, DB형, DC형, 퇴직금, IRP |
+| `retirement-money-planning-guide-2026.md` | 은퇴 후 월 생활비 300만원, 필요한 노후자금은 얼마? | 노후자금, 은퇴준비, 국민연금, 연금 |
+| `didimdol-vs-bogeumjari-loan-2026.md` | 디딤돌 vs 보금자리론: 내 조건에 맞는 정책대출 비교 | 디딤돌대출, 보금자리론, 정책대출, 주택대출 |
+| `housing-subscription-point-guide-2026.md` | 청약 가점 계산과 당첨 확률 높이는 전략 | 청약가점, 주택청약, 청약당첨, 가점계산 |
+| `isa-account-guide-2026.md` | ISA 계좌 세제 혜택 총정리: 가입 전 알아야 할 5가지 | ISA, 비과세, 개인종합자산관리계좌, 절세 |
+| `emergency-fund-guide-2026.md` | 비상금 얼마가 적당할까? 월급 대비 적정 비상금 계산 | 비상금, 비상자금, 가계관리, 저축 |
+| `income-tax-filing-guide-2026.md` | 5월 종합소득세 신고: 직장인도 해야 할까? 대상자 확인부터 신고까지 | 종합소득세, 5월신고, 프리랜서세금, 홈택스 |
+| `acquisition-tax-guide-2026.md` | 아파트 살 때 취득세 얼마? 1주택·다주택 세율 비교 | 취득세, 주택취득세, 다주택자, 취득세감면 |
+| `capital-gains-tax-guide-2026.md` | 집 팔 때 양도세 계산: 비과세 조건과 장기보유특별공제 | 양도세, 양도소득세, 1세대1주택비과세, 장기보유특별공제 |
+| `property-holding-tax-guide-2026.md` | 종합부동산세 기준 금액과 세율 총정리 | 종합부동산세, 종부세, 보유세, 공시가격 |
+| `medical-expense-deduction-guide-2026.md` | 의료비 세액공제 받는 법: 실비청구와 동시에 가능할까? | 의료비세액공제, 실비보험, 연말정산, 의료비공제 |
+| `childcare-expense-deduction-2026.md` | 자녀 교육비·양육비 공제 총정리: 연령별 가능한 공제 항목 | 자녀세액공제, 교육비공제, 양육비, 연말정산 |
+| `youth-housing-policy-summary-2026.md` | 2026 청년 주거지원 총정리: 전세·월세·청약 한눈에 | 청년주거, 전세자금대출, 월세지원, 청약 |
+| `debt-repayment-strategy-2026.md` | 빚 갚는 순서: 눈덩이 vs 눈사태 전략 비교 | 채무상환, 눈덩이전략, 눈사태전략, 대출상환 |
 
 ---
 
@@ -142,7 +166,7 @@
 
 ---
 
-## Insurance (보험) - 6개
+## Insurance (보험) - 9개
 
 | 파일명 | 제목 | 키워드 |
 |--------|------|--------|
@@ -152,6 +176,9 @@
 | `pet-insurance-comparison-2026.md` | 2026년 펫보험 비교 가이드 | 펫보험, 반려동물 |
 | `travel-insurance-comparison-2026.md` | 2026년 해외여행자보험 비교 | 여행자보험, 해외여행 |
 | `prenatal-insurance-guide-2026.md` | 태아보험 가입 완벽 가이드｜22주 전 필수! 가입시기·특약·보험사 비교 | 태아보험, 임신보험, 어린이보험, 출산준비 |
+| `health-insurance-claim-guide-2026.md` | 실비보험 청구 방법: 앱으로 3분 만에 청구하는 법 | 실비보험, 실손보험, 보험금청구, 실비청구 |
+| `insurance-review-checklist-2026.md` | 보험 리모델링 체크리스트: 불필요한 보험료 줄이는 5단계 | 보험리모델링, 보험정리, 보험료절약, 보험점검 |
+| `insurance-comparison-site-guide-2026.md` | 보험다모아 vs 보험비교 사이트: 어디서 비교해야 유리할까 | 보험비교, 보험다모아, 보험비교사이트, 자동차보험비교 |
 
 ---
 

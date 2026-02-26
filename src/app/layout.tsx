@@ -35,20 +35,11 @@ export const metadata: Metadata = {
     siteName: '쓱싹',
     title: '쓱싹 - 생활 금융 계산기 & 가이드',
     description: '연봉 실수령액, 대출이자, 적금이자, 증여세 등 금융 계산기와 보험·투자·세금 가이드를 공식 자료 기반으로 제공합니다.',
-    images: [
-      {
-        url: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80',
-        width: 1200,
-        height: 630,
-        alt: '쓱싹',
-      },
-    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: '쓱싹 - 생활 금융 계산기 & 가이드',
     description: '연봉 실수령액, 대출이자, 적금이자, 증여세 등 금융 계산기와 보험·투자·세금 가이드를 공식 자료 기반으로 제공합니다.',
-    images: ['https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop&q=80'],
   },
   robots: {
     index: true,
@@ -85,7 +76,6 @@ export default function RootLayout({
       <head>
         {/* 외부 도메인 preconnect - next/font이 폰트를 셀프호스팅하므로 Google Fonts preconnect 불필요 */}
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
         {/* Google Analytics - lazyOnload로 렌더링 차단 방지 */}

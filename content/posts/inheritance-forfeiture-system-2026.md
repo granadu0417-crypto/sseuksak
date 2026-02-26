@@ -5,7 +5,6 @@ description: "2026년 1월 시행! 부양의무 위반·학대 부모의 상속�
 date: "2026-02-04"
 category: "finance"
 tags: ["상속권 상실", "상속법", "민법 개정", "부양의무", "가정법원", "상속 분쟁"]
-thumbnail: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=630&fit=crop&q=80"
 ---
 
 ## 상속권 자동 박탈이 아닙니다

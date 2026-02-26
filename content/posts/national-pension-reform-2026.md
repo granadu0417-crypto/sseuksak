@@ -5,7 +5,6 @@ description: "2026년 국민연금 보험료율 9%→13% 인상, 직장인 월 7
 date: "2026-01-07"
 category: "finance"
 tags: ["국민연금", "연금개혁", "보험료율", "소득대체율", "노후준비", "2026년", "국민연금개정"]
-thumbnail: "https://images.unsplash.com/photo-1624953336495-0b5af4d962f2?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw2fHxyZXRpcmVtZW50JTIwcGVuc2lvbnxlbnwwfDB8fHwxNzY4NTQwMzY3fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 국민연금 보험료가 오른다고 해서 무조건 손해라고 생각하기 쉽다. 하지만 실제로 숫자를 놓고 따져보면 이야기가 달라진다. 2026년 1월부터 시행되는 개정안은 보험료율을 9%에서 13%로 올리는 대신, 소득대체율을 43%로 높이고 국가 지급보장까지 법률에 명문화했다. 직장인이라면 인상분의 절반은 회사가 부담하기 때문에, 본인 주머니에서 빠져나가는 돈은 생각보다 크지 않다. 18년 만의 연금개혁이 정말 손해인지, 구체적인 금액으로 확인해본다.

@@ -5,7 +5,6 @@ description: "CES 2026 참가 4,500개사가 공개한 혁신 기술 TOP 10. AI 
 date: "2026-01-05"
 category: "tech"
 tags: ["CES2026", "기술트렌드", "AI", "로봇", "전기차", "XR", "스마트홈"]
-thumbnail: "https://images.unsplash.com/photo-1609619385076-36a873425636?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbnxlbnwwfDB8fHwxNzY4NTQwNDQzfDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 2026년 1월 7~10일, 미국 라스베이거스 컨벤션센터에서 CES 2026이 열렸습니다. 올해 참가 기업은 전 세계 4,500여 개사로, CTA(미국소비자기술협회)가 공식 선정한 핵심 주제는 **'AI Everywhere'**였습니다(CTA 공식 보도자료, 2026.01.07 기준).

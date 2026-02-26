@@ -5,7 +5,6 @@ description: "1월 연납 신청하면 4.57% 할인, 2,000cc 기준 10년이면 
 date: "2026-01-12"
 category: "finance"
 tags: ["자동차세", "연납", "자동차세연납", "위택스", "세금절약", "자동차세할인", "2026년세금"]
-thumbnail: "https://images.unsplash.com/photo-1641846948845-60e99fa0f072?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8Y2FyJTIwdGF4JTIwcGF5bWVudHxlbnwwfDB8fHwxNzY4NTQwMzU1fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 2025년 기준 자동차세 연납 신청 건수는 약 940만 건으로, 국내 등록 자동차 2,550만 대의 37%에 해당합니다. 배기량 2,000cc 차량 한 대만 놓고 보면 연납으로 매년 약 2만 4천원, 10년이면 24만원을 절약할 수 있는 셈입니다. 연봉 대비 차량 유지비가 얼마나 되는지 [연봉 실수령액 계산기](/tools/salary-calculator)로 확인해보면 절세의 체감이 달라집니다. 자동차세 연납은 복잡한 절차 없이 신청 한 번으로 세금을 줄일 수 있는 가장 단순하고 확실한 절세 수단입니다.

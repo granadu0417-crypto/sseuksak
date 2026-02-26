@@ -78,6 +78,26 @@ const financeTools = [
     title: '실업급여 계산기',
     description: '실업급여 예상 수령액과 수급 기간을 계산해요',
   },
+  {
+    slug: 'health-insurance-calculator',
+    title: '건강보험료 계산기',
+    description: '직장가입자 건강보험료와 4월 정산 예상액을 계산해요',
+  },
+  {
+    slug: 'pension-calculator',
+    title: '국민연금 수령액 계산기',
+    description: '가입 기간과 소득으로 예상 국민연금 월 수령액을 계산해요',
+  },
+  {
+    slug: 'rent-conversion-calculator',
+    title: '전월세 전환율 계산기',
+    description: '전세↔월세 전환율과 적정 월세를 계산해요',
+  },
+  {
+    slug: 'income-tax-calculator',
+    title: '종합소득세 계산기',
+    description: '프리랜서·사업자 종합소득세 예상 세액을 계산해요',
+  },
 ];
 
 const lifeTools = [

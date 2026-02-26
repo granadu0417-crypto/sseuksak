@@ -5,7 +5,6 @@ description: "2026년 기사·산업기사·기능사 시험 연 3회 접수일�
 date: "2026-01-06"
 category: "education"
 tags: ["국가기술자격", "기사시험", "자격증시험", "시험일정", "큐넷", "취업준비"]
-thumbnail: "https://images.unsplash.com/photo-1715173679369-18006e84d6a8?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxleGFtJTIwY2VydGlmaWNhdGlvbnxlbnwwfDB8fHwxNzY4NTQwMzY4fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 국가기술자격이란 한국산업인력공단이 「국가기술자격법」에 따라 시행하는 공인 자격 제도다. 기술사, 기능장, 기사, 산업기사, 기능사 5개 등급으로 나뉘며, 취득하면 취업 가산점, 공무원 가점, 인허가 요건 충족 등 실질적인 혜택이 따른다. 2026년 기준 시행 종목만 500개를 넘기 때문에, 본인이 응시할 종목의 일정을 정확히 파악하는 것이 합격의 출발점이다.

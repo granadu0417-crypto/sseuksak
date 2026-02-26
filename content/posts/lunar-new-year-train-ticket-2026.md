@@ -5,7 +5,6 @@ date: "2026-01-15"
 description: "2026 설날 KTX 예매 1/19~21일, SRT 1/28~29일 오전 7시 시작! 경부선 3분 만에 매진되는 경쟁률, 취소표 잡는 실전 팁과 노선별 일정을 미리 확인하세요."
 category: "lifestyle"
 tags: ["설날", "KTX예매", "SRT예매", "기차표", "명절귀성", "코레일", "2026설날"]
-thumbnail: "https://images.unsplash.com/photo-1546713458-bf14315ef31e?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwyfHx0cmFpbiUyMHN0YXRpb24lMjB0cmF2ZWx8ZW58MHwwfHx8MTc2ODU0MDM2NXww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 2025년 설 연휴 KTX 예매 서버 동시 접속자가 180만 명을 넘겼다. 예매 시작 3분 만에 경부선 오전 시간대가 전석 매진된 해였다. 2026년도 사정은 비슷하거나 더 치열할 것으로 보인다. 코레일 일반 예매는 **1월 19일(월) 오전 7시**, SRT는 **1월 28일(수) 오전 7시**에 시작된다. 올해는 예매 기간이 기존 2일에서 3일로 확대되었지만, 인기 노선 경쟁률이 줄어들 가능성은 낮다.

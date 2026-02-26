@@ -1,10 +1,9 @@
 ---
-title: "적금 금리 비교 TOP 10 (2026년) - 시중은행 vs 저축은행 최고 5%"
-description: "같은 적금인데 이자 5만원 차이? 시중은행 최고 4.15% vs 저축은행 5.0%, 금감원 공시 데이터 기반 실비교. 우대조건 없이도 높은 기본금리 상품만 골랐습니다."
+title: "2026 적금 금리 비교 TOP 10 | 연 5% 고금리 적금 순위 (2월 기준)"
+description: "2026년 2월 기준 적금 금리 순위. 저축은행 최고 5.0%, 수협 3.65%, 케이뱅크 3.2%. 우대조건 없이 기본금리만 높은 상품 10개를 금감원 공시 데이터로 비교했습니다. 월 30만원 적금 시 이자 차이 5만원."
 date: "2026-01-16"
 category: "finance"
 tags: ["적금", "적금금리", "저축은행", "인터넷은행", "재테크", "금리비교", "고금리적금"]
-thumbnail: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwyfHxzYXZpbmdzJTIwYmFuayUyMG1vbmV5fGVufDB8MHx8fDE3Njg1NDAzNzF8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 시중은행 3.5% vs 저축은행 5.0%. 같은 적금인데 금리 차이가 1.5%p나 된다. 월 30만 원씩 1년 넣으면 이자 차이가 약 5만 원. 금액이 크거나 기간이 길어지면 격차는 더 벌어진다.

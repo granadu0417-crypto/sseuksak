@@ -5,7 +5,6 @@ description: "회의록 정리 2시간을 3분으로. ChatGPT·Claude·Gemini �
 date: "2026-01-05"
 category: "tech"
 tags: ["AI도구", "ChatGPT", "Claude", "업무효율", "생산성", "노션AI", "프롬프트"]
-thumbnail: "https://images.unsplash.com/photo-1758876201598-67fd2a5570ed?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxwcm9kdWN0aXZpdHklMjB3b3Jrc3BhY2V8ZW58MHwwfHx8MTc2ODU0MDM1M3ww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 회의록 정리에 매번 2시간을 쓰던 직장인이 있었습니다. 회의 녹취를 듣고, 타이핑하고, 양식에 맞추고, 담당자별 액션 아이템을 정리하는 데 점심시간까지 반납하는 일이 반복됐습니다. 혹시 이런 반복 업무에 지쳐 있다면 [번아웃 위험도 테스트](/tests/burnout-risk)로 현재 상태를 점검해보는 것도 좋습니다. 어느 날 Anthropic의 Claude에 텍스트를 붙여넣고 양식을 지정했더니 3분 만에 정리가 끝났습니다. 이 글은 그런 변화를 만들어 줄 AI 도구 활용법을 단계별로 정리한 것입니다.

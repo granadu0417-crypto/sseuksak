@@ -5,7 +5,6 @@ description: "1,200kcal 다이어트 80%가 1년 안에 요요. 대한비만학�
 date: "2026-01-05"
 category: "health"
 tags: ["다이어트", "식단표", "체중감량", "건강식단", "신년다이어트", "저탄고지", "간헐적단식"]
-thumbnail: "https://images.unsplash.com/photo-1642339800099-921df1a0a958?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw4fHxoZWFsdGh5JTIwZm9vZCUyMGRpZXR8ZW58MHwwfHx8MTc2ODU0MDM1MHww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 1,200kcal 극단 다이어트와 1,600kcal 점진적 감량. 한 달 뒤 체중 차이는 거의 없지만, 6개월 뒤 요요 확률은 3배 차이가 납니다. 미국 국립보건원(NIH)이 2023년 발표한 메타분석에 따르면, 하루 1,200kcal 이하로 제한한 그룹의 80% 이상이 1년 안에 감량 체중의 절반 이상을 되찾았습니다. 반면 기초대사량 근처(1,400~1,600kcal)에서 점진적으로 줄인 그룹은 유지 성공률이 2배 이상 높았습니다.

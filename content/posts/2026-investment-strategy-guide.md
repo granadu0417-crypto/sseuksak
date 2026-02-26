@@ -4,7 +4,6 @@ description: "기준금리 2.5% 시대, 연금저축 600만원 납입하면 99�
 date: "2026-01-05"
 category: "finance"
 tags: ["재테크", "자산관리", "투자", "2026전망", "ETF", "예금", "적금", "주식"]
-thumbnail: "https://images.unsplash.com/photo-1727072206145-bf6f47befe9b?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxpbnZlc3RtZW50JTIwc3RyYXRlZ3l8ZW58MHwwfHx8MTc2ODU0MDM0OXww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 2025년 하반기부터 이어진 한국은행의 기준금리 인하 기조가 2026년에도 계속되고 있다. 2025년 3.0%였던 기준금리는 2.5~2.75% 수준까지 내려올 것으로 전망되며, 시중 예적금 금리도 동반 하락 중이다. 반면 코스피는 2,700~3,000 구간에서 완만한 상승세를 보이고, AI 관련 산업에 자금이 몰리는 흐름이 뚜렷하다.

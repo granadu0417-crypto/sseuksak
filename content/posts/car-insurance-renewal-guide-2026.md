@@ -4,7 +4,6 @@ date: "2026-01-07"
 description: "같은 차종인데 연간 15만원 차이? 다이렉트 전환으로 15~22% 절감, 마일리지 특약 최대 37% 할인까지. 2026년 자동차보험 갱신 전 반드시 비교하세요."
 category: "finance"
 tags: ["자동차보험", "보험갱신", "보험료절약", "다이렉트보험", "운전자보험", "2026년보험", "보험비교"]
-thumbnail: "https://images.unsplash.com/photo-1567113463730-77e3df20363c?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw0fHxhdXRvJTIwaW5zdXJhbmNlfGVufDB8MHx8fDE3Njg1NDAzNTV8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 지난달 자동차보험 갱신 안내 문자를 받고 별생각 없이 자동 갱신 버튼을 눌렀다. 그런데 같은 차종을 모는 직장 동료와 보험료를 비교해봤더니 연간 15만원 넘게 차이가 났다. 동료는 다이렉트로 갱신하면서 마일리지 특약까지 붙였고, 나는 3년째 같은 설계사 통해 대면 갱신만 반복한 것이 원인이었다. 2026년 상반기 보험료 인상이 예고된 시점이라 이번에는 제대로 비교해보기로 했다. 신차 구매를 고려 중이라면 [개소세 인하 종료](/posts/car-individual-consumption-tax-2026) 혜택도 함께 따져봐야 한다.

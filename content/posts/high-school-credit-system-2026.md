@@ -5,7 +5,6 @@ description: "전국 2,367개교 시행 1년차, 고교학점제 192학점 졸�
 date: "2026-01-06"
 category: "education"
 tags: ["고교학점제", "고등학교", "교육제도", "진로교육", "학부모가이드"]
-thumbnail: "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxMHx8aGlnaCUyMHNjaG9vbCUyMHN0dWRlbnR8ZW58MHwwfHx8MTc2ODU0MDM2Mnww&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 기존 고등학교에서는 모든 학생이 같은 시간표로 3년을 보냈습니다. 하지만 2025년 3월부터 전면 시행된 고교학점제 아래에서는 학생마다 선택한 과목이 다르고, 졸업 요건도 달라졌습니다. 1년이 지난 지금, 현장에서 확인된 변화와 학부모가 반드시 알아야 할 핵심 사항을 시간 순서대로 정리합니다.

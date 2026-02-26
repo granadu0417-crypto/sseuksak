@@ -4,7 +4,6 @@ date: "2026-01-08"
 description: "사고 시 형사합의금 3천만원+벌금 500만원, 자동차보험 보장 0원. 운전자보험 필수 담보 4가지와 월 보험료 비교, 금감원 기준 가입 체크리스트를 확인하세요."
 category: "insurance"
 tags: ["운전자보험", "자동차보험", "보험비교", "변호사선임비용", "벌금담보", "면허정지위로금", "2026년보험", "금융감독원"]
-thumbnail: "https://images.unsplash.com/photo-1611508106567-6218ae6c5f6a?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxjYXIlMjBkcml2aW5nfGVufDB8MHx8fDE3Njg1NDAzNTd8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 자동차보험에 가입했으니 사고가 나도 다 해결된다고 생각하는 운전자가 많습니다. 그러나 교통사고로 형사합의금 3,000만원, 벌금 500만원, 변호사 선임비 2,000만원이 발생했을 때 자동차보험에서 보장하는 금액은 0원입니다. 이 비용은 전부 운전자 본인이 부담해야 합니다. 자동차보험과 운전자보험은 보장하는 영역 자체가 다릅니다. [2026년 자동차보험 제도 변경 사항](/posts/car-insurance-policy-changes-2026)도 함께 확인해 두면 보험 구성에 도움이 됩니다.

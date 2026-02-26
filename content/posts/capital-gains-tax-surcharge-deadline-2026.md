@@ -5,7 +5,6 @@ date: "2026-02-04"
 description: "5월 전후 3개월 차이로 세금 1.3억 차이. 2026년 5월 9일 양도세 중과 유예 종료 전, 다주택자가 지금 해야 할 월별 체크리스트와 실제 세금 계산 사례입니다."
 category: "finance"
 tags: ["양도세중과", "다주택자", "양도소득세", "부동산세금", "2026년세금", "중과유예종료", "부동산매도"]
-thumbnail: "https://images.unsplash.com/photo-1686563759042-edc83eafc3b4?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHwxfHxtYXklMjBjYWxlbmRhcnxlbnwwfDB8fHwxNzA1MTczNzE1fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 같은 아파트를 같은 가격에 팔아도 5월 전후 석 달 차이로 세금이 1억 3천만 원 넘게 벌어집니다. 5억 원의 양도차익을 기준으로 2주택자는 약 1억 6,800만 원이던 세금이 3억 원 가까이 뛰고, 3주택자는 3억 5,400만 원을 넘깁니다. 2026년 5월 9일 양도세 중과 유예가 종료되면 벌어지는 현실입니다.

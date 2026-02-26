@@ -4,7 +4,6 @@ date: "2026-01-07"
 description: "청년버팀목 최저 연 1.2% vs 시중은행 4%대, 2026년 전세대출 금리 차이가 수백만원! 정책대출 3종·시중은행·인터넷은행 금리·한도·자격요건을 한번에 비교하세요."
 category: "finance"
 tags: ["전세대출", "청년버팀목", "전세자금대출", "전세금리", "2026년대출", "청년전세대출", "주금공"]
-thumbnail: "https://images.unsplash.com/photo-1689939736254-5601f79ef838?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw2fHxob3VzZSUyMHByb3BlcnR5fGVufDB8MHx8fDE3Njg1NDAzNjR8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 결론부터 말하면, 2026년 전세대출에서 가장 먼저 확인해야 할 상품은 **주택도시기금의 정책대출**(청년버팀목, 버팀목, 신혼부부 전용)이다. 금리가 시중은행 대비 1~3%p 낮고, 보증 절차도 비교적 간단하다. 정책대출 요건에 해당하지 않을 때만 시중은행이나 인터넷은행을 검토하는 것이 합리적이다.

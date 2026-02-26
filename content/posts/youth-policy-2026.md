@@ -5,7 +5,6 @@ description: "청년도약계좌 종료, 6월 청년미래적금 출시! 월세 
 date: "2026-01-06"
 category: "finance"
 tags: ["청년정책", "청년미래적금", "청년지원금", "정부지원", "청년월세", "청년취업"]
-thumbnail: "https://images.unsplash.com/photo-1596441248825-45b1f60ce4b2?ixid=M3w4NTI2NzZ8MHwxfHNlYXJjaHw1fHx5b3VuZyUyMHBlb3BsZSUyMGNhcmVlcnxlbnwwfDB8fHwxNzY4NTQwMzc3fDA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&q=80"
 ---
 
 2025년 12월 31일, 청년 금융정책의 상징이었던 청년도약계좌가 신규 가입을 종료했다. 동시에 기획재정부는 2026년 6월 후속 상품인 청년미래적금을 출시한다고 발표했다. 이번 개편으로 **5년 장기 저축에서 3년 단기 저축**으로 청년 정책 방향이 전환된다.
