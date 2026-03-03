@@ -29,14 +29,30 @@ const CONFIG = {
 
 // sitemap.ts와 동기화된 도구/테스트 목록
 const TOOLS_LIST = [
-  'salary-calculator',
-  'tax-refund-calculator',
-  'fire-calculator',
-  'sleep-calculator',
+  'age-calculator',
   'alcohol-calculator',
+  'bmi-calculator',
+  'fire-calculator',
+  'gift-tax-calculator',
+  'health-insurance-calculator',
+  'hourly-wage-calculator',
+  'income-tax-calculator',
   'life-in-weeks',
-  'true-hourly-wage',
+  'livelihood-benefit-calculator',
+  'loan-calculator',
+  'pension-calculator',
+  'pyeong-calculator',
+  'rent-conversion-calculator',
+  'salary-calculator',
+  'savings-interest-calculator',
+  'severance-calculator',
+  'sleep-calculator',
   'subscription-audit',
+  'tax-refund-calculator',
+  'true-hourly-wage',
+  'unemployment-benefit-calculator',
+  'vat-calculator',
+  'weekly-holiday-pay-calculator',
 ];
 
 const TESTS_LIST = [
@@ -71,13 +87,17 @@ function getAllUrls() {
   ];
   staticPages.forEach(page => urls.push(CONFIG.siteUrl + page));
 
-  // 2. 게시글 (content/posts/*.md)
+  // 2. 게시글 (content/posts/*.md) - draft 제외
   const postsDir = path.join(process.cwd(), 'content/posts');
   if (fs.existsSync(postsDir)) {
-    const posts = fs.readdirSync(postsDir)
-      .filter(f => f.endsWith('.md'))
-      .map(f => `/posts/${f.replace('.md', '')}`);
-    posts.forEach(post => urls.push(CONFIG.siteUrl + post));
+    const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
+    files.forEach(file => {
+      const content = fs.readFileSync(path.join(postsDir, file), 'utf8');
+      const isDraft = /draft:\s*true/i.test(content);
+      if (!isDraft) {
+        urls.push(`${CONFIG.siteUrl}/posts/${file.replace('.md', '')}`);
+      }
+    });
   }
 
   // 3. 카테고리 페이지
@@ -102,6 +122,8 @@ function getCategoriesFromPosts() {
 
     files.forEach(file => {
       const content = fs.readFileSync(path.join(postsDir, file), 'utf8');
+      const isDraft = /draft:\s*true/i.test(content);
+      if (isDraft) return;
       const match = content.match(/category:\s*["']?([^"'\n]+)["']?/);
       if (match) {
         categories.add(match[1].trim());
