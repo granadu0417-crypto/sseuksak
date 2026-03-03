@@ -52,6 +52,7 @@
 | - car-insurance-special-coverage-guide-2026 (자동차보험 특약 세팅) | ✅ |
 | - income-deduction-vs-tax-credit-guide-2026 (소득공제 vs 세액공제) | ✅ |
 | **배포**: cf:deploy (7개 신규 글 포함 전체 배포) | ✅ |
+| **타이틀 정리**: 전 페이지 '| 쓱싹' 중복 제거 (24개 파일 수정) | ✅ |
 | **문서 업데이트**: ANALYTICS_HISTORY.md, analytics/2026-03-03.md, PROGRESS.md | ✅ |
 
 ---
