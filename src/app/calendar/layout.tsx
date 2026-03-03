@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '2026년 주요 일정 캘린더 | 쓱싹',
+  title: '2026년 주요 일정 캘린더',
   description: '2026년 세금 납부, 자격증 시험, 공휴일, 지원금 신청 등 놓치면 안 되는 중요한 일정을 한눈에 확인하세요.',
   keywords: ['2026년달력', '2026일정', '세금납부일', '자격증시험일정', '공휴일', '지원금신청'],
   openGraph: {
-    title: '2026년 주요 일정 캘린더 | 쓱싹',
+    title: '2026년 주요 일정 캘린더',
     description: '세금, 자격증, 공휴일 등 놓치면 안 되는 2026년 일정',
     type: 'website',
     locale: 'ko_KR',

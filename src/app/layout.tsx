@@ -20,7 +20,7 @@ const notoSansKR = Noto_Sans_KR({
 export const metadata: Metadata = {
   title: {
     default: '쓱싹 - 생활 금융 계산기 & 가이드',
-    template: '%s | 쓱싹',
+    template: '%s',
   },
   description: '연봉 실수령액, 대출이자, 적금이자, 증여세 등 금융 계산기와 보험·투자·세금 가이드를 공식 자료 기반으로 제공합니다.',
   keywords: '금융 계산기, 연봉 계산기, 대출 이자 계산기, 적금 금리 비교, 증여세 계산기, 보험 비교, 투자 가이드, 세금 정보',

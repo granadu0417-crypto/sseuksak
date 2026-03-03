@@ -1,14 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s | 쓱싹',
-    default: '재미있는 심리테스트 모음 | 쓱싹',
-  },
+  title: '심리테스트 - 재미있는 테스트 모음',
   description: '정신연령, 소비유형, 번아웃 위험도, 연애스타일 등 다양한 심리테스트를 무료로 즐겨보세요. 친구들과 결과를 공유해보세요!',
   keywords: ['심리테스트', '성격테스트', '정신연령', '소비유형', '번아웃', 'MBTI'],
   openGraph: {
-    title: '재미있는 심리테스트 모음 | 쓱싹',
+    title: '심리테스트 - 재미있는 테스트 모음',
     description: '정신연령, 소비유형, 번아웃 위험도 등 다양한 심리테스트',
     type: 'website',
     siteName: '쓱싹',
@@ -16,7 +13,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '재미있는 심리테스트 모음 | 쓱싹',
+    title: '심리테스트 - 재미있는 테스트 모음',
     description: '정신연령, 소비유형, 번아웃 위험도 등 다양한 심리테스트',
   },
 };

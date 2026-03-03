@@ -1,14 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s | 쓱싹',
-    default: '유용한 계산기 모음 | 쓱싹',
-  },
+  title: '유용한 금융 계산기 모음',
   description: '연봉 실수령액, 연말정산 환급금, FIRE 은퇴자금, 수면시간, 음주량 등 생활에 필요한 다양한 계산기를 무료로 제공합니다.',
   keywords: ['계산기', '연봉계산기', '실수령액', '연말정산', 'FIRE', '수면계산기', '음주계산기'],
   openGraph: {
-    title: '유용한 계산기 모음 | 쓱싹',
+    title: '유용한 금융 계산기 모음',
     description: '연봉 실수령액, 연말정산 환급금, FIRE 은퇴자금 등 생활에 필요한 다양한 계산기',
     type: 'website',
     siteName: '쓱싹',
@@ -16,7 +13,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '유용한 계산기 모음 | 쓱싹',
+    title: '유용한 금융 계산기 모음',
     description: '연봉, 세금, 건강 등 생활에 필요한 다양한 계산기',
   },
 };
