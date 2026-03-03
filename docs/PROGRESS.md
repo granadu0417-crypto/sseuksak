@@ -1,6 +1,6 @@
 # sseuksak.com 진행 현황
 
-> 마지막 업데이트: 2026-02-28
+> 마지막 업데이트: 2026-03-03
 
 ## 프로젝트 현황
 
@@ -10,7 +10,7 @@
 | 게시글 | **63개 공개** (93개 draft) | finance 53 + insurance 10 |
 | 도구 | **20개** | 금융 계산기 18개 + 생활 계산기 2개 (평수, 나이) |
 | 테스트 | **2개 공개** (8개 숨김) | 소비유형, 재테크성향 |
-| AdSense | 🔄 **4차 심사 중** | 2/25 재신청 완료 (금융 니치 전환 후) |
+| AdSense | ✅ **승인됨** | 4차 심사 통과! 수익 발생 중 (잔고 $2.30) |
 | GA4 | 설치됨 | G-CMZF467RLD |
 | IndexNow | ✅ 적용 | 네이버, Bing, Yandex 자동 알림 |
 | **네이버 SEO** | ✅ 90/100 | 웹마스터 가이드 기준 평가 완료 |
@@ -25,6 +25,23 @@
 - [2026년 1월 3주차](archive/PROGRESS_2026_01_WEEK3.md) (01-15 ~ 01-21)
 - [2026년 1월 4주차](archive/PROGRESS_2026_01_WEEK4.md) (01-22 ~ 01-27)
 - [2026년 2월 1주차](archive/PROGRESS_2026_02_WEEK1.md) (01-27 ~ 02-09)
+
+---
+
+## 2026-03-03
+
+### 완료된 작업
+| 작업 내용 | 상태 |
+|----------|------|
+| **Git Push**: 미푸시 커밋 3개 GitHub 동기화 | ✅ |
+| **AdSense 4차 심사 승인 확인** | ✅ |
+| **Analytics 데이터 수집**: GSC + Naver + AdSense | ✅ |
+| - GSC: 클릭 12, 노출 7,986, CTR 0.2%, 순위 7.7 | ✅ |
+| - Naver: 클릭 1,300(+66.7%), 노출 1,300(+49.1%), CTR 9.5% | ✅ |
+| - AdSense: 잔고 $2.30, 이번달 $0.08 | ✅ |
+| **GSC 색인 요청**: 26개 중 8개 완료 (나머지 18개 다음 세션) | 🔄 |
+| - 완료: capital-gains-tax, childcare-expense-deduction, credit-loan-comparison, debt-repayment-strategy, didimdol-vs-bogeumjari-loan, emergency-fund, health-insurance-claim, health-insurance-settlement | ✅ |
+| **문서 업데이트**: ANALYTICS_HISTORY.md, analytics/2026-03-03.md, PROGRESS.md | ✅ |
 
 ---
 
