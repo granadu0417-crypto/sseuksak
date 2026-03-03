@@ -7,7 +7,7 @@
 | 항목 | 상태 | 비고 |
 |------|------|------|
 | 사이트 URL | https://sseuksak.com | 라이브 |
-| 게시글 | **63개 공개** (93개 draft) | finance 53 + insurance 10 |
+| 게시글 | **71개 공개** (91개 draft) | finance 58 + insurance 13 |
 | 도구 | **20개** | 금융 계산기 18개 + 생활 계산기 2개 (평수, 나이) |
 | 테스트 | **2개 공개** (8개 숨김) | 소비유형, 재테크성향 |
 | AdSense | 🔄 **4차 심사 중** | sseuksak.com "준비 중", Ads.txt "찾을 수 없음" |
@@ -39,8 +39,19 @@
 | - GSC: 클릭 12, 노출 7,986, CTR 0.2%, 순위 7.7 | ✅ |
 | - Naver: 클릭 1,300(+66.7%), 노출 1,300(+49.1%), CTR 9.5% | ✅ |
 | - AdSense: 잔고 $2.30, 이번달 $0.08 | ✅ |
-| **GSC 색인 요청**: 26개 중 8개 완료 (나머지 18개 다음 세션) | 🔄 |
-| - 완료: capital-gains-tax, childcare-expense-deduction, credit-loan-comparison, debt-repayment-strategy, didimdol-vs-bogeumjari-loan, emergency-fund, health-insurance-claim, health-insurance-settlement | ✅ |
+| **GSC 색인 요청**: 26개 전체 완료 | ✅ |
+| **404 오류 분석**: youth-future-savings undraft + 태그 페이지 조치 불필요 확인 | ✅ |
+| **NOINDEX 8개 확인**: 전부 draft 태그 페이지 (의도된 정상 동작) | ✅ |
+| **배포**: cf:quick (youth-future-savings undraft 반영) | ✅ |
+| **에버그린 콘텐츠 7개 신규 작성** | ✅ |
+| - family-loan-agreement-guide-2026 (가족간 차용증 작성법) | ✅ |
+| - monthly-rent-tax-credit-guide-2026 (월세 세액공제) | ✅ |
+| - social-insurance-guide-for-beginners-2026 (사회초년생 4대보험) | ✅ |
+| - bank-account-splitting-guide-2026 (통장 쪼개기 실전법) | ✅ |
+| - housing-subscription-first-priority-guide-2026 (청약통장 납입 전략) | ✅ |
+| - car-insurance-special-coverage-guide-2026 (자동차보험 특약 세팅) | ✅ |
+| - income-deduction-vs-tax-credit-guide-2026 (소득공제 vs 세액공제) | ✅ |
+| **배포**: cf:deploy (7개 신규 글 포함 전체 배포) | ✅ |
 | **문서 업데이트**: ANALYTICS_HISTORY.md, analytics/2026-03-03.md, PROGRESS.md | ✅ |
 
 ---
