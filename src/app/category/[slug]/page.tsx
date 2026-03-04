@@ -17,6 +17,9 @@ const categoryLabels: Record<string, string> = {
   lifestyle: '생활정보',
 };
 
+// 현재 활성 카테고리 (금융 니치)
+const activeCategories = ['finance', 'insurance'];
+
 const categoryDescriptions: Record<string, string> = {
   finance: '적금 금리 비교, 신용카드 추천, 청년 저축, ETF 투자, 재테크 전략 등 실용적인 금융 정보를 제공합니다.',
   insurance: '실비보험, 자동차보험, 상속·증여, 전입신고 등 보험과 법률 관련 핵심 정보를 정리했습니다.',
@@ -65,12 +68,27 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const categoryName = categoryLabels[slug] || slug;
+  const isActive = activeCategories.includes(slug);
 
-  return genMeta({
+  const meta = genMeta({
     title: `${categoryName} 관련 글`,
     description: categoryDescriptions[slug] || `${categoryName} 카테고리의 모든 게시글을 확인하세요.`,
     url: `/category/${slug}`,
   });
+
+  // 비활성 카테고리(health, tech, education, lifestyle)는 noindex 처리
+  if (!isActive) {
+    meta.robots = {
+      index: false,
+      follow: false,
+      googleBot: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  return meta;
 }
 
 export default async function CategoryPage({ params }: Props) {
