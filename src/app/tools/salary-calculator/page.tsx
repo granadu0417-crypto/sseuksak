@@ -396,6 +396,34 @@ export default function SalaryCalculatorPage() {
           </div>
         </div>
       </div>
+
+      {/* 관련 도구 */}
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+        <div className="space-y-2">
+          <Link
+            href="/tools/annual-leave-calculator"
+            className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <span className="text-blue-600 font-medium">연차 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">입사일 기준 연차 발생일수 계산</p>
+          </Link>
+          <Link
+            href="/tools/weekly-holiday-pay-calculator"
+            className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <span className="text-blue-600 font-medium">주휴수당 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">주 15시간 이상 근무 시 주휴수당 계산</p>
+          </Link>
+          <Link
+            href="/tools/hourly-wage-calculator"
+            className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <span className="text-blue-600 font-medium">시급 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">시급, 월급, 연봉 변환 계산</p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

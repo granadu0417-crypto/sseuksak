@@ -529,6 +529,25 @@ export default function IncomeTaxCalculator() {
             </Link>
           </div>
         </div>
+
+        {/* 관련 도구 */}
+        <div className="bg-gray-50 rounded-xl p-6">
+          <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+          <div className="space-y-2">
+            <Link href="/tools/tax-refund-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="text-blue-600 font-medium">연말정산 환급액 계산기</span>
+              <p className="text-sm text-gray-500 mt-1">연말정산 예상 환급액 계산</p>
+            </Link>
+            <Link href="/tools/vat-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="text-blue-600 font-medium">부가세 계산기</span>
+              <p className="text-sm text-gray-500 mt-1">공급가액 부가세 계산 및 역산</p>
+            </Link>
+            <Link href="/tools/salary-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="text-blue-600 font-medium">연봉 실수령액 계산기</span>
+              <p className="text-sm text-gray-500 mt-1">4대보험, 세금 공제 후 실수령액</p>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

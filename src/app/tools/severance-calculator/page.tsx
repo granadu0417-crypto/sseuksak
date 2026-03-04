@@ -340,7 +340,7 @@ export default function SeveranceCalculatorPage() {
       </div>
 
       {/* 관련 링크 */}
-      <div className="bg-gray-50 rounded-xl p-6">
+      <div className="bg-gray-50 rounded-xl p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 글</h3>
         <Link
           href="/posts/resignation-checklist-2026"
@@ -349,6 +349,25 @@ export default function SeveranceCalculatorPage() {
           <span className="text-blue-600 font-medium">퇴사 전 체크리스트 - 놓치면 손해보는 돈과 서류 총정리</span>
           <p className="text-sm text-gray-500 mt-1">퇴직금, 연차수당, 실업급여까지 한눈에</p>
         </Link>
+      </div>
+
+      {/* 관련 도구 */}
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+        <div className="space-y-2">
+          <Link href="/tools/annual-leave-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">연차 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">입사일 기준 연차 발생일수 계산</p>
+          </Link>
+          <Link href="/tools/unemployment-benefit-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">실업급여 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">실업급여 예상 수령액과 수급 기간 계산</p>
+          </Link>
+          <Link href="/tools/salary-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">연봉 실수령액 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">4대보험, 세금 공제 후 실수령액</p>
+          </Link>
+        </div>
       </div>
     </div>
   );

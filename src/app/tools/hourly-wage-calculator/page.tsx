@@ -521,6 +521,13 @@ export default function HourlyWageCalculatorPage() {
             <p className="text-sm text-gray-500 mt-1">4대보험, 세금 공제 후 실수령액</p>
           </Link>
           <Link
+            href="/tools/annual-leave-calculator"
+            className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <span className="text-blue-600 font-medium">연차 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">입사일 기준 연차 발생일수 계산</p>
+          </Link>
+          <Link
             href="/posts/minimum-wage-2026"
             className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
           >

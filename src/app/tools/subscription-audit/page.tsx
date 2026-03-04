@@ -229,6 +229,25 @@ export default function SubscriptionAuditPage() {
           <li>• 비슷한 기능의 서비스는 하나만 남기세요</li>
         </ul>
       </div>
+
+      {/* 관련 도구 */}
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+        <div className="space-y-2">
+          <Link href="/tools/fire-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">FIRE 조기은퇴 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">저축률과 투자수익률로 은퇴 시기 계산</p>
+          </Link>
+          <Link href="/tools/salary-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">연봉 실수령액 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">4대보험, 세금 공제 후 실수령액</p>
+          </Link>
+          <Link href="/tools/savings-interest-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">적금 이자 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">적금/예금 이자와 세후 실수령액 계산</p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

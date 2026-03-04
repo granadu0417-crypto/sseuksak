@@ -442,6 +442,25 @@ export default function RentConversionCalculatorPage() {
         <p className="text-xs text-gray-400 mt-6">
           2026년 2월 기준 | 한국은행 기준금리 {RATES.baseRate}%, 법정 상한 전환율 {legalMaxRate}%
         </p>
+
+        {/* 관련 도구 */}
+        <div className="mt-6 bg-gray-50 rounded-xl p-6">
+          <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+          <div className="space-y-2">
+            <Link href="/tools/loan-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="text-blue-600 font-medium">대출이자 계산기</span>
+              <p className="text-sm text-gray-500 mt-1">대출 조건별 월 상환금과 총 이자 비교</p>
+            </Link>
+            <Link href="/tools/savings-interest-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="text-blue-600 font-medium">적금 이자 계산기</span>
+              <p className="text-sm text-gray-500 mt-1">적금/예금 이자와 세후 실수령액 계산</p>
+            </Link>
+            <Link href="/tools/pyeong-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="text-blue-600 font-medium">평수 계산기</span>
+              <p className="text-sm text-gray-500 mt-1">평수↔제곱미터 간편 변환</p>
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );

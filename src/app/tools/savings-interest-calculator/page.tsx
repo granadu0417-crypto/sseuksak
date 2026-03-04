@@ -399,6 +399,25 @@ export default function SavingsInterestCalculatorPage() {
           <li>* 은행별 금리와 우대 조건이 다르므로 가입 전 비교하세요.</li>
         </ul>
       </div>
+
+      {/* 관련 도구 */}
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+        <div className="space-y-2">
+          <Link href="/tools/loan-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">대출이자 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">대출 조건별 월 상환금과 총 이자 비교</p>
+          </Link>
+          <Link href="/tools/fire-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">FIRE 조기은퇴 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">저축률과 투자수익률로 은퇴 시기 계산</p>
+          </Link>
+          <Link href="/tools/pension-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">국민연금 수령액 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">예상 국민연금 월 수령액 계산</p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

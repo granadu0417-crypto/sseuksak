@@ -248,6 +248,25 @@ export default function PyeongCalculatorPage() {
           <li>* 정확한 면적은 등기부등본 또는 건축물대장을 확인하세요.</li>
         </ul>
       </div>
+
+      {/* 관련 도구 */}
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+        <div className="space-y-2">
+          <Link href="/tools/rent-conversion-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">전월세 전환율 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">전세↔월세 전환율과 적정 월세 계산</p>
+          </Link>
+          <Link href="/tools/loan-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">대출이자 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">대출 조건별 월 상환금과 총 이자 비교</p>
+          </Link>
+          <Link href="/tools/gift-tax-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">증여세 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">증여금액과 관계별 증여세 계산</p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

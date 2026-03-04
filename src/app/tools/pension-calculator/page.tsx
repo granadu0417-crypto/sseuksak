@@ -396,6 +396,25 @@ export default function PensionCalculatorPage() {
         <p className="text-xs text-gray-400 mt-6">
           2026년 기준 | 보험료율 9.5%, 전체 가입자 평균소득월액(A값) 286만원, 소득대체율 40% 적용
         </p>
+
+        {/* 관련 도구 */}
+        <div className="mt-6 bg-gray-50 rounded-xl p-6">
+          <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+          <div className="space-y-2">
+            <Link href="/tools/salary-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="text-blue-600 font-medium">연봉 실수령액 계산기</span>
+              <p className="text-sm text-gray-500 mt-1">4대보험, 세금 공제 후 실수령액</p>
+            </Link>
+            <Link href="/tools/health-insurance-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="text-blue-600 font-medium">건강보험료 계산기</span>
+              <p className="text-sm text-gray-500 mt-1">직장가입자 건강보험료 계산</p>
+            </Link>
+            <Link href="/tools/fire-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+              <span className="text-blue-600 font-medium">FIRE 조기은퇴 계산기</span>
+              <p className="text-sm text-gray-500 mt-1">저축률과 투자수익률로 은퇴 시기 계산</p>
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );

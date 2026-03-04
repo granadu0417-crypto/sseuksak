@@ -310,6 +310,25 @@ export default function SleepCalculatorPage() {
           </p>
         </div>
       </div>
+
+      {/* 관련 도구 */}
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+        <div className="space-y-2">
+          <Link href="/tools/bmi-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">BMI 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">체질량지수로 비만도 확인</p>
+          </Link>
+          <Link href="/tools/age-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">나이 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">만 나이, 한국 나이 확인</p>
+          </Link>
+          <Link href="/tools/annual-leave-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">연차 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">입사일 기준 연차 발생일수 계산</p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

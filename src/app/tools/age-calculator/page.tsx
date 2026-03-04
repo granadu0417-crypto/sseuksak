@@ -280,6 +280,25 @@ export default function AgeCalculatorPage() {
           <li>* 한국 나이(세는 나이)는 공식적으로 폐지되었지만 일상 대화에서 사용됩니다.</li>
         </ul>
       </div>
+
+      {/* 관련 도구 */}
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+        <div className="space-y-2">
+          <Link href="/tools/pension-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">국민연금 수령액 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">예상 국민연금 월 수령액 계산</p>
+          </Link>
+          <Link href="/tools/health-insurance-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">건강보험료 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">직장가입자 건강보험료 계산</p>
+          </Link>
+          <Link href="/tools/annual-leave-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">연차 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">입사일 기준 연차 발생일수 계산</p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

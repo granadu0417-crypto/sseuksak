@@ -469,6 +469,25 @@ export default function LivelihoodBenefitCalculator() {
           </a>
         </div>
       </div>
+
+      {/* 관련 도구 */}
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+        <div className="space-y-2">
+          <Link href="/tools/salary-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">연봉 실수령액 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">4대보험, 세금 공제 후 실수령액</p>
+          </Link>
+          <Link href="/tools/health-insurance-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">건강보험료 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">직장가입자 건강보험료 계산</p>
+          </Link>
+          <Link href="/tools/pension-calculator" className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <span className="text-blue-600 font-medium">국민연금 수령액 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">예상 국민연금 월 수령액 계산</p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

@@ -398,6 +398,34 @@ export default function UnemploymentBenefitCalculatorPage() {
           <li>* 정확한 수급액과 자격 여부는 고용센터(1350)에 문의하세요.</li>
         </ul>
       </div>
+
+      {/* 관련 도구 */}
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
+        <div className="space-y-2">
+          <Link
+            href="/tools/severance-calculator"
+            className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <span className="text-blue-600 font-medium">퇴직금 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">근속기간과 급여로 예상 퇴직금 계산</p>
+          </Link>
+          <Link
+            href="/tools/annual-leave-calculator"
+            className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <span className="text-blue-600 font-medium">연차 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">입사일 기준 연차 발생일수 계산</p>
+          </Link>
+          <Link
+            href="/tools/salary-calculator"
+            className="block p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <span className="text-blue-600 font-medium">연봉 실수령액 계산기</span>
+            <p className="text-sm text-gray-500 mt-1">4대보험, 세금 공제 후 실수령액</p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
