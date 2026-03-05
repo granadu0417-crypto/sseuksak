@@ -103,6 +103,11 @@ const financeTools = [
     title: '연차 계산기',
     description: '입사일 기준 연차 발생일수와 잔여 연차를 계산합니다',
   },
+  {
+    slug: 'housing-cost-simulator',
+    title: '전세 vs 월세 vs 매매 비교',
+    description: '장기 주거비용을 차트로 비교해 가장 유리한 선택을 확인해요',
+  },
 ];
 
 const lifeTools = [

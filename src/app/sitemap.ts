@@ -109,6 +109,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'vat-calculator',
     'savings-interest-calculator',
     'unemployment-benefit-calculator',
+    'health-insurance-calculator',
+    'pension-calculator',
+    'rent-conversion-calculator',
+    'income-tax-calculator',
+    'annual-leave-calculator',
+    'housing-cost-simulator',
   ];
   const toolsPages = [
     {
