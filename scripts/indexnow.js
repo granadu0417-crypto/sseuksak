@@ -53,6 +53,10 @@ const TOOLS_LIST = [
   'unemployment-benefit-calculator',
   'vat-calculator',
   'weekly-holiday-pay-calculator',
+  'annual-leave-calculator',
+  'housing-cost-simulator',
+  'loan-repayment-simulator',
+  'car-cost-simulator',
 ];
 
 const TESTS_LIST = [

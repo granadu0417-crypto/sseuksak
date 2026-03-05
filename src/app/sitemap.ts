@@ -115,17 +115,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'income-tax-calculator',
     'annual-leave-calculator',
     'housing-cost-simulator',
+    'loan-repayment-simulator',
+    'car-cost-simulator',
   ];
   const toolsPages = [
     {
       url: `${baseUrl}/tools`,
-      lastModified: new Date('2026-02-24'),
+      lastModified: new Date('2026-03-05'),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     ...toolsList.map((tool) => ({
       url: `${baseUrl}/tools/${tool}`,
-      lastModified: new Date('2026-02-24'),
+      lastModified: new Date('2026-03-05'),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),

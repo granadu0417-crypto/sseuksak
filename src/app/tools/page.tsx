@@ -7,6 +7,27 @@ export const metadata: Metadata = {
   description: '대출이자, 연봉 실수령액, 적금이자, 증여세, 부가세, 실업급여, 퇴직금, 시급, 주휴수당, FIRE 조기은퇴 등 금융 계산기를 무료로 이용하세요.',
 };
 
+const simulators = [
+  {
+    slug: 'housing-cost-simulator',
+    title: '전세 vs 월세 vs 매매 비교',
+    description: '장기 주거비용을 차트로 비교해 가장 유리한 선택을 확인해요',
+    tag: '시뮬레이터',
+  },
+  {
+    slug: 'loan-repayment-simulator',
+    title: '대출 상환 전략 비교',
+    description: '원리금균등·원금균등·만기일시 3가지 상환방식을 차트로 비교해요',
+    tag: '시뮬레이터',
+  },
+  {
+    slug: 'car-cost-simulator',
+    title: '자동차 구매 vs 리스 vs 장기렌트 비교',
+    description: '구매·리스·장기렌트 3가지 방식의 장기 비용을 차트로 비교해요',
+    tag: '시뮬레이터',
+  },
+];
+
 const financeTools = [
   {
     slug: 'loan-calculator',
@@ -103,11 +124,6 @@ const financeTools = [
     title: '연차 계산기',
     description: '입사일 기준 연차 발생일수와 잔여 연차를 계산합니다',
   },
-  {
-    slug: 'housing-cost-simulator',
-    title: '전세 vs 월세 vs 매매 비교',
-    description: '장기 주거비용을 차트로 비교해 가장 유리한 선택을 확인해요',
-  },
 ];
 
 const lifeTools = [
@@ -130,6 +146,26 @@ export default function ToolsPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">금융 계산기 모음</h1>
         <p className="text-gray-600">연봉, 대출, 세금, 투자 등 금융 계산기를 무료로 이용하세요.</p>
+      </div>
+
+      {/* 시뮬레이터 */}
+      <div className="mb-10">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">시뮬레이터</h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          {simulators.map((sim) => (
+            <Link
+              key={sim.slug}
+              href={`/tools/${sim.slug}`}
+              className="block p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl border border-indigo-200 hover:border-indigo-400 hover:shadow-lg transition-all"
+            >
+              <div className="flex items-center gap-2 mb-1">
+                <h3 className="text-lg font-semibold text-gray-900">{sim.title}</h3>
+                <span className="text-xs font-medium text-indigo-600 bg-indigo-100 px-2 py-0.5 rounded-full">{sim.tag}</span>
+              </div>
+              <p className="text-sm text-gray-600">{sim.description}</p>
+            </Link>
+          ))}
+        </div>
       </div>
 
       {/* 금융 계산기 */}
