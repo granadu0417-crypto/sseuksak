@@ -106,6 +106,7 @@ tags: ["자동차보험", "보험제도변경", "비교추천서비스", "운전
 - [자동차보험 갱신 비교 가이드 - 보험료 아끼는 법](/posts/car-insurance-renewal-guide-2026)
 - [2026년 운전자보험 완벽 가이드](/posts/driver-insurance-guide-2026)
 - [2026년 자동차세 연납 신청 가이드](/posts/car-tax-annual-payment-2026)
+- [자동차 구매 vs 리스 vs 장기렌트 비교 시뮬레이터](/tools/car-cost-simulator) -- 자동차 취득 방식별 장기 비용 비교
 
 ---
 

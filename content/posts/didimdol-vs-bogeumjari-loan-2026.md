@@ -90,6 +90,8 @@ tags: ["디딤돌대출", "보금자리론", "정책대출", "주택구입대출
 - [전세대출 조건 비교](/posts/jeonse-loan-comparison-2026)
 - [주담대 vs 신용대출 이자 비교](/posts/mortgage-vs-credit-loan-interest-2026)
 - [청약 가점 계산과 당첨 전략](/posts/housing-subscription-point-guide-2026)
+- [대출 상환 전략 비교 시뮬레이터](/tools/loan-repayment-simulator) -- 상환방식별 이자 차이를 차트로 비교
+- [전세 vs 월세 vs 매매 비교 시뮬레이터](/tools/housing-cost-simulator) -- 주택 구매 vs 전세·월세 장기 비용 비교
 
 ---
 

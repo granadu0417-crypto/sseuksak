@@ -125,5 +125,6 @@ tags: ["대출이자", "주택담보대출", "신용대출", "원리금균등", 
 - [주택담보대출 금리 비교 가이드: 은행별 조건 정리](/posts/mortgage-rate-comparison-2026)
 - [전세대출 조건 비교: 청년버팀목부터 일반전세까지](/posts/jeonse-loan-comparison-2026)
 - [햇살론 금리 인하! 3종 비교와 신청방법](/posts/sunloan-2026-reform-guide)
+- [대출 상환 전략 비교 시뮬레이터](/tools/loan-repayment-simulator) -- 원리금균등·원금균등·만기일시 상환방식을 차트로 비교
 
 **출처:** 한국은행 기준금리 동향, 은행연합회 소비자포털 금리비교, 금융감독원 금융상품 한눈에

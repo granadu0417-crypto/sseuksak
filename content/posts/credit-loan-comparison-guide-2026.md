@@ -61,6 +61,7 @@ tags: ["신용대출", "신용대출 금리", "대출 비교", "은행 대출", 
 - [주담대 vs 신용대출 이자 비교](/posts/mortgage-vs-credit-loan-interest-2026)
 - [전세대출 조건 비교](/posts/jeonse-loan-comparison-2026)
 - [연봉 실수령액 비교](/posts/salary-take-home-comparison-2026)
+- [대출 상환 전략 비교 시뮬레이터](/tools/loan-repayment-simulator) -- 원리금균등·원금균등·만기일시 상환 이자 차이 비교
 
 ---
 

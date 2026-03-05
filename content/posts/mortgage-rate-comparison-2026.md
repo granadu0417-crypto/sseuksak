@@ -143,6 +143,8 @@ LTV 기준을 보면, 비규제지역 무주택자는 70%, 1주택자는 60%, �
 - [전세대출 조건 비교 가이드](/posts/jeonse-loan-comparison-2026)
 - [부동산 세금 총정리 - 취득세, 양도세, 종부세](/posts/real-estate-tax-guide-2026)
 - [2026년 적금 금리 비교 총정리](/posts/savings-account-comparison-2026)
+- [대출 상환 전략 비교 시뮬레이터](/tools/loan-repayment-simulator) -- 원리금균등·원금균등·만기일시 상환방식별 이자 비교
+- [전세 vs 월세 vs 매매 비교 시뮬레이터](/tools/housing-cost-simulator) -- 주거 형태별 장기 비용 비교
 
 ---
 

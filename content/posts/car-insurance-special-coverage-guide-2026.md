@@ -161,6 +161,7 @@ tags: ["자동차보험", "자동차보험특약", "보험료절약", "마일리
 - [자동차보험 갱신 비교 가이드 - 보험료 아끼는 법](/posts/car-insurance-renewal-guide-2026)
 - [2026년 자동차보험 제도 변경 총정리](/posts/car-insurance-policy-changes-2026)
 - [2026년 운전자보험 완벽 가이드 - 자동차보험과 차이점](/posts/driver-insurance-guide-2026)
+- [자동차 구매 vs 리스 vs 장기렌트 비교 시뮬레이터](/tools/car-cost-simulator) -- 보험료 포함 자동차 취득 방식별 총비용 비교
 
 **참고 자료:**
 

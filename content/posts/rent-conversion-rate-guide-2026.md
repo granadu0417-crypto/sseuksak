@@ -81,6 +81,7 @@ tags: ["전월세 전환율", "전세 월세 비교", "전세", "월세", "주�
 - [전세대출 조건 비교](/posts/jeonse-loan-comparison-2026)
 - [주담대 vs 신용대출 이자 비교](/posts/mortgage-vs-credit-loan-interest-2026)
 - [전세사기 예방 체크리스트](/posts/jeonse-fraud-prevention-guide-2026)
+- [전세 vs 월세 vs 매매 비교 시뮬레이터](/tools/housing-cost-simulator) -- 전세·월세·매매 장기 비용을 차트로 비교
 
 ---
 

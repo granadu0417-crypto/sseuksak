@@ -53,6 +53,18 @@
 | **도구 등록 업데이트**: page.tsx, sitemap.ts, layout.tsx JSON-LD, indexnow.js | ✅ |
 | **배포**: cf:quick (IndexNow 119개) | ✅ |
 | **색인 요청**: Google GSC 3개 + 네이버 서치어드바이저 수집요청 3개 | ✅ |
+| **내부링크 추가**: 14개 기존 글에 3개 신규 시뮬레이터 링크 16개 추가 | ✅ |
+| - 대출 관련 글 6개에 loan-repayment-simulator 링크 | ✅ |
+| - 부동산/주거 관련 글 6개에 housing-cost-simulator 링크 | ✅ |
+| - 자동차보험 관련 글 3개에 car-cost-simulator 링크 | ✅ |
+| **얇은 글 보강**: 4개 게시글 콘텐츠 확충 | ✅ |
+| - insurance-comparison-site: 실전 비교 과정 + FAQ 4개 추가 | ✅ |
+| - health-insurance-settlement: 연봉 구간별 정산표 + 퇴사/이직 정산 + FAQ 5개 | ✅ |
+| - medical-expense-deduction: 연봉별 기준선 표 + 실수방지 체크리스트 + FAQ 5개 | ✅ |
+| - property-holding-tax: 공시가격 구간별 시뮬레이션 + 다주택 비교 + FAQ 5개 | ✅ |
+| **SEO 메타 최적화**: alcohol-calculator 제목/설명 키워드 최적화 | ✅ |
+| - "알콜 해독 시간 계산기", "위드마크" 키워드 반영 (네이버 인기 검색어 기반) | ✅ |
+| **배포**: cf:quick | ✅ |
 
 ---
 

@@ -106,6 +106,7 @@ tags: ["취득세", "부동산세금", "주택취득세", "다주택자", "취�
 - [디딤돌 vs 보금자리론 비교](/posts/didimdol-vs-bogeumjari-loan-2026)
 - [청약 가점 계산과 당첨 전략](/posts/housing-subscription-point-guide-2026)
 - [주담대 vs 신용대출 이자 비교](/posts/mortgage-vs-credit-loan-interest-2026)
+- [전세 vs 월세 vs 매매 비교 시뮬레이터](/tools/housing-cost-simulator) -- 취득세 포함 매매 총비용과 전세·월세 비교
 
 ---
 

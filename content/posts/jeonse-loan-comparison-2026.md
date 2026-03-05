@@ -178,6 +178,7 @@ tags: ["전세대출", "청년버팀목", "전세자금대출", "전세금리", 
 - [경기도 전세보증금 이자지원 신청 가이드](/posts/gyeonggi-jeonse-interest-support-2026) -- 경기도 거주자라면 전세대출 이자의 일부를 지원받을 수 있다
 - [2026년 적금 금리 비교 총정리](/posts/savings-account-comparison-2026) -- 전세 자금 마련을 위한 적금 비교
 - [청년내일저축계좌 가이드](/posts/youth-tomorrow-savings-account-2026) -- 청년 대상 자산 형성 지원 제도
+- [전세 vs 월세 vs 매매 비교 시뮬레이터](/tools/housing-cost-simulator) -- 전세·월세·매매 중 어느 쪽이 유리한지 장기 비용 비교
 
 ---
 

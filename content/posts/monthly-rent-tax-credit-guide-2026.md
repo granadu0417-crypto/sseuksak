@@ -157,6 +157,7 @@ tags: ["월세세액공제", "연말정산", "월세환급", "경정청구", "�
 - [연말정산 완벽 가이드: 절세 팁, 공제 항목, 달라진 점 총정리](/posts/year-end-tax-settlement-2026)
 - [연봉 3000만원 vs 5000만원, 실수령액 차이는 얼마일까?](/posts/salary-comparison-3000-vs-5000)
 - [전월세 전환율 계산법: 전세가 유리할까 월세가 유리할까](/posts/rent-conversion-rate-guide-2026)
+- [전세 vs 월세 vs 매매 비교 시뮬레이터](/tools/housing-cost-simulator) -- 월세와 전세, 매매 중 어느 주거 형태가 유리한지 장기 비용 비교
 
 **참고 자료:**
 
