@@ -80,6 +80,7 @@ tags: ["노후자금", "은퇴 준비", "노후 생활비", "연금", "노후 �
 
 **관련 가이드**
 - [국민연금 예상 수령액](/posts/national-pension-expected-amount-2026)
+- [국민연금 예상 수령액 계산기](/tools/pension-calculator) -- 가입기간·소득별 예상 수령액 직접 계산
 - [연금저축 vs IRP 비교](/posts/pension-savings-vs-irp-guide-2026)
 - [FIRE 조기은퇴 시뮬레이션](/posts/fire-early-retirement-simulation-2026)
 

@@ -92,6 +92,7 @@ DC형에 추가 납입한 금액은 IRP와 합산하여 연 900만원까지 세�
 - [퇴직금 근속기간별 실수령액 비교](/posts/severance-pay-by-tenure-2026)
 - [연금저축 vs IRP 비교](/posts/pension-savings-vs-irp-guide-2026)
 - [국민연금 예상 수령액](/posts/national-pension-expected-amount-2026)
+- [국민연금 예상 수령액 계산기](/tools/pension-calculator) -- 가입기간·소득별 예상 수령액 계산
 
 ---
 
