@@ -1,6 +1,6 @@
 # sseuksak.com 진행 현황
 
-> 마지막 업데이트: 2026-03-05
+> 마지막 업데이트: 2026-03-06
 
 ## 프로젝트 현황
 
@@ -8,10 +8,10 @@
 |------|------|------|
 | 사이트 URL | https://sseuksak.com | 라이브 |
 | 게시글 | **72개 공개** (91개 draft) | finance 59 + insurance 13 |
-| **Naver 색인** | **84개** (+22) | 수집제한 34, 색인제외 0 |
+| **Naver 색인** | **78개** (-7) | 수집제한 36, 색인제외 0 |
 | 도구 | **23개** | 금융 계산기 18개 + 생활 계산기 2개 + 시뮬레이터 3개 |
 | 테스트 | **2개 공개** (8개 숨김) | 소비유형, 재테크성향 |
-| AdSense | 🔄 **4차 심사 중** | sseuksak.com "준비 중", Ads.txt "찾을 수 없음" |
+| AdSense | 🔄 **4차 심사 중** | sseuksak.com "준비 중", **Ads.txt "승인됨"** |
 | GA4 | 설치됨 | G-CMZF467RLD |
 | IndexNow | ✅ 적용 | 네이버, Bing, Yandex 자동 알림 |
 | **네이버 SEO** | ✅ 90/100 | 웹마스터 가이드 기준 평가 완료 |
@@ -26,6 +26,26 @@
 - [2026년 1월 3주차](archive/PROGRESS_2026_01_WEEK3.md) (01-15 ~ 01-21)
 - [2026년 1월 4주차](archive/PROGRESS_2026_01_WEEK4.md) (01-22 ~ 01-27)
 - [2026년 2월 1주차](archive/PROGRESS_2026_02_WEEK1.md) (01-27 ~ 02-09)
+
+---
+
+## 2026-03-06
+
+### 완료된 작업
+| 작업 내용 | 상태 |
+|----------|------|
+| **Analytics 데이터 수집**: GSC + Naver Search Advisor + AdSense | ✅ |
+| - GSC: 클릭 12, 노출 8,174(+21), CTR 0.1%, 순위 7.7, 색인 47 | ✅ |
+| - Naver: 클릭 ~120, 노출 ~1,300, CTR 9.4%, 색인 78(-7), 수집제한 36(+2) | ✅ |
+| - AdSense: sseuksak.com "준비 중" (4차 심사 10일차), **Ads.txt "승인됨"으로 개선** | ✅ |
+| - AdSense: natest.kr "주의 필요" → "준비 중"으로 변경 | ✅ |
+| **문서 업데이트**: ANALYTICS_HISTORY.md, analytics/2026-03-06.md, PROGRESS.md | ✅ |
+| **Naver 수집제한 상세 분석**: 36개 중 공개 7개 / draft 29개 분류 완료 | ✅ |
+| - 공개 7개: 2/24 금융 니치 전환 시 draft 처리 → 이후 undraft 했으나 네이버 미재방문 | ✅ |
+| - draft 29개: 금융 니치 전환으로 의도적 비공개 (정상) | ✅ |
+| **Naver 수집 요청 7개 제출**: 수집제한 걸린 공개 페이지 재크롤링 요청 | ✅ |
+| - gift-tax-practical, youth-future-savings, etf-investment, samsung-dividend | ✅ |
+| - jeonse-loan-comparison, ima-investment-account, savings-account-comparison | ✅ |
 
 ---
 

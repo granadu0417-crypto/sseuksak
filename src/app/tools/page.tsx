@@ -26,6 +26,12 @@ const simulators = [
     description: '구매·리스·장기렌트 3가지 방식의 장기 비용을 차트로 비교해요',
     tag: '시뮬레이터',
   },
+  {
+    slug: 'savings-goal-simulator',
+    title: '목돈 모으기 시뮬레이터',
+    description: '적금만·적금+투자·투자 중심 3가지 전략으로 목돈 모으기를 비교해요',
+    tag: '시뮬레이터',
+  },
 ];
 
 const financeTools = [

@@ -49,6 +49,7 @@ const toolsCollectionJsonLd = {
     { '@type': 'WebApplication', name: '전세 vs 월세 vs 매매 비교 시뮬레이터', url: 'https://sseuksak.com/tools/housing-cost-simulator' },
     { '@type': 'WebApplication', name: '대출 상환 전략 비교 시뮬레이터', url: 'https://sseuksak.com/tools/loan-repayment-simulator' },
     { '@type': 'WebApplication', name: '자동차 구매 vs 리스 vs 장기렌트 비교 시뮬레이터', url: 'https://sseuksak.com/tools/car-cost-simulator' },
+    { '@type': 'WebApplication', name: '목돈 모으기 시뮬레이터', url: 'https://sseuksak.com/tools/savings-goal-simulator' },
   ],
 };
 

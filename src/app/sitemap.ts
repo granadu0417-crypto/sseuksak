@@ -117,6 +117,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'housing-cost-simulator',
     'loan-repayment-simulator',
     'car-cost-simulator',
+    'savings-goal-simulator',
   ];
   const toolsPages = [
     {
