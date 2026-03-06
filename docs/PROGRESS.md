@@ -7,16 +7,15 @@
 | 항목 | 상태 | 비고 |
 |------|------|------|
 | 사이트 URL | https://sseuksak.com | 라이브 |
-| 게시글 | **72개 공개** (91개 draft) | finance 59 + insurance 13 |
-| **Naver 색인** | **78개** (-7) | 수집제한 36, 색인제외 0 |
-| 도구 | **23개** | 금융 계산기 18개 + 생활 계산기 2개 + 시뮬레이터 3개 |
+| 게시글 | **72개 공개** (91개 draft) | finance 60 + insurance 12 |
+| **Google 색인** | **47개** | 노출 8,153 / 클릭 12 / CTR 0.1% |
+| **Naver 색인** | **85개** | 클릭 ~130 / CTR 9.8% / 수집제한 34 |
+| 도구 | **29개** | 금융 계산기 18 + 생활 2 + 시뮬레이터 4 + 기타 5 |
 | 테스트 | **2개 공개** (8개 숨김) | 소비유형, 재테크성향 |
-| AdSense | 🔄 **4차 심사 중** | sseuksak.com "준비 중", **Ads.txt "승인됨"** |
+| AdSense | **4차 심사 중** | sseuksak.com "준비 중", Ads.txt "승인됨" |
 | GA4 | 설치됨 | G-CMZF467RLD |
-| IndexNow | ✅ 적용 | 네이버, Bing, Yandex 자동 알림 |
-| **네이버 SEO** | ✅ 90/100 | 웹마스터 가이드 기준 평가 완료 |
-| **AI 콘텐츠 품질** | ✅ **완료** | 7가지 AI 핑거프린트 제거 + 95/95 리라이팅 완료 (구조 8가지 균등 분포) |
-| **팩트체크** | ✅ **100%** | 163개 전체 검증 완료, 오류수정 42개 |
+| IndexNow | 적용 | 네이버, Bing, Yandex 자동 알림 |
+| **AI 콘텐츠 품질** | **완료** | 95/95 리라이팅 + 163개 팩트체크 완료 |
 
 ## 아카이브
 
@@ -26,6 +25,7 @@
 - [2026년 1월 3주차](archive/PROGRESS_2026_01_WEEK3.md) (01-15 ~ 01-21)
 - [2026년 1월 4주차](archive/PROGRESS_2026_01_WEEK4.md) (01-22 ~ 01-27)
 - [2026년 2월 1주차](archive/PROGRESS_2026_02_WEEK1.md) (01-27 ~ 02-09)
+- [2026년 2월 (2/10~2/28)](archive/PROGRESS_2026_02.md) (02-10 ~ 02-28)
 
 ---
 
@@ -35,17 +35,27 @@
 | 작업 내용 | 상태 |
 |----------|------|
 | **Analytics 데이터 수집**: GSC + Naver Search Advisor + AdSense | ✅ |
-| - GSC: 클릭 12, 노출 8,174(+21), CTR 0.1%, 순위 7.7, 색인 47 | ✅ |
-| - Naver: 클릭 ~120, 노출 ~1,300, CTR 9.4%, 색인 78(-7), 수집제한 36(+2) | ✅ |
-| - AdSense: sseuksak.com "준비 중" (4차 심사 10일차), **Ads.txt "승인됨"으로 개선** | ✅ |
-| - AdSense: natest.kr "주의 필요" → "준비 중"으로 변경 | ✅ |
-| **문서 업데이트**: ANALYTICS_HISTORY.md, analytics/2026-03-06.md, PROGRESS.md | ✅ |
-| **Naver 수집제한 상세 분석**: 36개 중 공개 7개 / draft 29개 분류 완료 | ✅ |
-| - 공개 7개: 2/24 금융 니치 전환 시 draft 처리 → 이후 undraft 했으나 네이버 미재방문 | ✅ |
-| - draft 29개: 금융 니치 전환으로 의도적 비공개 (정상) | ✅ |
-| **Naver 수집 요청 7개 제출**: 수집제한 걸린 공개 페이지 재크롤링 요청 | ✅ |
-| - gift-tax-practical, youth-future-savings, etf-investment, samsung-dividend | ✅ |
-| - jeonse-loan-comparison, ima-investment-account, savings-account-comparison | ✅ |
+| - GSC: 클릭 12, 노출 8,153(+60%), CTR 0.1%, 순위 7.7, 색인 47개 | ✅ |
+| - Naver: 클릭 ~130(+68.8%), 노출 ~1,316, CTR 9.8%, 색인 85(+1), 수집제한 34 | ✅ |
+| - AdSense: sseuksak.com "준비 중" (4차 심사 10일차), Ads.txt "승인됨" | ✅ |
+| - natest.kr "주의 필요" → "준비 중"으로 변경 | ✅ |
+| **Naver 수집제한 상세 분석**: 36개 중 공개 7개 / draft 29개 분류 | ✅ |
+| **Naver 수집 요청 7개 제출**: 수집제한 걸린 공개 페이지 재크롤링 | ✅ |
+| **내부링크 보강 (도구 페이지 연결)** | ✅ |
+| - pension-calculator: 0→4개 링크 (national-pension, retirement-money, pension-savings-vs-irp, retirement-pension-dc-db) | ✅ |
+| - rent-conversion-calculator: 1→2개 링크 (rent-conversion-rate-guide 본문 추가) | ✅ |
+| - pyeong-calculator: 1→2개 링크 (housing-subscription-first-priority-guide 본문 추가) | ✅ |
+| **문서 최적화** | ✅ |
+| - PROGRESS.md: 2월 기록 아카이브 분리 (691줄→~200줄) + 다음 할 일 갱신 | ✅ |
+| - SEO_INDEXING.md: 최신 데이터로 전체 갱신 (2/11→3/06) | ✅ |
+| - CONTENT_INVENTORY.md: 공개/draft 분리, 누락 8개 추가 (155→163개) | ✅ |
+| - NOINDEX_REPORT.md: 현재 사이트 구조 반영 갱신 (2/03→3/06) | ✅ |
+
+**주요 인사이트:**
+- Google 노출 급증 (+60%), 색인 47개로 서서히 증가
+- savings-account-comparison: Google 노출 1위 (7,325) / CTR 0.04% → 타이틀 최적화 최우선
+- Naver 클릭 +68.8% 지속 성장, 넷플릭스 3월 신작이 신규 견인
+- 도구 페이지 내부링크 보강으로 SEO 크롤링 연결성 강화
 
 ---
 
@@ -55,36 +65,16 @@
 | 작업 내용 | 상태 |
 |----------|------|
 | **주거비용 시뮬레이터 신규 개발**: `/tools/housing-cost-simulator` | ✅ |
-| - 전세 vs 월세 vs 매매 3종 비교, 라인차트+바차트+인사이트 | ✅ |
-| - 취득세 구간별 적용: 6억 이하 1.1%, 6~9억 비례세율, 9억 초과 3.3% | ✅ |
-| - 매도비용(중개수수료+양도세), 1주택 비과세, 장특공제 반영 | ✅ |
-| - 프리셋 3종: 서울원룸(2.5억), 수도권아파트(5억), 서울아파트(9억) | ✅ |
-| **사이트맵 도구 누락 6개 추가**: pension, rent-conversion, health-insurance, income-tax, annual-leave, housing-cost-simulator | ✅ |
-| **도구 목록 등록**: tools/page.tsx에 주거비용 시뮬레이터 추가 (21개) | ✅ |
-| **배포**: cf:deploy (전체 배포, IndexNow 115개) | ✅ |
-| **GitHub 푸시**: 커밋 1개 (`0983b6f`) | ✅ |
-| **대출 상환 전략 비교 시뮬레이터 신규 개발**: `/tools/loan-repayment-simulator` | ✅ |
+| - 전세 vs 월세 vs 매매 3종 비교, 취득세 구간별 적용 | ✅ |
+| **대출 상환 전략 비교 시뮬레이터**: `/tools/loan-repayment-simulator` | ✅ |
 | - 원리금균등/원금균등/만기일시 3가지 상환방식 비교 | ✅ |
-| - 잔금·월납입금·총이자 차트, 인사이트, 연도별 테이블 | ✅ |
-| - 프리셋 3종: 신혼부부 전세대출(2억), 주택담보대출(3억), 고액 아파트 대출(5억) | ✅ |
-| **자동차 구매 vs 리스 vs 장기렌트 비교 시뮬레이터 신규 개발**: `/tools/car-cost-simulator` | ✅ |
-| - 구매/리스/장기렌트 3가지 방식의 장기 비용 차트 비교 | ✅ |
-| - 프리셋 3종: 경형차(1500만), 준중형(2500만), 중형SUV(3800만) | ✅ |
+| **자동차 구매 vs 리스 vs 장기렌트 시뮬레이터**: `/tools/car-cost-simulator` | ✅ |
+| - 구매/리스/장기렌트 3가지 방식 장기 비용 비교 | ✅ |
 | **도구 등록 업데이트**: page.tsx, sitemap.ts, layout.tsx JSON-LD, indexnow.js | ✅ |
-| **배포**: cf:quick (IndexNow 119개) | ✅ |
-| **색인 요청**: Google GSC 3개 + 네이버 서치어드바이저 수집요청 3개 | ✅ |
-| **내부링크 추가**: 14개 기존 글에 3개 신규 시뮬레이터 링크 16개 추가 | ✅ |
-| - 대출 관련 글 6개에 loan-repayment-simulator 링크 | ✅ |
-| - 부동산/주거 관련 글 6개에 housing-cost-simulator 링크 | ✅ |
-| - 자동차보험 관련 글 3개에 car-cost-simulator 링크 | ✅ |
+| **내부링크 추가**: 14개 기존 글에 3개 신규 시뮬레이터 링크 16개 | ✅ |
 | **얇은 글 보강**: 4개 게시글 콘텐츠 확충 | ✅ |
-| - insurance-comparison-site: 실전 비교 과정 + FAQ 4개 추가 | ✅ |
-| - health-insurance-settlement: 연봉 구간별 정산표 + 퇴사/이직 정산 + FAQ 5개 | ✅ |
-| - medical-expense-deduction: 연봉별 기준선 표 + 실수방지 체크리스트 + FAQ 5개 | ✅ |
-| - property-holding-tax: 공시가격 구간별 시뮬레이션 + 다주택 비교 + FAQ 5개 | ✅ |
 | **SEO 메타 최적화**: alcohol-calculator 제목/설명 키워드 최적화 | ✅ |
-| - "알콜 해독 시간 계산기", "위드마크" 키워드 반영 (네이버 인기 검색어 기반) | ✅ |
-| **배포**: cf:quick | ✅ |
+| **배포**: cf:deploy + cf:quick 2회 | ✅ |
 
 ---
 
@@ -94,16 +84,10 @@
 | 작업 내용 | 상태 |
 |----------|------|
 | **Analytics 데이터 수집**: GSC + Naver Search Advisor | ✅ |
-| - GSC: 클릭 12, 노출 8,105(+119), CTR 0.1%, 순위 7.7 | ✅ |
-| - Naver: 클릭 ~130, 노출 ~1,300, CTR 9.6%(+0.1%p) | ✅ |
-| - Naver 색인: 84개(+22), 수집제한 34(+8), 색인제외 0(-1) | ✅ |
 | **Naver 데이터 보정**: 이전 기록(2/24~3/3) 클릭/노출 값 수정 | ✅ |
-| - "1.3백"=130, "1.3천"=1,300으로 보정 (이전 동일값 오류 수정) | ✅ |
-| **문서 업데이트**: ANALYTICS_HISTORY.md, analytics/2026-03-04.md, PROGRESS.md | ✅ |
-| **비활성 카테고리 noindex**: health, tech, education, lifestyle에 noindex 처리 | ✅ |
+| **비활성 카테고리 noindex**: health, tech, education, lifestyle | ✅ |
 | **국민성장펀드 게시글 작성**: national-growth-fund-2026.md (팩트체크 완료) | ✅ |
-| - 소득공제 40%/20%/10%, 배당 9% 분리과세, 뉴딜펀드 비교, FAQ 포함 | ✅ |
-| **배포**: cf:quick (noindex + 신규 게시글 반영, IndexNow 115개) | ✅ |
+| **배포**: cf:quick (IndexNow 115개) | ✅ |
 
 ---
 
@@ -113,548 +97,34 @@
 | 작업 내용 | 상태 |
 |----------|------|
 | **Git Push**: 미푸시 커밋 3개 GitHub 동기화 | ✅ |
-| **AdSense 4차 심사 확인**: sseuksak.com 아직 "준비 중", Ads.txt 문제 | ⚠️ |
 | **Analytics 데이터 수집**: GSC + Naver + AdSense | ✅ |
-| - GSC: 클릭 12, 노출 7,986, CTR 0.2%, 순위 7.7 | ✅ |
-| - Naver: 클릭 ~130(+67.1%), 노출 ~1,300(+45.2%), CTR 9.5% | ✅ |
-| - AdSense: 잔고 $2.30, 이번달 $0.08 | ✅ |
 | **GSC 색인 요청**: 26개 전체 완료 | ✅ |
 | **404 오류 분석**: youth-future-savings undraft + 태그 페이지 조치 불필요 확인 | ✅ |
-| **NOINDEX 8개 확인**: 전부 draft 태그 페이지 (의도된 정상 동작) | ✅ |
-| **배포**: cf:quick (youth-future-savings undraft 반영) | ✅ |
 | **에버그린 콘텐츠 7개 신규 작성** | ✅ |
-| - family-loan-agreement-guide-2026 (가족간 차용증 작성법) | ✅ |
-| - monthly-rent-tax-credit-guide-2026 (월세 세액공제) | ✅ |
-| - social-insurance-guide-for-beginners-2026 (사회초년생 4대보험) | ✅ |
-| - bank-account-splitting-guide-2026 (통장 쪼개기 실전법) | ✅ |
-| - housing-subscription-first-priority-guide-2026 (청약통장 납입 전략) | ✅ |
-| - car-insurance-special-coverage-guide-2026 (자동차보험 특약 세팅) | ✅ |
-| - income-deduction-vs-tax-credit-guide-2026 (소득공제 vs 세액공제) | ✅ |
-| **배포**: cf:deploy (7개 신규 글 포함 전체 배포) | ✅ |
+| - family-loan-agreement, monthly-rent-tax-credit, social-insurance-guide | ✅ |
+| - bank-account-splitting, housing-subscription-first-priority | ✅ |
+| - car-insurance-special-coverage, income-deduction-vs-tax-credit | ✅ |
 | **타이틀 정리**: 전 페이지 '| 쓱싹' 중복 제거 (24개 파일 수정) | ✅ |
-| **문서 업데이트**: ANALYTICS_HISTORY.md, analytics/2026-03-03.md, PROGRESS.md | ✅ |
-
----
-
-## 2026-02-28 (Phase 5)
-
-### 완료된 작업
-| 작업 내용 | 상태 |
-|----------|------|
-| **Phase 5: 보험/생활금융 클러스터 5개 신규** | ✅ |
-| - health-insurance-claim-guide-2026 (실비보험 청구 방법: 앱으로 3분 만에 청구하는 법) | ✅ |
-| - insurance-review-checklist-2026 (보험 리모델링 체크리스트: 불필요한 보험료 줄이는 5단계) | ✅ |
-| - youth-housing-policy-summary-2026 (2026 청년 주거지원 총정리: 전세·월세·청약) | ✅ |
-| - insurance-comparison-site-guide-2026 (보험다모아 vs 보험비교 사이트 비교) | ✅ |
-| - debt-repayment-strategy-2026 (빚 갚는 순서: 눈덩이 vs 눈사태 전략 비교) | ✅ |
-| **문서 업데이트** | ✅ |
-| - CONTENT_INVENTORY.md: 5개 글 추가 (150→155개) | ✅ |
-| - FACTCHECK_LOG.md: 5개 검증 기록 추가 | ✅ |
-| **전체 Phase 1~5 완료**: 공개 글 35→63개, 계산기 16→20개 | ✅ |
-
-## 2026-02-28 (Phase 4)
-
-### 완료된 작업
-| 작업 내용 | 상태 |
-|----------|------|
-| **Phase 4: 세금/정부지원 클러스터 + 신규 계산기 1개 (6개 신규 + 1개 undraft + 계산기 1개)** | ✅ |
-| - 종합소득세 계산기 신규 개발 (`/tools/income-tax-calculator`) | ✅ |
-| - income-tax-filing-guide-2026 (5월 종합소득세 신고 가이드) | ✅ |
-| - earned-income-tax-credit-2026 (근로장려금 가이드 undraft + 리라이트) | ✅ |
-| - acquisition-tax-guide-2026 (아파트 취득세 1주택·다주택 비교) | ✅ |
-| - capital-gains-tax-guide-2026 (양도세 계산: 비과세 조건과 장기보유특별공제) | ✅ |
-| - property-holding-tax-guide-2026 (종합부동산세 기준 금액과 세율) | ✅ |
-| - medical-expense-deduction-guide-2026 (의료비 세액공제: 실비청구 동시 가능?) | ✅ |
-| - childcare-expense-deduction-2026 (자녀 교육비·양육비 공제 총정리) | ✅ |
-| **문서 업데이트** | ✅ |
-| - CONTENT_INVENTORY.md: 6개 글 추가 (144→150개) | ✅ |
-| - FACTCHECK_LOG.md: 7개 검증 기록 추가 (계산기 1 + 가이드 6) | ✅ |
-
-## 2026-02-28 (Phase 3)
-
-### 완료된 작업
-| 작업 내용 | 상태 |
-|----------|------|
-| **Phase 3: 연금/부동산 클러스터 + 신규 계산기 2개 (6개 신규 + 계산기 2개)** | ✅ |
-| - 국민연금 수령액 계산기 신규 개발 (`/tools/pension-calculator`) | ✅ |
-| - 전월세 전환율 계산기 신규 개발 (`/tools/rent-conversion-calculator`) | ✅ |
-| - retirement-pension-dc-db-comparison-2026 (퇴직연금 DC vs DB 비교) | ✅ |
-| - retirement-money-planning-guide-2026 (은퇴 후 노후자금 계획) | ✅ |
-| - didimdol-vs-bogeumjari-loan-2026 (디딤돌 vs 보금자리론 비교) | ✅ |
-| - housing-subscription-point-guide-2026 (청약 가점 계산과 당첨 전략) | ✅ |
-| - isa-account-guide-2026 (ISA 계좌 세제 혜택 총정리) | ✅ |
-| - emergency-fund-guide-2026 (비상금 적정 금액 계산) | ✅ |
-| **문서 업데이트** | ✅ |
-| - CONTENT_INVENTORY.md: 6개 글 추가 (138→144개) | ✅ |
-| - FACTCHECK_LOG.md: 6개 글 검증 기록 추가 | ✅ |
-| **Phase 2: 시즌 콘텐츠 + 신규 계산기 (5개 신규 + 계산기 1개)** | ✅ |
-| - 건강보험료 계산기 신규 개발 (`/tools/health-insurance-calculator`) | ✅ |
-| - health-insurance-settlement-guide-2026 (4월 건보료 정산 가이드) | ✅ |
-| - credit-loan-comparison-guide-2026 (신용대출 금리 비교) | ✅ |
-| - national-pension-expected-amount-2026 (국민연금 예상 수령액) | ✅ |
-| - pension-savings-vs-irp-guide-2026 (연금저축 vs IRP 비교) | ✅ |
-| - rent-conversion-rate-guide-2026 (전월세 전환율 계산법) | ✅ |
-| **문서 업데이트** | ✅ |
-| - CONTENT_INVENTORY.md: 5개 글 추가 (133→138개) | ✅ |
-| - FACTCHECK_LOG.md: 5개 글 검증 기록 추가 | ✅ |
-| **배포** | ✅ |
-| - cf:quick 배포 완료 | ✅ |
-
-### Phase 2 콘텐츠 구조 다양성 검증
-| 글 | 구조 | 도입부 | 연동 계산기 |
-|----|------|--------|-----------|
-| health-insurance-settlement | E (PREP) | 숫자/통계 | health-insurance-calculator |
-| credit-loan-comparison | A (역피라미드) | 상황묘사 | loan-calculator |
-| national-pension-expected-amount | F (FAQ) | 오해바로잡기 | pension-calculator (Phase3) |
-| pension-savings-vs-irp | C (비교분석) | 비교/대조 | tax-refund-calculator |
-| rent-conversion-rate | B (문제해결) | 결론먼저 | loan-calculator |
-
----
-
-## 2026-02-27
-
-### 완료된 작업
-| 작업 내용 | 상태 |
-|----------|------|
-| **Phase 1: 기존 계산기 가이드 연결 (5개 신규 + CTR 1건)** | ✅ |
-| - savings-account-comparison CTR 개선 (메타태그 리라이트) | ✅ |
-| - hourly-wage-monthly-salary-guide-2026 (시급·월급·연봉 환산) | ✅ |
-| - true-hourly-wage-guide-2026 (출퇴근 포함 진짜 시급) | ✅ |
-| - subscription-cost-save-guide-2026 (구독료 정리 절약법) | ✅ |
-| - savings-interest-comparison-guide-2026 (적금 vs 예금 vs CMA) | ✅ |
-| - year-end-refund-march-2026 (3월 환급금 입금일 확인법) | ✅ |
-| **문서 업데이트** | ✅ |
-| - CONTENT_INVENTORY.md: 5개 글 추가 (128→133개) | ✅ |
-| - FACTCHECK_LOG.md: 5개 글 검증 기록 추가 | ✅ |
-| **배포** | ✅ |
-| - cf:quick 배포 완료 | ✅ |
-
-### Phase 1 콘텐츠 구조 다양성 검증
-| 글 | 구조 | 도입부 | 연동 계산기 |
-|----|------|--------|-----------|
-| hourly-wage-monthly-salary | C (비교분석) | 숫자/통계 | hourly-wage-calculator |
-| true-hourly-wage | H (Before-After) | 상황묘사 | true-hourly-wage |
-| subscription-cost-save | B (문제해결) | 오해바로잡기 | subscription-audit |
-| savings-interest-comparison | C (비교분석) | 비교/대조 | savings-interest-calculator |
-| year-end-refund-march | D (단계별) | 결론먼저 | tax-refund-calculator |
-
----
-
-## 2026-02-26
-
-### 완료된 작업
-| 작업 내용 | 상태 |
-|----------|------|
-| **계산기 연동형 실전 가이드 10개 신규 작성** | ✅ |
-| - 연봉 실수령액 비교 (salary-take-home-comparison-2026) | ✅ |
-| - 주담대 vs 신용대출 이자 비교 (mortgage-vs-credit-loan-interest-2026) | ✅ |
-| - 퇴직금 근속별 비교 (severance-pay-by-tenure-2026) | ✅ |
-| - 증여세 실전 가이드 (gift-tax-practical-guide-2026) | ✅ |
-| - 실업급여 수령액·기간 (unemployment-benefit-amount-guide-2026) | ✅ |
-| - 연말정산 환급액 가이드 (tax-refund-deduction-guide-2026) | ✅ |
-| - 주휴수당 월급 계산 (weekly-holiday-pay-monthly-salary-2026) | ✅ |
-| - FIRE 조기은퇴 시뮬레이션 (fire-early-retirement-simulation-2026) | ✅ |
-| - 부가세 계산 가이드 (vat-calculation-guide-2026) | ✅ |
-| - 생계급여 자가진단 (livelihood-benefit-eligibility-check-2026) | ✅ |
-| **10개 글 팩트체크 완료** | ✅ |
-| - 계산기 코드 기반 숫자 검증, 공식 법률·고시 출처 대조 | ✅ |
-| **문서 업데이트** | ✅ |
-| - CONTENT_INVENTORY.md: 10개 글 추가 (118→128개) | ✅ |
-| - FACTCHECK_LOG.md: 10개 글 검증 기록 추가 | ✅ |
-| - PROGRESS.md: 작업 기록 | ✅ |
-| **Google Search Console 색인 요청 10개 완료** | ✅ |
-| - salary-take-home-comparison-2026 | ✅ |
-| - mortgage-vs-credit-loan-interest-2026 | ✅ |
-| - severance-pay-by-tenure-2026 | ✅ |
-| - livelihood-benefit-eligibility-check-2026 | ✅ |
-| - gift-tax-practical-guide-2026 | ✅ |
-| - unemployment-benefit-amount-guide-2026 | ✅ |
-| - tax-refund-deduction-guide-2026 | ✅ |
-| - weekly-holiday-pay-monthly-salary-2026 | ✅ |
-| - fire-early-retirement-simulation-2026 | ✅ |
-| - vat-calculation-guide-2026 | ✅ |
-| **Naver Search Advisor 수집 요청 10개 완료** | ✅ |
-| - salary-take-home-comparison-2026 (13:09:01) | ✅ |
-| - mortgage-vs-credit-loan-interest-2026 (13:09:18) | ✅ |
-| - severance-pay-by-tenure-2026 (13:09:35) | ✅ |
-| - gift-tax-practical-guide-2026 (13:09:52) | ✅ |
-| - unemployment-benefit-amount-guide-2026 (13:10:08) | ✅ |
-| - tax-refund-deduction-guide-2026 (13:10:25) | ✅ |
-| - weekly-holiday-pay-monthly-salary-2026 (13:10:42) | ✅ |
-| - fire-early-retirement-simulation-2026 (13:12:14) | ✅ |
-| - vat-calculation-guide-2026 (13:12:34) | ✅ |
-| - livelihood-benefit-eligibility-check-2026 (13:12:53) | ✅ |
-| **Analytics 2026-02-26 보고서 작성** | ✅ |
-| - `docs/analytics/2026-02-26.md` 상세 보고서 작성 | ✅ |
-| - `docs/ANALYTICS_HISTORY.md` 누적 대시보드 업데이트 | ✅ |
-| **GSC 미색인 16건 원인 분석** | ✅ |
-| - 404 에러 6건: 3건 개선 (9→6), draft 처리된 URL | ✅ |
-| - NOINDEX 8건: draft 처리 + 태그 페이지 정상 동작 확인 | ✅ |
-| - 크롤링됨-미색인 2건: Google 자체 판단, 대기 필요 | ✅ |
-| **Naver SEO H1 복수 14건 분석** | ✅ |
-| - 코드 수정 이미 적용 확인 (`src/lib/posts.ts:91` H1→H2 변환) | ✅ |
-| - 14건 모두 마지막 크롤 2026.01.16 → Naver 재크롤 시 자동 해소 | ✅ |
-| - 10건 draft 상태 (접근 불가), 4건 공개 (수정 반영 대기) | ✅ |
-| **사이트맵 재제출** | ✅ |
-| - GSC 사이트맵 재제출 (2/9→2/26, 기존 128개→76개 URL) | ✅ |
-| - Naver 사이트맵 삭제 후 재등록 (1/15→2/26) | ✅ |
-| **GSC 색인 생성 요청 추가** | ✅ |
-| - health-insurance-premium-2026 색인 요청 완료 (기존 404→우선 크롤 대기열) | ✅ |
-
-### 참고: 현재 Analytics 현황 (2/26 기준)
-| 지표 | 값 | 변화 |
-|------|-----|------|
-| Google 클릭 | 10 | +1 (2/24 대비) |
-| Google 노출 | 7,052 | +89 |
-| Google 색인 | 47 | +6 |
-| Google 색인률 | 75% | +45%p (분모 축소) |
-| Naver 클릭 | 1,600 | 변동 없음 |
-| Naver CTR | 10.5% | +0.3%p |
-| Naver 색인 | 62 | -1 |
-| 공개 게시글 | 35 | (finance 28 + insurance 7) |
-
----
-
-## 2026-02-25
-
-### 완료된 작업
-| 작업 내용 | 상태 |
-|----------|------|
-| **검색 인덱스 draft 필터링** | ✅ |
-| - `scripts/generate-search-index.js`에 draft 필터 추가 (118개→25개) | ✅ |
-| - 사이트 내 검색 테스트 완료 (draft 글 미노출 확인) | ✅ |
-| **사이트 정체성 금융 니치로 재정비** | ✅ |
-| - 홈페이지 히어로: "생활 금융 계산기 & 가이드" | ✅ |
-| - About 페이지: 금융/보험 전문 사이트로 전면 개편 | ✅ |
-| - 네비게이션: 카테고리 6개→2개 (금융/투자, 보험/법률) | ✅ |
-| - 푸터: 금융 니치 소개 + 카테고리 정리 | ✅ |
-| - 메타데이터: title, description, keywords, OG/Twitter 전체 업데이트 | ✅ |
-| **도구 페이지 정리** | ✅ |
-| - BMI/음주/수면/인생주간 도구 제거 (20개→16개) | ✅ |
-| - "라이프 도구" → "생활 계산기" 명칭 변경 | ✅ |
-| **테스트 페이지 정리** | ✅ |
-| - 10개→2개 (소비유형, 재테크성향만 유지) | ✅ |
-| - 준비 중: 절약습관, 보험IQ, 노후준비도 (금융 테마) | ✅ |
-| - 안내 문구 금융 맥락으로 변경 | ✅ |
-| **커밋 & 배포** | ✅ |
-| - 93개 draft 처리 커밋 (`65ab06a`) | ✅ |
-| - 검색 인덱스 수정 커밋 (`5b05df3`) | ✅ |
-| - 사이트 정체성 재정비 커밋 (`5318c39`) | ✅ |
-| - 도구/테스트 정리 커밋 (`10aed20`) | ✅ |
-| - 배포 2회 + 라이브 검증 완료 | ✅ |
-| - 홈페이지 테스트 카드 문구 수정 (`3528be8`) + 배포 | ✅ |
-| **AdSense 4차 재신청** | ✅ |
-| - 사이트 전체 점검 (8개 페이지 + 검색 + 모바일) | ✅ |
-| - AdSense 검토 요청 완료 (2/25) | ✅ |
-
-### 참고: 현재 상태
-- **공개 글**: 25개 (finance 18 + insurance 7)
-- **도구**: 16개 (금융 14 + 생활 2)
-- **테스트**: 2개 공개 (소비유형, 재테크성향)
-- **draft 글**: 93개 (파일 보존, `draft: true`로 숨김)
-- **승인 후**: draft 글 다시 공개 가능 (draft: true 제거)
-
----
-
-## 2026-02-24
-
-### 완료된 작업
-| 작업 내용 | 상태 |
-|----------|------|
-| **AdSense 3차 거절 분석 및 니치 전환** | ✅ |
-| - 거절 사유: "가치가 별로 없는 콘텐츠" 분석 | ✅ |
-| - infozip365.com (승인) / housingzip365.com (승인) 비교 분석 | ✅ |
-| - infozip365와 중복 글 파악: URL 동일 4개 + 주제 중복 14개 = 18개 | ✅ |
-| - "생활 금융 계산기" 니치로 전환 결정 | ✅ |
-| - 유지할 25개 글 선별 (finance 18 + insurance 7) | ✅ |
-| **93개 글 draft 처리 및 배포** | ✅ |
-| - 93개 md 파일에 `draft: true` 추가 | ✅ |
-| - `src/lib/posts.ts`에 draft 필터링 로직 추가 (getAllPosts + getPostBySlug) | ✅ |
-| - `health-insurance-premium-2026` 카테고리 health → insurance 변경 | ✅ |
-| - 빌드 성공 (25개 글만 생성 확인) | ✅ |
-| - cf:deploy 배포 완료 + IndexNow 149 URL 제출 | ✅ |
-| **신규 게시글 8개 팩트체크 및 오류 수정** | ✅ |
-| - 4대보험(#113): 2026년 요율 반영 (국민연금 9.5%, 건보 7.19%, 장기요양 13.14%) | ✅ |
-| - 소액소송(#114): 송달료 5,500원/10회, 압류금지 250만원 수정 | ✅ |
-| - 내용증명(#112): 우편료 430원, 등기 2,400원, 배달증명 1,600원 수정 | ✅ |
-| - FACTCHECK_LOG.md 업데이트 (오류수정 37개) | ✅ |
-| **신규 계산기 5개 개발 및 배포** | ✅ |
-| - 평수 계산기 (평↔㎡ 변환, 주요 평형 참조표) | ✅ |
-| - 나이 계산기 (만나이·한국나이·연나이, 띠·별자리) | ✅ |
-| - 부가세 계산기 (정방향·역산, 공급가액↔합계금액) | ✅ |
-| - 적금 이자 계산기 (적금/예금, 단리/복리, 3가지 세금유형) | ✅ |
-| - 실업급여 계산기 (나이·근속기간·급여 기준 수령액·수급기간) | ✅ |
-| sitemap.ts에 5개 신규 도구 등록 + lastModified 업데이트 | ✅ |
-| tools/page.tsx 금융계산기·라이프도구 목록에 5개 추가 | ✅ |
-| 데이터 정확성 검증 (5개 전체) | ✅ |
-| - 실업급여 하한액 수정: 63,104원→64,192원 (2026 최저시급 10,030원 기준) | ✅ |
-| - 적금 세금우대 세율 수정: 9.2%→9.5% (이자소득세 9%+지방소득세 0.5%) | ✅ |
-| 모바일 반응형 검증 (iPhone 375×812) 5개 전체 통과 | ✅ |
-| 배포 2회 (cf:deploy 초기 + cf:quick 데이터 수정) | ✅ |
-| **신규 게시글 8개 일괄 작성 및 배포** | ✅ |
-| - 등기부등본 열람·발급 방법과 꼭 확인할 항목 총정리 (#111) | ✅ |
-| - 내용증명 작성부터 발송까지 셀프로 하는 법 (#112) | ✅ |
-| - 4대보험료 얼마나 내고 있나? 가입확인·계산·절약법 정리 (#113) | ✅ |
-| - 소액소송 혼자 하는 법 - 소장 작성부터 판결까지 총정리 (#114) | ✅ |
-| - 인감증명서 발급 방법 - 주민센터·온라인·대리 발급 가이드 (#115) | ✅ |
-| - 장례식 비용 얼마나 들까? 절차·준비물·비용 절감법 정리 (#116) | ✅ |
-| - 알바·정규직 근로계약서 작성법 - 꼭 들어가야 할 항목 7가지 (#117) | ✅ |
-| - 주민등록등본 발급 방법 총정리 - 온라인·주민센터·무인발급기 (#118) | ✅ |
-| 8개 글 구조 다양화 (A,B,B,C,D,E,F,H) + 도입부 8가지 유형 | ✅ |
-| 경쟁 블로그 10개+ 분석 후 차별화 포인트 반영 | ✅ |
-| E-E-A-T 요소 각 글 2개 이상 포함 | ✅ |
-| CONTENT_INVENTORY.md, FACTCHECK_LOG.md 업데이트 | ✅ |
-| **라이브 사이트 검증 (모바일 375×812 + PC 1280×800)** | ✅ |
-| - 등기부등본(#111), 4대보험(#113), 근로계약서(#117) 외 전체 정상 | ✅ |
-| **Google Search Console 색인 요청 8개 완료 (10차)** | ✅ |
-| - property-register-guide-2026 (#111) | ✅ |
-| - certified-mail-guide-2026 (#112) | ✅ |
-| - four-major-insurance-guide-2026 (#113) | ✅ |
-| - small-claims-court-guide-2026 (#114) | ✅ |
-| - seal-certificate-guide-2026 (#115) | ✅ |
-| - funeral-cost-guide-2026 (#116) | ✅ |
-| - employment-contract-guide-2026 (#117) | ✅ |
-| - resident-registration-copy-guide-2026 (#118) | ✅ |
-| **Naver Search Advisor 수집 요청 8개 완료** | ✅ |
-| - property-register-guide-2026 (12:09:21) | ✅ |
-| - certified-mail-guide-2026 (12:09:56) | ✅ |
-| - four-major-insurance-guide-2026 (12:10:13) | ✅ |
-| - small-claims-court-guide-2026 (12:10:30) | ✅ |
-| - seal-certificate-guide-2026 (12:10:45) | ✅ |
-| - funeral-cost-guide-2026 (12:11:01) | ✅ |
-| - employment-contract-guide-2026 (12:11:18) | ✅ |
-| - resident-registration-copy-guide-2026 (12:11:36) | ✅ |
-
----
-
-## 2026-02-23
-
-### 완료된 작업
-| 작업 내용 | 상태 |
-|----------|------|
-| Google Search Console 404 에러 9개 URL 확인 및 색인 재요청 | ✅ |
-| 카테고리 4개 (tech, education, insurance, finance) - 색인 요청 성공 | ✅ |
-| 게시글 2개 (youth-future-savings, health-insurance-premium) - 색인 요청 성공 | ✅ |
-| 태그 3개 (TIGER, 전세자금대출, 주담대금리) - noindex로 거부됨 (정상) | ✅ |
-| 남은 6개 게시글 색인 요청 완료 (9차) | ✅ |
-| - year-end-tax-simplification-service-2026: 이미 색인됨 (스킵) | ⏭️ |
-| - young-adults-pancreatic-cancer-alcohol-2026: 색인 요청됨 | ✅ |
-| - youth-future-savings-2026: 색인 요청됨 (재요청, 404 상태) | ✅ |
-| - youth-rent-support-2026: 색인 요청됨 | ✅ |
-| - youth-savings-comparison-2026: 색인 요청됨 | ✅ |
-| - youth-tomorrow-savings-account-2026: 색인 요청됨 | ✅ |
-| **전체 게시글 색인 요청 100% 완료 (남은 URL: 0개)** | ✅ |
-| docs/GOOGLE_INDEX_REQUEST_LOG.md 업데이트 | ✅ |
-| **신규 게시글: 미성년자 주식 계좌 개설·증여세·절세 가이드 2026 (#105)** | ✅ |
-| - 국세청 공식 사이트에서 증여세 면제한도·가산세·신고기한 검증 | ✅ |
-| - 네이버 블로그 15개 + 구글 10개 = 25개 경쟁 게시글 분석 | ✅ |
-| - FACTCHECK_LOG.md 업데이트 (104개 검증 완료) | ✅ |
-| - 빌드·배포 완료 (IndexNow 136개 URL 전송) | ✅ |
-| **신규 게시글 5개 일괄 작성 (#106~#110)** | ✅ |
-| - #106: 전세사기 예방법 2026 총정리 (lifestyle, 구조D) | ✅ |
-| - #107: 2026 봄철 알레르기 비염 예방·치료 총정리 (health, 구조B) | ✅ |
-| - #108: 투잡 직장인·프리랜서 종합소득세 가이드 (finance, 구조varies) | ✅ |
-| - #109: 건강검진 결과표 판정 등급·수치 해석 가이드 (health, 구조C) | ✅ |
-| - #110: 자동차 정기검사·종합검사 가이드 2026 (lifestyle, 구조F) | ✅ |
-| - 5개 전체 팩트체크 완료, 오류수정 적용 (109개 검증, 29건 수정) | ✅ |
-| - FACTCHECK_LOG.md, CONTENT_VERIFICATION.md, CONTENT_INVENTORY.md 업데이트 | ✅ |
-| - 일괄 빌드·배포 완료 | ✅ |
-
-### 발견된 이슈
-- Cloudflare KV 캐시 cold start 시 간헐적 404 반환 문제 지속
-- /category/finance가 당일(2/23) 크롤링에도 404 → KV 캐시 warming 필요
-
----
-
-## 2026-02-13
-
-### 완료된 작업 (3월 넷플릭스 신작 게시글 + 가독성 개선)
-| 작업 내용 | 상태 |
-|----------|------|
-| **netflix-march-2026-new-releases.md** 신규 게시글 작성 | ✅ |
-| 3월 넷플릭스 신작 6선: 월간남친, 공룡, ONE PIECE S2, 피키 블라인더스, BTS 컴백, Something Very Bad | ✅ |
-| YouTube 예고편 4개 삽입 (월간남친, 공룡, ONE PIECE S2, 피키 블라인더스) | ✅ |
-| 1월·2월 넷플릭스 게시글에 3월 글 관련 링크 추가 | ✅ |
-| 2월·3월 게시글 장르별 추천 섹션 리스트(`-`) 형식으로 가독성 개선 | ✅ |
-| docs/CONTENT_INVENTORY.md 업데이트 | ✅ |
-| 배포 2회 (cf:quick + IndexNow) | ✅ |
-
-### 완료된 작업 (Google 색인 생성 요청 - 추가 28개, 총 94개 완료)
-| 작업 내용 | 상태 |
-|----------|------|
-| **Google Search Console 수동 색인 요청 추가 28개 URL** | ✅ |
-| **6차 (14개)**: just-give-welfare-program ~ pet-insurance-comparison-2026 | ✅ |
-| **7차 (14개)**: prenatal-insurance-guide ~ worker-meal-support-2026 | ✅ |
-| ⏭️ 추가 스킵 2건: right-to-disconnect-guide-2026, water-meter-freeze-prevention-tips-2026 (이미 색인됨) | ℹ️ |
-| **총 누적**: 94개 요청 완료 + 거부 3건 + 스킵 3건 | ✅ |
-| **남은 6개**: year-end-tax-simplification-service ~ youth-tomorrow-savings-account-2026 | ⏳ |
-| URL 검사 용량 초과로 중단 (내일 갱신) | ℹ️ |
-| docs/GOOGLE_INDEX_REQUEST_LOG.md 업데이트 | ✅ |
-| docs/analytics/2026-02-13.md 업데이트 | ✅ |
-
----
-
-## 2026-02-12
-
-### 완료된 작업 (새 게시글 작성 + 배포)
-| 작업 내용 | 상태 |
-|----------|------|
-| 숨은 금융자산 조회·환급 완벽 가이드 작성 (102번째 글) | ✅ |
-| - 금융감독원·금융위원회·서민금융진흥원·생명보험협회 공식 자료 검증 | ✅ |
-| - 5가지 공식 채널 비교표 + 유형별/연령별 환급 데이터 (차별화) | ✅ |
-| - 구조 B(문제-해결형), 도입부 숫자/통계형 | ✅ |
-| - 경쟁블로그 13개+ 분석 후 차별점 7가지 반영 | ✅ |
-| FACTCHECK_LOG.md 업데이트 (102개) | ✅ |
-| CONTENT_INVENTORY.md 업데이트 (102개) | ✅ |
-| 배포 완료 (cf:deploy) | ✅ |
-| 신용점수 올리는 방법과 흔한 착각 5가지 작성 (103번째 글) | ✅ |
-| - 금감원 신용관리10계명 + 금융위 신용평가개편TF + NICE/KCB 공식 자료 검증 | ✅ |
-| - 13항목 팩트체크 전부 정확 | ✅ |
-| - 구조 E(PREP형), 도입부 오해 바로잡기형 | ✅ |
-| - 네이버블로그+구글 경쟁게시글 15개 분석 후 차별점 6가지 반영 | ✅ |
-| FACTCHECK_LOG.md 업데이트 (103개) | ✅ |
-| CONTENT_INVENTORY.md 업데이트 (103개) | ✅ |
-| 배포 완료 (cf:deploy) | ✅ |
-
-### 완료된 작업 (Analytics 업데이트 + 문서 정리)
-| 작업 내용 | 상태 |
-|----------|------|
-| Google/Naver/AdSense 최신 데이터 수집 | ✅ |
-| docs/analytics/2026-02-12.md 상세 보고서 작성 | ✅ |
-| docs/ANALYTICS_HISTORY.md 업데이트 | ✅ |
-| CLAUDE.md에 세션 시작 시 필수 체크 규칙 추가 | ✅ |
-| PROGRESS.md 아카이브 분리 (1/27~2/9 → archive/) | ✅ |
-
-### 완료된 작업 (Google 색인 생성 요청 - 총 66개 URL)
-| 작업 내용 | 상태 |
-|----------|------|
-| **Google Search Console 수동 색인 요청 66개 URL 완료** | ✅ |
-| **1차 (10개)**: 신규 게시글 4 + Naver 트래픽 기반 6 | ✅ |
-| - sunloan-2026-reform-guide, traffic-fine-payment-guide | ✅ |
-| - hidden-financial-assets-guide-2026, credit-score-guide-2026 | ✅ |
-| - netflix-february/january-2026, health-checkup-2026 | ✅ |
-| - car-insurance-policy-changes-2026, new-certifications-2026-guide | ✅ |
-| - national-pension-reform-2026 | ✅ |
-| **2차 (14개)**: ces-2026 ~ self-employed-tax-guide-2026 | ✅ |
-| **3차 (8개)**: birth-support ~ parental-leave-benefit-guide-2026 | ✅ |
-| **4차 (32개)**: 2026-golden-holiday ~ health-insurance-premium-2026 | ✅ |
-| **5차 (2개)**: high-school-credit-system-2026, inheritance-forfeiture-system-2026 | ✅ |
-| ❌ 거부 3건: sleep-quality-improvement-guide(슬러그 없음), netflix-march(미발행), digital-detox-guide(슬러그 없음) | ℹ️ |
-| ⏭️ 스킵 1건: savings-account-comparison-2026 (이미 색인됨) | ℹ️ |
-| **핵심 발견**: 103개 게시글 중 Google 색인 1개뿐 (나머지 40개는 도구/테스트/카테고리) | ℹ️ |
-| **내일 계속**: 나머지 36개 URL 색인 요청 예정 | ⏳ |
-
----
-
-## 2026-02-11
-
-### 완료된 작업 (새 게시글 작성 + 배포)
-| 작업 내용 | 상태 |
-|----------|------|
-| 햇살론 2026 일반·특례·유스 3종 비교 가이드 작성 | ✅ |
-| - 금융위원회 보도자료 + 서민금융진흥원 + 토스뱅크 출처 검증 | ✅ |
-| - 불법사금융예방대출 이자 시뮬레이션 포함 (차별화) | ✅ |
-| - 구조 C(비교-분석형), 도입부 숫자/통계형 | ✅ |
-| - 경쟁블로그 11개+ 분석 후 차별점 5가지 반영 | ✅ |
-| FACTCHECK_LOG.md 업데이트 (100개) | ✅ |
-| 배포 완료 (cf:quick) | ✅ |
-| 교통범칙금·과태료 조회 납부 가이드 작성 (101번째 글) | ✅ |
-| - 경찰청 이파인 + 찾기쉬운 생활법령정보 + 도로교통법 시행령 검증 | ✅ |
-| - 12항목 팩트체크 (3건 수정: 법조문·금액·면허정지 기준) | ✅ |
-| - 구조 C(비교-분석형), 도입부 오해 바로잡기형 | ✅ |
-| - 경쟁블로그 11개+ 분석 후 원스톱 가이드 차별화 | ✅ |
-| FACTCHECK_LOG.md 업데이트 (101개) | ✅ |
-| CONTENT_INVENTORY.md 업데이트 (101개) | ✅ |
-| 배포 완료 (cf:quick) | ✅ |
-
-### 완료된 작업 (모바일 성능 최적화)
-| 작업 내용 | 상태 |
-|----------|------|
-| **PageSpeed 모바일 성능: 54점 → 73점 (+19점)** | ✅ |
-| SearchButton에서 `useRouter` 제거 → `window.location.href` 대체 (JS 번들 축소) | ✅ |
-| SearchButton `next/dynamic` 동적 import로 코드 스플리팅 | ✅ |
-| GA 스크립트 `afterInteractive` → `lazyOnload` 변경 (TBT 430ms → 100ms) | ✅ |
-| 불필요한 preconnect 4개 제거 → `dns-prefetch` 경량화 (next/font 셀프호스팅) | ✅ |
-| `next.config.ts`에 `optimizePackageImports` 추가 (트리쉐이킹 향상) | ✅ |
-| 폰트 `adjustFontFallback: true` 추가 (CLS 방지) | ✅ |
-| **Core Web Vitals 개선**: FCP 4.7→3.9초, LCP 6.0→4.4초, TBT 430→100ms | ✅ |
-| 배포 완료 (cf:quick) | ✅ |
-
----
-
-## 2026-02-10
-
-### 완료된 작업 (SEO 6개 항목 개선 + 배포)
-| 작업 내용 | 상태 |
-|----------|------|
-| **1. Sitemap lastmod 수정** | ✅ |
-| - 정적 페이지 `new Date()` → 고정 날짜로 변경 | ✅ |
-| - 카테고리 페이지: 해당 카테고리 최신 글 날짜 사용 | ✅ |
-| - 누락된 도구 7개 사이트맵에 추가 (총 15개) | ✅ |
-| **2. React #418 hydration 에러 개선** | ✅ |
-| - TableOfContents: DOMParser 분기 제거 → regex 통일 | ✅ |
-| - `<body>` 태그에 `suppressHydrationWarning` 추가 | ✅ |
-| - AdSense/GA 외부 스크립트 기인 경고는 제거 불가 (알려진 이슈) | ℹ️ |
-| **3. 계산기 15개 JSON-LD 추가** | ✅ |
-| - `ToolJsonLd.tsx` 컴포넌트 신규 생성 (WebApplication 스키마) | ✅ |
-| - 15개 도구 페이지 전체에 개별 JSON-LD 삽입 | ✅ |
-| - tools/layout.tsx CollectionPage hasPart 15개로 확장 | ✅ |
-| **4. 홈페이지 최신글 3개 → 6개** | ✅ |
-| **5. ARIA 접근성 강화** | ✅ |
-| - DesktopNav: `aria-expanded`, `aria-haspopup` 추가 | ✅ |
-| - MobileNav: `aria-expanded`, 동적 `aria-label` 추가 | ✅ |
-| - TableOfContents: `aria-expanded`, `aria-controls` 추가 | ✅ |
-| **6. 도구/테스트 페이지 브레드크럼 추가** | ✅ |
-| - tools/page.tsx, tests/page.tsx에 Breadcrumb 컴포넌트 추가 | ✅ |
-| - 타이틀 중복 수정 (tools/tests layout template → `%s | 쓱싹`) | ✅ |
-| **배포 2회 완료** | ✅ |
-| - 754 페이지, 777 KV assets, IndexNow 제출 | ✅ |
-
-### 완료된 작업 (4대 플랫폼 현황 파악 + AdSense 재검토 제출)
-| 작업 내용 | 상태 |
-|----------|------|
-| **4대 플랫폼 종합 현황 파악** | ✅ |
-| - Google AdSense: 상태 "주의 필요 → 준비 중" | ✅ |
-| - Google Search Console: 4클릭, 4,993노출, CTR 0.1%, 색인 41/128 | ✅ |
-| - Google Analytics: 활성사용자 138명(+23.2%), 30일 351명(+58.1%) | ✅ |
-| - Naver Search Advisor: 150클릭(+100%), 1,400노출, CTR 11.2% | ✅ |
-| **AdSense 재검토 요청 제출** | ✅ |
-| - "문제를 수정했음을 확인합니다" 체크 → "검토 요청" 클릭 | ✅ |
-| - 사이트 상태: "주의 필요" → "준비 중" (검토 중) | ✅ |
-| - 95/95 리라이팅 + 4개 신규 콘텐츠 + 2개 계산기 반영 상태 | ✅ |
-
-### 완료된 작업 (신규 콘텐츠 색인 요청 - Naver + Google)
-| 작업 내용 | 상태 |
-|----------|------|
-| **Naver Search Advisor 크롤링 요청 (6개 URL)** | ✅ |
-| **Google Search Console 색인 생성 요청 (6개 URL)** | ✅ |
-
-**주요 인사이트:**
-- 네이버가 주 트래픽 엔진 (150클릭 vs Google 4클릭)
-- 넷플릭스 콘텐츠가 양 플랫폼 모두 1위 견인
-- GA 활성사용자 +23%, 네이버 클릭 +100% 우상향 추세
-- Google 색인율 32% (41/128) — 개선 여지 큼
-- AdSense 재검토 결과 수일~2주 소요 예상
-- 신규 6개 URL 양 플랫폼(Naver+Google) 수동 색인 요청 완료
+| **배포**: cf:deploy (전체 배포) | ✅ |
 
 ---
 
 ## 다음 할 일
 
 ### 우선순위 높음
-- [ ] AdSense 4차 심사 결과 확인 (2/25 제출, 금융 니치 전환 후)
-- [ ] savings-account-comparison-2026 메타태그 개선 (Google 6,423노출 / 2클릭, CTR 0.03%)
-- [ ] GSC 404 에러 남은 6건 모니터링 (사이트맵 재제출로 개선 예상)
+- [ ] savings-account-comparison-2026 타이틀/메타 최적화 (Google 7,325노출 / CTR 0.04%)
+- [ ] AdSense 4차 심사 결과 확인 (2/25 제출, 10일차)
+- [ ] GSC 404 에러 6건 조사 및 해결
 
 ### 우선순위 중간
-- [ ] Naver 수집제한 26건 모니터링 (draft 처리 영향, 자연 해소 대기)
-- [ ] Google 신규 10개 글 색인 반영 확인
+- [ ] Naver 수집제한 34건 모니터링 (draft 전환 영향, 자연 해소 대기)
+- [ ] Naver H1 복수 SEO 이슈 14건 점검
 - [ ] 금융 콘텐츠 추가 작성 (계산기 연동형 가이드 확대)
 
 ### 콘텐츠 확장 (선택)
+- [ ] 넷플릭스 4월 신작 게시글 (3월 신작이 네이버 주요 트래픽원)
 - [ ] 금융 테마 테스트 추가 (절약습관, 보험IQ, 노후준비도)
-- [ ] 공개 게시글 확충 (현재 35개)
-- [ ] GA4 ↔ Search Console 연결
+- [ ] draft 글 중 품질 높은 것 선별 공개 (현재 72개 공개 / 91개 draft)
 
 ---
 
