@@ -101,4 +101,14 @@ tags: ["디딤돌대출", "보금자리론", "정책대출", "주택구입대출
 - [한국주택금융공사] 보금자리론 상품 안내 (hf.go.kr)
 - [주택도시기금] 기금e든든 (enhuf.molit.go.kr)
 
+---
+
+**관련 가이드**
+- [청약 1순위 조건 총정리: 가점제와 추첨제](/posts/housing-subscription-first-priority-guide-2026) -- 내 집 마련의 첫 단계
+- [청년 주거정책 요약: 월세·전세·매매 지원 총정리](/posts/youth-housing-policy-summary-2026) -- 청년이라면 놓치면 안 될 주거 혜택
+- [주택담보대출 금리 비교](/posts/mortgage-rate-comparison-2026) -- 정책대출 외 시중은행 금리도 비교
+- [전세대출 조건 비교](/posts/jeonse-loan-comparison-2026)
+
+---
+
 *정책대출 금리와 자격 조건은 정부 정책에 따라 수시 변경됩니다. 신청 전 각 기관에서 최신 조건을 확인하세요.*

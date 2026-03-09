@@ -147,6 +147,7 @@ KB저축은행 KB착한누리적금은 기본 4.50%에 우대조건 충족 시 5
 - [청년미래적금 완벽 가이드](/posts/youth-future-savings-2026)
 - [2026년 재테크 전략 가이드](/posts/2026-investment-strategy-guide)
 - [ETF 투자 입문 가이드](/posts/etf-investment-guide-2026)
+- [국민성장펀드 가입 가이드](/posts/national-growth-fund-2026) -- 정책형 펀드로 분산투자
 
 ---
 

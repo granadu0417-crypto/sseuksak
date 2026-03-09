@@ -128,5 +128,7 @@ FIRE(Financial Independence, Retire Early)는 공격적인 저축과 투자를 �
 **관련 글 추천:**
 - [ETF 투자 입문 가이드: 소액으로 시작하는 분산투자](/posts/etf-investment-guide-2026)
 - [2026년 재테크 전략 가이드: 금리 시대의 자산관리](/posts/2026-investment-strategy-guide)
+- [퇴직금 활용 가이드: 수령 방법과 투자 전략](/posts/retirement-money-planning-guide-2026) -- 조기은퇴 시 퇴직금 활용법
+- [퇴직연금 DC vs DB 비교](/posts/retirement-pension-dc-db-comparison-2026) -- 은퇴 자금에 직결되는 선택
 
 **출처:** Trinity Study(1998, Journal of the AAII), 통계청 소비자물가지수, 한국은행 경제통계시스템

@@ -302,6 +302,8 @@ ARIRANG 고배당주, KODEX 배당가치 등 배당 ETF는 안정적인 현금�
 **관련 글 추천:**
 - [2026년 재테크 전략 가이드: 초보자 자산관리 로드맵](/posts/2026-investment-strategy-guide)
 - [FIRE 조기은퇴 시뮬레이션: 저축률별 은퇴 시점 비교](/posts/fire-early-retirement-simulation-2026)
+- [자녀 주식계좌 증여세 가이드: 미성년자 투자와 세금](/posts/minor-stock-account-gift-tax-guide-2026) -- 자녀에게 ETF 투자를 시작해주고 싶다면
+- [ISA 계좌 완벽 가이드: 비과세 혜택과 활용 전략](/posts/isa-account-guide-2026) -- ETF 세금 줄이는 핵심 계좌
 - [CES 2026 기술 트렌드 총정리](/posts/ces-2026-tech-trends)
 
 ---

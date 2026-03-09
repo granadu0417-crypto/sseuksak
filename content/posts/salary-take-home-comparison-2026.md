@@ -140,5 +140,6 @@ tags: ["연봉 실수령액", "실수령액 계산", "4대보험", "소득세", 
 - [2026년 4대보험 가이드: 요율과 계산법](/posts/four-major-insurance-guide-2026)
 - [개인사업자 절세 가이드: 종합소득세와 부가세](/posts/self-employed-tax-guide-2026)
 - [2026년 적금 금리 비교: 은행별 우대조건](/posts/savings-account-comparison-2026)
+- [부가가치세 계산 가이드](/posts/vat-calculation-guide-2026) -- 사업자라면 필수 세금 지식
 
 **출처:** 국민건강보험공단 2026년 건강보험료율, 국민연금공단 보험료율 안내, 국세청 근로소득 간이세액표

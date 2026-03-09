@@ -98,6 +98,8 @@ IRP는 예금·RP 같은 원리금보장 상품에도 투자할 수 있어 안�
 
 **관련 가이드**
 - [국민연금 예상 수령액](/posts/national-pension-expected-amount-2026)
+- [퇴직연금 DC vs DB 비교: 어떤 유형이 유리한가](/posts/retirement-pension-dc-db-comparison-2026) -- IRP와 연결되는 퇴직연금 선택
+- [퇴직금 활용 가이드: 수령 방법과 투자 전략](/posts/retirement-money-planning-guide-2026) -- 퇴직금을 IRP로 이전할 때 참고
 - [연말정산 공제항목별 절세 효과](/posts/tax-refund-deduction-guide-2026)
 - [FIRE 조기은퇴 시뮬레이션](/posts/fire-early-retirement-simulation-2026)
 

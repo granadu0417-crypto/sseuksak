@@ -191,6 +191,8 @@ tags: ["건강보험료", "4대보험", "건강보험", "보험료계산", "직�
 **관련 글 추천:**
 - [2026년 건강검진 대상자 확인 및 무료 검진 총정리](/posts/health-checkup-2026)
 - [2026년 5세대 실손보험 완벽 가이드](/posts/5th-generation-health-insurance-guide-2026)
+- [4대 보험 가이드: 직장인·프리랜서별 가입 기준](/posts/social-insurance-guide-for-beginners-2026) -- 건강보험 외 나머지 사회보험도 점검
+- [태아보험 비교 가이드: 가입 시기와 보장 범위](/posts/prenatal-insurance-guide-2026) -- 출산 예정이라면 필수 확인
 - [2026년 추천 신용카드 비교 가이드](/posts/2026-credit-card-comparison)
 
 **참고 자료:**
