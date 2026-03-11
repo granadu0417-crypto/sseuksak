@@ -145,6 +145,41 @@ export default function SalaryCalculatorPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
       <ToolJsonLd name="연봉 실수령액 계산기" description="4대보험, 소득세 공제 후 실제 받는 월급을 계산합니다" url="/tools/salary-calculator" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "연봉 3,000만원이면 실수령액이 얼마인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "2026년 기준 연봉 3,000만원(비과세 식대 20만원 포함)이면 월 실수령액은 약 224만원입니다. 국민연금 약 10.5만원, 건강보험 약 8.3만원, 장기요양보험 약 1.1만원, 고용보험 약 2.1만원, 소득세·지방소득세 약 4만원이 공제됩니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "비과세 항목에는 어떤 것이 있나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "대표적인 비과세 항목으로는 식대(월 20만원 한도), 자가운전보조금(월 20만원), 출산·보육수당(월 20만원), 야간근로수당(생산직 240만원 이하) 등이 있습니다. 비과세 금액만큼 과세표준이 줄어 소득세가 절감됩니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "2026년 4대보험 요율은 얼마인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "2026년 근로자 부담 4대보험 요율은 국민연금 4.5%, 건강보험 3.545%, 장기요양보험(건강보험의 12.95%), 고용보험 0.9%입니다. 회사도 동일하게 또는 그 이상을 부담합니다."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           ← 도구 목록으로
@@ -394,6 +429,65 @@ export default function SalaryCalculatorPage() {
             <strong className="text-gray-900">고용보험 (0.9%)</strong>
             <p>실업급여, 육아휴직 급여 등. 근로자 0.9% 부담.</p>
           </div>
+        </div>
+      </div>
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <h3 className="font-bold text-gray-900 mb-4">사용 예시</h3>
+        <div className="space-y-4">
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm font-semibold text-blue-900 mb-2">연봉 3,000만원, 비과세 식대 20만원</p>
+            <ul className="text-sm text-blue-800 space-y-1">
+              <li>월 급여: 250만원 (과세 230만원 + 비과세 20만원)</li>
+              <li>4대보험 공제: 약 22만원</li>
+              <li>소득세+지방소득세: 약 4만원</li>
+              <li>월 실수령액: 약 224만원</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-green-50 rounded-lg">
+            <p className="text-sm font-semibold text-green-900 mb-2">연봉 5,000만원, 비과세 식대 20만원</p>
+            <ul className="text-sm text-green-800 space-y-1">
+              <li>월 급여: 약 417만원</li>
+              <li>4대보험 공제: 약 37만원</li>
+              <li>소득세+지방소득세: 약 16만원</li>
+              <li>월 실수령액: 약 364만원</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <h2 className="font-bold text-gray-900 mb-4">자주 묻는 질문</h2>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 transition-colors">
+              <span className="font-medium text-gray-900 text-sm">연봉 3,000만원이면 실수령액이 얼마인가요?</span>
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600 leading-relaxed">
+              2026년 기준 연봉 3,000만원(비과세 식대 20만원 포함)이면 월 실수령액은 약 224만원입니다. 국민연금 약 10.5만원, 건강보험 약 8.3만원, 장기요양보험 약 1.1만원, 고용보험 약 2.1만원, 소득세·지방소득세 약 4만원이 공제됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 transition-colors">
+              <span className="font-medium text-gray-900 text-sm">비과세 항목에는 어떤 것이 있나요?</span>
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600 leading-relaxed">
+              대표적인 비과세 항목으로는 식대(월 20만원 한도), 자가운전보조금(월 20만원), 출산·보육수당(월 20만원), 야간근로수당(생산직 240만원 이하) 등이 있습니다. 비과세 금액만큼 과세표준이 줄어 소득세가 절감됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 transition-colors">
+              <span className="font-medium text-gray-900 text-sm">2026년 4대보험 요율은 얼마인가요?</span>
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600 leading-relaxed">
+              2026년 근로자 부담 4대보험 요율은 국민연금 4.5%, 건강보험 3.545%, 장기요양보험(건강보험의 12.95%), 고용보험 0.9%입니다. 회사도 동일하게 또는 그 이상을 부담합니다.
+            </div>
+          </details>
         </div>
       </div>
 

@@ -173,6 +173,41 @@ export default function AlcoholCalculatorPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <ToolJsonLd name="알코올 분해 시간 계산기" description="음주 후 알코올 분해에 걸리는 시간을 계산합니다" url="/tools/alcohol-calculator" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "소주 2병 마시면 몇 시간 후 운전 가능한가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "체중 70kg 남성 기준, 소주 2병(720ml, 17도)을 마시면 혈중 알코올 농도가 약 0.127%까지 올라갑니다. 면허정지 기준인 0.03% 미만으로 내려가려면 약 6시간 30분, 완전 분해까지는 약 8시간 30분이 걸립니다. 다만 개인차가 크므로 음주 후에는 절대 운전하지 마세요."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "체중에 따라 알코올 분해 시간이 다른가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "네, 체중이 많을수록 체내 수분량이 많아 같은 양의 알코올이 더 낮은 농도로 분포됩니다. 예를 들어 소주 1병 기준, 60kg 남성은 BAC 약 0.093%이지만 90kg 남성은 약 0.062%로 약 33% 낮습니다. 분해 시간도 그만큼 차이가 납니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "음주 후 다음 날 아침에 운전해도 되나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "음주량에 따라 다릅니다. 알코올은 시간당 약 0.015%씩 분해되므로, 혈중 알코올 농도가 0.1%였다면 0%까지 약 6~7시간이 필요합니다. 늦은 밤까지 많이 마셨다면 다음 날 아침에도 혈중 알코올이 남아 있을 수 있습니다. 이 계산기로 예상 분해 시간을 확인해 보세요."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:text-blue-800 text-sm">
           ← 도구 목록으로
@@ -497,6 +532,63 @@ export default function AlcoholCalculatorPage() {
               <li>* 숙취해소제, 커피, 사우나는 알코올 분해에 도움이 되지 않습니다.</li>
               <li>* 음주 후에는 반드시 대리운전이나 대중교통을 이용하세요.</li>
             </ul>
+          </div>
+
+          {/* 사용 예시 */}
+          <div className="bg-white rounded-xl border border-gray-200 p-6">
+            <h3 className="font-bold text-gray-900 mb-4">사용 예시</h3>
+            <div className="space-y-4">
+              <div className="p-4 bg-blue-50 rounded-lg">
+                <p className="text-sm font-semibold text-blue-900 mb-2">남성 70kg, 소주 2병 기준</p>
+                <ul className="text-sm text-blue-800 space-y-1">
+                  <li>추정 혈중 알코올 농도: 약 0.127%</li>
+                  <li>운전 가능 시점 (0.03% 미만): 약 6시간 30분 후</li>
+                  <li>완전 분해: 약 8시간 30분 후</li>
+                </ul>
+              </div>
+              <div className="p-4 bg-pink-50 rounded-lg">
+                <p className="text-sm font-semibold text-pink-900 mb-2">여성 55kg, 맥주 500ml 2잔 기준</p>
+                <ul className="text-sm text-pink-800 space-y-1">
+                  <li>추정 혈중 알코올 농도: 약 0.052%</li>
+                  <li>운전 가능 시점 (0.03% 미만): 약 1시간 30분 후</li>
+                  <li>완전 분해: 약 3시간 30분 후</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 자주 묻는 질문 */}
+          <div className="bg-white rounded-xl border border-gray-200 p-6">
+            <h2 className="font-bold text-gray-900 mb-4">자주 묻는 질문</h2>
+            <div className="space-y-3">
+              <details className="group border border-gray-200 rounded-lg">
+                <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 transition-colors">
+                  <span className="font-medium text-gray-900 text-sm">소주 2병 마시면 몇 시간 후 운전 가능한가요?</span>
+                  <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+                </summary>
+                <div className="px-4 pb-4 text-sm text-gray-600 leading-relaxed">
+                  체중 70kg 남성 기준, 소주 2병(720ml, 17도)을 마시면 혈중 알코올 농도가 약 0.127%까지 올라갑니다. 면허정지 기준인 0.03% 미만으로 내려가려면 약 6시간 30분, 완전 분해까지는 약 8시간 30분이 걸립니다. 다만 개인차가 크므로 음주 후에는 절대 운전하지 마세요.
+                </div>
+              </details>
+              <details className="group border border-gray-200 rounded-lg">
+                <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 transition-colors">
+                  <span className="font-medium text-gray-900 text-sm">체중에 따라 알코올 분해 시간이 다른가요?</span>
+                  <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+                </summary>
+                <div className="px-4 pb-4 text-sm text-gray-600 leading-relaxed">
+                  네, 체중이 많을수록 체내 수분량이 많아 같은 양의 알코올이 더 낮은 농도로 분포됩니다. 예를 들어 소주 1병 기준, 60kg 남성은 BAC 약 0.093%이지만 90kg 남성은 약 0.062%로 약 33% 낮습니다. 분해 시간도 그만큼 차이가 납니다.
+                </div>
+              </details>
+              <details className="group border border-gray-200 rounded-lg">
+                <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 transition-colors">
+                  <span className="font-medium text-gray-900 text-sm">음주 후 다음 날 아침에 운전해도 되나요?</span>
+                  <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+                </summary>
+                <div className="px-4 pb-4 text-sm text-gray-600 leading-relaxed">
+                  음주량에 따라 다릅니다. 알코올은 시간당 약 0.015%씩 분해되므로, 혈중 알코올 농도가 0.1%였다면 0%까지 약 6~7시간이 필요합니다. 늦은 밤까지 많이 마셨다면 다음 날 아침에도 혈중 알코올이 남아 있을 수 있습니다. 이 계산기로 예상 분해 시간을 확인해 보세요.
+                </div>
+              </details>
+            </div>
           </div>
 
           {/* 관련 도구 */}
