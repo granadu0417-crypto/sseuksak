@@ -121,6 +121,11 @@ const financeTools = [
     description: '전세↔월세 전환율과 적정 월세를 계산해요',
   },
   {
+    slug: 'dsr-calculator',
+    title: 'DSR 계산기',
+    description: '총부채원리금상환비율(DSR)과 추가 대출 가능 금액을 계산해요',
+  },
+  {
     slug: 'income-tax-calculator',
     title: '종합소득세 계산기',
     description: '프리랜서·사업자 종합소득세 예상 세액을 계산해요',
