@@ -53,6 +53,41 @@ export default function PyeongCalculatorPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
       <ToolJsonLd name="평수 계산기" description="평수를 제곱미터(㎡)로, 제곱미터를 평수로 간편하게 변환합니다" url="/tools/pyeong-calculator" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "25평은 몇 제곱미터(㎡)인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "25평은 약 82.64㎡입니다. 1평은 약 3.3058㎡이므로 25 x 3.3058 = 82.645㎡입니다. 아파트에서 '국민주택 규모'라고 하면 전용면적 85㎡ 이하를 뜻하며, 이는 약 25.7평에 해당합니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "전용면적 84㎡는 몇 평인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "전용면적 84㎡는 약 25.4평입니다. 하지만 아파트 분양 시 '34평형'이라고 부르는 이유는 공급면적(전용 + 공용) 기준이기 때문입니다. 전용 84㎡ 아파트의 공급면적은 보통 112~115㎡(약 34평)입니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "평수와 제곱미터 변환 공식은 무엇인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "평을 제곱미터로 변환하려면 평수에 3.3058을 곱합니다(㎡ = 평 x 3.3058). 반대로 제곱미터를 평으로 변환하려면 3.3058로 나눕니다(평 = ㎡ ÷ 3.3058). 1평은 가로 약 1.818m x 세로 약 1.818m의 넓이입니다."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <nav className="mb-6">
         <Link href="/tools" className="text-blue-600 hover:underline">
           &larr; 도구 목록으로
@@ -247,6 +282,55 @@ export default function PyeongCalculatorPage() {
           <li>* 2007년부터 부동산 공식 면적 단위는 ㎡이지만, 관행적으로 평수를 함께 사용합니다.</li>
           <li>* 정확한 면적은 등기부등본 또는 건축물대장을 확인하세요.</li>
         </ul>
+      </div>
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-bold text-gray-900 mb-4">사용 예시</h3>
+        <div className="space-y-4">
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm font-semibold text-blue-900 mb-2">아파트 전용면적 84㎡ 확인</p>
+            <p className="text-sm text-blue-800">84㎡ ÷ 3.3058 = <strong>약 25.4평</strong> (전용면적 기준). 분양 공고에서 &apos;34평형&apos;이라 부르는 이유는 공급면적(전용+공용) 기준 약 112㎡ = 34평이기 때문입니다.</p>
+          </div>
+          <div className="p-4 bg-green-50 rounded-lg">
+            <p className="text-sm font-semibold text-green-900 mb-2">원룸 8평짜리 실제 크기</p>
+            <p className="text-sm text-green-800">8평 x 3.3058 = <strong>약 26.4㎡</strong>. 가로 약 5.1m x 세로 약 5.1m 정도의 공간으로, 침대와 책상, 소형 주방을 배치할 수 있는 크기입니다.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-bold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-4">
+          <details className="group">
+            <summary className="flex items-center justify-between cursor-pointer p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <span className="font-medium text-gray-900 text-sm">25평은 몇 제곱미터(㎡)인가요?</span>
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="mt-2 p-3 text-sm text-gray-700 leading-relaxed">
+              25평은 약 82.64㎡입니다. 1평 = 약 3.3058㎡이므로 25 x 3.3058 = 82.645㎡입니다. &apos;국민주택 규모&apos;는 전용면적 85㎡ 이하를 뜻하며, 약 25.7평에 해당합니다.
+            </div>
+          </details>
+          <details className="group">
+            <summary className="flex items-center justify-between cursor-pointer p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <span className="font-medium text-gray-900 text-sm">전용면적 84㎡는 몇 평인가요?</span>
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="mt-2 p-3 text-sm text-gray-700 leading-relaxed">
+              전용면적 84㎡는 약 25.4평입니다. 아파트 분양 시 &apos;34평형&apos;이라 부르는 이유는 공급면적(전용+공용) 기준이기 때문입니다. 전용 84㎡ 아파트의 공급면적은 보통 112~115㎡(약 34평)입니다.
+            </div>
+          </details>
+          <details className="group">
+            <summary className="flex items-center justify-between cursor-pointer p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <span className="font-medium text-gray-900 text-sm">평수와 제곱미터 변환 공식은?</span>
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="mt-2 p-3 text-sm text-gray-700 leading-relaxed">
+              평 → ㎡: 평수 x 3.3058. ㎡ → 평: 제곱미터 ÷ 3.3058. 1평은 가로 약 1.818m x 세로 약 1.818m(6자 x 6자)의 넓이입니다.
+            </div>
+          </details>
+        </div>
       </div>
 
       {/* 관련 도구 */}
