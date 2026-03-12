@@ -841,6 +841,91 @@ export default function DsrCalculatorPage() {
         </div>
       </div>
 
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">DSR 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">직장인 A씨 (연소득 5,000만원)</p>
+            <p className="text-sm text-gray-600">
+              주택담보대출 3억(금리 3.5%, 30년), 신용대출 2,000만원(금리 5.5%) 보유.
+              DSR 34.2%로 은행권 한도(40%) 이내이며, 추가 대출 약 4,800만원 가능합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">신혼부부 B씨 (연소득 7,000만원)</p>
+            <p className="text-sm text-gray-600">
+              전세대출 2억(DSR 제외), 마이너스통장 한도 5,000만원(금리 4.8%) 보유.
+              마이너스통장은 한도 전액이 5년 환산되어 DSR 16.4%. 주담대 추가 시 여유 있습니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">청년 C씨 (만 29세, 연소득 3,500만원)</p>
+            <p className="text-sm text-gray-600">
+              청년 장래소득 인정 적용 시 인정소득이 약 4,200만원으로 상향되어,
+              일반 DSR 대비 약 1,500만원 더 대출받을 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              DSR이란 무엇인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              DSR(Debt Service Ratio, 총부채원리금상환비율)은 모든 대출의 연간 원리금 상환액을 연소득으로 나눈 비율입니다.
+              은행권은 40%, 비은행권(저축은행, 카드사 등)은 50%가 한도이며, 총 대출 1억 초과 시 적용됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              스트레스 DSR이란 무엇인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              스트레스 DSR은 금리 상승 위험을 반영해 실제 금리에 가산금리를 더해 DSR을 계산하는 제도입니다.
+              2026년 3단계 기준 수도권은 3.0%p의 50%(1.5%p), 비수도권은 1.5%p의 50%(0.75%p)가 가산됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              신용대출은 DSR에서 어떻게 계산되나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              신용대출은 실제 만기와 상관없이 5년 원리금균등 상환 방식으로 환산합니다.
+              마이너스통장은 한도 전액을 5년 원리금균등으로, 카드론은 3년 원리금균등으로 환산합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              전세대출도 DSR에 포함되나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              전세대출, 중도금대출, 300만원 이하 소액 신용대출은 DSR 산정에서 제외됩니다.
+              다만 전세대출 보유 시 주택담보대출 심사에서 별도로 고려될 수 있습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              청년 장래소득 인정이란?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              만 34세 이하 무주택 청년은 현재 소득에 미래 소득 증가분을 반영하여 DSR을 산출할 수 있는 제도입니다.
+              통계청 장래소득 추계를 기반으로 약 10~20% 높은 소득이 인정되어 대출 한도가 늘어납니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="mt-8 pt-6 border-t border-gray-200">
         <h3 className="text-sm font-semibold text-gray-500 mb-3">관련 계산기</h3>

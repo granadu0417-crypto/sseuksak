@@ -57,6 +57,7 @@ const TOOLS_LIST = [
   'housing-cost-simulator',
   'loan-repayment-simulator',
   'car-cost-simulator',
+  'dsr-calculator',
 ];
 
 const TESTS_LIST = [

@@ -361,6 +361,110 @@ export default function BMICalculatorPage() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'BMI 정상 범위는 어떻게 되나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '대한비만학회 기준 BMI 18.5~22.9가 정상 체중입니다. 23~24.9는 과체중, 25~29.9는 비만, 30 이상은 고도비만으로 분류됩니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'BMI 계산법은?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'BMI = 체중(kg) / 키(m)²입니다. 예를 들어 키 170cm, 체중 70kg이면 70 / (1.7 × 1.7) = 24.2입니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'BMI의 한계점은 무엇인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'BMI는 근육량, 체지방률, 체형을 반영하지 못합니다. 운동선수나 근육량이 많은 사람은 BMI가 높아도 건강할 수 있으며, 정확한 판단은 체지방률 측정이 필요합니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">BMI 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">키 175cm, 체중 72kg (남성)</p>
+            <p className="text-sm text-gray-600">
+              BMI 23.5 = 과체중. 정상 체중 범위(56.7~70.1kg)까지 약 1.9kg 감량이 권장됩니다.
+              식이조절과 주 3회 유산소 운동을 병행하면 효과적입니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">키 162cm, 체중 52kg (여성)</p>
+            <p className="text-sm text-gray-600">
+              BMI 19.8 = 정상 체중. 적정 체중 범위(48.6~60.1kg) 안에 있습니다.
+              현재 체중을 유지하는 것이 건강에 가장 좋습니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">키 180cm, 체중 95kg (근력운동 선수)</p>
+            <p className="text-sm text-gray-600">
+              BMI 29.3 = 비만으로 분류되지만, 근육량이 많은 경우 BMI만으로 판단하기 어렵습니다.
+              체지방률 측정(인바디 등)으로 정확한 체성분을 확인하세요.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              BMI 정상 범위는 어떻게 되나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              대한비만학회 기준 BMI 18.5~22.9가 정상 체중입니다.
+              23~24.9는 과체중, 25~29.9는 비만, 30 이상은 고도비만으로 분류됩니다.
+              서양 기준(WHO)과 한국 기준은 다르니, 한국 기준을 적용하는 것이 정확합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              BMI가 높은데 건강할 수도 있나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              네. BMI는 근육량을 반영하지 못합니다. 운동선수나 근력운동을 하는 분은
+              BMI가 과체중~비만으로 나와도 체지방률이 낮으면 건강한 상태일 수 있습니다.
+              반대로 BMI가 정상이어도 체지방률이 높으면 마른 비만에 해당할 수 있습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              한국 BMI 기준이 세계 기준과 다른 이유는?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              아시아인은 같은 BMI에서 서양인보다 체지방률이 높고, 대사질환 위험이 더 높다는 연구 결과가 있습니다.
+              그래서 대한비만학회는 비만 기준을 BMI 25(WHO 30)로, 과체중을 23(WHO 25)으로 낮게 설정합니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 정보 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">건강한 체중 관리 팁</h3>

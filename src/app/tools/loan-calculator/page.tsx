@@ -682,6 +682,118 @@ export default function LoanCalculatorPage() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '원리금균등상환과 원금균등상환의 차이는?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '원리금균등상환은 매달 동일한 금액을 납부하고, 원금균등상환은 매달 동일한 원금을 납부합니다. 원금균등상환이 총 이자가 적지만 초기 부담이 크며, 원리금균등상환은 자금 계획이 쉽습니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '거치기간이란 무엇인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '거치기간은 대출 초기에 원금 상환 없이 이자만 납부하는 기간입니다. 초기 부담을 줄일 수 있지만, 총 이자 부담이 늘어납니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '대출 상환 방식 중 어떤 것이 가장 유리한가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '총 이자 비용 기준으로 원금균등상환이 가장 유리합니다. 다만 초기 상환 부담이 크므로 소득과 상황에 맞게 선택해야 합니다. 만기일시상환은 월 납입금이 가장 적지만 총 이자가 가장 많습니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">대출이자 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">주택담보대출 3억원, 금리 3.5%, 30년</p>
+            <p className="text-sm text-gray-600">
+              원리금균등: 월 134.7만원 / 총이자 1억 8,480만원.
+              원금균등 선택 시 총이자 1억 5,793만원으로 약 2,687만원 절약됩니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">전세대출 2억원, 금리 3.2%, 2년 만기일시</p>
+            <p className="text-sm text-gray-600">
+              월 이자만 53.3만원 납부, 만기 시 원금 2억 일시상환.
+              총 이자 1,280만원. 전세보증금 반환으로 일시상환하는 구조입니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">신용대출 5,000만원, 금리 5.5%, 5년 (거치 1년)</p>
+            <p className="text-sm text-gray-600">
+              거치기간 1년간 월 22.9만원(이자만), 이후 월 100.7만원 상환.
+              거치 없을 때 대비 총이자가 약 137만원 더 발생합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              원리금균등과 원금균등, 어떤 게 유리한가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              총 이자 기준으로 원금균등상환이 유리합니다. 하지만 초기 월 상환금이 크기 때문에
+              소득 여유가 있는 경우에 적합합니다. 일정한 상환금을 원하면 원리금균등이 편리합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              거치기간을 두면 얼마나 손해인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              거치기간 동안 원금이 줄지 않아 이자가 계속 발생합니다. 예를 들어 3억 대출(금리 3.5%)에서
+              1년 거치 시 약 300만원, 3년 거치 시 약 800만원의 추가 이자가 발생합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              중도상환하면 이자를 줄일 수 있나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              네. 원금을 미리 상환하면 남은 기간의 이자가 줄어듭니다. 다만 중도상환 수수료(보통 1~1.5%)가
+              부과될 수 있으므로, 수수료와 절약되는 이자를 비교해야 합니다. 대출 후 3년이 지나면 수수료가 면제되는 경우가 많습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              변동금리와 고정금리, 어떤 걸 선택해야 하나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              금리 하락기에는 변동금리가, 금리 상승기에는 고정금리가 유리합니다.
+              장기 대출(20년 이상)은 고정금리가 안정적이고, 단기 대출(5년 이하)은 변동금리도 고려할 만합니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 링크 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 글</h3>
