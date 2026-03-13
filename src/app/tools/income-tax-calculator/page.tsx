@@ -530,6 +530,112 @@ export default function IncomeTaxCalculator() {
           </div>
         </div>
 
+        {/* FAQPage JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: '종합소득세 신고 대상자는 누구인가요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '프리랜서(3.3% 원천징수 소득자), 개인사업자, 임대소득자, 2곳 이상에서 근로소득이 있는 직장인, 금융소득 2천만원 초과자, 연금소득 1,200만원 초과자 등이 매년 5월에 종합소득세를 신고해야 합니다.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '단순경비율과 기준경비율의 차이는 무엇인가요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '단순경비율은 직전연도 수입이 일정 금액(프리랜서 2,400만원) 미만인 소규모 사업자에게 적용되며, 수입의 60~90%를 경비로 인정받습니다. 기준경비율은 그 이상 수입이 있는 사업자에게 적용되며, 주요경비(매입비, 임차료, 인건비)는 실제 증빙으로, 나머지는 기준경비율로 계산합니다.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '종합소득세 신고 기간은 언제인가요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '종합소득세 신고 기간은 매년 5월 1일부터 5월 31일까지입니다. 성실신고확인 대상자는 6월 30일까지 연장됩니다. 홈택스(hometax.go.kr)에서 전자신고하거나 세무서에 방문하여 신고할 수 있습니다.',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* 사용 예시 */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h3 className="font-semibold text-gray-900 mb-4">종합소득세 계산기 사용 예시</h3>
+          <div className="space-y-4">
+            <div className="border-l-4 border-blue-400 pl-4">
+              <p className="font-medium text-gray-900 mb-1">프리랜서 연 수입 5,000만원 (단순경비율 64.1%)</p>
+              <p className="text-sm text-gray-600">
+                필요경비 3,205만원 공제 후 소득금액 1,795만원.
+                기본공제 150만원 적용 시 과세표준 약 1,645만원, 세율 15% 적용.
+                3.3% 원천징수 기납부세액을 차감하면 환급받을 가능성이 높습니다.
+              </p>
+            </div>
+            <div className="border-l-4 border-green-400 pl-4">
+              <p className="font-medium text-gray-900 mb-1">직장인 투잡 (근로소득 + 프리랜서 부수입 1,200만원)</p>
+              <p className="text-sm text-gray-600">
+                부수입에 대해 별도로 종합소득세 신고 필요.
+                3.3% 원천징수된 세금과 실제 결정세액을 비교하여 추가납부 또는 환급이 결정됩니다.
+              </p>
+            </div>
+            <div className="border-l-4 border-purple-400 pl-4">
+              <p className="font-medium text-gray-900 mb-1">개인사업자 연매출 8,000만원 (음식점업, 단순경비율 87.4%)</p>
+              <p className="text-sm text-gray-600">
+                필요경비 6,992만원, 소득금액 1,008만원.
+                기본공제와 국민연금 공제 적용 후 과세표준이 낮아져 세율 6% 구간에 해당할 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 자주 묻는 질문 */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+          <div className="space-y-3">
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                종합소득세 신고 대상자는 누구인가요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                프리랜서(3.3% 원천징수 소득자), 개인사업자, 임대소득자,
+                2곳 이상에서 근로소득이 있는 직장인, 금융소득 2천만원 초과자,
+                연금소득 1,200만원 초과자 등이 매년 5월에 종합소득세를 신고해야 합니다.
+              </div>
+            </details>
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                단순경비율과 기준경비율의 차이는 무엇인가요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                단순경비율은 직전연도 수입이 일정 금액(프리랜서 2,400만원) 미만인 소규모 사업자에게 적용되며,
+                수입의 60~90%를 경비로 인정받습니다. 기준경비율은 그 이상 수입이 있는 사업자에게 적용되며,
+                주요경비(매입비, 임차료, 인건비)는 실제 증빙으로, 나머지는 기준경비율로 계산합니다.
+              </div>
+            </details>
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                종합소득세 신고 기간은 언제인가요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                종합소득세 신고 기간은 매년 5월 1일부터 5월 31일까지입니다.
+                성실신고확인 대상자는 6월 30일까지 연장됩니다.
+                홈택스(hometax.go.kr)에서 전자신고하거나 세무서에 방문하여 신고할 수 있습니다.
+              </div>
+            </details>
+          </div>
+        </div>
+
         {/* 관련 도구 */}
         <div className="bg-gray-50 rounded-xl p-6">
           <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

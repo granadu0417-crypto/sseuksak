@@ -467,6 +467,108 @@ export default function TrueHourlyWagePage() {
         </div>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '진짜 시급이란 무엇인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '진짜 시급은 공식 급여에서 출퇴근 시간, 야근, 업무 관련 지출(점심값, 커피, 업무 의류 등)을 모두 반영해 계산한 실제 시급입니다. 책 "Your Money or Your Life"에서 소개된 개념으로, 돈을 생명 에너지로 환산해 소비 습관을 돌아보게 합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '공식 시급과 진짜 시급은 얼마나 차이나나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '보통 공식 시급 대비 30~50% 낮아집니다. 출퇴근 왕복 1시간, 야근 주 5시간, 업무 지출 월 80만원인 월급 300만원 직장인의 경우, 공식 시급 약 17,321원에서 진짜 시급은 약 10,970원으로 약 37% 감소합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '진짜 시급을 높이려면 어떻게 해야 하나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '출퇴근 시간 줄이기(재택근무, 회사 근처 이사), 불필요한 업무 지출 줄이기(도시락, 텀블러 사용), 야근 줄이기(업무 효율화) 등이 효과적입니다. 연봉이 올라도 출퇴근이 늘면 진짜 시급은 오히려 떨어질 수 있습니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6">
+        <h3 className="font-semibold text-gray-900 mb-4">진짜 시급 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">월급 300만원, 왕복 출퇴근 90분, 야근 주 10시간</p>
+            <p className="text-sm text-gray-600">
+              공식 시급 약 17,321원이지만, 출퇴근/야근/업무지출을 포함하면 진짜 시급은 약 9,500원으로 약 45% 감소합니다.
+              점심값+커피만 월 약 65만원이 나가고 있어, 도시락을 싸면 진짜 시급이 크게 올라갑니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">월급 250만원, 재택근무, 야근 없음</p>
+            <p className="text-sm text-gray-600">
+              출퇴근이 없고 야근도 없으면 공식 시급과 진짜 시급의 차이가 적습니다.
+              업무 지출도 줄어 월급은 적어도 진짜 시급은 출퇴근 직장인보다 높을 수 있습니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">이직 비교: A사 350만원(출퇴근 2시간) vs B사 300만원(출퇴근 30분)</p>
+            <p className="text-sm text-gray-600">
+              A사가 월급은 50만원 높지만, 출퇴근 시간 차이(월 약 30시간)를 반영하면
+              진짜 시급은 B사가 더 높을 수 있습니다. 연봉만 보지 말고 진짜 시급으로 비교하세요.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              진짜 시급이란 무엇인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              진짜 시급은 공식 급여에서 출퇴근 시간, 야근, 업무 관련 지출(점심값, 커피, 업무 의류 등)을 모두 반영해 계산한 실제 시급입니다.
+              책 &quot;Your Money or Your Life&quot;에서 소개된 개념으로, 돈을 생명 에너지로 환산해 소비 습관을 돌아보게 합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              공식 시급과 진짜 시급은 얼마나 차이나나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              보통 공식 시급 대비 30~50% 낮아집니다. 출퇴근 왕복 1시간, 야근 주 5시간, 업무 지출 월 80만원인
+              월급 300만원 직장인의 경우, 공식 시급 약 17,321원에서 진짜 시급은 약 10,970원으로 약 37% 감소합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              진짜 시급을 높이려면 어떻게 해야 하나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              출퇴근 시간 줄이기(재택근무, 회사 근처 이사), 불필요한 업무 지출 줄이기(도시락, 텀블러 사용),
+              야근 줄이기(업무 효율화) 등이 효과적입니다. 연봉이 올라도 출퇴근이 늘면 진짜 시급은 오히려 떨어질 수 있습니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="mt-6 bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

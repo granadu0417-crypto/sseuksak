@@ -652,6 +652,111 @@ export default function SavingsGoalSimulator() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '1억 모으려면 월 얼마씩 저축해야 하나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '적금 금리 3.5% 기준 월 50만원씩 저축하면 약 14년, 월 100만원이면 약 7년 6개월이 걸립니다. 적금+투자 혼합 전략(연 7% 수익률)을 활용하면 월 50만원으로도 약 10년이면 1억을 모을 수 있습니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '적금만 vs 투자 병행, 어떤 전략이 유리한가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '단기(3년 이내)에는 적금이 안전하고 유리합니다. 장기(10년 이상)에는 투자 병행이 복리 효과로 훨씬 유리합니다. 예를 들어 월 100만원 15년 기준, 적금만(3.5%)은 약 2억 1천만원, 투자 중심(10%)은 약 4억 1천만원으로 약 2배 차이가 납니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '시드머니(초기 자금)가 있으면 얼마나 유리한가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '시드머니는 복리 효과를 극대화합니다. 예를 들어 초기 자금 2,000만원 + 월 100만원 투자(연 7%) 15년 후 약 3억 7천만원이 됩니다. 시드머니 없이 같은 조건이면 약 3억 1천만원으로 약 6천만원 차이가 납니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">목돈 모으기 시뮬레이터 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">사회초년생: 월 50만원으로 1억 모으기</p>
+            <p className="text-sm text-gray-600">
+              시드머니 없이 월 50만원 저축 시, 적금만(3.5%)으로는 약 14년, 적금+투자 혼합(7%)으로는 약 10년이 소요됩니다.
+              투자 병행 시 약 4년을 앞당길 수 있지만, 원금 손실 위험이 있으므로 분산투자가 중요합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">직장인 5년차: 시드머니 2,000만원 + 월 100만원으로 3억 모으기</p>
+            <p className="text-sm text-gray-600">
+              적금만으로는 약 20년 이상 걸리지만, 적금 50% + 투자 50% 균형 전략(투자 7%)을 활용하면
+              약 15년이면 3억에 도달합니다. 시드머니가 복리 효과를 받아 후반부에 자산 성장이 가속됩니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">맞벌이 부부: 월 200만원으로 5억 모으기</p>
+            <p className="text-sm text-gray-600">
+              시드머니 5,000만원과 월 200만원 저축 시, 투자 중심(10%) 전략으로 약 10년이면 5억 달성 가능합니다.
+              적금만(3.5%)으로는 약 16년이 걸려 투자 병행 시 6년을 앞당길 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              1억 모으려면 월 얼마씩 저축해야 하나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              적금 금리 3.5% 기준 월 50만원씩 저축하면 약 14년, 월 100만원이면 약 7년 6개월이 걸립니다.
+              적금+투자 혼합 전략(연 7% 수익률)을 활용하면 월 50만원으로도 약 10년이면 1억을 모을 수 있습니다.
+              세금(이자소득세 15.4%)은 별도이므로 실제로는 조금 더 걸릴 수 있습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              적금만 vs 투자 병행, 어떤 전략이 유리한가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              단기(3년 이내)에는 적금이 안전하고 유리합니다. 장기(10년 이상)에는 투자 병행이
+              복리 효과로 훨씬 유리합니다. 다만 투자에는 원금 손실 위험이 있으므로
+              자신의 위험 감수 성향과 투자 기간을 고려해 적금과 투자 비율을 조절하세요.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              시드머니(초기 자금)가 있으면 얼마나 유리한가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              시드머니는 복리 효과를 극대화합니다. 예를 들어 초기 자금 2,000만원 + 월 100만원 투자(연 7%)
+              15년 후 약 3억 7천만원이 됩니다. 시드머니 없이 같은 조건이면 약 3억 1천만원으로
+              약 6천만원 차이가 납니다. 초기 자금이 클수록 장기적으로 더 큰 복리 혜택을 받습니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* ── 관련 도구 ── */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

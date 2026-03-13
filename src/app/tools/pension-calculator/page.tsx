@@ -397,6 +397,113 @@ export default function PensionCalculatorPage() {
           2026년 기준 | 보험료율 9.5%, 전체 가입자 평균소득월액(A값) 286만원, 소득대체율 40% 적용
         </p>
 
+        {/* FAQPage JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: '국민연금 20년 납부하면 월 얼마 받나요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '2026년 기준 월 평균소득 300만원으로 20년 납부 시 예상 월 수령액은 약 61만원입니다. 가입 기간이 길수록 수령액이 늘어나며, 30년 납부 시 약 96만원, 35년 납부 시 약 115만원을 받을 수 있습니다.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '국민연금은 몇 살부터 받을 수 있나요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '출생연도에 따라 수령 시작 나이가 다릅니다. 1969년 이후 출생자는 만 65세부터, 1965~1968년생은 만 64세, 1961~1964년생은 만 63세부터 수령합니다. 조기노령연금은 5년 일찍 받을 수 있지만 연 6%씩 감액됩니다.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '국민연금 보험료율은 얼마인가요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '2026년 기준 국민연금 보험료율은 9.5%이며, 직장가입자는 근로자와 사용자가 절반씩(각 4.75%) 부담합니다. 기준소득월액 하한은 37만원, 상한은 617만원입니다. 2028년까지 단계적으로 13%까지 인상될 예정입니다.',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* 사용 예시 */}
+        <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h3 className="font-semibold text-gray-900 mb-4">국민연금 계산기 사용 예시</h3>
+          <div className="space-y-4">
+            <div className="border-l-4 border-blue-400 pl-4">
+              <p className="font-medium text-gray-900 mb-1">35세, 월 평균소득 300만원, 20년 납부</p>
+              <p className="text-sm text-gray-600">
+                예상 월 수령액 약 61만원, 근로자 납부 총액 약 3,420만원, 65세부터 83세까지 총 수령액 약 1억 3,200만원.
+                납부 대비 약 3.9배를 수령할 수 있어 국민연금의 수익성이 높습니다.
+              </p>
+            </div>
+            <div className="border-l-4 border-green-400 pl-4">
+              <p className="font-medium text-gray-900 mb-1">28세, 월 평균소득 250만원, 30년 납부</p>
+              <p className="text-sm text-gray-600">
+                예상 월 수령액 약 80만원, 근로자 납부 총액 약 4,275만원. 가입 기간이 20년에서 30년으로 늘어나면
+                수령액이 약 31% 증가합니다. 장기 가입이 연금 수령액에 큰 영향을 미칩니다.
+              </p>
+            </div>
+            <div className="border-l-4 border-purple-400 pl-4">
+              <p className="font-medium text-gray-900 mb-1">40세, 월 평균소득 500만원, 25년 납부</p>
+              <p className="text-sm text-gray-600">
+                예상 월 수령액 약 100만원. 월 소득이 높아도 기준소득월액 상한(617만원)이 있어
+                소득 500만원과 617만원의 연금 차이는 크지 않습니다. 상한 초과 소득에 대해서는
+                개인연금이나 IRP로 추가 노후 준비를 권장합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 자주 묻는 질문 */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+          <div className="space-y-3">
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                국민연금 20년 납부하면 월 얼마 받나요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                2026년 기준 월 평균소득 300만원으로 20년 납부 시 예상 월 수령액은 약 61만원입니다.
+                가입 기간이 길수록 수령액이 늘어나며, 30년 납부 시 약 96만원, 35년 납부 시 약 115만원을
+                받을 수 있습니다. 실제 수령액은 전체 가입자 평균소득월액 변동에 따라 달라집니다.
+              </div>
+            </details>
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                국민연금은 몇 살부터 받을 수 있나요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                출생연도에 따라 수령 시작 나이가 다릅니다. 1969년 이후 출생자는 만 65세부터,
+                1965~1968년생은 만 64세, 1961~1964년생은 만 63세부터 수령합니다.
+                조기노령연금은 5년 일찍 받을 수 있지만 연 6%씩 감액되며,
+                반대로 연기연금은 최대 5년 늦추면 연 7.2%씩 증액됩니다.
+              </div>
+            </details>
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                국민연금 보험료율은 얼마인가요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                2026년 기준 국민연금 보험료율은 9.5%이며, 직장가입자는 근로자와 사용자가
+                절반씩(각 4.75%) 부담합니다. 기준소득월액 하한은 37만원, 상한은 617만원입니다.
+                국민연금 개혁안에 따라 2028년까지 단계적으로 13%까지 인상될 예정입니다.
+              </div>
+            </details>
+          </div>
+        </div>
+
         {/* 관련 도구 */}
         <div className="mt-6 bg-gray-50 rounded-xl p-6">
           <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

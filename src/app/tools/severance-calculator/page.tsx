@@ -339,6 +339,111 @@ export default function SeveranceCalculatorPage() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '퇴직금을 받으려면 몇 년 이상 근무해야 하나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '근로자퇴직급여 보장법에 따라 1년 이상 계속 근무하고 주 15시간 이상(월 60시간 이상) 일한 근로자가 퇴직금 수급 대상입니다. 정규직, 계약직, 아르바이트 모두 해당됩니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '퇴직금 계산 방법은?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '퇴직금 = 1일 평균임금 x 30일 x (총 근속일수 / 365)입니다. 1일 평균임금은 퇴직 전 3개월간 급여 총액을 92일(3개월)로 나눈 금액이며, 상여금과 연차수당도 포함됩니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '퇴직금에 세금이 붙나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '네, 퇴직소득세가 부과됩니다. 다만 근속연수에 따른 공제가 적용되어 일반 소득세보다 세율이 낮습니다. 근속연수가 길수록 공제액이 커져 세금 부담이 줄어듭니다. 퇴직소득세와 지방소득세(퇴직소득세의 10%)를 차감한 금액이 실수령액입니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">퇴직금 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">월급 300만원, 3년 근무 후 퇴직</p>
+            <p className="text-sm text-gray-600">
+              1일 평균임금 약 97,826원, 예상 퇴직금 약 900만원.
+              퇴직소득세 공제 후 실수령액은 약 880만원 수준입니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">월급 400만원 + 연 상여금 800만원, 5년 근무</p>
+            <p className="text-sm text-gray-600">
+              상여금이 포함되면 평균임금이 높아져 퇴직금도 증가합니다.
+              월 평균 약 467만원 기준으로 계산되어 퇴직금은 약 2,280만원이 됩니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">월급 250만원, 11개월 근무 후 퇴직</p>
+            <p className="text-sm text-gray-600">
+              1년 미만 근무 시 법정 퇴직금 수급 대상이 아닙니다.
+              1년을 채우면 퇴직금을 받을 수 있으니, 가능하면 1년 이상 근무하는 것이 유리합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              퇴직금을 받으려면 몇 년 이상 근무해야 하나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              근로자퇴직급여 보장법에 따라 1년 이상 계속 근무하고 주 15시간 이상(월 60시간 이상) 일한 근로자가
+              퇴직금 수급 대상입니다. 정규직, 계약직, 아르바이트 모두 해당됩니다.
+              1년 미만이면 법정 퇴직금 지급 의무가 없습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              퇴직금 계산 방법은?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              퇴직금 = 1일 평균임금 x 30일 x (총 근속일수 / 365)입니다.
+              1일 평균임금은 퇴직 전 3개월간 급여 총액을 92일(3개월)로 나눈 금액이며,
+              상여금과 연차수당도 포함됩니다. 기본급만이 아닌 정기적으로 지급되는 수당도 평균임금에 산입됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              퇴직금에 세금이 붙나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              네, 퇴직소득세가 부과됩니다. 다만 근속연수에 따른 공제가 적용되어 일반 소득세보다 세율이 낮습니다.
+              근속연수가 길수록 공제액이 커져 세금 부담이 줄어듭니다.
+              퇴직소득세와 지방소득세(퇴직소득세의 10%)를 차감한 금액이 실수령액입니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 링크 */}
       <div className="bg-gray-50 rounded-xl p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 글</h3>

@@ -750,6 +750,111 @@ export default function CarCostSimulator() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '자동차 구매, 리스, 장기렌트 중 어떤 게 가장 유리한가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '3년 이하 단기 이용 시 장기렌트나 리스가 유리하고, 5년 이상 장기 보유 시 구매가 유리한 경우가 많습니다. 차량가격, 대출금리, 감가율에 따라 달라지므로 시뮬레이션으로 비교해보는 것이 정확합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '리스와 장기렌트의 차이점은 무엇인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '리스는 보험료, 자동차세, 정비비를 별도로 부담하지만 월 리스료가 저렴합니다. 장기렌트는 보험, 세금, 정비가 월 렌트료에 포함되어 관리가 편리하지만 총 비용은 높을 수 있습니다. 리스는 만기 시 인수 옵션이 있고, 장기렌트는 반납이 기본입니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '자동차 취등록세는 얼마인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '비영업용 승용차 기준 취득세 7%가 적용됩니다. 예를 들어 2,500만원 차량이면 약 175만원의 취등록세가 발생합니다. 경차는 취득세가 면제(2024년 기준)되며, 하이브리드/전기차는 감면 혜택이 있습니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자동차 비용 비교 시뮬레이터 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">사회초년생 - 아반떼 2,500만원, 5년 이용</p>
+            <p className="text-sm text-gray-600">
+              대출 70%, 금리 5.5% 기준 구매 시 5년 순비용 약 1,600만원, 장기렌트 약 3,720만원.
+              5년 이상 타실 예정이라면 구매가 유리합니다. 단, 초기 취등록세 175만원이 필요합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">법인사업자 - 중형 SUV 리스 3년</p>
+            <p className="text-sm text-gray-600">
+              법인 리스는 월 리스료 전액 비용 처리가 가능해 절세 효과가 큽니다.
+              3년 후 반납하고 신차로 교체하면 감가 부담 없이 항상 새 차를 이용할 수 있습니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">차량 관리가 부담스러운 경우 - 장기렌트</p>
+            <p className="text-sm text-gray-600">
+              보험, 세금, 정비를 월 렌트료에 포함시키면 관리가 편리합니다.
+              사고 이력이 있어 보험료가 높거나, 만 26세 미만이라면 장기렌트가 보험 부담을 줄일 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              자동차 구매, 리스, 장기렌트 중 어떤 게 가장 유리한가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              3년 이하 단기 이용 시 장기렌트나 리스가 유리하고, 5년 이상 장기 보유 시 구매가 유리한 경우가 많습니다.
+              차량가격, 대출금리, 감가율에 따라 달라지므로 시뮬레이션으로 비교해보는 것이 정확합니다.
+              특히 구매는 잔존가치가 남아 오래 탈수록 순비용이 줄어드는 구조입니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              리스와 장기렌트의 차이점은 무엇인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              리스는 보험료, 자동차세, 정비비를 별도로 부담하지만 월 리스료가 저렴합니다.
+              장기렌트는 보험, 세금, 정비가 월 렌트료에 포함되어 관리가 편리하지만 총 비용은 높을 수 있습니다.
+              번호판도 리스는 일반 번호판, 장기렌트는 허/하/호 번호판이 부여됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              자동차 취등록세는 얼마인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              비영업용 승용차 기준 취득세 7%가 적용됩니다. 예를 들어 2,500만원 차량이면 약 175만원의 취등록세가 발생합니다.
+              경차는 취득세가 면제되며, 하이브리드/전기차는 감면 혜택이 있습니다.
+              리스와 장기렌트는 취등록세를 직접 부담하지 않습니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* ── 관련 도구 ── */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

@@ -334,6 +334,111 @@ export default function LifeInWeeksPage() {
         </div>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Life in Weeks는 무엇인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Life in Weeks는 Tim Urban의 블로그 "Wait But Why"에서 2014년에 소개된 개념으로, 인생을 주(週) 단위 격자로 시각화하는 방법입니다. 90세 기준 인생은 총 4,680주이며, 이미 지나간 주와 남은 주를 한눈에 볼 수 있어 시간의 유한함을 직관적으로 느끼게 해줍니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '인생이 총 몇 주인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '90세 기준으로 인생은 총 4,680주입니다. 80세 기준이면 4,160주, 100세 기준이면 5,200주입니다. 30세라면 이미 약 1,560주가 지났고 약 3,120주가 남아 있습니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Neither Week이란 무엇인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Tim Urban이 경고하는 가장 나쁜 유형의 주입니다. 현재를 즐기지도 않고, 미래를 위해 무언가를 쌓지도 않는 주를 말합니다. 소셜 미디어 무한 스크롤, 의미 없는 TV 시청 등 시간이 그냥 지나가버리는 주를 피하는 것이 중요합니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">Life in Weeks 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">1995년생 (만 30세)</p>
+            <p className="text-sm text-gray-600">
+              약 1,560주가 지났고, 남은 주는 약 3,120주입니다. 인생의 33%를 사용했고 67%가 남아 있습니다.
+              현재 커리어 빌딩 시기에 해당하며, 남은 주를 의미 있게 활용할 계획을 세워보세요.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">1975년생 (만 50세)</p>
+            <p className="text-sm text-gray-600">
+              약 2,600주가 지났고, 남은 주는 약 2,080주입니다. 인생의 56%를 지나왔으며 절정기에 해당합니다.
+              전문성과 경험을 바탕으로 멘토링이나 새로운 도전을 시작하기에 좋은 시기입니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">2005년생 (만 20세)</p>
+            <p className="text-sm text-gray-600">
+              약 1,040주가 지났고, 남은 주는 약 3,640주입니다. 인생의 22%를 사용했으며 대학/사회초년 시기입니다.
+              남은 3,640주를 &quot;즐기기&quot;와 &quot;만들기&quot;에 균형 있게 투자하는 것이 중요합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              Life in Weeks는 무엇인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              Tim Urban의 블로그 &quot;Wait But Why&quot;에서 2014년에 소개된 개념으로, 인생을 주(週) 단위 격자로 시각화하는 방법입니다.
+              90세 기준 인생은 총 4,680주이며, 이미 지나간 주와 남은 주를 한눈에 볼 수 있어
+              시간의 유한함을 직관적으로 느끼게 해줍니다. 매주 한 칸씩 색칠하며 삶을 되돌아보는 용도로도 활용됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              인생이 총 몇 주인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              90세 기준으로 인생은 총 4,680주입니다. 80세 기준이면 4,160주, 100세 기준이면 5,200주입니다.
+              30세라면 이미 약 1,560주가 지났고, 40세라면 약 2,080주, 50세라면 약 2,600주가 지나갑니다.
+              이 숫자를 시각적으로 보면 남은 시간을 더 소중하게 사용하려는 동기가 생깁니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              Neither Week이란 무엇인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              Tim Urban이 경고하는 가장 나쁜 유형의 주입니다. 현재를 즐기지도 않고, 미래를 위해 무언가를 쌓지도 않는 주를 말합니다.
+              소셜 미디어 무한 스크롤, 의미 없는 TV 시청, 결정을 미루며 시간 낭비하는 것이 대표적입니다.
+              매주를 &quot;즐기기&quot;(여행, 취미, 관계) 또는 &quot;만들기&quot;(공부, 운동, 저축)에 투자하는 것이 좋습니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

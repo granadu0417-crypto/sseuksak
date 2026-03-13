@@ -399,6 +399,113 @@ export default function UnemploymentBenefitCalculatorPage() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '실업급여는 얼마나 받을 수 있나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '퇴직 전 3개월 평균임금의 60%를 1일 구직급여액으로 받습니다. 2026년 기준 1일 상한액은 66,000원(월 약 198만원), 하한액은 66,048원입니다. 수급 기간은 나이와 고용보험 가입기간에 따라 120~270일입니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '자발적 퇴직(자진 퇴사)도 실업급여를 받을 수 있나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '원칙적으로 자발적 퇴직은 실업급여 대상이 아닙니다. 다만 임금체불, 근로조건 위반, 직장 내 괴롭힘, 통근 곤란(왕복 3시간 이상) 등 정당한 이직 사유가 인정되면 수급 가능합니다. 고용센터(1350)에서 개별 상담을 받아보세요.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '실업급여 신청 방법과 기한은 어떻게 되나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '퇴직일 다음 날부터 12개월 이내에 관할 고용센터에 신청해야 합니다. 워크넷(work.go.kr)에서 구직등록 후 고용센터를 방문하여 수급자격 인정 신청을 하면 됩니다. 기한이 지나면 수급권이 소멸되므로 빠른 신청이 중요합니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">실업급여 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">30세, 월급 300만원, 고용보험 3년 가입</p>
+            <p className="text-sm text-gray-600">
+              1일 평균임금 10만원, 구직급여 60% = 6만원. 상한액(66,000원) 이내이므로 그대로 적용.
+              50세 미만 / 3~5년 가입 = 180일 수급. 총 예상 수령액 약 1,080만원 (월 약 180만원).
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">52세, 월급 400만원, 고용보험 12년 가입</p>
+            <p className="text-sm text-gray-600">
+              1일 평균임금 약 13.3만원, 60% = 약 8만원이지만 상한액 66,000원 적용.
+              50세 이상 / 10년 이상 가입 = 270일(9개월) 수급. 총 예상 수령액 약 1,782만원.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">25세, 월급 220만원, 고용보험 1년 미만</p>
+            <p className="text-sm text-gray-600">
+              1일 평균임금 약 7.3만원, 60% = 약 4.4만원이지만 하한액 66,048원 적용.
+              50세 미만 / 1년 미만 = 120일(4개월) 수급. 총 예상 수령액 약 792만원.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              실업급여는 얼마나 받을 수 있나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              퇴직 전 3개월 평균임금의 60%를 1일 구직급여액으로 받습니다.
+              2026년 기준 1일 상한액은 66,000원(월 약 198만원), 하한액은 66,048원입니다.
+              수급 기간은 나이와 고용보험 가입기간에 따라 120~270일이며,
+              50세 이상이거나 장애인인 경우 더 긴 수급 기간이 적용됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              자발적 퇴직(자진 퇴사)도 실업급여를 받을 수 있나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              원칙적으로 자발적 퇴직은 실업급여 대상이 아닙니다.
+              다만 임금체불, 근로조건 위반, 직장 내 괴롭힘, 통근 곤란(왕복 3시간 이상),
+              건강 악화 등 정당한 이직 사유가 인정되면 수급 가능합니다.
+              고용센터(1350)에서 개별 상담을 받아보세요.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              실업급여 신청 방법과 기한은 어떻게 되나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              퇴직일 다음 날부터 12개월 이내에 관할 고용센터에 신청해야 합니다.
+              워크넷(work.go.kr)에서 구직등록 후 고용센터를 방문하여 수급자격 인정 신청을 하면 됩니다.
+              온라인으로 수급자격 교육을 이수할 수도 있으며, 1~4주 단위로 실업인정(구직활동 보고)을 해야 급여가 지급됩니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

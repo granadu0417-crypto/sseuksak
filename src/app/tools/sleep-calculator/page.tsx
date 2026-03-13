@@ -311,6 +311,109 @@ export default function SleepCalculatorPage() {
         </div>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '수면 사이클은 몇 분인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '하나의 수면 사이클은 약 90분(1시간 30분)입니다. N1(입면기), N2(얕은 수면), N3(깊은 수면), REM(렘수면) 4단계로 구성되며, 하룻밤에 4~6사이클을 반복합니다. 사이클이 끝나는 시점(얕은 수면)에 일어나면 개운하게 기상할 수 있습니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '성인 적정 수면 시간은 몇 시간인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'CDC(미국 질병통제예방센터) 기준으로 18~60세 성인은 7시간 이상, 61세 이상은 7~9시간의 수면이 권장됩니다. 수면 사이클 기준으로는 5사이클(7시간 30분) 또는 6사이클(9시간)이 최적입니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '수면 사이클 중간에 일어나면 왜 피곤한가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '깊은 수면(N3) 단계에서 억지로 깨면 "수면 관성(sleep inertia)"이 발생해 30분~1시간 동안 두뇌가 완전히 깨어나지 못합니다. 얕은 수면(N1~N2) 단계, 즉 사이클이 끝나는 시점에 일어나면 자연스럽게 각성되어 개운합니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">수면 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">아침 7시에 일어나야 하는 직장인</p>
+            <p className="text-sm text-gray-600">
+              기상 시간 07:00 입력 시, 추천 취침 시간은 오후 9:45(6사이클, 9시간),
+              오후 11:15(5사이클, 7.5시간), 오전 12:45(4사이클, 6시간)입니다.
+              5~6사이클이 권장되므로 오후 9:45~11:15 사이에 잠드는 것이 좋습니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">밤 11시에 잠자리에 드는 학생</p>
+            <p className="text-sm text-gray-600">
+              취침 시간 23:00 입력 시, 추천 기상 시간은 오전 4:45(4사이클),
+              오전 6:15(5사이클), 오전 7:45(6사이클)입니다.
+              학교 등교를 고려하면 오전 6:15(5사이클, 7.5시간)에 일어나는 것이 최적입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              수면 사이클은 몇 분인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              하나의 수면 사이클은 약 90분(1시간 30분)입니다.
+              N1(입면기), N2(얕은 수면), N3(깊은 수면), REM(렘수면) 4단계로 구성되며,
+              하룻밤에 4~6사이클을 반복합니다.
+              사이클이 끝나는 시점(얕은 수면)에 일어나면 개운하게 기상할 수 있고,
+              깊은 수면 중간에 깨면 피곤함을 느끼게 됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              성인 적정 수면 시간은 몇 시간인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              CDC(미국 질병통제예방센터) 기준으로 18~60세 성인은 7시간 이상, 61세 이상은 7~9시간의 수면이 권장됩니다.
+              수면 사이클 기준으로는 5사이클(7시간 30분) 또는 6사이클(9시간)이 최적입니다.
+              4사이클(6시간)도 가능하지만, 장기적으로 수면 부족이 누적될 수 있어 권장되지 않습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              수면 사이클 중간에 일어나면 왜 피곤한가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              깊은 수면(N3) 단계에서 억지로 깨면 &quot;수면 관성(sleep inertia)&quot;이 발생합니다.
+              이 상태에서는 30분~1시간 동안 두뇌가 완전히 깨어나지 못해 피로감, 집중력 저하를 느낍니다.
+              얕은 수면(N1~N2) 단계, 즉 사이클이 끝나는 시점에 일어나면
+              자연스럽게 각성되어 개운하게 하루를 시작할 수 있습니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

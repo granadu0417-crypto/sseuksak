@@ -502,6 +502,109 @@ export default function HourlyWageCalculatorPage() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '2026년 최저시급은 얼마인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '2026년 최저시급은 10,320원입니다. 주 40시간 근무 시 주휴수당을 포함한 월급은 약 2,156,880원(209시간 기준)이며, 연봉으로 환산하면 약 25,882,560원입니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '시급에서 월급을 계산하는 방법은?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '월급 = 시급 x 월 근무시간입니다. 주 40시간 근무 시 월 평균 근무시간은 약 173.8시간(40시간 x 4.345주)이고, 주휴수당을 포함하면 209시간(48시간 x 4.345주)으로 계산합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '209시간은 어떻게 나온 숫자인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '209시간은 주 40시간 근무 + 주휴 8시간 = 주 48시간을 월 평균 주수(4.345주 = 365일/12개월/7일)로 곱한 값입니다. 즉, 48 x 4.345 = 약 209시간이 됩니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">시급 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">편의점 알바 (시급 10,320원, 주 20시간)</p>
+            <p className="text-sm text-gray-600">
+              주휴수당 포함 월급 약 107만원. 주 15시간 이상이므로 주휴수당(주 4시간분)이 발생합니다.
+              주휴수당만 월 약 18만원으로, 이를 못 받고 있다면 사업주에게 청구할 수 있습니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">월급 300만원 직장인의 시급 환산</p>
+            <p className="text-sm text-gray-600">
+              주 40시간 기준 시급 약 14,354원(주휴수당 포함). 최저시급 대비 139%.
+              야근, 출퇴근 시간까지 고려하면 실제 시급은 더 낮아질 수 있습니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">카페 주말 알바 (시급 12,000원, 주 16시간)</p>
+            <p className="text-sm text-gray-600">
+              주휴수당 포함 월급 약 91만원. 주 15시간을 넘기므로 주휴수당 대상이 됩니다.
+              만약 주 14시간이면 주휴수당이 빠져 월급이 약 73만원으로 줄어듭니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              2026년 최저시급은 얼마인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              2026년 최저시급은 10,320원입니다. 주 40시간 근무 시 주휴수당을 포함한 월급은 약 2,156,880원(209시간 기준)이며,
+              연봉으로 환산하면 약 25,882,560원입니다. 2025년(10,030원) 대비 290원(2.9%) 인상되었습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              시급에서 월급을 계산하는 방법은?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              월급 = 시급 x 월 근무시간입니다. 주 40시간 근무 시 월 평균 근무시간은 약 173.8시간(40시간 x 4.345주)이고,
+              주휴수당을 포함하면 209시간(48시간 x 4.345주)으로 계산합니다.
+              주 15시간 미만 근무 시 주휴수당이 빠지므로 월급이 크게 달라집니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              209시간은 어떻게 나온 숫자인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              209시간은 주 40시간 근무 + 주휴 8시간 = 주 48시간을 월 평균 주수(4.345주 = 365일/12개월/7일)로 곱한 값입니다.
+              즉, 48 x 4.345 = 약 209시간이 됩니다. 이 209시간은 최저임금 월급 환산의 법적 기준으로 사용됩니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 링크 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구 및 글</h3>

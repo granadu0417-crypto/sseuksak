@@ -470,6 +470,114 @@ export default function LivelihoodBenefitCalculator() {
         </div>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '생계급여 수급 조건은 무엇인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '2026년 기준 소득인정액이 기준중위소득의 32% 이하인 가구가 대상입니다. 1인 가구 약 82만원, 4인 가구 약 208만원 이하입니다. 소득인정액은 소득평가액(근로소득 30% 공제 후)과 재산의 소득환산액을 합산하여 계산합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '생계급여는 얼마나 받을 수 있나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '생계급여 = 선정기준액 - 소득인정액입니다. 예를 들어 1인 가구 소득인정액이 30만원이면, 선정기준 82만원 - 30만원 = 월 52만원을 받습니다. 소득이 전혀 없는 1인 가구는 최대 월 약 82만원을 받을 수 있습니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '부양의무자 기준이 폐지되었나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '2026년 현재 생계급여의 부양의무자 기준은 사실상 폐지되었습니다. 본인 가구의 소득과 재산만으로 수급 자격을 심사합니다. 단, 부양의무자 가구에 연 1억원 이상 고소득자나 9억원 이상 재산 보유자가 있는 경우는 예외적으로 제한될 수 있습니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">생계급여 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">무소득 1인 가구 (지방 거주)</p>
+            <p className="text-sm text-gray-600">
+              근로소득 0원, 재산 없음. 소득인정액 0원으로 1인 가구 선정기준 약 82만원 전액 수급 가능.
+              의료급여, 주거급여, 교육급여도 함께 신청할 수 있습니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">28세 청년, 월 근로소득 100만원 (서울 거주)</p>
+            <p className="text-sm text-gray-600">
+              청년 추가공제 적용: (100만원 - 60만원) x 70% = 28만원 소득평가액.
+              재산이 적으면 소득인정액이 선정기준(82만원) 이하로 차액만큼 수급 가능합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">4인 가구, 월 소득 150만원, 전세 8,000만원 (경기)</p>
+            <p className="text-sm text-gray-600">
+              근로소득 공제 후 소득평가액 105만원. 주거재산 8,000만원에서 기본재산액 8,000만원 공제 = 0원.
+              소득인정액 약 105만원, 4인 가구 선정기준 약 208만원. 차액 약 103만원 수급 가능합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              생계급여 수급 조건은 무엇인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              2026년 기준 소득인정액이 기준중위소득의 32% 이하인 가구가 대상입니다.
+              1인 가구 약 82만원, 4인 가구 약 208만원 이하입니다.
+              소득인정액은 소득평가액(근로소득 30% 공제 후)과 재산의 소득환산액을 합산하여 계산합니다.
+              주민센터에서 신청하면 약 30일 내에 결과를 통보받습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              생계급여는 얼마나 받을 수 있나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              생계급여 = 선정기준액 - 소득인정액입니다.
+              예를 들어 1인 가구 소득인정액이 30만원이면, 선정기준 82만원 - 30만원 = 월 52만원을 받습니다.
+              소득이 전혀 없는 1인 가구는 최대 월 약 82만원을 받을 수 있습니다.
+              생계급여 외에도 의료급여(40%), 주거급여(48%), 교육급여(50%) 등도 함께 신청 가능합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              부양의무자 기준이 폐지되었나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              2026년 현재 생계급여의 부양의무자 기준은 사실상 폐지되었습니다.
+              본인 가구의 소득과 재산만으로 수급 자격을 심사합니다.
+              단, 부양의무자 가구에 연 1억원 이상 고소득자나 9억원 이상 재산 보유자가 있는 경우는
+              예외적으로 제한될 수 있습니다. 자세한 사항은 보건복지상담센터(129)에 문의하세요.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

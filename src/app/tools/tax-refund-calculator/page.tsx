@@ -615,6 +615,104 @@ export default function TaxRefundCalculator() {
           </div>
         </div>
 
+        {/* FAQPage JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: '연말정산 환급은 언제 받나요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '연말정산은 매년 1월 중순~2월 중순에 진행되며, 환급금은 보통 2월 또는 3월 급여에 포함되어 지급됩니다. 회사마다 지급 시기가 다를 수 있으므로 회사 인사팀에 확인하시기 바랍니다.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '연말정산에서 가장 절세 효과가 큰 항목은 무엇인가요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '연금저축/IRP 세액공제(최대 연 900만원, 공제율 12~16.5%), 월세 세액공제(최대 750만원, 17%), 신용카드 소득공제(총급여 25% 초과 사용분)가 대표적입니다. 총급여 5,500만원 이하인 경우 공제율이 더 높아 절세 효과가 큽니다.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '연말정산을 못하면 어떻게 하나요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '연말정산을 놓쳤거나 추가 공제를 적용하고 싶다면, 5월 종합소득세 신고 기간에 확정신고를 통해 정정할 수 있습니다. 홈택스에서 경정청구를 하면 최대 5년 이내 환급이 가능합니다.',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* 사용 예시 */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h3 className="font-semibold text-gray-900 mb-4">연말정산 환급액 계산기 사용 예시</h3>
+          <div className="space-y-4">
+            <div className="border-l-4 border-blue-400 pl-4">
+              <p className="font-medium text-gray-900 mb-1">연봉 5,000만원, 기납부세액 300만원, 연금저축 400만원</p>
+              <p className="text-sm text-gray-600">
+                근로소득공제 후 과세표준 약 3,300만원, 산출세액 약 370만원.
+                근로소득세액공제 + 연금저축 세액공제(15%) 60만원 적용.
+                결정세액 약 240만원으로, 기납부세액 300만원과의 차이 약 60만원 환급 가능.
+              </p>
+            </div>
+            <div className="border-l-4 border-green-400 pl-4">
+              <p className="font-medium text-gray-900 mb-1">연봉 3,500만원, 월세 연 600만원 납부</p>
+              <p className="text-sm text-gray-600">
+                총급여 7천만원 이하이므로 월세 세액공제 17% 적용.
+                월세 600만원 x 17% = 102만원 세액공제.
+                다른 공제 항목과 합산하면 상당한 환급을 받을 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 자주 묻는 질문 */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+          <div className="space-y-3">
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                연말정산 환급은 언제 받나요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                연말정산은 매년 1월 중순~2월 중순에 진행되며, 환급금은 보통 2월 또는 3월 급여에 포함되어 지급됩니다.
+                회사마다 지급 시기가 다를 수 있으므로 회사 인사팀에 확인하시기 바랍니다.
+              </div>
+            </details>
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                연말정산에서 가장 절세 효과가 큰 항목은 무엇인가요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                연금저축/IRP 세액공제(최대 연 900만원, 공제율 12~16.5%), 월세 세액공제(최대 750만원, 17%),
+                신용카드 소득공제(총급여 25% 초과 사용분)가 대표적입니다.
+                총급여 5,500만원 이하인 경우 공제율이 더 높아 절세 효과가 큽니다.
+              </div>
+            </details>
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                연말정산을 못하면 어떻게 하나요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                연말정산을 놓쳤거나 추가 공제를 적용하고 싶다면, 5월 종합소득세 신고 기간에 확정신고를 통해
+                정정할 수 있습니다. 홈택스에서 경정청구를 하면 최대 5년 이내 환급이 가능합니다.
+              </div>
+            </details>
+          </div>
+        </div>
+
         {/* 관련 도구 */}
         <div className="bg-gray-50 rounded-xl p-6">
           <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

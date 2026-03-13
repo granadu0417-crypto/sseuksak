@@ -281,6 +281,112 @@ export default function AgeCalculatorPage() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '만 나이와 한국 나이 차이는 몇 살인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '만 나이와 한국 나이(세는 나이)는 생일 전에는 2살, 생일이 지난 후에는 1살 차이가 납니다. 예를 들어 2000년 6월생이 2026년 3월 기준 만 25세, 한국 나이 27세로 2살 차이입니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '만 나이 통일법은 언제부터 시행되었나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '2023년 6월 28일부터 민법과 행정 분야에서 만 나이가 법적 기준으로 통일되었습니다. 다만 병역법(연 나이), 청소년보호법(연 나이) 등 일부 법령은 예외적으로 연 나이를 사용합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '연 나이는 어디에 사용되나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '연 나이(올해 연도 - 출생 연도)는 병역법, 청소년보호법 등에서 사용됩니다. 예를 들어 병역 판정은 연 나이 기준이며, 만 19세가 아닌 연 나이 19세에 해당하는 해에 입영 대상이 됩니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">나이 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">2000년 3월 15일생 (생일 지남)</p>
+            <p className="text-sm text-gray-600">
+              만 나이 25세, 한국 나이 27세, 연 나이 26세입니다.
+              만 19세(성인) 기준을 이미 충족했고, 만 25세이므로 대형면허 취득이 가능합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">1964년 8월 20일생 (정년 확인)</p>
+            <p className="text-sm text-gray-600">
+              만 61세, 한국 나이 63세입니다. 법정 정년(만 60세)을 넘겼으며,
+              1969년 이전 출생이므로 국민연금 수령 개시 연령은 만 62~64세 구간에 해당합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">2008년 12월 1일생 (청소년 법적 나이 확인)</p>
+            <p className="text-sm text-gray-600">
+              만 17세, 연 나이 18세입니다. 만 18세 미달이므로 선거권과 운전면허 취득은 아직 불가하지만,
+              병역법상 연 나이 18세이므로 병역 의무 관련 사항을 확인해야 합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              만 나이와 한국 나이 차이는 몇 살인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              만 나이와 한국 나이(세는 나이)는 생일 전에는 2살, 생일이 지난 후에는 1살 차이가 납니다.
+              한국 나이는 태어나면 1살, 매년 1월 1일에 1살씩 추가되는 방식이고,
+              만 나이는 생일이 지나야 1살이 추가되기 때문입니다.
+              2023년 6월부터 법적으로 만 나이가 기준이 되었지만, 일상 대화에서는 여전히 한국 나이를 쓰는 경우가 많습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              만 나이 통일법은 언제부터 시행되었나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              2023년 6월 28일부터 민법과 행정 분야에서 만 나이가 법적 기준으로 통일되었습니다.
+              이전에는 한국 나이, 연 나이, 만 나이가 혼용되어 혼란이 있었습니다.
+              다만 병역법(연 나이), 청소년보호법(연 나이) 등 일부 법령은 예외적으로 연 나이를 사용합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              연 나이는 어디에 사용되나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              연 나이(올해 연도 - 출생 연도)는 병역법, 청소년보호법 등에서 사용됩니다.
+              병역 판정은 연 나이 기준이며, 만 19세가 아닌 연 나이 19세에 해당하는 해에 입영 대상이 됩니다.
+              또한 청소년 보호 관련 법률에서도 연 나이 19세 미만을 청소년으로 규정합니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

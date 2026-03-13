@@ -443,6 +443,108 @@ export default function RentConversionCalculatorPage() {
           2026년 2월 기준 | 한국은행 기준금리 {RATES.baseRate}%, 법정 상한 전환율 {legalMaxRate}%
         </p>
 
+        {/* FAQPage JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: '전월세 전환율이란 무엇인가요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '전월세 전환율은 전세 보증금과 월세 보증금의 차액을 월세로 환산할 때 적용하는 비율입니다. 계산식은 (월세 x 12) / (전세 보증금 - 월세 보증금) x 100 입니다. 2026년 2월 기준 법정 상한 전환율은 기준금리(2.75%) + 2% = 4.75%입니다.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '법정 상한 전환율을 초과하면 어떻게 되나요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '주택임대차보호법에 따라 법정 상한 전환율(기준금리 + 2%)을 초과하는 월세는 임차인이 초과분의 반환을 청구할 수 있습니다. 2026년 2월 기준 상한은 4.75%이며, 이를 초과하면 임대인에게 초과 월세의 반환을 요구하거나 분쟁 조정을 신청할 수 있습니다.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '전세와 월세 중 어느 쪽이 유리한가요?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '전세대출 금리가 전환율보다 낮으면 전세가 유리하고, 높으면 월세가 유리합니다. 예를 들어 전세대출 금리 3.5%, 전환율 4.75%인 경우 전세가 유리합니다. 다만 전세는 보증금 반환 위험이 있고, 월세는 매달 지출이 발생하므로 자금 상황과 거주 기간을 함께 고려해야 합니다.',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* 사용 예시 */}
+        <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h3 className="font-semibold text-gray-900 mb-4">전월세 전환율 계산기 사용 예시</h3>
+          <div className="space-y-4">
+            <div className="border-l-4 border-blue-400 pl-4">
+              <p className="font-medium text-gray-900 mb-1">전세 2억 → 보증금 5천만 + 월세 전환</p>
+              <p className="text-sm text-gray-600">
+                보증금 차액 1.5억에 법정 상한 전환율 4.75% 적용 시 적정 월세는 약 59만 3,750원입니다.
+                만약 집주인이 월 70만원을 요구하면 전환율이 5.6%로 법정 상한을 초과하므로
+                조정을 요청할 수 있습니다.
+              </p>
+            </div>
+            <div className="border-l-4 border-green-400 pl-4">
+              <p className="font-medium text-gray-900 mb-1">월세 50만원의 전환율 역산</p>
+              <p className="text-sm text-gray-600">
+                전세 2억, 보증금 5천만, 월세 50만원일 때 전환율은 4.0%입니다.
+                법정 상한(4.75%) 이내이며, 전세대출 금리(3.5%)보다 높으므로
+                전세대출이 가능하다면 전세가 월 비용 면에서 유리합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 자주 묻는 질문 */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+          <div className="space-y-3">
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                전월세 전환율이란 무엇인가요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                전월세 전환율은 전세 보증금과 월세 보증금의 차액을 월세로 환산할 때 적용하는 비율입니다.
+                계산식은 (월세 x 12) / (전세 보증금 - 월세 보증금) x 100 입니다.
+                2026년 2월 기준 법정 상한 전환율은 기준금리(2.75%) + 2% = 4.75%입니다.
+              </div>
+            </details>
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                법정 상한 전환율을 초과하면 어떻게 되나요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                주택임대차보호법에 따라 법정 상한 전환율(기준금리 + 2%)을 초과하는 월세는
+                임차인이 초과분의 반환을 청구할 수 있습니다. 2026년 2월 기준 상한은 4.75%이며,
+                이를 초과하면 임대인에게 초과 월세의 반환을 요구하거나
+                주택임대차분쟁조정위원회에 조정을 신청할 수 있습니다.
+              </div>
+            </details>
+            <details className="group border border-gray-200 rounded-lg">
+              <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+                전세와 월세 중 어느 쪽이 유리한가요?
+                <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm text-gray-600">
+                전세대출 금리가 전환율보다 낮으면 전세가 유리하고, 높으면 월세가 유리합니다.
+                예를 들어 전세대출 금리 3.5%, 전환율 4.75%인 경우 전세가 유리합니다.
+                다만 전세는 보증금 반환 위험이 있고, 월세는 매달 지출이 발생하므로
+                자금 상황과 거주 기간을 함께 고려해야 합니다.
+              </div>
+            </details>
+          </div>
+        </div>
+
         {/* 관련 도구 */}
         <div className="mt-6 bg-gray-50 rounded-xl p-6">
           <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

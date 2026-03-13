@@ -512,6 +512,111 @@ export default function GiftTaxCalculator() {
         </div>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '증여세 면제 한도는 얼마인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '증여재산공제는 10년 합산 기준으로, 배우자 6억원, 성년 자녀 5천만원, 미성년 자녀 2천만원, 기타 친족 1천만원입니다. 같은 그룹(예: 부모는 직계존속으로 합산)에서 10년간 받은 증여를 모두 합산합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '증여세 신고 기한과 신고하지 않으면 어떻게 되나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '증여세 신고 기한은 증여받은 날이 속하는 달의 말일부터 3개월 이내입니다. 기한 내 신고하면 산출세액의 3%를 공제받습니다. 미신고 시 무신고가산세(20%)와 납부불성실가산세(연 약 10.95%)가 추가됩니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '부모가 각각 5천만원씩 증여하면 공제가 1억인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '아닙니다. 아버지와 어머니는 모두 직계존속으로 분류되어 공제 한도가 합산됩니다. 따라서 부모 합산 5천만원(성년 기준)까지만 공제됩니다. 친조부모, 외조부모도 마찬가지로 직계존속으로 합산됩니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6 mt-6">
+        <h3 className="font-semibold text-gray-900 mb-4">증여세 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">부모가 성년 자녀에게 1억원 증여</p>
+            <p className="text-sm text-gray-600">
+              증여재산 1억원 - 공제 5천만원 = 과세표준 5천만원.
+              산출세액 5천만원 x 10% = 500만원. 기한 내 신고 시 3% 공제로 최종 485만원 납부.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">배우자에게 5억원 증여</p>
+            <p className="text-sm text-gray-600">
+              증여재산 5억원 - 배우자공제 6억원 = 과세표준 0원.
+              배우자 공제 한도(6억원) 이내이므로 증여세가 발생하지 않습니다. 단, 신고는 해두는 것이 좋습니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">조부모가 성년 손자녀에게 2억원 증여 (세대생략)</p>
+            <p className="text-sm text-gray-600">
+              과세표준 1억5천만원(2억 - 5천만원), 산출세액 2천만원(20% - 누진공제 1천만원).
+              세대생략 할증 30% 추가로 600만원, 합계 2,600만원. 신고 공제 후 약 2,522만원 납부.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              증여세 면제 한도는 얼마인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              증여재산공제는 10년 합산 기준으로, 배우자 6억원, 성년 자녀 5천만원, 미성년 자녀 2천만원,
+              기타 친족 1천만원입니다. 같은 그룹(예: 부모는 직계존속으로 합산)에서
+              10년간 받은 증여를 모두 합산합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              증여세 신고 기한과 신고하지 않으면 어떻게 되나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              증여세 신고 기한은 증여받은 날이 속하는 달의 말일부터 3개월 이내입니다.
+              기한 내 신고하면 산출세액의 3%를 공제받습니다.
+              미신고 시 무신고가산세(20%)와 납부불성실가산세(연 약 10.95%)가 추가됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              부모가 각각 5천만원씩 증여하면 공제가 1억인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              아닙니다. 아버지와 어머니는 모두 &apos;직계존속&apos;으로 분류되어 공제 한도가 합산됩니다.
+              따라서 부모 합산 5천만원(성년 기준)까지만 공제됩니다.
+              친조부모, 외조부모도 마찬가지로 직계존속으로 합산됩니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="bg-gray-50 rounded-xl p-6 mt-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

@@ -371,6 +371,110 @@ export default function AnnualLeaveCalculatorPage() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '연차는 몇 개 발생하나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '근로기준법 제60조에 따라 1년 미만 근무자는 매월 개근 시 1일(최대 11일), 1년 이상 근무 시 80% 이상 출근하면 15일이 발생합니다. 3년 이상부터 매 2년마다 1일씩 추가되어 최대 25일까지 늘어납니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '사용하지 않은 연차는 어떻게 되나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '미사용 연차는 연차수당으로 전환하여 금전 보상을 받을 수 있습니다. 다만, 회사가 연차촉진제도를 시행한 경우(사용 시기를 정해달라는 서면 통보 등)에는 미사용 연차수당 지급 의무가 면제될 수 있습니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '입사 첫 해에도 연차를 쓸 수 있나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '네. 2018년 근로기준법 개정으로 입사 1년 미만 근로자도 1개월 개근 시 1일의 유급휴가가 발생합니다. 최대 11일까지 사용할 수 있으며, 이 월차는 1년 차에 발생하는 15일에서 차감되지 않습니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">연차 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">2024년 1월 입사, 현재 2년 2개월 근무</p>
+            <p className="text-sm text-gray-600">
+              만 2년 이상이므로 올해 연차는 15일. 아직 3년 미만이라 근속 추가분은 없습니다.
+              5일 사용했다면 잔여 연차는 10일이며, 내년에도 15일이 발생합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">2018년 3월 입사, 8년차 직장인</p>
+            <p className="text-sm text-gray-600">
+              근속 8년이므로 기본 15일 + 근속 추가 3일 = 총 18일의 연차가 발생합니다.
+              3년 이상부터 매 2년마다 1일이 추가되므로, 10년차에는 19일이 됩니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">입사 6개월 차 신입사원</p>
+            <p className="text-sm text-gray-600">
+              1년 미만이므로 매월 개근 시 1일씩 발생, 현재까지 최대 6일 사용 가능.
+              1년이 되면 15일의 연차가 새로 발생하며, 이전에 사용한 월차와 별도입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              연차는 몇 개 발생하나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              근로기준법 제60조에 따라 1년 미만 근무자는 매월 개근 시 1일(최대 11일),
+              1년 이상 근무 시 80% 이상 출근하면 15일이 발생합니다.
+              3년 이상부터 매 2년마다 1일씩 추가되어 최대 25일까지 늘어납니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              사용하지 않은 연차는 어떻게 되나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              미사용 연차는 연차수당으로 전환하여 금전 보상을 받을 수 있습니다.
+              다만, 회사가 연차촉진제도를 시행한 경우(사용 시기를 정해달라는 서면 통보 등)에는
+              미사용 연차수당 지급 의무가 면제될 수 있습니다. 연차촉진 절차가 적법하게 이뤄졌는지 확인해보세요.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              입사 첫 해에도 연차를 쓸 수 있나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              네. 2018년 근로기준법 개정으로 입사 1년 미만 근로자도 1개월 개근 시 1일의 유급휴가가 발생합니다.
+              최대 11일까지 사용할 수 있으며, 이 월차는 1년 차에 발생하는 15일에서 차감되지 않습니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구/글 링크 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 계산기</h3>

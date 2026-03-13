@@ -884,6 +884,111 @@ export default function HousingCostSimulator() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '전세, 월세, 매매 중 어떤 게 가장 유리한가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '단기(1~5년) 거주 시 전세나 월세가 유리하고, 장기(10년 이상) 거주 시 매매가 유리한 경우가 많습니다. 집값 상승률이 대출금리보다 높으면 매매가 유리하고, 반대라면 전세가 유리합니다. 개인 상황에 따라 다르므로 시뮬레이션으로 비교해보세요.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '1주택 비과세 조건은 무엇인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '1세대 1주택으로 2년 이상 보유(조정대상지역은 2년 거주 포함) 시 매도가 12억원 이하면 양도소득세가 전액 비과세됩니다. 12억 초과분은 장기보유특별공제(보유+거주 연 4%, 최대 80%)를 적용한 후 과세합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '취득세는 얼마나 내야 하나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '1주택 기준 6억 이하 1.1%, 6~9억 구간 비례세율(1.1~3.3%), 9억 초과 3.3%입니다. 예를 들어 5억 아파트는 약 550만원, 9억 초과 아파트는 매매가의 3.3%를 취득세로 납부합니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">주거비용 비교 시뮬레이터 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">사회초년생 - 서울 원룸 (월세 vs 전세)</p>
+            <p className="text-sm text-gray-600">
+              보증금 1,000만원/월세 60만원 vs 전세 1.5억(대출 80%, 금리 3.5%).
+              전세 대출이자 연 420만원 + 기회비용 vs 월세 연 720만원. 2년 이상이면 전세가 유리합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">신혼부부 - 수도권 아파트 (전세 vs 매매)</p>
+            <p className="text-sm text-gray-600">
+              전세 3억 vs 매매 5억(LTV 60%, 금리 4%). 연 3% 상승 가정 시 약 7~8년차부터
+              매매가 전세보다 유리해집니다. 집값 상승분이 대출 이자를 상쇄하기 때문입니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">장기 거주 - 서울 아파트 매매 20년</p>
+            <p className="text-sm text-gray-600">
+              매매 9억, 연 3% 상승 시 20년 후 집값 약 16.3억. 1주택 비과세(12억 이하)와
+              장기보유특별공제 적용으로 양도세 부담이 크게 줄어 매매가 압도적으로 유리합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              전세, 월세, 매매 중 어떤 게 가장 유리한가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              단기(1~5년) 거주 시 전세나 월세가 유리하고, 장기(10년 이상) 거주 시 매매가 유리한 경우가 많습니다.
+              핵심은 집값 상승률과 대출금리의 차이입니다. 상승률이 금리보다 높으면 매매가, 낮으면 전세가 유리합니다.
+              개인의 자금 상황, 거주 기간, 지역 시세 등을 종합적으로 고려해야 합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              1주택 비과세 조건은 무엇인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              1세대 1주택으로 2년 이상 보유(조정대상지역은 2년 거주 포함) 시 매도가 12억원 이하면
+              양도소득세가 전액 비과세됩니다. 12억 초과분은 장기보유특별공제(보유+거주 각 연 4%, 최대 80%)를
+              적용한 후 기본공제 250만원을 빼고 과세합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              취득세는 얼마나 내야 하나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              1주택 기준 6억 이하 1.1%, 6~9억 구간 비례세율(1.1~3.3%), 9억 초과 3.3%입니다.
+              예를 들어 5억 아파트는 약 550만원, 10억 아파트는 약 3,300만원의 취득세가 발생합니다.
+              다주택자는 중과세율(8~12%)이 적용될 수 있으니 주의하세요.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* ── 관련 도구 ── */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

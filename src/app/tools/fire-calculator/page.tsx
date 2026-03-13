@@ -413,6 +413,111 @@ export default function FireCalculatorPage() {
         </div>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'FIRE 달성에 필요한 자금은 얼마인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '4% Rule에 따라 연간 지출의 25배가 필요합니다. 예를 들어 연 지출이 3,000만원이면 7억 5천만원, 4,000만원이면 10억원이 FIRE Number입니다. 이 금액을 모으면 투자 수익만으로 생활비를 충당할 수 있습니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '저축률이 높으면 왜 은퇴가 빨라지나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '저축률이 높으면 두 가지 효과가 동시에 작용합니다. 첫째, 저축액이 늘어 자산이 빠르게 증가합니다. 둘째, 지출이 줄어 필요한 은퇴 자금(FIRE Number) 자체가 감소합니다. 예를 들어 저축률 50%면 약 17년, 70%면 약 8.5년 만에 은퇴할 수 있습니다(연 7% 수익률 기준).',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '4% Rule은 한국에서도 적용 가능한가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '4% Rule은 미국 주식/채권 기준 연구이므로, 한국에서 그대로 적용하기는 어렵습니다. 한국은 국민연금, 건강보험, 물가상승률이 다르므로 3~3.5% 인출률을 적용하거나, 국민연금 수령 시기를 고려해 은퇴 계획을 세우는 것이 안전합니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">FIRE 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">30세, 연소득 5,000만원, 연지출 3,000만원</p>
+            <p className="text-sm text-gray-600">
+              저축률 40%, 투자수익률 7% 기준 FIRE Number는 7.5억원이며, 약 52세에 경제적 자유를 달성할 수 있습니다.
+              저축률을 50%로 올리면 47세로 5년 앞당겨집니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">35세, 자산 1억, 연소득 7,000만원, 연지출 4,000만원</p>
+            <p className="text-sm text-gray-600">
+              저축률 약 43%, FIRE Number 10억원. 기존 자산과 높은 소득 덕분에 약 49세에 은퇴 가능합니다.
+              연 지출을 3,500만원으로 줄이면 FIRE Number가 8.75억원으로 낮아져 46세에 달성 가능합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">28세, Lean FIRE 목표 (연지출 2,000만원)</p>
+            <p className="text-sm text-gray-600">
+              FIRE Number가 5억원으로 낮아져 저축률 50%, 수익률 7%면 약 45세에 Lean FIRE 달성 가능합니다.
+              소비를 최소화하고 빠른 은퇴를 원하는 경우 적합한 전략입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              FIRE 달성에 필요한 자금은 얼마인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              4% Rule에 따라 연간 지출의 25배가 필요합니다. 예를 들어 연 지출이 3,000만원이면 7억 5천만원,
+              4,000만원이면 10억원이 FIRE Number입니다. 이 금액을 모으면 매년 4%씩 인출해도
+              30년 이상 자산이 유지될 확률이 95% 이상입니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              저축률이 높으면 왜 은퇴가 빨라지나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              저축률이 높으면 두 가지 효과가 동시에 작용합니다. 첫째, 저축액이 늘어 자산이 빠르게 증가합니다.
+              둘째, 지출이 줄어 필요한 은퇴 자금(FIRE Number) 자체가 감소합니다.
+              예를 들어 저축률 50%면 약 17년, 70%면 약 8.5년 만에 은퇴할 수 있습니다(연 7% 수익률 기준).
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              4% Rule은 한국에서도 적용 가능한가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              4% Rule은 미국 주식/채권 기준 연구이므로, 한국에서 그대로 적용하기는 어렵습니다.
+              한국은 국민연금, 건강보험, 물가상승률이 다르므로 3~3.5% 인출률을 적용하거나,
+              국민연금 수령 시기를 고려해 은퇴 계획을 세우는 것이 안전합니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="mt-6 bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

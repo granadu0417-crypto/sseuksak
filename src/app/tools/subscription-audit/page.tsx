@@ -230,6 +230,105 @@ export default function SubscriptionAuditPage() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '한국인 평균 구독 서비스 지출은 얼마인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '2024년 기준 한국인 1인당 평균 구독 서비스 수는 3~4개, 월 평균 지출은 약 4~5만원입니다. OTT(넷플릭스, 유튜브 프리미엄), 음악 스트리밍, 쇼핑 멤버십 순으로 많이 이용하며, 인지하지 못한 채 유지되는 서비스까지 포함하면 실제 지출은 더 높을 수 있습니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '구독 서비스 비용을 절약하는 방법은?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '첫째, 최근 한 달간 사용하지 않은 서비스는 해지합니다. 둘째, 가족/친구와 공유 요금제를 활용하면 1인당 비용을 절반 이하로 줄일 수 있습니다. 셋째, 연간 결제 시 월 결제 대비 20~30% 할인되는 서비스가 많습니다. 넷째, 비슷한 기능의 서비스(예: 넷플릭스와 티빙)는 하나만 유지하세요.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '구독 서비스 해지 시 위약금이 있나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '대부분의 월정액 구독 서비스(넷플릭스, 유튜브 프리미엄, 멜론 등)는 위약금 없이 언제든 해지 가능합니다. 해지 후에도 결제 기간 종료일까지 서비스를 이용할 수 있습니다. 다만 연간 결제를 한 경우 일부 서비스는 환불 정책이 다를 수 있으니 약관을 확인하세요.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">구독 서비스 총액 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">일반적인 직장인 구독 패턴</p>
+            <p className="text-sm text-gray-600">
+              넷플릭스(17,000원) + 유튜브 프리미엄(14,900원) + 멜론(10,900원) + 쿠팡 로켓와우(7,890원)
+              = 월 50,690원, 연 608,280원. 5년이면 약 304만원입니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">절약형 - 가족 공유 활용</p>
+            <p className="text-sm text-gray-600">
+              넷플릭스 프리미엄(가족 4명 분할 시 약 4,250원) + 유튜브 패밀리(6명 분할 시 약 3,650원)
+              = 월 약 7,900원. 개별 결제 대비 연간 약 30만원을 절약할 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              한국인 평균 구독 서비스 지출은 얼마인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              2024년 기준 한국인 1인당 평균 구독 서비스 수는 3~4개, 월 평균 지출은 약 4~5만원입니다.
+              OTT, 음악 스트리밍, 쇼핑 멤버십 순으로 많이 이용하며,
+              인지하지 못한 채 유지되는 서비스까지 포함하면 실제 지출은 더 높을 수 있습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              구독 서비스 비용을 절약하는 방법은?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              첫째, 최근 한 달간 사용하지 않은 서비스는 해지합니다.
+              둘째, 가족이나 친구와 공유 요금제를 활용하면 1인당 비용을 절반 이하로 줄일 수 있습니다.
+              셋째, 연간 결제 시 월 결제 대비 20~30% 할인되는 서비스가 많습니다.
+              넷째, 비슷한 기능의 서비스는 하나만 유지하세요.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              구독 서비스 해지 시 위약금이 있나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              대부분의 월정액 구독 서비스(넷플릭스, 유튜브 프리미엄, 멜론 등)는 위약금 없이 언제든 해지 가능합니다.
+              해지 후에도 결제 기간 종료일까지 서비스를 이용할 수 있습니다.
+              다만 연간 결제를 한 경우 일부 서비스는 환불 정책이 다를 수 있으니 약관을 확인하세요.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

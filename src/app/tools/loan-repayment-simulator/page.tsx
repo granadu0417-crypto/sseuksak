@@ -919,6 +919,114 @@ export default function LoanRepaymentSimulator() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '원리금균등과 원금균등 중 어떤 상환방식이 유리한가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '총 이자를 줄이려면 원금균등상환이 유리합니다. 3억 대출, 연 4%, 30년 기준 원금균등은 원리금균등보다 약 1,800만원 이자를 절약합니다. 다만 초기 월 납입금이 높으므로 소득이 안정적이고 초기 부담을 감당할 수 있을 때 적합합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '만기일시상환은 어떤 경우에 선택하나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '만기일시상환은 월 부담금이 가장 적지만 총 이자가 가장 많습니다. 전세자금 대출처럼 만기 시 보증금 반환으로 일시 상환이 가능한 경우, 또는 투자 수익이 대출 이자보다 높을 것으로 예상되는 경우에 선택합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '거치기간을 설정하면 이자가 얼마나 늘어나나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '거치기간 동안은 원금 상환 없이 이자만 납부하므로 총 이자가 증가합니다. 예를 들어 3억 대출, 연 4%, 30년 기준 거치기간 3년 설정 시 원리금균등 기준 총 이자가 약 1,500만~2,000만원 더 늘어납니다. 거치기간은 소득이 일시적으로 낮은 초기에만 활용하는 것이 좋습니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">대출 상환 시뮬레이터 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">주택담보대출 3억, 연 4%, 30년</p>
+            <p className="text-sm text-gray-600">
+              원리금균등 월 약 143만원(고정), 원금균등 첫달 약 183만원(점차 감소). 원금균등이 총 이자 약 1,800만원 절약.
+              월 소득이 안정적이라면 원금균등, 초기 부담이 부담스러우면 원리금균등을 추천합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">신혼부부 전세대출 2억, 연 3.5%, 10년 (거치 1년)</p>
+            <p className="text-sm text-gray-600">
+              거치 1년간 월 약 58만원(이자만), 이후 원리금균등 월 약 237만원. 전세 만기 시 보증금 반환을 계획하고 있다면
+              만기일시상환(월 약 58만원)도 고려할 수 있습니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">고액 아파트 대출 5억, 연 4.5%, 30년 (거치 3년)</p>
+            <p className="text-sm text-gray-600">
+              거치 3년간 월 약 187만원(이자만), 이후 원리금균등 월 약 313만원. 거치기간 없이 바로 상환하면
+              총 이자를 약 3,000만원 이상 절약할 수 있어, 가능하다면 거치기간을 최소화하는 것이 유리합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              원리금균등과 원금균등 중 어떤 상환방식이 유리한가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              총 이자를 줄이려면 원금균등상환이 유리합니다. 3억 대출, 연 4%, 30년 기준 원금균등은
+              원리금균등보다 약 1,800만원 이자를 절약합니다. 다만 초기 월 납입금이 높으므로
+              소득이 안정적이고 초기 부담을 감당할 수 있을 때 적합합니다.
+              원리금균등은 매월 동일한 금액을 납부해 가계 예산 관리가 쉽습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              만기일시상환은 어떤 경우에 선택하나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              만기일시상환은 월 부담금이 가장 적지만 총 이자가 가장 많습니다.
+              전세자금 대출처럼 만기 시 보증금 반환으로 일시 상환이 가능한 경우,
+              또는 투자 수익이 대출 이자보다 높을 것으로 예상되는 경우에 선택합니다.
+              일반 주택담보대출에서는 권장하지 않습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              거치기간을 설정하면 이자가 얼마나 늘어나나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              거치기간 동안은 원금 상환 없이 이자만 납부하므로 총 이자가 증가합니다.
+              예를 들어 3억 대출, 연 4%, 30년 기준 거치기간 3년 설정 시 원리금균등 기준
+              총 이자가 약 1,500만~2,000만원 더 늘어납니다. 거치기간은 소득이 일시적으로
+              낮은 초기에만 활용하고, 가능하면 최소화하는 것이 좋습니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* ── 관련 도구 ── */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

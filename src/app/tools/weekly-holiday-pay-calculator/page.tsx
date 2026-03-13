@@ -368,6 +368,111 @@ export default function WeeklyHolidayPayCalculatorPage() {
         </div>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '주휴수당은 누가 받을 수 있나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '주 15시간 이상 근무하고, 소정근로일에 개근하며, 다음 주에도 근무 예정인 근로자라면 정규직, 계약직, 아르바이트 등 고용 형태에 관계없이 모두 주휴수당을 받을 수 있습니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '주휴수당 계산 방법은?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '주휴시간 = 주간 근무시간 / 40 x 8 (최대 8시간)이고, 주휴수당 = 주휴시간 x 시급입니다. 예를 들어 주 40시간 근무, 시급 10,320원이면 주휴시간 8시간 x 10,320원 = 주 82,560원의 주휴수당이 발생합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '월급제 직원도 주휴수당을 별도로 받나요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '아닙니다. 월급제 근로자의 월급에는 이미 주휴수당이 포함되어 있습니다. 주휴수당을 별도로 받아야 하는 대상은 시급제나 일급제로 일하는 아르바이트, 파트타임 근로자입니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">주휴수당 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">음식점 알바 (시급 10,320원, 주 5일 x 6시간 = 30시간)</p>
+            <p className="text-sm text-gray-600">
+              주휴시간 6시간(30/40 x 8), 주휴수당 61,920원/주, 월 약 269,045원.
+              주 30시간이므로 주휴시간이 8시간이 아닌 6시간인 점에 주의하세요.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">편의점 주말 알바 (시급 11,000원, 주 2일 x 8시간 = 16시간)</p>
+            <p className="text-sm text-gray-600">
+              주 15시간 이상이므로 주휴수당 대상. 주휴시간 3.2시간(16/40 x 8), 주휴수당 35,200원/주.
+              만약 1시간만 줄여 주 14시간이면 주휴수당을 받지 못합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">풀타임 알바 (시급 12,000원, 주 5일 x 8시간 = 40시간)</p>
+            <p className="text-sm text-gray-600">
+              주휴시간 최대 8시간, 주휴수당 96,000원/주, 월 약 417,120원.
+              주휴수당을 포함한 월급은 약 2,505,720원이 됩니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              주휴수당은 누가 받을 수 있나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              주 15시간 이상 근무하고, 소정근로일에 개근하며, 다음 주에도 근무 예정인 근로자라면
+              정규직, 계약직, 아르바이트 등 고용 형태에 관계없이 모두 주휴수당을 받을 수 있습니다.
+              5인 미만 사업장도 지급 의무가 있습니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              주휴수당 계산 방법은?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              주휴시간 = 주간 근무시간 / 40 x 8 (최대 8시간)이고, 주휴수당 = 주휴시간 x 시급입니다.
+              예를 들어 주 40시간 근무, 시급 10,320원이면 주휴시간 8시간 x 10,320원 = 주 82,560원의 주휴수당이 발생합니다.
+              주 20시간 근무라면 주휴시간은 4시간이 됩니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              월급제 직원도 주휴수당을 별도로 받나요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              아닙니다. 월급제 근로자의 월급에는 이미 주휴수당이 포함되어 있습니다.
+              주휴수당을 별도로 받아야 하는 대상은 시급제나 일급제로 일하는 아르바이트, 파트타임 근로자입니다.
+              월급을 209시간(주 40시간 기준)이 아닌 174시간으로 나눠 시급을 계산하면 주휴수당이 빠진 것일 수 있으니 확인해보세요.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="bg-gray-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>

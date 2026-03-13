@@ -213,6 +213,110 @@ export default function VatCalculatorPage() {
         </ul>
       </div>
 
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '부가가치세율은 몇 퍼센트인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '한국의 부가가치세 일반 세율은 10%입니다. 수출 등 일부 거래에는 영세율(0%)이 적용되며, 가공되지 않은 농산물, 의료, 교육 서비스 등은 면세 대상입니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '부가세 신고 기간은 언제인가요?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '일반과세자는 1기(1~6월분)를 7월 25일까지, 2기(7~12월분)를 다음해 1월 25일까지 신고합니다. 예정신고는 각각 4월 25일, 10월 25일입니다. 간이과세자는 1월 25일까지 연 1회 신고합니다.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '합계금액에서 부가세를 역산하는 방법은?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '합계금액(부가세 포함)에서 공급가액을 구하려면 합계금액을 1.1로 나누면 됩니다. 예를 들어 합계금액 110만원이면 공급가액은 100만원(110만 / 1.1), 부가세는 10만원입니다.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* 사용 예시 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6 mt-6">
+        <h3 className="font-semibold text-gray-900 mb-4">부가세 계산기 사용 예시</h3>
+        <div className="space-y-4">
+          <div className="border-l-4 border-blue-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">공급가액 500만원에 부가세 계산</p>
+            <p className="text-sm text-gray-600">
+              부가세 = 500만원 x 10% = 50만원.
+              합계금액 550만원. 세금계산서에 공급가액 500만원, 세액 50만원으로 기재합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-green-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">합계금액 330만원에서 부가세 역산</p>
+            <p className="text-sm text-gray-600">
+              공급가액 = 330만원 / 1.1 = 300만원.
+              부가세 = 330만원 - 300만원 = 30만원. 거래처에서 총액만 알려준 경우 역산에 활용합니다.
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-400 pl-4">
+            <p className="font-medium text-gray-900 mb-1">1억원 공급가액의 세금계산서 발행</p>
+            <p className="text-sm text-gray-600">
+              부가세 1,000만원, 합계금액 1억 1,000만원.
+              세금계산서에 공급가액 1억원, 세액 1,000만원을 정확히 기재해야 합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 자주 묻는 질문 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h3 className="font-semibold text-gray-900 mb-4">자주 묻는 질문</h3>
+        <div className="space-y-3">
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              부가가치세율은 몇 퍼센트인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              한국의 부가가치세 일반 세율은 10%입니다.
+              수출 등 일부 거래에는 영세율(0%)이 적용되며,
+              가공되지 않은 농산물, 의료, 교육 서비스 등은 면세 대상입니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              부가세 신고 기간은 언제인가요?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              일반과세자는 1기(1~6월분)를 7월 25일까지, 2기(7~12월분)를 다음해 1월 25일까지 신고합니다.
+              예정신고는 각각 4월 25일, 10월 25일입니다.
+              간이과세자는 1월 25일까지 연 1회 신고합니다.
+            </div>
+          </details>
+          <details className="group border border-gray-200 rounded-lg">
+            <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900">
+              합계금액에서 부가세를 역산하는 방법은?
+              <span className="text-gray-400 group-open:rotate-180 transition-transform">&#9662;</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-gray-600">
+              합계금액(부가세 포함)에서 공급가액을 구하려면 합계금액을 1.1로 나누면 됩니다.
+              예를 들어 합계금액 110만원이면 공급가액은 100만원(110만 / 1.1), 부가세는 10만원입니다.
+            </div>
+          </details>
+        </div>
+      </div>
+
       {/* 관련 도구 */}
       <div className="bg-gray-50 rounded-xl p-6 mt-6">
         <h3 className="font-semibold text-gray-900 mb-3">관련 도구</h3>
