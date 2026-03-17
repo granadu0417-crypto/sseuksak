@@ -567,6 +567,51 @@ export default function IncomeTaxCalculator() {
           }}
         />
 
+        {/* 상세 가이드 */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">종합소득세 계산 완벽 가이드</h2>
+          <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">2025년 종합소득세 세율 구간</h3>
+              <p>종합소득세는 누진세 구조로, 소득이 높아질수록 높은 세율이 적용됩니다. 각 구간별로 해당 세율이 적용되므로 전체 소득에 최고 세율이 적용되는 것은 아닙니다.</p>
+              <ul className="list-disc list-inside mt-2 space-y-1">
+                <li><strong>1,400만원 이하</strong>: 6%</li>
+                <li><strong>1,400~5,000만원</strong>: 15% (누진공제 126만원)</li>
+                <li><strong>5,000~8,800만원</strong>: 24% (누진공제 576만원)</li>
+                <li><strong>8,800만원~1.5억원</strong>: 35% (누진공제 1,544만원)</li>
+                <li><strong>1.5억~3억원</strong>: 38% (누진공제 1,994만원)</li>
+                <li><strong>3억~5억원</strong>: 40% (누진공제 2,594만원)</li>
+                <li><strong>5억~10억원</strong>: 42% (누진공제 3,594만원)</li>
+                <li><strong>10억원 초과</strong>: 45% (누진공제 6,594만원)</li>
+              </ul>
+              <p className="mt-2">예를 들어 과세표준이 6,000만원이면 간편 계산: 6,000만원 x 24% - 576만원 = 864만원입니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">소득공제 vs 세액공제 차이</h3>
+              <p>소득공제는 과세표준을 줄여주고, 세액공제는 산출세액에서 직접 차감합니다. 같은 100만원이라도 효과가 다릅니다. 소득공제 100만원(세율 24%)의 절세 효과는 약 26.4만원이지만, 세액공제 100만원은 정확히 100만원을 줄여줍니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">종합소득세 신고 대상</h3>
+              <p>근로소득만 있는 직장인은 연말정산으로 끝나지만, 다음의 경우 5월에 종합소득세 신고가 필요합니다.</p>
+              <ul className="list-disc list-inside mt-2 space-y-1">
+                <li>프리랜서·사업소득이 있는 경우 (3.3% 원천징수 대상)</li>
+                <li>2곳 이상에서 근로소득을 받는 경우</li>
+                <li>금융소득(이자+배당)이 연 2,000만원 초과</li>
+                <li>부동산 임대소득이 있는 경우</li>
+                <li>연금소득이 연 1,500만원 초과</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">프리랜서 절세 전략</h3>
+              <p>프리랜서는 경비율 활용이 핵심입니다. 수입 2,400만원 미만은 단순경비율(장부 불필요), 이상은 기준경비율이 적용됩니다. 간편장부 기장 시 산출세액의 20%를 기장세액공제로 받을 수 있어 절세 효과가 큽니다. 노란우산공제 가입 시 연 최대 500만원 소득공제도 가능합니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">신고·납부 일정</h3>
+              <p>신고 기간은 매년 5월 1일~31일(성실신고확인 대상자는 6월 30일)이며, 납부세액이 1,000만원을 초과하면 2개월 분납이 가능합니다. 무신고 가산세 20%, 과소신고 가산세 10%, 납부불성실 가산세 일 0.022%가 부과되므로 기한 내 신고가 중요합니다.</p>
+            </div>
+          </div>
+        </div>
+
         {/* 사용 예시 */}
         <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
           <h3 className="font-semibold text-gray-900 mb-4">종합소득세 계산기 사용 예시</h3>

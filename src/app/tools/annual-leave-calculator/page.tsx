@@ -408,6 +408,40 @@ export default function AnnualLeaveCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">연차 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">연차 발생 기준 (근로기준법)</h3>
+            <p>연차유급휴가는 근로기준법 제60조에 따라 발생합니다. 입사 1년 미만 근로자는 1개월 개근 시 1일씩(최대 11일), 1년 이상 근로자는 15일이 부여됩니다. 3년 이상 근무 시 매 2년마다 1일씩 추가되어 최대 25일까지 늘어납니다.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>1년 미만</strong>: 월 1개 (최대 11일, 80% 이상 출근 시)</li>
+              <li><strong>1년 이상</strong>: 15일 (80% 이상 출근 시)</li>
+              <li><strong>3년 이상</strong>: 15일 + 매 2년마다 1일 추가</li>
+              <li><strong>상한</strong>: 최대 25일</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">연차수당 계산법</h3>
+            <p>미사용 연차에 대해 통상임금 기준으로 수당이 지급됩니다. 연차수당 = 1일 통상임금 x 미사용 연차일수. 통상임금은 기본급 + 고정수당을 209시간으로 나눈 시급에 8시간을 곱한 금액입니다. 월 통상임금 300만원이면 1일 약 114,832원, 미사용 5일이면 약 574,160원입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">연차 촉진제도</h3>
+            <p>회사가 연차 사용을 촉진하면 미사용 연차에 대한 수당 지급 의무가 면제됩니다. 촉진 절차는 두 단계입니다. 첫째, 연차 만료 6개월 전에 미사용 연차일수를 서면 통보하고 사용 시기를 정하도록 촉구합니다. 둘째, 촉구에도 사용 시기를 정하지 않으면 만료 2개월 전까지 회사가 사용 시기를 지정합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">특수 상황의 연차</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>출산휴가 기간</strong>: 출근한 것으로 간주, 연차 발생에 영향 없음</li>
+              <li><strong>육아휴직 기간</strong>: 출근율 계산 시 제외 (근무일에서 빼고 계산)</li>
+              <li><strong>업무상 재해</strong>: 요양 기간은 출근한 것으로 간주</li>
+              <li><strong>반차·반반차</strong>: 법정 제도는 아니지만 취업규칙으로 운영 가능</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">연차 계산기 사용 예시</h3>

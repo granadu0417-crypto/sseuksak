@@ -31,7 +31,6 @@ export default function PostCard({ post }: PostCardProps) {
           >
             {categoryLabels[post.category] || post.category}
           </Link>
-          <span className="text-xs text-gray-500">{post.readingTime}</span>
         </div>
 
         <Link href={`/posts/${post.slug}`}>

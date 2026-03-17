@@ -719,6 +719,34 @@ export default function LoanCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">대출이자 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">대출 상환 방식 3가지 비교</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>원리금균등</strong>: 매달 같은 금액(원금+이자)을 납부. 초반 이자 비중 높고 점차 원금 비중 증가. 월 납입액이 일정하여 가계 예산 관리에 유리</li>
+              <li><strong>원금균등</strong>: 매달 같은 원금을 갚고 이자는 줄어듦. 초반 부담이 크지만 총 이자가 가장 적음</li>
+              <li><strong>만기일시</strong>: 매달 이자만 내고 만기에 원금 전액 상환. 월 부담 가장 낮지만 총 이자가 가장 많음</li>
+            </ul>
+            <p className="mt-2">1억원, 연 4%, 20년 기준 총 이자: 원리금균등 약 4,553만원, 원금균등 약 4,017만원, 만기일시 약 8,000만원. 상환 방식에 따라 이자 차이가 수천만원에 달합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">고정금리 vs 변동금리 vs 혼합금리</h3>
+            <p>고정금리는 대출 기간 내내 같은 금리가 적용되어 예측 가능성이 높습니다. 변동금리는 기준금리(COFIX, CD금리 등)에 가산금리를 더해 주기적(3~6개월)으로 변동합니다. 혼합금리는 초기 일정 기간(3~5년) 고정 후 변동으로 전환됩니다. 금리 인상기에는 고정, 인하기에는 변동이 유리합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">중도상환수수료</h3>
+            <p>대출을 조기에 갚으면 중도상환수수료가 부과됩니다. 통상 1.2~1.5%이며, 대출 실행 후 3년이 지나면 면제되는 경우가 많습니다. 중도상환수수료 = 상환금액 x 수수료율 x (잔여기간/약정기간)으로 계산합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">DTI와 DSR 규제</h3>
+            <p>DTI(총부채상환비율)는 소득 대비 주담대 원리금+기타대출 이자의 비율입니다. DSR(총부채원리금상환비율)은 모든 대출의 원리금 상환액을 소득과 비교합니다. 개인별 DSR 40% 규제가 적용되어 연소득 5,000만원이면 연간 원리금 상환 한도가 2,000만원(월 167만원)입니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">대출이자 계산기 사용 예시</h3>

@@ -376,6 +376,33 @@ export default function SeveranceCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">퇴직금 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">퇴직금 산정 공식</h3>
+            <p>퇴직금 = 1일 평균임금 x 30일 x (총 재직일수 / 365). 평균임금은 퇴직 전 3개월간 임금 총액을 해당 기간 총 일수로 나눈 금액입니다. 기본급, 고정수당, 정기상여금(1/12), 연차수당이 포함되며 실비변상(출장비, 교통비)은 제외됩니다. 평균임금이 통상임금보다 낮으면 통상임금으로 계산합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">퇴직금 수령 요건</h3>
+            <p>계속근로기간 1년 이상, 주 15시간 이상(4주 평균) 근무한 근로자가 대상입니다. 퇴직일로부터 14일 이내 지급해야 하며, 미지급 시 연 20% 지연이자가 발생합니다. 퇴직금 청구 소멸시효는 5년입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">DB형 vs DC형 퇴직연금</h3>
+            <p>DB형(확정급여형)은 퇴직 시 최종 평균임금 기준으로 산정되어 임금 상승이 클수록 유리합니다. DC형(확정기여형)은 매년 연봉 1/12을 적립하여 본인이 운용하며, 투자 수익률이 높으면 유리합니다. 연봉 인상률이 높을 것으로 예상되면 DB형, 투자에 자신 있으면 DC형이 적합합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">퇴직소득세</h3>
+            <p>근속연수공제가 적용되어 장기 근속일수록 세금이 줄어듭니다. 5년 이하 100만원x연수, 10년 이하 500만원+200만원x(연수-5), 20년 이하 1,500만원+250만원x(연수-10)이 공제됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">IRP 이전 시 절세</h3>
+            <p>퇴직금을 IRP로 이체하면 퇴직소득세 납부를 연금 수령 시점까지 이연할 수 있습니다. 55세 이후 연금 수령 시 퇴직소득세의 60~70%만 부과됩니다. 추가 납입 시 연 900만원까지 세액공제(13.2~16.5%)도 받을 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">퇴직금 계산기 사용 예시</h3>

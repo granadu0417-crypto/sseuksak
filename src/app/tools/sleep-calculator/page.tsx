@@ -348,6 +348,55 @@ export default function SleepCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">수면 사이클 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">수면 사이클이란?</h3>
+            <p>사람은 잠을 자는 동안 약 90분(80~100분) 단위로 수면 사이클을 반복합니다. 하룻밤에 보통 4~6회의 사이클을 거치며, 한 사이클은 N1(입면기) - N2(얕은 수면) - N3(깊은 수면) - REM(꿈 수면) 순서로 진행됩니다. 건강한 수면을 위해서는 사이클이 끝나는 시점에 기상하는 것이 중요합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">수면 단계별 역할</h3>
+            <ul className="list-disc list-inside space-y-1">
+              <li><strong>N1 (입면기, 약 5분)</strong>: 잠에 막 들어가는 단계입니다. 쉽게 깨어나며, 근육이 이완되기 시작합니다.</li>
+              <li><strong>N2 (얕은 수면, 약 25분)</strong>: 체온과 심박수가 떨어지고, 뇌파에 수면방추(sleep spindle)가 나타납니다. 전체 수면의 약 50%를 차지합니다.</li>
+              <li><strong>N3 (깊은 수면, 약 20~40분)</strong>: 성장호르몬이 분비되고 신체가 회복되는 가장 중요한 단계입니다. 이 단계에서 깨면 극심한 피로감(수면 관성)을 느낍니다.</li>
+              <li><strong>REM (꿈 수면, 약 20분)</strong>: 꿈을 꾸는 단계로, 기억 정리와 감정 처리가 이루어집니다. 후반 사이클로 갈수록 REM 비율이 증가합니다.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">적정 수면 시간 (연령별)</h3>
+            <p>미국 수면재단(National Sleep Foundation)이 권장하는 연령별 적정 수면 시간입니다.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>신생아(0~3개월)</strong>: 14~17시간</li>
+              <li><strong>영아(4~11개월)</strong>: 12~15시간</li>
+              <li><strong>유아(1~2세)</strong>: 11~14시간</li>
+              <li><strong>학령전기(3~5세)</strong>: 10~13시간</li>
+              <li><strong>학령기(6~13세)</strong>: 9~11시간</li>
+              <li><strong>청소년(14~17세)</strong>: 8~10시간</li>
+              <li><strong>성인(18~64세)</strong>: 7~9시간 (4~5 수면 사이클)</li>
+              <li><strong>노인(65세 이상)</strong>: 7~8시간</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">수면의 질을 높이는 방법</h3>
+            <ul className="list-disc list-inside space-y-1">
+              <li><strong>일정한 취침/기상 시간</strong>: 주말에도 같은 시간에 자고 일어나면 생체 시계(일주기 리듬)가 안정됩니다.</li>
+              <li><strong>취침 1시간 전 블루라이트 차단</strong>: 스마트폰, 태블릿의 블루라이트가 멜라토닌 분비를 억제합니다.</li>
+              <li><strong>침실 온도 18~20도</strong>: 약간 서늘한 환경이 깊은 수면에 유리합니다.</li>
+              <li><strong>카페인 오후 2시 이후 금지</strong>: 카페인의 반감기는 약 5~6시간이므로, 오후에 마시면 취침 시에도 체내에 남아있습니다.</li>
+              <li><strong>취침 전 과식/음주 금지</strong>: 알코올은 수면을 유도하지만 REM 수면을 방해하여 수면의 질을 떨어뜨립니다.</li>
+              <li><strong>규칙적 운동</strong>: 주 150분 이상의 중강도 운동은 수면의 질을 개선합니다. 단, 취침 2~3시간 전 격한 운동은 피하세요.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">수면 부족의 건강 영향</h3>
+            <p>만성적인 수면 부족(하루 6시간 미만)은 다양한 건강 문제를 유발합니다. 면역력 저하, 비만 위험 증가(렙틴 감소, 그렐린 증가), 고혈압/심혈관 질환 위험 증가, 인지 기능 및 집중력 저하, 우울증/불안 증가, 당뇨병 위험 증가 등이 보고되어 있습니다. 하루 4시간 수면을 6일간 지속하면 혈당 조절 능력이 사전 당뇨 수준까지 악화된다는 연구 결과도 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">수면 계산기 사용 예시</h3>

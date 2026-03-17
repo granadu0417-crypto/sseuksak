@@ -250,6 +250,37 @@ export default function VatCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6 mt-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">부가가치세 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">부가세 기본 원리</h3>
+            <p>부가가치세(VAT)는 공급가액의 10%입니다. 소비자가 지불하는 금액(공급대가)에는 부가세가 포함되어 있습니다. 공급가액 100만원이면 부가세 10만원, 총액 110만원입니다. 역으로 총액 110만원에서 공급가액 역산: 110만원 / 1.1 = 100만원.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">일반과세자 vs 간이과세자</h3>
+            <p>연 매출 1억 400만원 미만 개인사업자는 간이과세자로 등록할 수 있습니다. 간이과세자는 업종별 부가가치율(15~40%)을 적용하여 세금 부담이 낮고, 연 매출 4,800만원 미만이면 납부 면제됩니다. 다만 세금계산서 발급이 제한됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">부가세 신고 기간</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>1기 확정</strong>: 1~6월 매출, 7월 25일까지 신고·납부</li>
+              <li><strong>2기 확정</strong>: 7~12월 매출, 다음 해 1월 25일까지 신고·납부</li>
+              <li><strong>예정신고</strong>: 1기 4월, 2기 10월 (개인은 예정고지로 대체 가능)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">매입세액공제</h3>
+            <p>사업과 관련된 매입에 포함된 부가세는 납부세액에서 공제받을 수 있습니다. 세금계산서를 받아야 공제 가능하며, 접대비, 비영업용 소형승용차, 개인 사용 경비는 공제 대상이 아닙니다. 전자세금계산서 의무 발행 대상(직전년 매출 1억원 이상)이 확대되고 있습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">영세율과 면세의 차이</h3>
+            <p>영세율(0%)은 수출 등에 적용되며 매입세액 환급이 가능합니다. 면세는 부가세 자체가 없는 것으로 매입세액 공제가 불가합니다. 면세 품목: 미가공 농수산물, 의료·교육 서비스, 도서·신문, 대중교통 등.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6 mt-6">
         <h3 className="font-semibold text-gray-900 mb-4">부가세 계산기 사용 예시</h3>

@@ -132,7 +132,6 @@ export default async function PostPage({ params }: Props) {
           </h1>
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <time dateTime={post.date}>{formattedDate}</time>
-            <span>{post.readingTime}</span>
           </div>
           {post.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">

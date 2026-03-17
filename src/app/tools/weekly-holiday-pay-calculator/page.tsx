@@ -405,6 +405,42 @@ export default function WeeklyHolidayPayCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">주휴수당 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">주휴수당 발생 조건</h3>
+            <p>근로기준법 제55조에 따라 주 15시간 이상 근무하고 소정근로일을 개근한 근로자에게 유급 주휴일이 주어집니다. 정규직, 계약직, 아르바이트 구분 없이 조건만 충족하면 발생합니다.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>주 15시간 이상</strong>: 4주간 평균으로 계산</li>
+              <li><strong>개근</strong>: 소정근로일에 모두 출근 (결근 시 해당 주 주휴수당 미발생)</li>
+              <li><strong>적용 제외</strong>: 주 15시간 미만 초단시간 근로자</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">주휴수당 계산법</h3>
+            <p>주휴수당 = 1일 소정근로시간 x 시급. 주 40시간(하루 8시간) 근무자의 주휴시간은 8시간이므로 시급 10,030원 기준 주휴수당은 80,240원(주당)입니다. 주 20시간(하루 4시간) 근무 단시간 근로자는 비례 계산하여 4시간 x 시급 = 40,120원입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">주휴수당 포함 실질 시급</h3>
+            <p>구인공고에서 &quot;시급 10,030원(주휴수당 포함)&quot;이라고 쓰면 이는 불법입니다. 최저시급은 주휴수당을 별도로 지급해야 합니다. 주 40시간 기준 주휴수당 포함 실질 시급은 10,030원 x (48/40) = 12,036원입니다. 주 48시간분의 급여를 40시간 근무로 받는 셈입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">주휴수당 미지급 시 제재</h3>
+            <p>주휴수당을 지급하지 않으면 근로기준법 위반으로 2년 이하 징역 또는 2,000만원 이하 벌금에 처해질 수 있습니다. 또한 미지급 주휴수당은 최대 3년까지 소급하여 청구할 수 있습니다. 고용노동부 진정·신고를 통해 구제받을 수 있습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">자주 묻는 질문</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>월급제도 주휴수당이 있나요?</strong> 월급에 이미 주휴수당이 포함되어 있습니다. 209시간 기준 월급은 174시간(근로) + 35시간(주휴)으로 구성됩니다.</li>
+              <li><strong>공휴일에 쉬면 주휴수당이 줄어드나요?</strong> 공휴일 유급휴일과 주휴일은 별개입니다. 소정근로일에 개근했으면 주휴수당은 정상 발생합니다.</li>
+              <li><strong>주중에 결근하면?</strong> 해당 주의 주휴수당은 발생하지 않습니다. 다음 주부터 개근하면 다시 발생합니다.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">주휴수당 계산기 사용 예시</h3>

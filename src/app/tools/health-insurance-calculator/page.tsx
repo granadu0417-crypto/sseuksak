@@ -433,6 +433,33 @@ export default function HealthInsuranceCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">건강보험료 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">직장가입자 vs 지역가입자</h3>
+            <p>직장가입자는 보수월액에 7.09%를 곱하며 회사가 절반(3.545%)을 부담합니다. 지역가입자는 소득·재산·자동차 점수를 합산하여 점수당 208.4원을 곱해 산정하며 전액 본인 부담입니다. 장기요양보험료는 건강보험료의 12.95%가 추가 부과됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">피부양자 자격 요건</h3>
+            <p>직장가입자의 피부양자로 등록되면 보험료 없이 건강보험 혜택을 받습니다. 연간 소득 2,000만원 이하(사업소득 500만원 이하), 재산세 과세표준 5.4억원 이하가 기본 요건입니다. 배우자, 직계존비속, 형제자매가 대상이며, 요건 미충족 시 지역가입자로 전환됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">보수외소득 추가 보험료</h3>
+            <p>직장가입자도 보수 외 소득(이자, 배당, 임대소득 등)이 연 2,000만원을 초과하면 추가 보험료가 부과됩니다. 초과분을 12로 나눈 소득월액에 7.09%를 곱한 금액을 전액 본인이 부담합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">4월 건강보험료 정산</h3>
+            <p>매년 4월에 전년도 실제 소득을 기준으로 정산합니다. 연봉이 올랐으면 추가 납부, 내렸으면 환급됩니다. 정산 금액이 클 경우 최대 10개월 분할 납부가 가능합니다. 연봉 인상 시 회사에 보수월액 변경 신고를 요청하면 4월 정산 부담을 줄일 수 있습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">임의계속가입제도</h3>
+            <p>퇴직 후 피부양자 등록이 안 되면 지역가입자로 전환되어 보험료가 크게 오를 수 있습니다. 임의계속가입제도를 이용하면 퇴직 후 최대 36개월까지 직장가입자 수준의 보험료를 유지할 수 있습니다. 퇴직 후 2개월 이내에 건강보험공단에 신청해야 합니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">건강보험료 계산기 사용 예시</h3>

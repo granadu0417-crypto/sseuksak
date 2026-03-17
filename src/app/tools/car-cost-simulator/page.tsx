@@ -787,6 +787,37 @@ export default function CarCostSimulator() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">자동차 비용 비교 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">구매 vs 리스 vs 장기렌트 핵심 차이</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>구매</strong>: 소유권 본인, 취등록세 부담, 보험·정비 직접 관리, 감가상각 후 중고 매각 가능</li>
+              <li><strong>리스</strong>: 소유권 리스사, 취등록세 리스료에 포함, 만기 시 인수·반납·재리스 선택</li>
+              <li><strong>장기렌트</strong>: 소유권 렌터카사, 보험·정비·세금 모두 포함, &apos;하&apos; 번호판</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">구매 시 부대비용</h3>
+            <p>차량 가격 외에 취등록세(약 7%), 자동차보험(연 50~150만원), 검사비, 번호판 발급비 등이 필요합니다. 3,000만원 차량이면 취등록세만 약 210만원, 보험 100만원, 기타 30만원으로 초기 비용이 약 340만원 추가됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">리스의 잔존가치</h3>
+            <p>리스 만기 시 차량의 예상 가치가 잔존가치(잔가)입니다. 잔가를 높게 설정하면 월 리스료가 줄지만 만기 시 인수 가격이 높아집니다. 잔가율은 보통 30~50%이며, 인기 차종은 잔가가 높고 비인기 차종은 낮습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">법인·개인사업자 세금 혜택</h3>
+            <p>리스료는 연 800만원까지 경비(비용) 처리가 가능하여 법인세·소득세를 줄일 수 있습니다. 장기렌트도 동일하게 경비 처리됩니다. 개인 구매의 경우 업무용 사용 비율만큼 감가상각비를 경비로 인정받을 수 있습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">5년 보유 총비용 비교 예시</h3>
+            <p>3,000만원 중형 세단, 5년 보유 시 예상 총비용: 구매 약 4,200만원(차량값+취등록세+보험5년+유류+정비-중고매각), 리스 약 4,500만원(보증금+리스료60개월), 장기렌트 약 4,800만원(렌트료60개월). 구매가 가장 저렴하지만 관리 부담이 있고, 렌트는 비용이 높지만 편의성이 최고입니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">자동차 비용 비교 시뮬레이터 사용 예시</h3>

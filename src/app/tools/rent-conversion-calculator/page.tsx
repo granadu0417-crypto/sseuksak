@@ -480,6 +480,33 @@ export default function RentConversionCalculatorPage() {
           }}
         />
 
+        {/* 상세 가이드 */}
+        <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">전월세 전환 계산 완벽 가이드</h2>
+          <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">전월세 전환율이란?</h3>
+              <p>전세 보증금을 월세로 전환할 때 적용하는 비율입니다. 전환 공식: 월세 = (보증금 감소분 x 전환율) / 12. 예를 들어 보증금 1억원을 5,000만원으로 줄이고 전환율 5%이면: (5,000만원 x 5%) / 12 = 약 20.8만원의 월세가 됩니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">법정 전환율 상한</h3>
+              <p>주택임대차보호법에 따라 전환율의 상한은 &apos;한국은행 기준금리 + 2%&apos;입니다. 2025년 기준금리 2.75%이면 법정 상한 전환율은 4.75%입니다. 이를 초과하는 전환율을 적용하면 초과분은 무효이며 임차인이 반환을 청구할 수 있습니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">전세→월세 전환 시 유불리 판단</h3>
+              <p>전환율이 전세자금대출 금리보다 높으면 전세 유지가 유리합니다. 전세대출 금리 3%인데 전환율 5%이면, 대출받아 전세로 사는 게 월세보다 저렴합니다. 반대로 전환율이 대출 금리보다 낮으면 월세가 유리할 수 있습니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">임대차3법 핵심</h3>
+              <ul className="list-disc list-inside mt-2 space-y-1">
+                <li><strong>계약갱신청구권</strong>: 1회에 한해 2년 연장 가능 (최대 4년 거주)</li>
+                <li><strong>전월세상한제</strong>: 갱신 시 임대료 인상 상한 5%</li>
+                <li><strong>전월세신고제</strong>: 보증금 6,000만원 초과 또는 월세 30만원 초과 시 30일 내 신고</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* 사용 예시 */}
         <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 mb-6">
           <h3 className="font-semibold text-gray-900 mb-4">전월세 전환율 계산기 사용 예시</h3>

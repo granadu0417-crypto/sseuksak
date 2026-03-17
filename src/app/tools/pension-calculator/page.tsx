@@ -434,6 +434,33 @@ export default function PensionCalculatorPage() {
           }}
         />
 
+        {/* 상세 가이드 */}
+        <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">국민연금 계산 완벽 가이드</h2>
+          <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">국민연금 보험료 산정</h3>
+              <p>보험료율은 기준소득월액의 9%이며, 직장가입자는 회사와 본인이 4.5%씩 부담합니다. 기준소득월액 하한은 39만원(월 보험료 35,100원), 상한은 617만원(월 보험료 555,300원)입니다. 매년 7월에 전년도 소득 기준으로 재산정됩니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">노령연금 수급 요건</h3>
+              <p>가입기간 10년 이상이면 수급 자격이 생깁니다. 수급 개시 연령은 1969년 이후 출생자 만 65세, 1965~1968년생 만 64세, 1961~1964년생 만 63세입니다. 조기노령연금은 최대 5년 앞당길 수 있으나 연 6%씩 감액되고, 연기연금은 5년 늦추면 연 7.2%씩 증액됩니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">연금액 계산 (A값·B값)</h3>
+              <p>기본연금액은 A값(전체 가입자 평균소득, 2025년 약 286만원)과 B값(본인 가입기간 평균소득)을 합산하여 산정합니다. A값이 포함되어 소득이 낮은 사람도 일정 수준의 연금을 보장받는 소득재분배 기능이 있습니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">크레딧 제도</h3>
+              <p>보험료를 내지 못한 기간에 가입기간을 인정해주는 제도입니다. 군복무 크레딧 6개월(2008년 이후 입대자), 출산 크레딧 둘째부터 12개월·셋째 이후 18개월, 실업 크레딧 최대 12개월(보험료 75% 정부 지원)이 있습니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">조기 vs 연기 수령 비교</h3>
+              <p>조기수령(5년 앞당김)은 월 연금액이 30% 감소, 연기수령(5년 늦춤)은 36% 증가합니다. 손익분기점은 조기수령 약 76세, 연기수령 약 73세입니다. 건강 상태와 다른 소득원을 고려하여 결정해야 합니다.</p>
+            </div>
+          </div>
+        </div>
+
         {/* 사용 예시 */}
         <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 mb-6">
           <h3 className="font-semibold text-gray-900 mb-4">국민연금 계산기 사용 예시</h3>

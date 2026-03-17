@@ -534,6 +534,91 @@ export default function AlcoholCalculatorPage() {
             </ul>
           </div>
 
+          {/* 상세 가이드 */}
+          <div className="bg-white rounded-xl border border-gray-200 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">알코올 분해 시간 완벽 가이드</h2>
+
+            <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">위드마크(Widmark) 공식이란?</h3>
+                <p>위드마크 공식은 스웨덴 의학자 에릭 위드마크(Erik Widmark)가 1932년에 개발한 혈중 알코올 농도(BAC) 추정 공식입니다. 법의학과 음주 단속에서 국제적으로 사용되며, 한국 법원에서도 음주운전 사건의 역추산 근거로 활용됩니다. 공식은 다음과 같습니다.</p>
+                <div className="bg-gray-50 rounded-lg p-3 mt-2 font-mono text-xs">
+                  BAC(%) = (섭취한 알코올량(g) / (체중(kg) x 체내수분비율)) x 100 - (경과시간 x 0.015)
+                </div>
+                <p className="mt-2">체내수분비율은 남성 0.68, 여성 0.55를 적용합니다. 여성이 같은 양을 마셔도 BAC가 더 높은 이유는 체내 수분 비율이 낮아 알코올이 더 높은 농도로 분포되기 때문입니다.</p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">알코올 분해 속도에 영향을 주는 요인</h3>
+                <p>알코올은 주로 간에서 분해되며, 평균적으로 시간당 혈중 알코올 농도가 0.015%씩 감소합니다. 하지만 여러 요인에 따라 개인차가 큽니다.</p>
+                <ul className="list-disc list-inside mt-2 space-y-1">
+                  <li><strong>체중</strong>: 체중이 많을수록 체내 수분량이 많아 같은 양의 알코올이 더 낮은 농도로 분포됩니다.</li>
+                  <li><strong>성별</strong>: 여성은 남성보다 체내 수분 비율이 낮고 알코올 분해 효소(ADH)가 적어 같은 양을 마셔도 BAC가 더 높습니다.</li>
+                  <li><strong>공복 여부</strong>: 빈속에 마시면 알코올 흡수가 30~50% 빨라져 최고 BAC에 더 빨리 도달합니다.</li>
+                  <li><strong>음주 속도</strong>: 빠르게 마실수록 간의 분해 능력을 초과하여 BAC가 급격히 올라갑니다.</li>
+                  <li><strong>유전적 요인</strong>: ALDH2 유전자 변이가 있는 사람(한국인의 약 30~40%)은 아세트알데히드 분해가 느려 숙취가 심합니다.</li>
+                  <li><strong>간 건강</strong>: 간 기능이 저하된 경우 분해 속도가 현저히 느려질 수 있습니다.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">2019년 강화된 음주운전 처벌 기준</h3>
+                <p>2019년 6월 25일부터 시행된 일명 &apos;윤창호법&apos;으로 음주운전 처벌이 대폭 강화되었습니다.</p>
+                <div className="overflow-x-auto mt-2">
+                  <table className="w-full text-xs">
+                    <thead>
+                      <tr className="border-b border-gray-300">
+                        <th className="text-left py-2 px-2 font-semibold">BAC 구간</th>
+                        <th className="text-left py-2 px-2 font-semibold">행정처분</th>
+                        <th className="text-left py-2 px-2 font-semibold">형사처벌</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-100">
+                        <td className="py-2 px-2">0.03% 이상 ~ 0.08% 미만</td>
+                        <td className="py-2 px-2">면허정지 (100일)</td>
+                        <td className="py-2 px-2">1년 이하 징역 또는 500만원 이하 벌금</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="py-2 px-2">0.08% 이상 ~ 0.2% 미만</td>
+                        <td className="py-2 px-2">면허취소</td>
+                        <td className="py-2 px-2">1~2년 징역 또는 500~1천만원 벌금</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="py-2 px-2">0.2% 이상</td>
+                        <td className="py-2 px-2">면허취소</td>
+                        <td className="py-2 px-2">2~5년 징역 또는 1천~2천만원 벌금</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 px-2">2회 이상 적발</td>
+                        <td className="py-2 px-2">면허취소</td>
+                        <td className="py-2 px-2">2~5년 징역 또는 1천~2천만원 벌금</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="mt-2">음주운전으로 사망 사고를 낸 경우 3년 이상의 징역 또는 무기징역에 처해질 수 있습니다. 음주 후에는 반드시 대리운전이나 대중교통을 이용하세요.</p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">주류별 순수 알코올 함량 비교</h3>
+                <p>같은 &apos;한 잔&apos;이라도 주류에 따라 순수 알코올 함량이 크게 다릅니다. 소주 1잔(50ml, 17도)의 알코올량은 약 6.7g이고, 맥주 한 잔(350ml, 5도)은 약 13.8g입니다. 맥주 한 잔이 소주 한 잔보다 알코올량이 약 2배 많습니다. 와인 1잔(150ml, 13도)은 약 15.4g, 위스키 1잔(45ml, 40도)은 약 14.2g입니다.</p>
+                <p className="mt-2">한국 성인의 &apos;적정 음주량&apos;은 하루 순수 알코올 기준 남성 40g(소주 약 6잔), 여성 20g(소주 약 3잔) 이하입니다. 다만 세계보건기구(WHO)는 안전한 음주량은 없다는 입장입니다.</p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">숙취 해소에 대한 오해와 진실</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li><strong>숙취해소제</strong>: 아세트알데히드 분해를 일부 도울 수 있지만, 알코올 자체의 분해 속도를 높이지는 않습니다. BAC 감소에는 효과가 없습니다.</li>
+                  <li><strong>커피</strong>: 카페인으로 각성 효과는 있지만 알코올 분해와는 무관합니다. 오히려 이뇨 작용으로 탈수를 악화시킬 수 있습니다.</li>
+                  <li><strong>사우나</strong>: 땀으로 배출되는 알코올은 전체의 2~3%에 불과합니다. 탈수와 심혈관 부담만 증가시킵니다.</li>
+                  <li><strong>구토</strong>: 이미 흡수된 알코올은 구토로 제거할 수 없습니다. 위에 남아있는 알코올만 배출됩니다.</li>
+                  <li><strong>충분한 수분 섭취와 휴식</strong>: 간의 알코올 분해를 돕는 가장 효과적인 방법입니다. 물이나 이온 음료를 충분히 마시고 충분히 자는 것이 최선입니다.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           {/* 사용 예시 */}
           <div className="bg-white rounded-xl border border-gray-200 p-6">
             <h3 className="font-bold text-gray-900 mb-4">사용 예시</h3>

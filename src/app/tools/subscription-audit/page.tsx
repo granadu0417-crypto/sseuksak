@@ -267,6 +267,50 @@ export default function SubscriptionAuditPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">구독 서비스 관리 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">구독 경제의 함정</h3>
+            <p>한국소비자원 조사에 따르면 성인 1인당 평균 3.4개의 구독 서비스를 이용하며, 월 평균 지출은 약 4~6만 원입니다. 문제는 가입한 사실을 잊고 사용하지 않는 &apos;잠자는 구독&apos;이 전체의 약 30%에 달한다는 점입니다. 매달 자동결제되는 소액이 모이면 연간 수십만 원의 불필요한 지출이 됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">구독 서비스 유형과 평균 요금</h3>
+            <ul className="list-disc list-inside space-y-1">
+              <li><strong>OTT(영상 스트리밍)</strong>: 넷플릭스(5,500~17,000원), 디즈니+(9,900원), 웨이브(7,900~13,900원), 티빙(5,500~13,900원), 쿠팡플레이(7,890원 - 로켓와우 포함)</li>
+              <li><strong>음악 스트리밍</strong>: 멜론(10,900원), 스포티파이(10,900원), 유튜브 뮤직(10,990원), 애플뮤직(10,900원)</li>
+              <li><strong>클라우드/생산성</strong>: iCloud+(1,100~13,400원), 구글 원(2,400~39,000원), 노션(월 $10), MS 365(8,900원)</li>
+              <li><strong>배송/커머스</strong>: 쿠팡 로켓와우(7,890원), SSG닷컴(3,900원), 네이버 플러스 멤버십(4,900원)</li>
+              <li><strong>기타</strong>: 통신 부가서비스, 앱스토어 인앱구독, 뉴스레터, 온라인 강의 등</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">숨은 구독 찾는 방법</h3>
+            <ul className="list-disc list-inside space-y-1">
+              <li><strong>카드 명세서 확인</strong>: 최근 3개월간 카드/계좌 이체 내역에서 정기결제 항목을 모두 표시합니다.</li>
+              <li><strong>앱스토어 구독 관리</strong>: iPhone(설정 - Apple ID - 구독), Android(Play Store - 결제 및 정기결제)에서 활성 구독을 확인합니다.</li>
+              <li><strong>이메일 검색</strong>: 메일에서 &apos;구독&apos;, &apos;결제&apos;, &apos;갱신&apos;, &apos;subscription&apos; 등으로 검색하면 잊고 있던 서비스를 찾을 수 있습니다.</li>
+              <li><strong>금융앱 정기결제 조회</strong>: 토스, 카카오뱅크 등에서 정기결제 내역을 한눈에 확인할 수 있습니다.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">구독비 절약 전략</h3>
+            <ul className="list-disc list-inside space-y-1">
+              <li><strong>가족/공유 요금제 활용</strong>: 넷플릭스, 유튜브 프리미엄, 스포티파이 등은 가족 요금제가 1인당 비용이 훨씬 저렴합니다.</li>
+              <li><strong>연간 결제 할인</strong>: 연간 결제 시 월 결제 대비 15~30% 할인되는 서비스가 많습니다. 장기 사용이 확실한 경우 유리합니다.</li>
+              <li><strong>통신사 결합 할인</strong>: SK텔레콤(Wavve/FLO), KT(시즌/지니), LG U+(유플러스 멤버십)에서 통신비에 OTT가 포함된 요금제를 제공합니다.</li>
+              <li><strong>무료 체험 후 해지</strong>: 새 서비스 가입 시 무료 체험 기간에 알림을 설정해두고, 필요 없으면 기한 전 해지하세요.</li>
+              <li><strong>월별 순환 이용</strong>: 꼭 동시에 모든 OTT를 구독할 필요는 없습니다. 한 달씩 순환하며 이용하면 비용을 크게 줄일 수 있습니다.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">구독 해지 시 주의사항</h3>
+            <p>대부분의 월정액 구독은 위약금 없이 해지 가능하며, 해지 후에도 결제 기간 종료일까지 이용할 수 있습니다. 단, 연간 결제의 경우 환불 조건이 다를 수 있으니 약관을 확인하세요. 앱스토어에서 구독한 서비스는 앱을 삭제해도 자동결제가 계속되므로, 반드시 구독 관리에서 해지해야 합니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">구독 서비스 총액 계산기 사용 예시</h3>

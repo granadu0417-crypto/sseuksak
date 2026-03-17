@@ -450,6 +450,38 @@ export default function FireCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">FIRE 은퇴 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">FIRE란?</h3>
+            <p>FIRE(Financial Independence, Retire Early)는 경제적 자립을 통해 조기 은퇴를 달성하는 운동입니다. 핵심은 높은 저축률과 투자 수익을 통해 생활비의 25배를 모으는 것입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">4% 룰 (25배 법칙)</h3>
+            <p>트리니티 연구(1998)에 따르면 포트폴리오에서 매년 4%씩 인출하면 30년간 자산이 고갈되지 않을 확률이 95% 이상입니다. 따라서 연간 생활비의 25배가 목표 자산입니다. 월 생활비 300만원이면 연 3,600만원, 목표 자산은 9억원입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">FIRE 유형</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>Fat FIRE</strong>: 현재 생활 수준 유지하며 은퇴. 목표 자산이 가장 큼</li>
+              <li><strong>Lean FIRE</strong>: 최소한의 생활비로 은퇴. 월 150~200만원 수준</li>
+              <li><strong>Barista FIRE</strong>: 파트타임 근무로 부족분 보충. 반(半)은퇴</li>
+              <li><strong>Coast FIRE</strong>: 충분한 투자금을 모은 뒤 복리가 목표를 채울 때까지 기다림</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">한국형 FIRE 고려사항</h3>
+            <p>한국에서 FIRE를 계획할 때는 미국과 다른 점을 고려해야 합니다. 국민연금 수령(65세부터), 건강보험료(지역가입자 전환 시 부담 증가), 자녀 교육비, 주거비(전세·월세 포함), 물가상승률(연 2~3%)이 핵심 변수입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">저축률과 은퇴 시기</h3>
+            <p>투자 수익률 연 5%, 인플레이션 연 2% 가정 시 저축률에 따른 은퇴까지 소요 기간: 저축률 10%면 약 51년, 20%면 약 37년, 30%면 약 28년, 50%면 약 17년, 70%면 약 8.5년입니다. 저축률이 FIRE 달성 속도의 핵심 변수입니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">FIRE 계산기 사용 예시</h3>

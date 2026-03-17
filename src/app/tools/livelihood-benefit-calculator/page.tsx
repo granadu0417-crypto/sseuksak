@@ -507,6 +507,44 @@ export default function LivelihoodBenefitCalculator() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">기초생활수급 자격 확인 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">기초생활보장 4가지 급여</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>생계급여</strong>: 기준 중위소득 32% 이하, 현금 지급 (생계급여액 = 선정기준 - 소득인정액)</li>
+              <li><strong>의료급여</strong>: 기준 중위소득 40% 이하, 의료비 지원 (1종/2종)</li>
+              <li><strong>주거급여</strong>: 기준 중위소득 48% 이하, 임차료 또는 수선비 지원</li>
+              <li><strong>교육급여</strong>: 기준 중위소득 50% 이하, 교육활동지원비 지급</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">2025년 기준 중위소득</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>1인 가구</strong>: 2,392,013원</li>
+              <li><strong>2인 가구</strong>: 3,932,658원</li>
+              <li><strong>3인 가구</strong>: 5,025,353원</li>
+              <li><strong>4인 가구</strong>: 6,097,773원</li>
+            </ul>
+            <p className="mt-2">생계급여 선정기준(32%): 1인 765,444원, 4인 1,951,287원. 이 금액에서 소득인정액을 뺀 차액이 생계급여로 지급됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">소득인정액 계산</h3>
+            <p>소득인정액 = 소득평가액 + 재산의 소득환산액. 소득평가액은 실제 소득에서 근로소득공제(30%)를 적용합니다. 재산은 (재산 - 기본재산액 - 부채) x 소득환산율로 계산합니다. 기본재산액은 서울 9,900만원, 경기 8,000만원, 광역시 7,700만원, 그 외 5,300만원입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">부양의무자 기준</h3>
+            <p>생계급여는 2021년 10월부터 부양의무자 기준이 폐지되었습니다(연소득 1억 또는 재산 9억 초과 제외). 의료급여는 여전히 부양의무자 기준이 적용됩니다. 주거급여와 교육급여는 부양의무자 기준이 없습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">신청 방법</h3>
+            <p>주소지 관할 읍면동 주민센터에 방문하여 신청합니다. 온라인은 복지로(bokjiro.go.kr)에서 가능합니다. 신청 후 약 30일간 소득·재산 조사가 진행되며, 결정 통지를 받게 됩니다. 급여 지급일은 매월 20일(생계급여), 주거급여는 매월 20일입니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">생계급여 계산기 사용 예시</h3>

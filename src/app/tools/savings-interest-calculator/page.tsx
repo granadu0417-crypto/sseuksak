@@ -427,6 +427,47 @@ export default function SavingsInterestCalculatorPage() {
         </ul>
       </div>
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">적금 이자 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">적금 vs 예금, 무엇이 다를까?</h3>
+            <p>적금(積金)은 매월 일정 금액을 나누어 저축하는 상품이고, 예금(預金)은 목돈을 한 번에 맡기는 상품입니다. 같은 금리라면 예금이 더 유리합니다. 적금은 초반에 납입한 금액만 이자가 붙고, 나중에 납입한 금액은 이자가 적게 붙기 때문입니다. 예를 들어 금리 4%인 적금에 월 100만 원씩 12개월을 넣으면, 실질 수익률은 약 2.2% 수준입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">단리 vs 복리</h3>
+            <ul className="list-disc list-inside space-y-1">
+              <li><strong>단리</strong>: 원금에 대해서만 이자를 계산합니다. 대부분의 시중 은행 적금이 단리 방식입니다.</li>
+              <li><strong>복리</strong>: 원금 + 이자에 대해 이자를 계산합니다. 일부 저축은행이나 특판 상품에서 복리 적금을 제공합니다.</li>
+            </ul>
+            <p className="mt-2">12개월 단기 적금에서는 단리와 복리의 차이가 크지 않습니다. 하지만 기간이 길어질수록(3~5년) 복리 효과가 커집니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">이자소득세 15.4%</h3>
+            <p>적금, 예금의 이자에는 이자소득세 14%와 지방소득세 1.4%(이자소득세의 10%)를 합한 15.4%가 원천징수됩니다. 예를 들어 세전 이자가 10만 원이면, 실수령 이자는 84,600원입니다.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>비과세 상품</strong>: 청년희망적금, 조합원 예탁금(농협/신협/새마을금고, 연 3,000만 원 한도) 등은 이자소득세가 면제됩니다.</li>
+              <li><strong>세금우대</strong>: 신협/새마을금고의 세금우대 저축은 이자소득세 1.4%(지방소득세만)로 감면됩니다.</li>
+              <li><strong>ISA 계좌</strong>: 개인종합자산관리계좌(ISA)에서 발생한 이자는 200~400만 원까지 비과세, 초과분은 9.9% 분리과세됩니다.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">적금 금리 비교 시 체크포인트</h3>
+            <ul className="list-disc list-inside space-y-1">
+              <li><strong>기본 금리 vs 우대 금리</strong>: 광고하는 금리가 우대 조건을 모두 충족했을 때의 최고 금리인 경우가 많습니다. 카드 실적, 급여이체, 자동이체 등 우대 조건을 꼼꼼히 확인하세요.</li>
+              <li><strong>중도해지 금리</strong>: 만기 전 해지하면 약정 금리의 40~60% 수준의 중도해지 금리가 적용됩니다.</li>
+              <li><strong>예금자보호</strong>: 은행, 저축은행, 신협 등 금융기관별로 1인당 5,000만 원까지 예금자보호가 됩니다(원금+이자 합산).</li>
+              <li><strong>특판 적금</strong>: 은행 앱 전용, 비대면 전용 특판 적금이 일반 적금보다 금리가 0.5~1%p 높은 경우가 많습니다.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">적금 실효 수익률 계산법</h3>
+            <p>적금의 표시 금리와 실제 수익률은 다릅니다. 적금은 매월 분할 납입하므로 첫 달 납입금은 12개월간 이자가 붙지만, 마지막 달 납입금은 1개월만 이자가 붙습니다. 이를 평균하면 실효 수익률은 표시 금리의 약 55% 수준입니다. 금리 4% 적금의 실효 수익률은 약 2.2%, 금리 5%이면 약 2.7%입니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6">
         <h3 className="font-bold text-gray-900 mb-4">사용 예시</h3>

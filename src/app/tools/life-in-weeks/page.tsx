@@ -371,6 +371,34 @@ export default function LifeInWeeksPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">인생 주간 시각화 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">인생을 주 단위로 보는 의미</h3>
+            <p>80세까지 산다면 인생은 약 4,160주입니다. 한 장의 표에 모든 주를 점으로 표시하면, 이미 보낸 시간과 남은 시간이 직관적으로 보입니다. Tim Urban의 &quot;Your Life in Weeks&quot;에서 시작된 이 시각화는 시간의 유한성을 체감하게 해주는 강력한 도구입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">한국인 평균 기대수명</h3>
+            <p>2023년 통계청 기준 한국인 평균 기대수명은 남성 80.6세, 여성 86.6세입니다. 건강수명(건강하게 활동하는 기간)은 남성 66.3세, 여성 68.0세로, 기대수명과 약 14~18년의 차이가 있습니다. 이 기간은 만성질환이나 거동 불편으로 삶의 질이 떨어지는 시기입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">인생 단계별 주간 배분</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>교육기간(0~22세)</strong>: 약 1,144주 - 유년기, 초중고, 대학</li>
+              <li><strong>직장생활(23~60세)</strong>: 약 1,976주 - 경력 형성, 가정, 자녀 양육</li>
+              <li><strong>은퇴 후(61~80세)</strong>: 약 1,040주 - 제2의 인생, 취미, 봉사</li>
+            </ul>
+            <p className="mt-2">30세라면 이미 1,560주를 보냈고, 80세까지 2,600주가 남아 있습니다. 건강수명 기준으로는 약 1,900주가 활발한 활동이 가능한 시간입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">시간 관리와 우선순위</h3>
+            <p>남은 주 수가 한정되어 있다는 인식은 우선순위를 명확히 하는 데 도움이 됩니다. 아이젠하워 매트릭스(긴급/중요 분류), 파레토 법칙(20%의 활동이 80%의 성과), 파킨슨 법칙(시간이 허락하는 만큼 일이 늘어남) 등의 원칙을 활용하면 남은 시간을 더 가치 있게 사용할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">Life in Weeks 사용 예시</h3>

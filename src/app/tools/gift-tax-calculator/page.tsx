@@ -549,6 +549,39 @@ export default function GiftTaxCalculator() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6 mt-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">증여세 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">증여세 세율 구간</h3>
+            <p>증여세는 과세표준(증여재산 - 증여재산공제)에 누진세율을 적용합니다. 1억원 이하 10%, 1~5억원 20%(누진공제 1,000만원), 5~10억원 30%(누진공제 6,000만원), 10~30억원 40%(누진공제 1.6억원), 30억원 초과 50%(누진공제 4.6억원)입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">증여재산공제 한도 (10년 합산)</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>배우자</strong>: 6억원</li>
+              <li><strong>직계존속(부모→자녀)</strong>: 성년 5,000만원, 미성년 2,000만원</li>
+              <li><strong>직계비속(자녀→부모)</strong>: 5,000만원</li>
+              <li><strong>기타 친족</strong>: 1,000만원</li>
+            </ul>
+            <p className="mt-2">10년 합산 규칙이 핵심입니다. 같은 증여자로부터 10년 이내 받은 모든 증여를 합산하여 과세합니다. 따라서 10년 단위로 분할 증여하면 공제를 반복 활용할 수 있습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">증여 vs 상속 비교</h3>
+            <p>세율은 동일하지만 공제가 크게 다릅니다. 상속공제(배우자 최대 30억원, 일괄 5억원 등)가 증여공제보다 훨씬 커서 재산 10억원 이하라면 상속이 유리한 경우가 많습니다. 다만 사전증여를 10년 단위로 나누면 공제를 여러 번 활용할 수 있어 대규모 재산 이전에는 사전증여가 효과적입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">부담부증여</h3>
+            <p>채무(대출)가 있는 재산을 증여하면 채무 부분은 양도(양도소득세), 나머지는 증여(증여세)로 과세됩니다. 전체를 증여로 보는 것보다 세금이 줄 수 있지만, 양도차익이 크면 불리할 수 있으므로 세무사 상담이 필요합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">신고·납부 절차</h3>
+            <p>증여받은 달 말일부터 3개월 이내 신고해야 합니다. 기한 내 신고 시 산출세액의 3%를 공제받습니다. 납부세액 2,000만원 초과 시 5년간 분할납부(연부연납)도 가능합니다. 무신고 시 가산세 20%(부정 40%)가 부과됩니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6 mt-6">
         <h3 className="font-semibold text-gray-900 mb-4">증여세 계산기 사용 예시</h3>

@@ -398,6 +398,41 @@ export default function BMICalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">BMI 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">BMI 공식과 아시아-태평양 기준</h3>
+            <p>BMI = 체중(kg) / 신장(m)의 제곱. WHO 기준과 아시아-태평양 기준이 다릅니다. 아시아인은 같은 BMI에서도 체지방 비율이 높아 더 낮은 기준이 적용됩니다.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>저체중</strong>: 18.5 미만</li>
+              <li><strong>정상</strong>: 18.5~22.9 (WHO는 24.9까지)</li>
+              <li><strong>과체중</strong>: 23~24.9 (WHO는 25부터)</li>
+              <li><strong>비만 1단계</strong>: 25~29.9</li>
+              <li><strong>비만 2단계</strong>: 30~34.9</li>
+              <li><strong>고도비만</strong>: 35 이상</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">BMI의 한계</h3>
+            <p>BMI는 근육량을 반영하지 못합니다. 운동선수는 BMI가 높아도 체지방률이 낮을 수 있고, 노인은 BMI가 정상이어도 근감소증일 수 있습니다. 보다 정확한 건강 지표로는 체지방률, 허리둘레, 허리-엉덩이 비율(WHR)이 있습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">복부비만 기준</h3>
+            <p>대한비만학회 기준 복부비만은 남성 허리둘레 90cm 이상, 여성 85cm 이상입니다. 허리둘레는 BMI보다 내장지방을 더 잘 반영하며, 심혈관 질환·당뇨병 위험과 더 높은 상관관계가 있습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">BMI와 건강 위험</h3>
+            <p>BMI 25 이상부터 고혈압, 당뇨병, 이상지질혈증, 심혈관 질환 위험이 증가합니다. BMI 30 이상에서는 수면무호흡증, 관절 질환, 일부 암 발생 위험도 높아집니다. 반대로 BMI 18.5 미만의 저체중도 면역력 저하, 골다공증, 빈혈 위험이 있어 건강에 좋지 않습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">건강 체중 관리 팁</h3>
+            <p>감량 목표는 주당 0.5~1kg이 안전합니다. 급격한 다이어트는 근육 손실과 요요현상을 유발합니다. 칼로리 결핍은 하루 500~750kcal이 적정하며, 유산소 운동과 근력 운동을 병행하는 것이 효과적입니다. 국민건강보험공단 무료 건강검진(2년 주기)을 통해 정기적으로 체성분을 확인하세요.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">BMI 계산기 사용 예시</h3>

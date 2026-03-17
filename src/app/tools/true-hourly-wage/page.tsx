@@ -504,6 +504,35 @@ export default function TrueHourlyWagePage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">진짜 시급 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">진짜 시급이란?</h3>
+            <p>진짜 시급 = 실수령액 / 실제 투입 시간. 월급에서 4대 보험과 세금을 뺀 실수령액을, 근무 시간뿐 아니라 출퇴근·야근·업무 준비 등 일과 관련된 모든 시간으로 나눈 값입니다. 명목 시급보다 항상 낮으며, 실제 노동의 가치를 더 정확히 보여줍니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">숨은 비용 항목</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>출퇴근 시간</strong>: 서울 직장인 평균 왕복 1시간 20분 (월 약 30시간)</li>
+              <li><strong>교통비</strong>: 대중교통 월 약 7~10만원, 자차 월 20~40만원</li>
+              <li><strong>식비</strong>: 점심 외식 평균 1만원 x 22일 = 월 22만원</li>
+              <li><strong>의류·미용</strong>: 직장 복장 관리비 월 5~15만원</li>
+              <li><strong>야근·회식</strong>: 비공식 업무 시간, 수당 없는 추가 근무</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">진짜 시급으로 소비 판단하기</h3>
+            <p>진짜 시급이 15,000원이라면, 10만원짜리 물건은 &quot;내 시간 6.7시간치&quot;입니다. 이렇게 환산하면 불필요한 소비를 줄이는 데 효과적입니다. &quot;이 물건을 사기 위해 몇 시간을 일해야 하는가?&quot;라는 질문이 소비 습관을 바꿉니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">재택근무 vs 출근의 차이</h3>
+            <p>재택근무는 출퇴근 시간(월 30시간)과 교통비(월 7~40만원), 외식비를 절약합니다. 연봉 4,000만원 직장인이 출퇴근 왕복 2시간이면 진짜 시급이 약 15,000원이지만, 재택근무 시 약 18,000원으로 20% 상승합니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6">
         <h3 className="font-semibold text-gray-900 mb-4">진짜 시급 계산기 사용 예시</h3>

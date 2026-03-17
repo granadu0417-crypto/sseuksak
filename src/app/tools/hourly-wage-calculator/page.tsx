@@ -539,6 +539,38 @@ export default function HourlyWageCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">시급 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">2025년 최저시급과 변천사</h3>
+            <p>2025년 최저시급은 10,030원이며, 주 40시간 근무 시 월 환산액은 2,096,270원(209시간 기준)입니다. 최근 변천사를 보면 2020년 8,590원, 2021년 8,720원, 2022년 9,160원, 2023년 9,620원, 2024년 9,860원, 2025년 10,030원으로 꾸준히 인상되고 있습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">209시간제와 월급 환산</h3>
+            <p>주 40시간 근무의 월 환산 시간은 209시간입니다. 계산: (주 40시간 + 주휴 8시간) x (365일 / 7일 / 12개월) = 약 209시간. 따라서 시급 10,030원 x 209시간 = 월 2,096,270원이 최저월급입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">주휴수당 포함 시급</h3>
+            <p>주 15시간 이상 근무하고 개근하면 주휴수당이 발생합니다. 주 40시간 기준 주휴 8시간이 추가되므로, 실질 시급은 시급 x (48/40) = 시급 x 1.2입니다. 최저시급 기준 주휴수당 포함 실질 시급은 12,036원입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">가산수당 (야간·휴일·연장)</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>연장근로</strong>: 통상임금의 50% 가산 (주 40시간 초과분)</li>
+              <li><strong>야간근로</strong>: 통상임금의 50% 가산 (22시~06시)</li>
+              <li><strong>휴일근로</strong>: 8시간 이내 50% 가산, 8시간 초과 100% 가산</li>
+            </ul>
+            <p className="mt-2">야간 + 연장이 겹치면 100% 가산됩니다. 시급 10,030원 기준 야간연장수당은 시간당 20,060원입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">수습기간과 최저임금 위반</h3>
+            <p>1년 이상 근로계약 체결 시 수습 3개월 동안 최저임금의 90%(9,027원)를 지급할 수 있습니다. 단순노무직은 감액 적용이 불가합니다. 최저임금 위반 시 3년 이하 징역 또는 2,000만원 이하 벌금이 부과됩니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">시급 계산기 사용 예시</h3>

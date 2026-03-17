@@ -318,6 +318,42 @@ export default function AgeCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">나이 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">만 나이 통일법 (2023년 시행)</h3>
+            <p>2023년 6월 28일부터 법적·행정적으로 만 나이가 통일 기준이 되었습니다. 기존의 한국식 나이(태어날 때 1살, 매년 1월 1일 +1)는 일상에서 사용되지만 법적 효력이 없습니다. 연 나이(현재연도 - 출생연도)도 일부 법률에서 사용됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">법적 나이 기준 적용</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>음주·흡연</strong>: 만 19세 이상 (생일 기준)</li>
+              <li><strong>운전면허</strong>: 만 18세 이상 (1종 보통은 만 19세)</li>
+              <li><strong>선거권</strong>: 만 18세 이상 (선거일 기준)</li>
+              <li><strong>청소년</strong>: 만 19세 미만</li>
+              <li><strong>형사 책임</strong>: 만 14세 이상</li>
+              <li><strong>혼인</strong>: 만 18세 이상</li>
+              <li><strong>초등학교 입학</strong>: 만 6세 (3월 1일~이듬해 2월생 동일 학년)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">학교 입학 기준</h3>
+            <p>초등학교 입학은 같은 해 3월 1일부터 이듬해 2월 28/29일까지 출생한 아이가 같은 학년이 됩니다. 만 6세가 되는 해의 3월에 입학합니다. 빠른 생일(1~2월생)은 같은 연도 출생이지만 한 학년 위가 됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">나이 계산 방식 비교</h3>
+            <p>예시: 2000년 8월 15일생, 현재 2026년 3월</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>만 나이</strong>: 25세 (생일 전이므로 2026-2000-1=25)</li>
+              <li><strong>연 나이</strong>: 26세 (2026-2000=26)</li>
+              <li><strong>한국식 나이</strong>: 27세 (2026-2000+1=27)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">나이 계산기 사용 예시</h3>

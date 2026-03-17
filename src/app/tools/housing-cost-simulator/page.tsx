@@ -921,6 +921,34 @@ export default function HousingCostSimulator() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">주거비용 시뮬레이션 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">매매 vs 전세 vs 월세 비교 관점</h3>
+            <p>매매는 자산 형성이 되지만 취득세·대출이자·유지비 부담이 있습니다. 전세는 보증금 기회비용(투자 수익 포기)이 발생하고, 월세는 순수 비용이지만 자금 유동성이 높습니다. 장기적으로 부동산 가격 상승률이 대출 이자율보다 높으면 매매가 유리합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">취득세 구간별 세율</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>6억원 이하</strong>: 1.1% (취득세 1% + 지방교육세 0.1%)</li>
+              <li><strong>6억~9억원</strong>: 1.1~3.3% (비례세율, 구간 내 점진 증가)</li>
+              <li><strong>9억원 초과</strong>: 3.3% (취득세 3% + 지방교육세 0.3%)</li>
+              <li><strong>다주택자</strong>: 조정대상지역 2주택 8.4%, 3주택 이상 13.4%</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">재산세와 종합부동산세</h3>
+            <p>재산세는 매년 7월(건물분)과 9월(토지분)에 부과됩니다. 공시가격 기준으로 세율이 적용되며, 1주택자 특례세율이 있습니다. 종합부동산세는 공시가격 합계가 12억원(1주택)을 초과하면 부과되며, 세율은 0.5~2.7%입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">기회비용 개념</h3>
+            <p>전세보증금 3억원을 투자했다면 연 5% 수익률 기준 1,500만원(월 125만원)의 수익을 얻을 수 있습니다. 이것이 전세의 기회비용입니다. 월세 80만원과 비교하면 전세가 실질적으로 더 비쌀 수 있습니다. 이 시뮬레이터는 이런 기회비용까지 반영합니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">주거비용 비교 시뮬레이터 사용 예시</h3>

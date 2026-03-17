@@ -841,6 +841,39 @@ export default function DsrCalculatorPage() {
         </div>
       </div>
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">DSR 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">DSR이란?</h3>
+            <p>DSR(Debt Service Ratio, 총부채원리금상환비율)은 연간 소득 대비 모든 대출의 원리금 상환액 비율입니다. DSR = (모든 대출의 연간 원리금 상환액 / 연간 소득) x 100. 기존 DTI가 주담대 원리금만 반영한 것과 달리, DSR은 신용대출·학자금·카드론 등 모든 대출을 포함합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">DSR 규제 현황</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>개인별 DSR 40%</strong>: 은행권 기준, 총 대출액 1억원 초과 시 적용</li>
+              <li><strong>2금융권</strong>: DSR 50% 적용</li>
+              <li><strong>스트레스 DSR</strong>: 향후 금리 인상 가능성을 반영한 가산금리 적용</li>
+            </ul>
+            <p className="mt-2">연소득 5,000만원이면 연간 원리금 상환 한도는 2,000만원(월 약 167만원)입니다. 기존 대출이 있으면 그만큼 신규 대출 한도가 줄어듭니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">대출 종류별 원리금 산정</h3>
+            <p>주담대는 실제 상환 조건대로, 신용대출은 만기 5~7년 원리금균등 기준으로, 학자금·카드론은 약정 조건으로 산정합니다. 마이너스통장은 한도의 일정 비율을 연간 상환액으로 간주합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">DSR 낮추는 방법</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>소득 증빙 확대</strong>: 근로소득 외 임대소득, 사업소득, 연금소득 등 추가 증빙</li>
+              <li><strong>대출 통합</strong>: 여러 소액 대출을 하나로 통합하여 만기 연장</li>
+              <li><strong>만기 연장</strong>: 상환 기간을 늘리면 연간 원리금이 줄어들어 DSR이 낮아짐</li>
+              <li><strong>기존 대출 상환</strong>: 소액 대출을 먼저 갚아 DSR 여력 확보</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">DSR 계산기 사용 예시</h3>

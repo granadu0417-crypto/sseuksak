@@ -436,6 +436,45 @@ export default function UnemploymentBenefitCalculatorPage() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">실업급여 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">실업급여 수급 요건</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>고용보험 피보험기간</strong>: 퇴직 전 18개월 중 180일 이상 근무</li>
+              <li><strong>비자발적 퇴직</strong>: 권고사직, 계약만료, 정리해고 등 (자발적 퇴사는 원칙적 불가)</li>
+              <li><strong>구직활동 의사</strong>: 워크넷 구직등록 후 적극적 구직활동 필요</li>
+              <li><strong>재취업 능력</strong>: 근로 능력이 있고 취업 의사가 있어야 함</li>
+            </ul>
+            <p className="mt-2">자발적 퇴사라도 임금체불, 근로조건 위반, 직장 내 괴롭힘, 통근 곤란(왕복 3시간 이상) 등 정당한 사유가 있으면 수급 가능합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">지급액 계산</h3>
+            <p>1일 구직급여 = 퇴직 전 3개월 평균임금의 60%. 단, 상한액은 1일 66,000원(2025년), 하한액은 최저임금의 80%(1일 64,192원)입니다. 상한과 하한이 거의 비슷하여 대부분의 수급자가 1일 64,000~66,000원 구간에서 받게 됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">수급 기간 (나이·가입기간별)</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>50세 미만, 1~3년</strong>: 120일</li>
+              <li><strong>50세 미만, 3~5년</strong>: 150일</li>
+              <li><strong>50세 미만, 5~10년</strong>: 180일</li>
+              <li><strong>50세 미만, 10년 이상</strong>: 210일</li>
+              <li><strong>50세 이상 또는 장애인</strong>: 각 구간에서 30일씩 추가 (최대 270일)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">수급 절차</h3>
+            <p>퇴직 → 워크넷 구직등록 → 고용센터 방문(수급자격인정 신청) → 수급자격인정 교육(1일) → 1~4주 대기기간 → 2주마다 실업인정(구직활동 보고) → 급여 지급. 실업인정은 온라인으로도 가능합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">부정수급 주의</h3>
+            <p>구직활동을 하지 않으면서 실업급여를 받거나, 취업 사실을 숨기고 수급하면 부정수급에 해당합니다. 적발 시 지급받은 금액 반환 + 추가 2배 징수(총 3배)의 제재를 받습니다. 일용직이나 프리랜서로 일하면서 미신고하는 것도 부정수급입니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">실업급여 계산기 사용 예시</h3>

@@ -689,6 +689,34 @@ export default function SavingsGoalSimulator() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">저축 목표 시뮬레이션 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">목표 기반 저축의 중요성</h3>
+            <p>막연히 저축하는 것보다 구체적 목표(결혼자금, 내집마련, 비상금)를 설정하면 달성 확률이 42% 높아진다는 연구가 있습니다. 목표 금액과 기한을 정하면 매달 필요한 저축액이 명확해집니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">50-30-20 법칙</h3>
+            <p>소득 배분의 기본 원칙입니다. 필수 지출(주거비·식비·교통비) 50%, 욕구(외식·취미·쇼핑) 30%, 저축·투자 20%로 배분합니다. 월 실수령 300만원이면 저축에 60만원을 배정하는 것이 기본입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">복리의 마법과 72 법칙</h3>
+            <p>72 법칙: 원금이 2배가 되는 기간 = 72 / 수익률. 연 4% 수익이면 18년, 연 6%이면 12년, 연 8%이면 9년에 2배가 됩니다. 월 50만원을 연 5% 복리로 20년 저축하면 원금 1.2억원이 약 2.06억원으로 불어납니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">목표별 저축 전략</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>비상금</strong>: 월 생활비 3~6개월분, 입출금 자유 예금에 보관</li>
+              <li><strong>결혼자금</strong>: 평균 결혼비용 약 5,000만원, 3~5년 기간 적금+투자 병행</li>
+              <li><strong>내집마련</strong>: 청약저축(월 25만원) + 추가 적금, 5~10년 장기 계획</li>
+              <li><strong>은퇴준비</strong>: 연금저축+IRP로 세액공제 받으며 장기 투자</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">목돈 모으기 시뮬레이터 사용 예시</h3>

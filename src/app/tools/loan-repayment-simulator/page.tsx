@@ -956,6 +956,29 @@ export default function LoanRepaymentSimulator() {
         }}
       />
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">대출 상환 전략 시뮬레이션 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">상환 방식별 총 이자 비교</h3>
+            <p>3억원, 연 4%, 30년 기준: 원리금균등 약 2.16억원, 원금균등 약 1.81억원, 만기일시 약 3.6억원의 총 이자가 발생합니다. 원금균등이 원리금균등보다 약 3,500만원 적지만, 초기 월 상환액이 약 30만원 더 높습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">거치기간의 비용</h3>
+            <p>거치기간에는 이자만 내고 원금을 갚지 않으므로 총 이자가 크게 증가합니다. 3억원, 연 4%, 거치 3년 + 상환 27년이면 거치 없이 30년 상환하는 것보다 총 이자가 약 2,000만원 더 많습니다. 거치기간은 꼭 필요한 경우에만 최소한으로 설정해야 합니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">중도상환의 효과</h3>
+            <p>원금의 10%를 조기에 상환하면 이자 절감 효과가 큽니다. 3억원 대출 5년차에 3,000만원 중도상환하면 남은 기간의 이자를 약 1,500~2,000만원 절약할 수 있습니다. 중도상환수수료(보통 1.2~1.5%, 3년 후 면제)를 감안해도 대부분 이득입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">대환대출 판단 기준</h3>
+            <p>기존 대출과 새 대출의 금리 차이가 0.5%p 이상이고, 잔여 기간이 5년 이상이면 대환이 유리할 가능성이 높습니다. 대환 비용(중도상환수수료+근저당설정비)을 이자 절감액과 비교하여 판단합니다. 금융위원회 대출 갈아타기 서비스를 이용하면 간편합니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-semibold text-gray-900 mb-4">대출 상환 시뮬레이터 사용 예시</h3>

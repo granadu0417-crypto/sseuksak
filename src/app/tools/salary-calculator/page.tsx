@@ -432,6 +432,52 @@ export default function SalaryCalculatorPage() {
         </div>
       </div>
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">연봉 실수령액 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">4대 보험 공제 항목별 요율 (2025년)</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>국민연금</strong>: 4.5% (회사 4.5% 별도, 기준소득월액 상한 617만원)</li>
+              <li><strong>건강보험</strong>: 3.545% (회사 3.545% 별도)</li>
+              <li><strong>장기요양보험</strong>: 건강보험료의 12.95%</li>
+              <li><strong>고용보험</strong>: 0.9% (회사 0.9~1.65% 별도)</li>
+            </ul>
+            <p className="mt-2">4대 보험 근로자 부담분 합계는 약 9.4%입니다. 월급 300만원이면 약 28만원이 4대 보험으로 공제됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">근로소득세 간이세액표</h3>
+            <p>매달 급여에서 원천징수하는 소득세는 국세청 간이세액표에 따릅니다. 월급여, 부양가족 수, 20세 이하 자녀 수에 따라 원천징수 금액이 달라집니다. 간이세액의 80%, 100%, 120% 중 선택할 수 있으며 연말정산에서 정산됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">비과세 항목 활용</h3>
+            <p>비과세 항목은 소득세와 4대 보험 산정 기준에서 제외되어 실수령액을 높이는 효과가 있습니다.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>식대</strong>: 월 20만원까지 비과세</li>
+              <li><strong>차량유지비</strong>: 본인 차량 업무 사용 시 월 20만원까지</li>
+              <li><strong>출산·보육수당</strong>: 월 20만원까지</li>
+              <li><strong>연구보조비</strong>: 월 20만원까지 (연구직)</li>
+            </ul>
+            <p className="mt-2">연봉 4,000만원 중 식대 240만원을 비과세로 분리하면 과세대상 소득이 3,760만원이 되어 연간 약 20~30만원의 세금을 절약할 수 있습니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">연봉 구간별 실수령 비율</h3>
+            <p>연봉이 높아질수록 세율이 올라가 실수령 비율이 낮아집니다. 대략적인 실수령 비율은 다음과 같습니다.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>3,000만원</strong>: 약 88~89% (월 실수령 약 220만원)</li>
+              <li><strong>5,000만원</strong>: 약 84~85% (월 실수령 약 350만원)</li>
+              <li><strong>7,000만원</strong>: 약 80~82% (월 실수령 약 470만원)</li>
+              <li><strong>1억원</strong>: 약 75~78% (월 실수령 약 640만원)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">연봉 협상 시 확인 사항</h3>
+            <p>연봉 협상 시 총액 외에 확인해야 할 사항이 있습니다. 성과급·상여금 포함 여부, 식대·교통비 비과세 처리 여부, 퇴직금 별도 여부(포괄연봉제 주의), 복리후생(건강검진, 자기계발비, 학자금 지원) 등이 실질 처우에 큰 영향을 줍니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6">
         <h3 className="font-bold text-gray-900 mb-4">사용 예시</h3>

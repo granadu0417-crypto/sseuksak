@@ -135,7 +135,6 @@ export default function SearchResults() {
                     <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
                       {CATEGORY_NAMES[post.category] || post.category}
                     </span>
-                    <span className="text-xs text-gray-400">{post.readingTime}</span>
                   </div>
                   <h2 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
                     {post.title}

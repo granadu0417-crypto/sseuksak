@@ -31,7 +31,6 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
               <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
                 {categoryLabels[post.category] || post.category}
               </span>
-              <span className="text-xs text-gray-400">{post.readingTime}</span>
             </div>
             <h3 className="font-medium text-gray-900 group-hover:text-blue-600 line-clamp-2 mb-2">
               {post.title}

@@ -284,6 +284,40 @@ export default function PyeongCalculatorPage() {
         </ul>
       </div>
 
+      {/* 상세 가이드 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">평수 계산 완벽 가이드</h2>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">평(坪)의 정의와 환산</h3>
+            <p>1평 = 3.3058㎡ (약 3.3㎡). 역으로 1㎡ = 0.3025평입니다. 2007년부터 부동산 공식 면적 단위는 ㎡이지만, 실생활에서는 여전히 평수가 널리 사용됩니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">전용면적 vs 공급면적 vs 계약면적</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>전용면적</strong>: 실제 거주 공간 (방, 거실, 주방, 화장실). 벽 안쪽 면적만 포함</li>
+              <li><strong>공급면적</strong>: 전용면적 + 주거공용면적(복도, 계단, 엘리베이터)</li>
+              <li><strong>계약면적</strong>: 공급면적 + 기타공용면적(관리사무소, 주차장, 놀이터 등)</li>
+            </ul>
+            <p className="mt-2">아파트 분양 시 &quot;25평형&quot;이라 하면 공급면적 기준이며, 실제 전용면적은 약 59㎡(약 18평)입니다.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">아파트 평형별 실 전용면적</h3>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li><strong>18평형(공급)</strong>: 전용 약 49㎡ (15평) - 원룸~소형 1베드</li>
+              <li><strong>25평형(공급)</strong>: 전용 약 59㎡ (18평) - 2베드 소형</li>
+              <li><strong>33평형(공급)</strong>: 전용 약 84㎡ (25평) - 3베드 국민평형</li>
+              <li><strong>43평형(공급)</strong>: 전용 약 114㎡ (35평) - 4베드 중대형</li>
+              <li><strong>55평형(공급)</strong>: 전용 약 145㎡ (44평) - 대형</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">전용률 계산</h3>
+            <p>전용률 = 전용면적 / 공급면적 x 100. 아파트는 보통 72~82%, 오피스텔은 50~65%, 상가는 40~60%입니다. 전용률이 높을수록 실제 사용 공간이 넓습니다. 같은 공급면적이라도 전용률에 따라 체감 넓이가 크게 다릅니다.</p>
+          </div>
+        </div>
+      </div>
+
       {/* 사용 예시 */}
       <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
         <h3 className="font-bold text-gray-900 mb-4">사용 예시</h3>

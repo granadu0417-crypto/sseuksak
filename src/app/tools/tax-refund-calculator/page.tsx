@@ -652,6 +652,40 @@ export default function TaxRefundCalculator() {
           }}
         />
 
+        {/* 상세 가이드 */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">연말정산 환급액 계산 완벽 가이드</h2>
+          <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">연말정산 원리</h3>
+              <p>연말정산은 1년간 원천징수한 세금(기납부세액)과 실제 내야 할 세금(결정세액)을 비교하는 정산 과정입니다. 기납부세액이 더 많으면 환급, 적으면 추가납부입니다. 공제를 많이 받을수록 결정세액이 줄어 환급액이 커집니다.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">주요 소득공제 항목</h3>
+              <ul className="list-disc list-inside mt-2 space-y-1">
+                <li><strong>인적공제</strong>: 본인·배우자·부양가족 1인당 150만원</li>
+                <li><strong>신용카드 등</strong>: 총급여 25% 초과분의 15~40% (한도 300만원)</li>
+                <li><strong>주택청약</strong>: 납입액의 40% (한도 300만원, 무주택 세대주)</li>
+                <li><strong>주택자금</strong>: 전세대출 이자 400만원, 주담대 이자 300~1,800만원</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">주요 세액공제 항목</h3>
+              <ul className="list-disc list-inside mt-2 space-y-1">
+                <li><strong>보험료</strong>: 100만원 한도의 12%</li>
+                <li><strong>의료비</strong>: 총급여 3% 초과분의 15% (난임·미숙아 20%)</li>
+                <li><strong>교육비</strong>: 본인 한도 없음, 자녀 300~900만원의 15%</li>
+                <li><strong>연금저축</strong>: 600만원 한도의 13.2~16.5%</li>
+                <li><strong>월세</strong>: 750만원 한도의 12~15%</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">맞벌이 부부 공제 배분 전략</h3>
+              <p>인적공제는 세율이 높은 쪽이, 의료비는 세율이 낮은 쪽이 유리합니다. 신용카드는 총급여 25% 기준선을 먼저 넘는 쪽에 몰아쓰는 것이 효과적입니다. 자녀 관련 공제는 기본공제를 등록한 쪽만 받을 수 있으므로 종합적으로 비교해야 합니다.</p>
+            </div>
+          </div>
+        </div>
+
         {/* 사용 예시 */}
         <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
           <h3 className="font-semibold text-gray-900 mb-4">연말정산 환급액 계산기 사용 예시</h3>
