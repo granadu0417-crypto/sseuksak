@@ -47,6 +47,12 @@ export function generateMetadata({
       siteName: SITE_NAME,
       locale: 'ko_KR',
       type,
+      images: [{
+        url: `${SITE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: socialTitle,
+      }],
       ...(type === 'article' && {
         publishedTime,
         modifiedTime,
@@ -56,9 +62,10 @@ export function generateMetadata({
       }),
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: socialTitle,
       description,
+      images: [`${SITE_URL}/og-image.png`],
     },
     robots: {
       index: true,

@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   creator: '쓱싹',
   publisher: '쓱싹',
   metadataBase: new URL('https://sseuksak.com'),
+  alternates: {
+    canonical: 'https://sseuksak.com',
+  },
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
@@ -35,11 +38,18 @@ export const metadata: Metadata = {
     siteName: '쓱싹',
     title: '쓱싹 - 생활 금융 계산기 & 가이드',
     description: '연봉 실수령액, 대출이자, 적금이자, 증여세 등 금융 계산기와 보험·투자·세금 가이드를 공식 자료 기반으로 제공합니다.',
+    images: [{
+      url: 'https://sseuksak.com/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: '쓱싹 - 생활 금융 계산기 & 가이드',
+    }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: '쓱싹 - 생활 금융 계산기 & 가이드',
     description: '연봉 실수령액, 대출이자, 적금이자, 증여세 등 금융 계산기와 보험·투자·세금 가이드를 공식 자료 기반으로 제공합니다.',
+    images: ['https://sseuksak.com/og-image.png'],
   },
   robots: {
     index: true,
