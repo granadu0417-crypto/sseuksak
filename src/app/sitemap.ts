@@ -113,6 +113,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'pension-calculator',
     'rent-conversion-calculator',
     'income-tax-calculator',
+    'acquisition-tax-calculator',
     'annual-leave-calculator',
     'housing-cost-simulator',
     'loan-repayment-simulator',

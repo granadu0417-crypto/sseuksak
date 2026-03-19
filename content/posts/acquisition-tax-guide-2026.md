@@ -121,6 +121,7 @@ tags: ["취득세", "부동산세금", "주택취득세", "다주택자", "취�
 
 ## 내 취득세 직접 계산해보기
 
+- **[취득세 계산기](/tools/acquisition-tax-calculator)** — 1주택·다주택 세율, 조정지역, 감면 혜택 자동 계산
 - **[주거비용 시뮬레이터](/tools/housing-cost-simulator)** — 취득세 포함 매매 총비용과 전세·월세 비교
 - **[대출이자 계산기](/tools/loan-calculator)** — 대출 상환액까지 포함한 총 비용 시뮬레이션
 - **[증여세 계산기](/tools/gift-tax-calculator)** — 증여로 주택을 받을 때 세금 계산

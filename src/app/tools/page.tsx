@@ -131,6 +131,11 @@ const financeTools = [
     description: '프리랜서·사업자 종합소득세 예상 세액을 계산해요',
   },
   {
+    slug: 'acquisition-tax-calculator',
+    title: '취득세 계산기',
+    description: '1주택·다주택 취득세를 자동 계산, 감면 혜택까지 반영해요',
+  },
+  {
     slug: 'annual-leave-calculator',
     title: '연차 계산기',
     description: '입사일 기준 연차 발생일수와 잔여 연차를 계산합니다',

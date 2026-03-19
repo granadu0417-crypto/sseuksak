@@ -58,6 +58,7 @@ const TOOLS_LIST = [
   'loan-repayment-simulator',
   'car-cost-simulator',
   'dsr-calculator',
+  'acquisition-tax-calculator',
 ];
 
 const TESTS_LIST = [
