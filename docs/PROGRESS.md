@@ -49,6 +49,9 @@
 | **신규 게시글 2개 작성** | ✅ |
 | - 부동산 중개수수료 가이드 (`real-estate-brokerage-fee-guide-2026`) | ✅ |
 | - 중소기업 취업 청년 소득세 90% 감면 가이드 (`youth-sme-income-tax-reduction-2026`) | ✅ |
+| **배포**: cf:quick 성공 + IndexNow 129개 URL 제출 | ✅ |
+| **Git Push**: 커밋 `873f7ec` → GitHub main 푸시 완료 | ✅ |
+| **라이브 확인**: 2개 신규 게시글 렌더링·테이블·볼드 정상 확인 | ✅ |
 
 **주요 인사이트:**
 - Naver 7일 CTR **11.9%**: 역대 최고 기록 갱신 (이전 10.5%)
