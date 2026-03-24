@@ -144,6 +144,21 @@ const financeTools = [
 
 const lifeTools = [
   {
+    slug: 'electricity-calculator',
+    title: '전기세 계산기',
+    description: '누진제 구간별 전기요금을 간편하게 계산해요',
+  },
+  {
+    slug: 'car-tax-calculator',
+    title: '자동차세 계산기',
+    description: '배기량과 연식으로 연간 자동차세를 계산해요',
+  },
+  {
+    slug: 'compound-interest-calculator',
+    title: '복리 계산기',
+    description: '복리 효과로 자산이 얼마나 불어나는지 시뮬레이션해요',
+  },
+  {
     slug: 'pyeong-calculator',
     title: '평수 계산기',
     description: '평수↔제곱미터를 간편하게 변환해요 (부동산 거래 필수)',
