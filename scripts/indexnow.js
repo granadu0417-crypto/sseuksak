@@ -59,6 +59,12 @@ const TOOLS_LIST = [
   'car-cost-simulator',
   'dsr-calculator',
   'acquisition-tax-calculator',
+  'capital-gains-tax-calculator',
+  'brokerage-fee-calculator',
+  'electricity-calculator',
+  'car-tax-calculator',
+  'compound-interest-calculator',
+  'savings-goal-simulator',
 ];
 
 const TESTS_LIST = [

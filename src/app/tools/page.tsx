@@ -136,6 +136,16 @@ const financeTools = [
     description: '1주택·다주택 취득세를 자동 계산, 감면 혜택까지 반영해요',
   },
   {
+    slug: 'capital-gains-tax-calculator',
+    title: '양도소득세 계산기',
+    description: '부동산 매도 시 양도세를 계산, 비과세·장특공·중과까지 반영해요',
+  },
+  {
+    slug: 'brokerage-fee-calculator',
+    title: '부동산 중개수수료 계산기',
+    description: '매매·전세·월세 거래 시 중개수수료를 자동 계산해요',
+  },
+  {
     slug: 'annual-leave-calculator',
     title: '연차 계산기',
     description: '입사일 기준 연차 발생일수와 잔여 연차를 계산합니다',
